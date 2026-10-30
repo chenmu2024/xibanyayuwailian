@@ -20,6 +20,7 @@ EDUCATION = ROOT / "data/education-resource-submissions.csv"
 V23 = ROOT / "data/v23-design-submission-check.csv"
 V24 = ROOT / "data/v24-curated-submission-audit.csv"
 V25 = ROOT / "data/v25-spanish-resource-evidence.csv"
+V26 = ROOT / "data/v26-new-source-audit.csv"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -42,8 +43,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) < 171:
-        fail(f"V25 baseline has 171 rows; catalog unexpectedly shrank to {len(catalog)}.")
+    if len(catalog) < 176:
+        fail(f"V26 baseline has 176 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -236,7 +237,7 @@ def main():
         fail("V25 research may not claim a submission without ledger evidence.")
     if any(not r["官网证据"].strip() or not r["状态级别"].strip() for r in v25):
         fail("V25 entries require actual official evidence and an actionable status.")
-    if numbers[-4:] != [168, 169, 170, 171]:
+    if numbers[167:171] != [168, 169, 170, 171]:
         fail("V25 IDs must append 168 through 171 without rewriting historical rows.")
     aicatalog=[r for r in catalog if r["编号"] == "109"]
     if len(aicatalog)!=1 or aicatalog[0]["优先级"] != "排除" or "徽章" not in aicatalog[0]["关键限制/拒绝原因"]:
@@ -244,6 +245,27 @@ def main():
     if not any(r["编号"].strip() == "E006" and "bestproductivityresources.com" in r["媒体/域名"]
                for r in editorial):
         fail("V25 LinkedIn-only editorial lead E006 must be preserved, not treated as a directory.")
+
+    v26_fields, v26 = read(V26)
+    for key in ["编号", "平台根域名", "官网资格依据", "当前可操作状态", "真实rel独立实测", "实际申请情况"]:
+        if key not in v26_fields:
+            fail(f"Missing V26 evidence column: {key}")
+    if len(v26) != 5:
+        fail(f"V26 audit expected five research sources, got {len(v26)}.")
+    expected_v26 = {"epictools.dev", "learnlists.com", "illustration.tools", "discoverly.tech", "yaju.com.mx"}
+    v26_domains = [registered_domain_hint(r["平台根域名"]) for r in v26]
+    if len(set(v26_domains)) != 5 or set(v26_domains) != expected_v26:
+        fail("V26 source domains missing or duplicated.")
+    if any(r["实际申请情况"].strip() != "未提交" for r in v26):
+        fail("V26 research may not claim submitted without separate ledger evidence.")
+    if numbers[-5:] != [172, 173, 174, 175, 176]:
+        fail("V26 must append consecutive IDs 172-176.")
+    for record_id in ("175", "176"):
+        matching=[r for r in catalog if r["编号"] == record_id]
+        if len(matching)!=1 or matching[0]["优先级"] != "排除":
+            fail(f"V26 excluded directory {record_id} must retain its exclusion.")
+    if not any(r["编号"]=="E007" and "thecreativevault.co" in r["媒体/域名"] and "未联系" in r["执行状态"] for r in editorial):
+        fail("V26 editorial pitch lead E007 must be recorded as not contacted.")
 
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
@@ -254,6 +276,7 @@ def main():
     print(f"V23: {len(v23)} extra evidence records; no real submissions claimed.")
     print(f"V24: {len(v24)} new research records, two current design-submission forms; no submissions claimed.")
     print(f"V25: {len(v25)} evidence records, #109 excluded, E006 editorial lead; no submissions claimed.")
+    print(f"V26: {len(v26)} sources, 2 exclusions, one new editorial lead; zero submissions.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
