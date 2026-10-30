@@ -45,3 +45,8 @@
 33. V24维护：新增Unikist（#164）、Mark-it（#165）为人工设计投稿候选。DailyLaunch（#166）免费发布不等于免费Dofollow，其官网明确需要回链徽章才改为Dofollow；不能擅自添加。
 34. Software Como Servicio（#167）免费收录明确强制自站徽章与Dofollow反向链接，按排除处理；不为已上线AdSense站引入互链。Illustration.tools抓取超时，不作为当前可申请。
 35. 新增待审核设计目录需真实可用界面和真实作者/联系资料，官网表单无付款字段≠独立获链/高DR。不同网站同平台重复投递前查目标域名×平台注册根域名。
+
+36. V25：Herramientas y Recursos（#168）和FreeDesignerTools（#169）有可读取的公开建议表单，但仍是候选；没有独立DR/Follow数据，不宣称高权重。后者仅12条馆藏，宣传流量无独立证据。
+37. Ghostbyte Library（#170）官网Submit a Resource跳GitHub Issues，不是直接PR；仓库确有data/design/资源文件，但开一个Issue并非官网获链。FounderOmni（#171）只有西语建议按钮可见，尚未证实最终表单及免费资格。
+38. 2026-10-31 AI Webcatalog（历史#109）官网明确强制安装徽章并填写该页面的链接，因此改为排除，历史行保留，禁止因为其“免费投稿”就推荐给普通西语网站。
+39. Best Productivity Resources为E006编辑媒体，官网只接受本人LinkedIn DM资源建议；不属于免费目录直接填写入口。不得在未经用户允许前自动发私信，也不得把媒体曝光当目录Follow。
