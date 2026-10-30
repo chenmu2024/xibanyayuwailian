@@ -19,6 +19,7 @@ ACTIONABLE = ROOT / "data/actionable-applications-v22.csv"
 EDUCATION = ROOT / "data/education-resource-submissions.csv"
 V23 = ROOT / "data/v23-design-submission-check.csv"
 V24 = ROOT / "data/v24-curated-submission-audit.csv"
+V25 = ROOT / "data/v25-spanish-resource-evidence.csv"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -41,8 +42,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) < 167:
-        fail(f"V24 baseline has 167 rows; catalog unexpectedly shrank to {len(catalog)}.")
+    if len(catalog) < 171:
+        fail(f"V25 baseline has 171 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -219,8 +220,30 @@ def main():
         fail("Software Como Servicio reciprocal badge prohibition must stay explicit.")
     if not any("徽章" in r["免费与徽章限制"] for r in v24 if r["平台根域名"] == "dailylaunch.io"):
         fail("DailyLaunch must disclose its badge-based dofollow restriction.")
-    if numbers[-4:] != [164,165,166,167]:
+    if numbers[163:167] != [164,165,166,167]:
         fail("V24 last four catalog IDs must be 164-167.")
+
+    v25_fields, v25 = read(V25)
+    for key in ["编号", "根域名", "官网证据", "强制互链", "状态级别", "本轮是否提交"]:
+        if key not in v25_fields:
+            fail(f"Missing V25 evidence column: {key}")
+    if len(v25) != 4:
+        fail(f"V25 must contain four new research records, got {len(v25)}.")
+    v25_domains = [registered_domain_hint(r["根域名"]) for r in v25]
+    if set(v25_domains) != {"herramientasyrecursos.com", "freedesignertools.com", "ghostbyte.dev", "founderomni.com"}:
+        fail("V25 new domains changed or duplicated.")
+    if any(r["本轮是否提交"].strip() != "未提交" for r in v25):
+        fail("V25 research may not claim a submission without ledger evidence.")
+    if any(not r["官网证据"].strip() or not r["状态级别"].strip() for r in v25):
+        fail("V25 entries require actual official evidence and an actionable status.")
+    if numbers[-4:] != [168, 169, 170, 171]:
+        fail("V25 IDs must append 168 through 171 without rewriting historical rows.")
+    aicatalog=[r for r in catalog if r["编号"] == "109"]
+    if len(aicatalog)!=1 or aicatalog[0]["优先级"] != "排除" or "徽章" not in aicatalog[0]["关键限制/拒绝原因"]:
+        fail("V25 badge-mandatory AI Webcatalog #109 must remain excluded with official warning.")
+    if not any(r["编号"].strip() == "E006" and "bestproductivityresources.com" in r["媒体/域名"]
+               for r in editorial):
+        fail("V25 LinkedIn-only editorial lead E006 must be preserved, not treated as a directory.")
 
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
@@ -230,6 +253,7 @@ def main():
     print(f"V22: {len(audit)} audited directory candidates and {len(active)} currently actionable research targets.")
     print(f"V23: {len(v23)} extra evidence records; no real submissions claimed.")
     print(f"V24: {len(v24)} new research records, two current design-submission forms; no submissions claimed.")
+    print(f"V25: {len(v25)} evidence records, #109 excluded, E006 editorial lead; no submissions claimed.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
