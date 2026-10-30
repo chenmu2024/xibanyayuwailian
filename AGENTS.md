@@ -59,3 +59,7 @@
 44. `docs/lettering-priority-21-ready-to-fill.md`专门针对Generador de Lettering为21条优先研究候选提供真实字段和值；卡片不是实际完成提交/获链/Follow的证明。切换其他网站必须更换品牌、域名、真实功能、截图、价格、作者与资格。
 45. 从此用户要填写方式，应优先给出`一站一个入口 + 分步骤 + 具体字段值 + 真实限制`，而非长表或只给排名/DR；遇到排除、暂停、无法访问、版权/教育/地域/强制badge，明确写“不提交”。不得因总库176条就称有176条可免费申请。
 46. 新增`docs/all-176-backlink-submission-methods.md`为历史资料的衍生文档，`data/backlinks-master.csv`和`data/submission-ledger.csv`仍是事实来源；不能因为填写卡有示例，就更新台账为已提交、已上线或独立测得Follow。
+
+47. V28新增本地单文件操作台`docs/backlink-submission-workbench.html`。本文件内嵌历史176条数据，仅供检索、复制真实材料和localStorage本机标注；不可把浏览器手动标注的“已自行提交/已上线待验链”自动当作GitHub提交台账或完成外链验收。
+48. 更新`data/backlinks-master.csv`时，应同步更新V27逐站长文、V28HTML操作台（内嵌全部新条目）及其操作指南；GitHub Actions应检验数据ID、入口和名称完全对应，防止长文/HTML数据过期。
+49. V28 HTML须保持离线、零付费依赖，无第三方分析/跟踪、远程脚本、密钥及自动站外网络提交。用户换新网站时不能自动沿用Generador de Lettering功能/教育版权/地区实体事实，须人工改写；本地进度CSV仅是用户的工作记录。
