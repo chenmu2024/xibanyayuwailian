@@ -50,3 +50,7 @@
 37. Ghostbyte Library（#170）官网Submit a Resource跳GitHub Issues，不是直接PR；仓库确有data/design/资源文件，但开一个Issue并非官网获链。FounderOmni（#171）只有西语建议按钮可见，尚未证实最终表单及免费资格。
 38. 2026-10-31 AI Webcatalog（历史#109）官网明确强制安装徽章并填写该页面的链接，因此改为排除，历史行保留，禁止因为其“免费投稿”就推荐给普通西语网站。
 39. Best Productivity Resources为E006编辑媒体，官网只接受本人LinkedIn DM资源建议；不属于免费目录直接填写入口。不得在未经用户允许前自动发私信，也不得把媒体曝光当目录Follow。
+
+40. V26新增EpicTools #172（仅URL+Design分类可尝试）；Learnlists #173仅教育教学资源有条件，不得投稿普通字体转换首页；Illustration Tools #174官网直访超时，搜索快照不代表当前可投。
+41. Discoverly #175官方要求免费提交前先安装Featured badge，与第三方免徽章线索相矛盾，以官网优先，排除；YAJU #176明确只收墨西哥有实际关系网站，不能只凭西语或虚构国家地点投稿。
+42. The Creative Vault E007为编辑邮件资源建议，必须存入editorial-prospects，不能冒充免费表单、已联系或已获链；没有用户许可时不自动发送。
