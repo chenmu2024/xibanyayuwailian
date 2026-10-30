@@ -6,6 +6,7 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| [docs/v29-field-level-workbench-and-ci-evidence.md](docs/v29-field-level-workbench-and-ci-evidence.md) | **V29更新：21家平台共133个真实历史字段示例、进度按网站域名隔离、GitHub Actions故障取证** |
 | **[docs/backlink-submission-workbench.html](docs/backlink-submission-workbench.html)** | **V28离线可用的176条外链操作台**：可搜索/筛选/排序，独立展开每站入口与逐条步骤，复制自己的西语/英语材料，浏览器本地标注进度并下载CSV；需下载原始HTML后用Chrome打开 |
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
@@ -163,3 +164,11 @@
 - 已附 [操作台打开及使用说明](docs/workbench-quickstart-v28.md)，已经人工检查内嵌数据与主表176个编号、站名和入口一一对应，并检查页面JS语法及无第三方JS。历史数据仍176条，**新增已获反链为0，未独立验证DR/AS、Follow和索引**。
 
 **V28验收说明（2026-10-31）**：操作台静态JSON包含176条，逐项名称、ID、提交入口与当前总库相符，JavaScript语法检查通过；不存在外部脚本。仓库GitHub Actions最近运行未通过，而且无法取得具体作业日志；虽然已恢复先前成功的原版验证脚本与工作流配置，**不能宣称本次GitHub Actions已通过**。操作台本身已上传，但仍需用户用Chrome本地打开做界面实际操作验收。
+
+## V29｜离线操作台真正逐字段可复制（2026-10-31）
+
+- 仍是原来的 **176个历史渠道**，**没有新增已获链**。现在21家优先来源的**133个字段行**被直接嵌入HTML操作台，每家独立展示原始真实字段、历史示例与独立复制按钮；不再只是让用户去看另一份Markdown。
+- 不同西语网站的提交工作记录改为按**目标域名独立本地存储**，兼容迁移旧V28对Lettering的记录，禁止把旧网站“已提交”套到另一个新站。
+- 当切换到新品牌或域名，Lettering特有介绍、功能类别和教学资源路径不再作为可直接复制的事实；要用新站真实功能重写。
+- 保留历史Python验证，加了 `scripts/validate_workbench.mjs`，用于当Runner恢复时检查176条JSON、21家字段133行、页面JavaScript语法和无外部网络依赖。
+- **CI仍显示失败，未取得绿色结果**：曾添加不依赖checkout/用户代码的Runner探针也失败，换成`ubuntu-24.04`仍失败；无法取得GitHub失败作业的日志，故不能确定确切原因，更不能声称全部测试通过。证据详见 [V29执行与CI记录](docs/v29-field-level-workbench-and-ci-evidence.md)。
