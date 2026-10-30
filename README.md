@@ -11,6 +11,8 @@
 | [data/submission-ledger.csv](data/submission-ledger.csv) | 跨网站申请台账：以目标域名 × 外链平台注册根域名去重 |
 | [docs/submit-guide-v16.md](docs/submit-guide-v16.md) | V16 逐站操作指南、西语/英文文案、已知限制 |
 | [docs/quality-policy.md](docs/quality-policy.md) | 证据等级、DR/AS/rel 核验、风险与验收定义 |
+| [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
+| [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
 **数据基线：2026-10-30 / V16。** 该版历史台账累计 146 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
@@ -38,3 +40,7 @@
 - 后续其他西语站按各自类型建立提交记录；同一个外链平台可以服务多个不同的网站，但每一组合只能登记一次成功提交。
 
 > 本仓库是内部研究与执行台账，不是对所列第三方平台的质量背书。
+## 自动质量检查
+
+仓库内置 [GitHub Actions 验证工作流](.github/workflows/validate-data.yml)，当 `data/` 的 CSV 或脚本发生变化时执行 `python3 scripts/validate_csv.py`。
+此脚本仅验证数据结构和台账一致性，**不代表实际外链的权威度、Follow 属性或搜索引擎收录情况已经核实**。
