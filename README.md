@@ -6,6 +6,8 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| **[docs/backlink-submission-workbench.html](docs/backlink-submission-workbench.html)** | **V28离线可用的176条外链操作台**：可搜索/筛选/排序，独立展开每站入口与逐条步骤，复制自己的西语/英语材料，浏览器本地标注进度并下载CSV；需下载原始HTML后用Chrome打开 |
+| [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
 | **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
 | [data/backlinks-master.csv](data/backlinks-master.csv) | V26 累计176条渠道/候选（保留V25的171条，本轮新添5条，含条件/排除），完整保留历史记录 |
@@ -151,3 +153,11 @@
 - 历史分类：**P1 30条 / P2 21条 / 条件77条 / 待核验14条 / 排除33条 / 非外链1条**。其中#026 TopTool官网暂停新申请，#003 Enlineados免费托管资格需询问；这些属于历史状态而非今日全量复核。
 - 2026-10-31官方重核证实：TopTool当前暂停；Enlineados官方排除免费主机站点。已在手册单列醒目警告。
 - 本次**不发送邮件、不申请第三方账号、不实际提交网站、不装回链徽章、不修改历史递交台账**；新增成功获链仍未确认，DR/AS与真实Follow也不冒称已测。
+
+## V28｜单文件离线操作台（2026-10-31）
+
+- 在 `docs/backlink-submission-workbench.html` 新增一份**无需API、服务器、外部脚本、付费工具**的完整搜索页面，内嵌主表176条历史记录。
+- 可以搜索站点/域名/限制、按资格和优先级筛选、展开真实历史提交步骤、打开官网、复制Generador de Lettering示例名称、URL、英西语说明、联系方式（需用户填写）。
+- 能在浏览器本机使用LocalStorage自留提交进度/备注，并导出CSV备份。**不联网发送、不自动注册、不提交第三方表单、不修改GitHub真实提交台账**。
+- 重要：请在GitHub找到HTML文件后点击**Download raw file**下载，再在Windows Chrome本地打开；仅在GitHub代码浏览页面无法实际操作。
+- 已附 [操作台打开及使用说明](docs/workbench-quickstart-v28.md)，并增加持续校验：HTML必须包含与主表一致的全部渠道ID、入口和名称，不允许漏条目或引用第三方JS。历史数据仍176条，**新增已获反链为0，未独立验证DR/AS、Follow和索引**。
