@@ -6,9 +6,11 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V22 累计160条渠道/候选（V21原159条保留，本轮新增1条），完整保留历史记录 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V23 累计163条渠道/候选（完整保留V22的160条，本轮新添3条），完整保留历史记录 |
 | [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的15家历史申请候选（含条件、低优先项目），不要全部照单提交 |
 | [data/actionable-applications-v22.csv](data/actionable-applications-v22.csv) | **现在先看这张**：6家当前可尝试申请的免费优先渠道，含入口与填写准备（不保证审核/Follow） |
+| [data/v23-design-submission-check.csv](data/v23-design-submission-check.csv) | **V23**：新增3家字体/设计资源目录及Enlineados已有#3资格复核，独立记录免费/语种/限制/审核状态 |
+| [docs/v23-spanish-typography-resource-submissions-20261031.md](docs/v23-spanish-typography-resource-submissions-20261031.md) | **V23逐站操作说明**：UX Resources、LDS Library、Fountn、Enlineados；附可复制文案及证据缺口 |
 | [data/v22-link-evidence-audit.csv](data/v22-link-evidence-audit.csv) | **10家逐站证据审计**：官方承诺、第三方rel抽样、实例、真实申请状态与DR来源 |
 | [data/reusable-free-shortlist.csv](data/reusable-free-shortlist.csv) | 原10家无已确认强制回链徽章的研究清单，含已暂停或需核实渠道，**不等于10家可立即申请** |
 | [data/education-resource-submissions.csv](data/education-resource-submissions.csv) | V20：3家教育资源馆藏渠道，明确非广告、教育资格及开放版权硬门槛 |
@@ -26,7 +28,7 @@
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-31 / V22。** 该版历史台账累计 160 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-31 / V23。** 当前历史台账累计 163 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -103,3 +105,10 @@
 - 建立6家可尝试申请的独立执行名单：LaunchFree、NoSignupTools、Design Resources Archive、Toolfound、PeplioHUB、DesignTools.fyi。只表示当前有公开入口及免费基础条件，**不等于审核或Follow已确认**。
 - 编辑推荐新增 **UI Goodies（E005）**，由人工设计编辑选择，官网不出售普通入选；对广告干扰严重的站点可能拒绝。
 - 现有15家历史队列、10家研究清单与实际提交台账都保留；本轮**实际新提交0，新增已获链0**。
+
+## V23 更新（2026-10-31）
+
+- 在160条完整历史记录基础上，新增3条未见同根域重复的设计/排版资源候选：**Fountn（#161，条件）、UX Resources（#162，可尝试）、LDS Library（#163，可尝试）**。当前共163条。
+- 本次独立复核了历史已有的 **Enlineados（#3）**：只收西语且官网免费，但其**拒绝免费主机站点**，因此自购域名+免费Cloudflare Pages托管是否符合需先确认，绝不能虚填地点。
+- V22的6家行动清单仍独立保留；V23新三家记录于新证据表，避免因混用口径改写V22十家审计结果。
+- 实际新增提交 **0**、获批 **0**、已确认公开获链 **0**；所有新渠道的实时DR/AS、外链rel及索引保持“未实测”。
