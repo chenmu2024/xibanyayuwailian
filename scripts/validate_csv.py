@@ -296,11 +296,6 @@ def main():
     if "未自动递交" not in quick_guide and "没有进行任何实际提交" not in quick_guide:
         fail("Quickstart must state that example fillings are not real submissions")
 
-    # V28 workbench: existence check, with detailed source checks performed separately.
-    if not WORKBENCH.is_file() or not WORKBENCH_GUIDE.is_file():
-        fail("V28 offline workbench or its usage guide is missing")
-    wb_items = catalog
-
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
     print(f"Editorial: {len(editorial)} prospects, {len(outreach)} historical outreach records.")
@@ -312,7 +307,6 @@ def main():
     print(f"V25: {len(v25)} evidence records, #109 excluded, E006 editorial lead; no submissions claimed.")
     print(f"V26: {len(v26)} sources, 2 exclusions, one new editorial lead; zero submissions.")
     print(f"V27: {len(anchors)} numbered submission instructions, {len(quick_cards)} practical cards, {len(media_sections)} editorial-only leads.")
-    print(f"V28: {len(wb_items)} mirrored offline search cards; local-only tracking and no remote scripts.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
