@@ -1,7 +1,7 @@
 # 西语外链提交操作台｜使用指南（V28）
 
 > 工具页面：[`backlink-submission-workbench.html`](backlink-submission-workbench.html)  
-> 数据基线：2026-10-31，来源于 `data/backlinks-master.csv`。共176条历史来源，既有优先候选，也有暂停、受限或明确排除来源；不是176个能免费获得Follow的链接，也不代表已递交。
+> 数据基线：2026-10-31，来源于 `data/backlinks-master.csv`。共176条历史来源，既有优先候选，也有暂停、受限或明确排除来源；不是176个能免费获得Follow的链接，也不代表已递交。**本地标注不等于真实成功获链**。
 
 ## 一、Windows / Chrome 怎么打开
 
