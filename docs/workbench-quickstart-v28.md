@@ -1,4 +1,4 @@
-# 西语外链提交操作台｜使用指南（V28）
+# 西语外链提交操作台｜使用指南（V29，兼容V28）
 
 > 工具页面：[`backlink-submission-workbench.html`](backlink-submission-workbench.html)  
 > 数据基线：2026-10-31，来源于 `data/backlinks-master.csv`。共176条历史来源，既有优先候选，也有暂停、受限或明确排除来源；不是176个能免费获得Follow的链接，也不代表已递交。**本地标注不等于真实成功获链**。
@@ -41,3 +41,11 @@
 - [全部历史渠道CSV](../data/backlinks-master.csv)：分类和平台规则的事实底稿。
 - [实际提交记录CSV](../data/submission-ledger.csv)：平台、目标域名、提交日期、审核与公开获链证据。
 - 操作台不依赖这些文件联网加载。若以后将历史CSV增到177条，应**同步重新生成HTML内嵌数据**并重新核对JSON记录与主表、运行脚本语法测试、尝试GitHub Actions校验；目前GitHub Actions未提供本轮成功记录，不能声称已通过。
+
+## 六、V29新增：21家真正逐字段表格与多网站隔离
+
+- 在操作台搜索 `Herramientas y Recursos` 或 `LaunchFree`，点击卡片展开，在历史步骤下方可见**逐字段填写表**。21家优先来源共133行，旁边的复制按钮分别复制网站名称、URL、类别、说明等；`#172 EpicTools`只显示已见到的URL与分类，不会捏造额外字段。
+- 更换顶部`网站名称`、`网站首页`或`具体工具页`后，离开输入框即可刷新示例；如果新站不是Generador，Lettering独有描述/类别会提示重新编写，并且对应复制按钮禁止直接复制旧文案。
+- 以网站**主机域名**分隔本地申请进度；从 `generadordelettering.org` 切到另一域名不会继承旧站的“已提交”状态。切回来还能找到原记录（在同一浏览器、未清理LocalStorage的情况下）。老V28进度若存在只尝试迁移到Generador，其他网站不共享。
+- `导出本地进度CSV`按当前网站主页列出操作日志；只代表个人操作记录，不能自动同步到GitHub，也不能算获链成功。
+- 代码检查新增 `node scripts/validate_workbench.mjs`。GitHub Actions目前运行仍失败，最小Runner探针也同样失败，日志不能取得；需明确区分数据静态核对与完整CI/真实浏览器验收。见 [V29事实记录](v29-field-level-workbench-and-ci-evidence.md)。
