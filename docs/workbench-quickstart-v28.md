@@ -46,6 +46,7 @@
 
 - 在操作台搜索 `Herramientas y Recursos` 或 `LaunchFree`，点击卡片展开，在历史步骤下方可见**逐字段填写表**。21家优先来源共133行，旁边的复制按钮分别复制网站名称、URL、类别、说明等；`#172 EpicTools`只显示已见到的URL与分类，不会捏造额外字段。
 - 更换顶部`网站名称`、`网站首页`或`具体工具页`后，离开输入框即可刷新示例；如果新站不是Generador，Lettering独有描述/类别会提示重新编写，并且对应复制按钮禁止直接复制旧文案。
+- 将网站首页切换到**不同域名**时，如果工具URL还指向原网站，会自动清空该工具URL；请手工填新站真正可用的工具或教育页，避免将旧站的/editor页面误投。
 - 以网站**主机域名**分隔本地申请进度；从 `generadordelettering.org` 切到另一域名不会继承旧站的“已提交”状态。切回来还能找到原记录（在同一浏览器、未清理LocalStorage的情况下）。老V28进度若存在只尝试迁移到Generador，其他网站不共享。
 - `导出本地进度CSV`按当前网站主页列出操作日志；只代表个人操作记录，不能自动同步到GitHub，也不能算获链成功。
 - 代码检查新增 `node scripts/validate_workbench.mjs`。GitHub Actions目前运行仍失败，最小Runner探针也同样失败，日志不能取得；需明确区分数据静态核对与完整CI/真实浏览器验收。见 [V29事实记录](v29-field-level-workbench-and-ci-evidence.md)。
