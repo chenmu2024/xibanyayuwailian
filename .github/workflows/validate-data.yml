@@ -4,19 +4,11 @@ on:
     paths:
       - 'data/**'
       - 'scripts/validate_csv.py'
-      - 'docs/backlink-submission-workbench.html'
-      - 'docs/workbench-quickstart-v28.md'
-      - 'docs/all-176-backlink-submission-methods.md'
-      - 'docs/lettering-priority-21-ready-to-fill.md'
       - '.github/workflows/validate-data.yml'
   pull_request:
     paths:
       - 'data/**'
       - 'scripts/validate_csv.py'
-      - 'docs/backlink-submission-workbench.html'
-      - 'docs/workbench-quickstart-v28.md'
-      - 'docs/all-176-backlink-submission-methods.md'
-      - 'docs/lettering-priority-21-ready-to-fill.md'
       - '.github/workflows/validate-data.yml'
 
 permissions:
