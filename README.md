@@ -6,9 +6,11 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V25 累计171条渠道/候选（保留V24的167条，本轮新增4条；另修正历史#109强制Badge状态），完整保留历史记录 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V26 累计176条渠道/候选（保留V25的171条，本轮新添5条，含条件/排除），完整保留历史记录 |
 | [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的15家历史申请候选（含条件、低优先项目），不要全部照单提交 |
 | [data/actionable-applications-v22.csv](data/actionable-applications-v22.csv) | **现在先看这张**：6家当前可尝试申请的免费优先渠道，含入口与填写准备（不保证审核/Follow） |
+| [data/v26-new-source-audit.csv](data/v26-new-source-audit.csv) | **V26**：五家新渠道的免费、语言、提交入口、Google索引、外链与资格证据 |
+| [docs/v26-typography-education-submission-20261031.md](docs/v26-typography-education-submission-20261031.md) | **V26逐站提交说明**：EpicTools、Learnlists、Illustration Tools、Discoverly与YAJU |
 | [data/v25-spanish-resource-evidence.csv](data/v25-spanish-resource-evidence.csv) | **V25** 四家新研究来源逐条证据与已提交真相：两家可尝试、两家条件 |
 | [docs/v25-spanish-and-design-resource-submissions-20261031.md](docs/v25-spanish-and-design-resource-submissions-20261031.md) | **V25** 西语目录、免费设计工具、GitHub Issue、需核实弹窗与历史强制Badge纠错 |
 | [data/v24-curated-submission-audit.csv](data/v24-curated-submission-audit.csv) | **V24**：Unikist、Mark-it、DailyLaunch和Software Como Servicio四站逐项资格、免费/徽章与证据等级 |
@@ -32,7 +34,7 @@
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-31 / V25。** 当前历史台账累计 171 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-31 / V26。** 当前历史台账累计 176 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -130,3 +132,10 @@
 - **纠错现有#109 AI Webcatalog**：官网现在明确免费审核也必须安装Badge及填写徽章落地页，且仅适合AI工具；改为排除。保留历史行与证据。
 - 编辑推荐线索新增 Best Productivity Resources E006，官网要求作者LinkedIn私信，**不属于可直接提交的普通目录表单**。
 - 本轮实际第三方递交 **0**、新获批 **0**、新真实获链 **0**；实时DR/AS、真实rel、Google索引和引荐访问均未独立验收。
+
+## V26 更新（2026-10-31）
+
+- 主库171→**176条**：EpicTools（#172，有可用的Design提交入口及独立字体工具案例）、Learnlists（#173，仅真实教育实践资源适用）、Illustration Tools（#174，搜索索引有字段但官网实时访问受阻）、Discoverly（#175，强制badge，排除）、YAJU（#176，必须有真实墨西哥关联，本网站排除）。
+- 新增独立**编辑邮件线索E007 The Creative Vault**；不与可填表的普通目录混淆，本轮没有发送任何邮件。
+- 这批仅 EpicTools 为当前优先可尝试入口；其免费投稿不等于已获Follow。真实DR/AS、目标页rel、Google实际索引未实测。
+- 实际新申请0、获批0、新确认获链0；保存全部历史和既有提交台账。
