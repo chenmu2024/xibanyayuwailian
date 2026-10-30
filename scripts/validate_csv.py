@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import json
 from collections import Counter
 from pathlib import Path
 from urllib.parse import urlparse
@@ -23,6 +24,8 @@ V25 = ROOT / "data/v25-spanish-resource-evidence.csv"
 V26 = ROOT / "data/v26-new-source-audit.csv"
 ALL_GUIDE = ROOT / "docs/all-176-backlink-submission-methods.md"
 QUICK_GUIDE = ROOT / "docs/lettering-priority-21-ready-to-fill.md"
+WORKBENCH = ROOT / "docs/backlink-submission-workbench.html"
+WORKBENCH_GUIDE = ROOT / "docs/workbench-quickstart-v28.md"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -293,6 +296,32 @@ def main():
     if "未自动递交" not in quick_guide and "没有进行任何实际提交" not in quick_guide:
         fail("Quickstart must state that example fillings are not real submissions")
 
+    # V28: offline HTML workbench must mirror the historical CSV exactly.
+    workbench = WORKBENCH.read_text(encoding="utf-8")
+    workbench_guide = WORKBENCH_GUIDE.read_text(encoding="utf-8")
+    match = re.search(r'<script id="items" type="application/json">([\\s\\S]*?)</script>', workbench)
+    if not match:
+        fail("Offline HTML workbench missing embedded catalog JSON")
+    try:
+        wb_items = json.loads(match.group(1))
+    except json.JSONDecodeError as exc:
+        fail(f"Offline HTML JSON not valid: {exc}")
+    if len(wb_items) != len(catalog):
+        fail(f"Workbench has {len(wb_items)} channels but master has {len(catalog)}")
+    for i, (item, entry) in enumerate(zip(wb_items, catalog), start=1):
+        if item.get("id") != i:
+            fail(f"Workbench ID mismatch at position {i}")
+        if item.get("name") != entry["平台/域名"]:
+            fail(f"Workbench name changed from historical catalog at ID {i}")
+        if item.get("url") != entry["提交入口URL"]:
+            fail(f"Workbench official submission URL mismatch at ID {i}")
+    if re.search(r'<script[^>]+src=', workbench, re.I):
+        fail("Offline workbench must not import third-party scripts")
+    if any(s not in workbench for s in ["localStorage", "导出本地进度CSV", "不会更新GitHub台账"]):
+        fail("Offline workbench must disclose and support local-only progress")
+    if not all(s in workbench_guide for s in ["Chrome", "Download raw file", "不等于"]):
+        fail("Offline workbench guide must explain how to run and not confuse statuses")
+
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
     print(f"Editorial: {len(editorial)} prospects, {len(outreach)} historical outreach records.")
@@ -304,6 +333,7 @@ def main():
     print(f"V25: {len(v25)} evidence records, #109 excluded, E006 editorial lead; no submissions claimed.")
     print(f"V26: {len(v26)} sources, 2 exclusions, one new editorial lead; zero submissions.")
     print(f"V27: {len(anchors)} numbered submission instructions, {len(quick_cards)} practical cards, {len(media_sections)} editorial-only leads.")
+    print(f"V28: {len(wb_items)} mirrored offline search cards; local-only tracking and no remote scripts.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
