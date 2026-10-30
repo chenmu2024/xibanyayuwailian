@@ -6,16 +6,19 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V17 累计150条渠道/候选（含V16原146条及本轮新增4条），完整保留历史记录 |
-| [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的当前12家重点渠道，按实际执行顺序排列 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V18 累计151条渠道/候选（V17原150条保留，本轮新增1条），完整保留历史记录 |
+| [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的当前13家重点渠道，按实际执行顺序排列 |
 | [data/submission-ledger.csv](data/submission-ledger.csv) | 跨网站申请台账：以目标域名 × 外链平台注册根域名去重 |
 | [docs/submit-guide-v16.md](docs/submit-guide-v16.md) | V16 逐站操作指南、西语/英文文案、已知限制 |
 | [docs/v17-new-channels-20261030.md](docs/v17-new-channels-20261030.md) | V17 新增4家的官网证据、适配性、申请步骤、风险与填写模板 |
+| [docs/v18-editorial-and-typography-20261030.md](docs/v18-editorial-and-typography-20261030.md) | V18 Typography新入口、4家西语编辑媒体及历史邮件查重报告 |
+| [data/editorial-prospects.csv](data/editorial-prospects.csv) | 独立编辑推荐候选清单（不等于免费投稿许可） |
+| [data/editorial-outreach-ledger.csv](data/editorial-outreach-ledger.csv) | 跨网站真实编辑部联络历史：防止重复发送 |
 | [docs/quality-policy.md](docs/quality-policy.md) | 证据等级、DR/AS/rel 核验、风险与验收定义 |
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-30 / V17。** 该版历史台账累计 150 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-30 / V18。** 该版历史台账累计 151 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -52,3 +55,10 @@
 - Lettering 优先队列由9家更新为12家；未改变已有提交台账的实际状态。
 - 自动检查新增**历史记录不得减少至150条以下、编号连续**规则。
 - 实时 DR/AS、目标新页面 Follow 属性、Google 索引、真实引荐流量未全面实测；**没有任何新站点被代为提交，新增成功获链数为0**。
+
+## V18 本轮更新（2026-10-30）
+
+- 总库新增 `DesignTools.fyi` (#151)：官网具有正式的 Typography 投稿表单；免费资格、DR/AS、获批后的 Follow 属性未全面核验。
+- Lettering 优先队列更新至 **13家**。
+- 新增独立的**编辑媒体线索（4家）**与**既往编辑部联系台账（2条已发送记录）**：Gràffica 已于2026-10-25收到本网站介绍；EDUCACIÓN 3.0 于2026-10-12收到另一网站的教学材料。不能短期重复发送。
+- 历史151个候选并不代表151条有效外链；本轮实际新增成功外链**0条**，未替用户发送新邮件或提交新表单。
