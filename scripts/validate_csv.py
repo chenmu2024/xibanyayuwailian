@@ -21,6 +21,8 @@ V23 = ROOT / "data/v23-design-submission-check.csv"
 V24 = ROOT / "data/v24-curated-submission-audit.csv"
 V25 = ROOT / "data/v25-spanish-resource-evidence.csv"
 V26 = ROOT / "data/v26-new-source-audit.csv"
+ALL_GUIDE = ROOT / "docs/all-176-backlink-submission-methods.md"
+QUICK_GUIDE = ROOT / "docs/lettering-priority-21-ready-to-fill.md"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -267,6 +269,30 @@ def main():
     if not any(r["编号"]=="E007" and "thecreativevault.co" in r["媒体/域名"] and "未联系" in r["执行状态"] for r in editorial):
         fail("V26 editorial pitch lead E007 must be recorded as not contacted.")
 
+    # V27: The manual must cover every numbered historical channel exactly once,
+    # including exclusions, without conflating a submission guide with earned links.
+    import re
+    all_guide = ALL_GUIDE.read_text(encoding="utf-8")
+    anchors = [int(s) for s in re.findall(r'<a id="link-(\\d{3})"></a>', all_guide)]
+    if anchors != list(range(1, len(catalog) + 1)):
+        fail(f"Full submission manual anchors are incomplete or out of catalog order: {len(anchors)} / {len(catalog)}")
+    for entry in catalog:
+        if entry["提交入口URL"].strip() not in all_guide:
+            fail(f"Full submission manual lacks official entry for #{entry['编号']}")
+    media_sections = re.findall(r"^### E\\d{3}\\.", all_guide, flags=re.M)
+    if len(media_sections) != len(editorial):
+        fail(f"Full manual must include all editorial-only sources: {len(media_sections)} / {len(editorial)}")
+    if not all(text in all_guide for text in ["176是研究渠道数量", "当前没有自动发送"]):
+        fail("Guide must disclose research vs actual earned/submitted status")
+    quick_guide = QUICK_GUIDE.read_text(encoding="utf-8")
+    quick_cards = re.findall(r"^### \\d+\\. .+｜主库 #(\\d{3})$", quick_guide, flags=re.M)
+    if len(quick_cards) != 21 or len(set(quick_cards)) != 21:
+        fail(f"Quickstart must have 21 unique platform-specific filing cards, got {len(quick_cards)}")
+    if not all(int(n) in numbers for n in quick_cards):
+        fail("Quickstart contains a source not found in catalog")
+    if "未自动递交" not in quick_guide and "没有进行任何实际提交" not in quick_guide:
+        fail("Quickstart must state that example fillings are not real submissions")
+
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
     print(f"Editorial: {len(editorial)} prospects, {len(outreach)} historical outreach records.")
@@ -277,6 +303,7 @@ def main():
     print(f"V24: {len(v24)} new research records, two current design-submission forms; no submissions claimed.")
     print(f"V25: {len(v25)} evidence records, #109 excluded, E006 editorial lead; no submissions claimed.")
     print(f"V26: {len(v26)} sources, 2 exclusions, one new editorial lead; zero submissions.")
+    print(f"V27: {len(anchors)} numbered submission instructions, {len(quick_cards)} practical cards, {len(media_sections)} editorial-only leads.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
