@@ -2,7 +2,7 @@
 
 本仓库用于**西班牙语网站通用外链库**，任何 AI、Codex 或维护脚本必须遵守：
 
-1. 先读取 `README.md`、`docs/quality-policy.md`、`data/backlinks-master.csv`、`data/reusable-free-shortlist.csv`、`data/submission-ledger.csv`、`data/editorial-prospects.csv`、`data/editorial-outreach-ledger.csv`，再查找或更新渠道。
+1. 先读取 `README.md`、`docs/quality-policy.md`、`data/backlinks-master.csv`、`data/reusable-free-shortlist.csv`、`data/education-resource-submissions.csv`、`data/submission-ledger.csv`、`data/editorial-prospects.csv`、`data/editorial-outreach-ledger.csv`，再查找或更新渠道。
 2. 同一根域名的渠道必须跨 V1–V16 历史去重。新增来源先搜索总库；不要为了数量新增同一站点的其他提交URL。
 3. 保留全部历史及排除记录，不得因为网站关闭、收费或被降级而偷偷删行；修改状态时写明官方依据与核验日期。
 4. 新渠道应先核实**免费、实际可提交、接受西语/目标站型、存在可公开访问的资料页、是否强制互链**；权威值和 Follow 属性只有证据时才填写，未知一律“未核实”。
@@ -22,3 +22,8 @@
 15. 对明确拒绝关键词站/简单转换器的目录（例如DesignTrash）不得替Lettering站重复投稿；对明确英语可理解要求的平台（例如DesignBookmark）不能通过仅写英文简介伪装为真正英语可用的产品。
 16. 免费档Nofollow与付费Follow必须分开记录（例如DesignMunk）。不能为争取Follow擅自给已有站点添加强制徽章、重复推广或升级付费。
 17. 对据称支持GitHub PR投稿的外部项目，必须确认其仓库**真实存在可编辑的数据文件及投稿许可**后，才可称其为“可直接通过PR获得外链”；外部站点写“可提PR”却只有README的情况只能列待核验。
+
+18. V20：教育资源共享库必须单列在 `data/education-resource-submissions.csv`。免费会员 ≠ 允许商用广告推广 ≠ 必定Follow；不得将教育库当SEO提交农场。
+19. MERLOT 的注册条款严禁广告推广，只有真实学习资料、教学目标、非营销措辞和准确作者信息才可考虑；仅为拿商业网站反向链接而加入不合格。
+20. OER Commons 对具体教学内容有严格开放使用/非商业教育许可门槛。除非权利人明确决定，否则不得更改已有网站或练习素材的版权、CC许可证，也不得代替权利人勾选许可。
+21. Procomún/INTEF 主要服务教师/教育从业者；不得冒充身份。2026-10-31公开主页抓取返回HTTP500，未恢复前不可声称已验证投稿入口。
