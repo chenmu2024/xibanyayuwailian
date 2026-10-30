@@ -6,9 +6,11 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V23 累计163条渠道/候选（完整保留V22的160条，本轮新添3条），完整保留历史记录 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V24 累计167条渠道/候选（保留V23的163条，本轮新增4条其中1条明确排除），完整保留历史记录 |
 | [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的15家历史申请候选（含条件、低优先项目），不要全部照单提交 |
 | [data/actionable-applications-v22.csv](data/actionable-applications-v22.csv) | **现在先看这张**：6家当前可尝试申请的免费优先渠道，含入口与填写准备（不保证审核/Follow） |
+| [data/v24-curated-submission-audit.csv](data/v24-curated-submission-audit.csv) | **V24**：Unikist、Mark-it、DailyLaunch和Software Como Servicio四站逐项资格、免费/徽章与证据等级 |
+| [docs/v24-curated-design-and-spanish-launch-20261031.md](docs/v24-curated-design-and-spanish-launch-20261031.md) | **V24逐站投稿指南**：真实官网入口、精确字段、英语/西语文案及排除原因 |
 | [data/v23-design-submission-check.csv](data/v23-design-submission-check.csv) | **V23**：新增3家字体/设计资源目录及Enlineados已有#3资格复核，独立记录免费/语种/限制/审核状态 |
 | [docs/v23-spanish-typography-resource-submissions-20261031.md](docs/v23-spanish-typography-resource-submissions-20261031.md) | **V23逐站操作说明**：UX Resources、LDS Library、Fountn、Enlineados；附可复制文案及证据缺口 |
 | [data/v22-link-evidence-audit.csv](data/v22-link-evidence-audit.csv) | **10家逐站证据审计**：官方承诺、第三方rel抽样、实例、真实申请状态与DR来源 |
@@ -28,7 +30,7 @@
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-31 / V23。** 当前历史台账累计 163 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-31 / V24。** 当前历史台账累计 167 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -112,3 +114,10 @@
 - 本次独立复核了历史已有的 **Enlineados（#3）**：只收西语且官网免费，但其**拒绝免费主机站点**，因此自购域名+免费Cloudflare Pages托管是否符合需先确认，绝不能虚填地点。
 - V22的6家行动清单仍独立保留；V23新三家记录于新证据表，避免因混用口径改写V22十家审计结果。
 - 实际新增提交 **0**、获批 **0**、已确认公开获链 **0**；所有新渠道的实时DR/AS、外链rel及索引保持“未实测”。
+
+## V24 更新（2026-10-31）
+
+- 主库从163增至 **167条**：Unikist (#164，设计工具投稿)、Mark-it (#165，设计资源人工精选)、DailyLaunch (#166，有西语免费产品发布，但网站需badge才获官网承诺的Follow)、Software Como Servicio (#167，免费强制Dofollow徽章，**排除**)。
+- 两家公开设计投稿表单可尝试，但本轮**未独立实测DR/AS、目标页rel、Google索引、审核成功率**。DailyLaunch不计无条件免费Follow；Software Como Servicio不能以免费名义要求AdSense站装回链。
+- 已核对The Tool Directory旧来源#9已是正确新版提交页，避免重复新增。Illustration.tools仍直接抓取超时，不算当前可执行。
+- 本轮新增成功提交 **0**，经审核确认的新外链 **0**；V22的6家、V23的4项以及既往真实联络历史均保留不变。
