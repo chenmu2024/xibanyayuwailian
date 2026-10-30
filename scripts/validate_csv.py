@@ -14,6 +14,7 @@ LEDGER = ROOT / "data/submission-ledger.csv"
 EDITORIAL = ROOT / "data/editorial-prospects.csv"
 EDITORIAL_CONTACTS = ROOT / "data/editorial-outreach-ledger.csv"
 SHORTLIST = ROOT / "data/reusable-free-shortlist.csv"
+EDUCATION = ROOT / "data/education-resource-submissions.csv"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -36,8 +37,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) < 154:
-        fail(f"V19 baseline has 154 rows; catalog unexpectedly shrank to {len(catalog)}.")
+    if len(catalog) < 157:
+        fail(f"V20 baseline has 157 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -128,10 +129,26 @@ def main():
     if any(not r["最新官方依据"].strip() for r in shortlist):
         fail("All shortlisted channels need an evidence source.")
 
+
+    headers_ed, education = read(EDUCATION)
+    for key in ["教育资源平台", "渠道根域名", "原始官网资料", "直接公开投稿入口",
+                "目标资源URL", "关键版权或身份门槛", "当前状态", "核验日期"]:
+        if key not in headers_ed:
+            fail(f"Missing education submission column: {key}")
+    if len(education) < 3:
+        fail("V20 education resource research must preserve at least three entries.")
+    e_domains = [registered_domain_hint(r["渠道根域名"]) for r in education]
+    if any(not x for x in e_domains) or len(set(e_domains)) != len(e_domains):
+        fail("Invalid or duplicate education resource platform domains.")
+    if any(not r["关键版权或身份门槛"].strip() or not r["原始官网资料"].strip()
+           for r in education):
+        fail("Education resources require explicit copyright/identity conditions and source.")
+
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
     print(f"Editorial: {len(editorial)} prospects, {len(outreach)} historical outreach records.")
     print(f"Strict free-first shortlist: {len(shortlist)} distinct channels; actual Follow/DR not guaranteed.")
+    print(f"Education resource platforms: {len(education)} conditional entries; rights/status must be verified.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
