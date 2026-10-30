@@ -6,9 +6,11 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V24 累计167条渠道/候选（保留V23的163条，本轮新增4条其中1条明确排除），完整保留历史记录 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V25 累计171条渠道/候选（保留V24的167条，本轮新增4条；另修正历史#109强制Badge状态），完整保留历史记录 |
 | [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的15家历史申请候选（含条件、低优先项目），不要全部照单提交 |
 | [data/actionable-applications-v22.csv](data/actionable-applications-v22.csv) | **现在先看这张**：6家当前可尝试申请的免费优先渠道，含入口与填写准备（不保证审核/Follow） |
+| [data/v25-spanish-resource-evidence.csv](data/v25-spanish-resource-evidence.csv) | **V25** 四家新研究来源逐条证据与已提交真相：两家可尝试、两家条件 |
+| [docs/v25-spanish-and-design-resource-submissions-20261031.md](docs/v25-spanish-and-design-resource-submissions-20261031.md) | **V25** 西语目录、免费设计工具、GitHub Issue、需核实弹窗与历史强制Badge纠错 |
 | [data/v24-curated-submission-audit.csv](data/v24-curated-submission-audit.csv) | **V24**：Unikist、Mark-it、DailyLaunch和Software Como Servicio四站逐项资格、免费/徽章与证据等级 |
 | [docs/v24-curated-design-and-spanish-launch-20261031.md](docs/v24-curated-design-and-spanish-launch-20261031.md) | **V24逐站投稿指南**：真实官网入口、精确字段、英语/西语文案及排除原因 |
 | [data/v23-design-submission-check.csv](data/v23-design-submission-check.csv) | **V23**：新增3家字体/设计资源目录及Enlineados已有#3资格复核，独立记录免费/语种/限制/审核状态 |
@@ -30,7 +32,7 @@
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-31 / V24。** 当前历史台账累计 167 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-31 / V25。** 当前历史台账累计 171 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -121,3 +123,10 @@
 - 两家公开设计投稿表单可尝试，但本轮**未独立实测DR/AS、目标页rel、Google索引、审核成功率**。DailyLaunch不计无条件免费Follow；Software Como Servicio不能以免费名义要求AdSense站装回链。
 - 已核对The Tool Directory旧来源#9已是正确新版提交页，避免重复新增。Illustration.tools仍直接抓取超时，不算当前可执行。
 - 本轮新增成功提交 **0**，经审核确认的新外链 **0**；V22的6家、V23的4项以及既往真实联络历史均保留不变。
+
+## V25 更新（2026-10-31）
+
+- 历史总库从167增至 **171条**：Herramientas y Recursos (#168，纯西语目录真实投稿表单)、FreeDesignerTools (#169，真实设计工具建议表单)、Ghostbyte Library (#170，官方GitHub Issue但采纳未知)、FounderOmni (#171，有西语资源建议控件但展开后的实际提交资格未核实)。
+- **纠错现有#109 AI Webcatalog**：官网现在明确免费审核也必须安装Badge及填写徽章落地页，且仅适合AI工具；改为排除。保留历史行与证据。
+- 编辑推荐线索新增 Best Productivity Resources E006，官网要求作者LinkedIn私信，**不属于可直接提交的普通目录表单**。
+- 本轮实际第三方递交 **0**、新获批 **0**、新真实获链 **0**；实时DR/AS、真实rel、Google索引和引荐访问均未独立验收。
