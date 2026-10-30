@@ -128,8 +128,7 @@ def main():
         fail("Reusable shortlist must have unique platform domains.")
     if any(not r["最新官方依据"].strip() for r in shortlist):
         fail("All shortlisted channels need an evidence source.")
-    master_names = "\
-".join(
+    master_names = chr(10).join(
         " ".join((r["平台/域名"], r["提交入口URL"], r["官方来源URL"])).lower()
         for r in catalog
     )
