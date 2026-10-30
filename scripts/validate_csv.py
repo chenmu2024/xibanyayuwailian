@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import csv
-import json
 from collections import Counter
 from pathlib import Path
 from urllib.parse import urlparse
@@ -24,8 +23,6 @@ V25 = ROOT / "data/v25-spanish-resource-evidence.csv"
 V26 = ROOT / "data/v26-new-source-audit.csv"
 ALL_GUIDE = ROOT / "docs/all-176-backlink-submission-methods.md"
 QUICK_GUIDE = ROOT / "docs/lettering-priority-21-ready-to-fill.md"
-WORKBENCH = ROOT / "docs/backlink-submission-workbench.html"
-WORKBENCH_GUIDE = ROOT / "docs/workbench-quickstart-v28.md"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
