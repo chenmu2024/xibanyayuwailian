@@ -37,3 +37,7 @@
 27. 第三方FinderLaunch把TOOOLS.design标为Nofollow/DR47；Submitator抽样Good Design Tools（60页面390外链、无rel、DR25）是利益相关来源。**任何第三方报告不可冒充我们实时DOM或Ahrefs实测**，必须在数据中保留日期、来源和局限。
 28. 新增Freebie Supply仅限有明确授权的原创可免费设计素材；页面不显示可填写表单时标为条件，不得声明可一键投稿。UI Goodies应归编辑媒体线索而不是可自动投稿的目录；必须符合它的设计质量与广告体验规则。
 29. 准备行动清单时先复查官方提交页、用户网站实际功能、历史去重、免费和回链限制，不要将“已注册/已填写/已批准/真实Follow/被Google索引”混为一种状态。
+
+30. V23新增3条真实不重复研究候选：Fountn（独立Notion表单未读到，条件）、UX Resources（公开Typography工具投稿）、LDS Library（编辑审核）。不要将新增候选写成已提交，亦不要倒灌成V22的六家行动名单。
+31. Enlineados官方明确拒绝免费主机托管的网站：自购域名+免费Cloudflare Pages的合规性需向平台核实；禁止猜选国家/城市。不因纯西语适配就跳过其余资格审核。
+32. LDS Library的提交站点是lds-library.vercel.app，运营方为legitdesign.studio；在跨站提交查重时同时核对别名，不能把所有vercel.app子域视为同一来源。Fountn的官网按钮跳Notion，而不是已获编辑收录。
