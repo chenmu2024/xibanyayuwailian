@@ -6,9 +6,11 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V21 累计159条渠道/候选（V20原157条保留，本轮新增2条），完整保留历史记录 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V22 累计160条渠道/候选（V21原159条保留，本轮新增1条），完整保留历史记录 |
 | [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的15家历史申请候选（含条件、低优先项目），不要全部照单提交 |
-| [data/reusable-free-shortlist.csv](data/reusable-free-shortlist.csv) | **优先看这张**：10家无已确认强制回链徽章的免费/待核验渠道，区分资格与证据缺口 |
+| [data/actionable-applications-v22.csv](data/actionable-applications-v22.csv) | **现在先看这张**：6家当前可尝试申请的免费优先渠道，含入口与填写准备（不保证审核/Follow） |
+| [data/v22-link-evidence-audit.csv](data/v22-link-evidence-audit.csv) | **10家逐站证据审计**：官方承诺、第三方rel抽样、实例、真实申请状态与DR来源 |
+| [data/reusable-free-shortlist.csv](data/reusable-free-shortlist.csv) | 原10家无已确认强制回链徽章的研究清单，含已暂停或需核实渠道，**不等于10家可立即申请** |
 | [data/education-resource-submissions.csv](data/education-resource-submissions.csv) | V20：3家教育资源馆藏渠道，明确非广告、教育资格及开放版权硬门槛 |
 | [data/submission-ledger.csv](data/submission-ledger.csv) | 跨网站申请台账：以目标域名 × 外链平台注册根域名去重 |
 | [docs/submit-guide-v16.md](docs/submit-guide-v16.md) | V16 逐站操作指南、西语/英文文案、已知限制 |
@@ -17,13 +19,14 @@
 | [docs/v19-design-quality-and-shortlist-20261030.md](docs/v19-design-quality-and-shortlist-20261030.md) | **V19**：DesignTrash拒收条款、DesignBookmark语言限制、DesignMunk免费Nofollow、严格申请建议 |
 | [docs/v20-educational-resource-channels-20261031.md](docs/v20-educational-resource-channels-20261031.md) | **V20**：MERLOT同类素材案例、OER Commons版权要求、Procomún当前HTTP500及逐字段投稿说明 |
 | [docs/v21-curated-design-submissions-20261031.md](docs/v21-curated-design-submissions-20261031.md) | **V21**：两家真实设计投稿表单、官方精选规则、editor内页实测与可直接复制英文文案 |
-| [data/editorial-prospects.csv](data/editorial-prospects.csv) | 独立编辑推荐候选清单（不等于免费投稿许可） |
+| [docs/v22-backlink-evidence-and-six-actionable-submissions-20261031.md](docs/v22-backlink-evidence-and-six-actionable-submissions-20261031.md) | **V22**：10家证据分级、6家可尝试投稿、历史条件纠错与原创设计素材渠道 |
+| [data/editorial-prospects.csv](data/editorial-prospects.csv) | 5家独立编辑推荐线索（新增UI Goodies；不等于免费投稿许可） |
 | [data/editorial-outreach-ledger.csv](data/editorial-outreach-ledger.csv) | 跨网站真实编辑部联络历史：防止重复发送 |
 | [docs/quality-policy.md](docs/quality-policy.md) | 证据等级、DR/AS/rel 核验、风险与验收定义 |
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-31 / V21。** 该版历史台账累计 159 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-31 / V22。** 该版历史台账累计 160 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -92,3 +95,11 @@
 - 可实际操作的原历史队列由13增至**15家**；更严格的免费优先研究清单由8增至**10家**。两家新渠道均未测得最新DR/AS，也不能保证出站Follow或Google索引。
 - Usetools.Design 普通收录目前明确需€9.99，因此不应列入免费外链；Itmeo Index虽有字体工具馆藏，但没找到真实官方提交表单，不列入“可直接申请”。
 - 没有向外部表单提交网站，也没有把新增候选计入已获链。**V21新获链0条。**
+
+## V22 更新（2026-10-31）
+
+- 总库新增 **Freebie Supply（#160）**：官方只接受原创免费素材，当前Submit Freebie页面无法核实实际可填写字段；这**不是**可立即提交的免费高DR渠道。
+- 原10家重点候选完成证据分级审计：**TopTool官方暂停新投稿；Toolfound新的初次投稿步骤为URL、Email、Logo；TOOOLS.design第三方标为Nofollow/参考DR47；Good Design Tools第三方抽样60页390条外链无rel，参考DR25但仍需复测**。
+- 建立6家可尝试申请的独立执行名单：LaunchFree、NoSignupTools、Design Resources Archive、Toolfound、PeplioHUB、DesignTools.fyi。只表示当前有公开入口及免费基础条件，**不等于审核或Follow已确认**。
+- 编辑推荐新增 **UI Goodies（E005）**，由人工设计编辑选择，官网不出售普通入选；对广告干扰严重的站点可能拒绝。
+- 现有15家历史队列、10家研究清单与实际提交台账都保留；本轮**实际新提交0，新增已获链0**。
