@@ -2,7 +2,7 @@
 
 本仓库用于**西班牙语网站通用外链库**，任何 AI、Codex 或维护脚本必须遵守：
 
-1. 先读取 `README.md`、`docs/quality-policy.md`、`data/backlinks-master.csv`、`data/reusable-free-shortlist.csv`、`data/education-resource-submissions.csv`、`data/submission-ledger.csv`、`data/editorial-prospects.csv`、`data/editorial-outreach-ledger.csv`，再查找或更新渠道。
+1. 先读取 `README.md`、`docs/quality-policy.md`、`data/backlinks-master.csv`、`data/actionable-applications-v22.csv`、`data/v22-link-evidence-audit.csv`、`data/reusable-free-shortlist.csv`、`data/education-resource-submissions.csv`、`data/submission-ledger.csv`、`data/editorial-prospects.csv`、`data/editorial-outreach-ledger.csv`，再查找或更新渠道。
 2. 同一根域名的渠道必须跨 V1–V16 历史去重。新增来源先搜索总库；不要为了数量新增同一站点的其他提交URL。
 3. 保留全部历史及排除记录，不得因为网站关闭、收费或被降级而偷偷删行；修改状态时写明官方依据与核验日期。
 4. 新渠道应先核实**免费、实际可提交、接受西语/目标站型、存在可公开访问的资料页、是否强制互链**；权威值和 Follow 属性只有证据时才填写，未知一律“未核实”。
@@ -31,3 +31,9 @@
 22. V21：`TOOOLS.design` 和 `resourcesfor.design` 均有官方投稿表单，但只证实无即时付款/换链字段，**不代表已确认永久免费Follow、已获准收录、已测DR/AS**。2026-10-31官网条件变动需再次确认。
 23. 对设计类资源推荐 `https://generadordelettering.org/editor` 的真实可视化编辑功能，不要声称该在线工具提供 TTF/OTF字体文件、SVG打印文件或专业DPI保证；对不同网站必须逐一核对实际功能。
 24. 网站已有公开投稿页与真正已被馆藏收录是两个状态，不能把没有收费步骤推断为“获链成功”。每次保持Github源记录、申请队列、短名单与文案一致。
+
+25. V22开始区分三个层级：**历史总库（允许排除）→有证据的研究名单（允许暂时暂停）→当前可尝试申请的行动清单（必须确认公开免费入口）**；不要把一个层级的数据直接充当下一级的成功事实。
+26. TopTool在2026-10-31官网明确暂停新申请，不能未经官网恢复证据放入行动清单；品牌认领的DNS/Meta验证不能错写为首次投稿必需步骤。
+27. 第三方FinderLaunch把TOOOLS.design标为Nofollow/DR47；Submitator抽样Good Design Tools（60页面390外链、无rel、DR25）是利益相关来源。**任何第三方报告不可冒充我们实时DOM或Ahrefs实测**，必须在数据中保留日期、来源和局限。
+28. 新增Freebie Supply仅限有明确授权的原创可免费设计素材；页面不显示可填写表单时标为条件，不得声明可一键投稿。UI Goodies应归编辑媒体线索而不是可自动投稿的目录；必须符合它的设计质量与广告体验规则。
+29. 准备行动清单时先复查官方提交页、用户网站实际功能、历史去重、免费和回链限制，不要将“已注册/已填写/已批准/真实Follow/被Google索引”混为一种状态。
