@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 MASTER = ROOT / "data/backlinks-master.csv"
 QUEUE = ROOT / "data/priority-queue.csv"
 LEDGER = ROOT / "data/submission-ledger.csv"
+EDITORIAL = ROOT / "data/editorial-prospects.csv"
+EDITORIAL_CONTACTS = ROOT / "data/editorial-outreach-ledger.csv"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -33,8 +35,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) < 150:
-        fail(f"V17 baseline has 150 rows; catalog unexpectedly shrank to {len(catalog)}.")
+    if len(catalog) < 151:
+        fail(f"V18 baseline has 151 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -74,8 +76,43 @@ def main():
         if stage == "已上线" and not r["公开条目URL"].strip():
             fail(f"Approved link has no public URL: {key}")
 
+
+    headers_e, editorial = read(EDITORIAL)
+    required_e = ["编号", "媒体/域名", "官方联系入口", "执行状态", "是否可保证链接"]
+    for key in required_e:
+        if key not in headers_e:
+            fail(f"Missing editorial prospect column: {key}")
+    if len(editorial) < 4:
+        fail("V18 baseline requires at least four editorial prospects.")
+    editorial_ids = [r["编号"].strip() for r in editorial]
+    if len(set(editorial_ids)) != len(editorial_ids):
+        fail("Duplicate editorial prospect IDs.")
+    if any("保证" not in (r["是否可保证链接"] or "") for r in editorial):
+        fail("Editorial prospects must explicitly state that a backlink is not guaranteed.")
+
+    headers_o, outreach = read(EDITORIAL_CONTACTS)
+    required_o = ["目标网站", "目标媒体", "收件公开地址", "发送日期", "邮件主题", "接触状态"]
+    for key in required_o:
+        if key not in headers_o:
+            fail(f"Missing editorial outreach ledger column: {key}")
+    if len(outreach) < 2:
+        fail("V18 baseline requires the two pre-existing sent outreach records.")
+    contacts_seen = set()
+    for r in outreach:
+        target = registered_domain_hint(r["目标网站"])
+        media = registered_domain_hint(r["目标媒体"])
+        if not target or not media:
+            fail("Editorial outreach requires valid target and publisher domains.")
+        k = (target, media, r["邮件主题"].strip())
+        if k in contacts_seen:
+            fail(f"Duplicate editorial outreach record: {k}")
+        contacts_seen.add(k)
+        if not r["发送日期"].strip():
+            fail(f"Outreach marked as sent lacks date: {k}")
+
     priorities = Counter(r["优先级"].strip() for r in catalog)
-    print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} ledger records.")
+    print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
+    print(f"Editorial: {len(editorial)} prospects, {len(outreach)} historical outreach records.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
