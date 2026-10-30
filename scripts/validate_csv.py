@@ -14,6 +14,8 @@ LEDGER = ROOT / "data/submission-ledger.csv"
 EDITORIAL = ROOT / "data/editorial-prospects.csv"
 EDITORIAL_CONTACTS = ROOT / "data/editorial-outreach-ledger.csv"
 SHORTLIST = ROOT / "data/reusable-free-shortlist.csv"
+AUDIT = ROOT / "data/v22-link-evidence-audit.csv"
+ACTIONABLE = ROOT / "data/actionable-applications-v22.csv"
 EDUCATION = ROOT / "data/education-resource-submissions.csv"
 
 def read(path: Path):
@@ -37,8 +39,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) < 159:
-        fail(f"V21 baseline has 159 rows; catalog unexpectedly shrank to {len(catalog)}.")
+    if len(catalog) < 160:
+        fail(f"V22 baseline has 160 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -84,8 +86,8 @@ def main():
     for key in required_e:
         if key not in headers_e:
             fail(f"Missing editorial prospect column: {key}")
-    if len(editorial) < 4:
-        fail("V18 baseline requires at least four editorial prospects.")
+    if len(editorial) < 5:
+        fail("V22 baseline requires at least five editorial prospects.")
     editorial_ids = [r["编号"].strip() for r in editorial]
     if len(set(editorial_ids)) != len(editorial_ids):
         fail("Duplicate editorial prospect IDs.")
@@ -151,11 +153,39 @@ def main():
            for r in education):
         fail("Education resources require explicit copyright/identity conditions and source.")
 
+
+    audit_fields, audit = read(AUDIT)
+    for key in ["根域名", "官网提交/资格依据", "第三方rel抽样证据", "V22动作级别"]:
+        if key not in audit_fields:
+            fail(f"Missing V22 evidence audit column: {key}")
+    if len(audit) != 10:
+        fail(f"V22 must preserve ten reviewed shortlist sites; got {len(audit)}.")
+    audited_domains = [registered_domain_hint(r["根域名"]) for r in audit]
+    if len(set(audited_domains)) != 10:
+        fail("Duplicate or missing audited platform domains.")
+    if set(audited_domains) != set(shortlist_domains):
+        fail("V22 audit domains and research shortlist must match.")
+
+    act_fields, active = read(ACTIONABLE)
+    for key in ["平台根域名", "当前入口", "当前阻断", "出站Follow实测", "当前申请状态"]:
+        if key not in act_fields:
+            fail(f"Missing V22 actionable applications column: {key}")
+    if len(active) != 6:
+        fail(f"V22 initial actionable list must contain six candidates, got {len(active)}.")
+    act_domains = [registered_domain_hint(r["平台根域名"]) for r in active]
+    if len(set(act_domains)) != 6 or not set(act_domains).issubset(set(audited_domains)):
+        fail("Actionable domains must be unique and all come from audited shortlist.")
+    if "toptool.io" in act_domains:
+        fail("TopTool is paused for new submissions and cannot be called currently actionable.")
+    if any(r["当前申请状态"].strip() != "未提交" for r in active):
+        fail("Actionable list may not claim submissions without supported ledger evidence.")
+
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
     print(f"Editorial: {len(editorial)} prospects, {len(outreach)} historical outreach records.")
     print(f"Strict free-first shortlist: {len(shortlist)} distinct channels; actual Follow/DR not guaranteed.")
     print(f"Education resource platforms: {len(education)} conditional entries; rights/status must be verified.")
+    print(f"V22: {len(audit)} audited directory candidates and {len(active)} currently actionable research targets.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
