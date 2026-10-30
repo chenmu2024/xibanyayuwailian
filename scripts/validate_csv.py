@@ -33,8 +33,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) != 146:
-        print(f"NOTICE: base V16 had 146 rows; current file has {len(catalog)}. Check the change log.")
+    if len(catalog) < 150:
+        fail(f"V17 baseline has 150 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -42,6 +42,9 @@ def main():
         fail(f"Duplicate record IDs: {dup_ids}")
     if any(not n.isdigit() for n in ids):
         fail("All catalog IDs must be numeric.")
+    numbers = [int(n) for n in ids]
+    if numbers != list(range(1, len(numbers) + 1)):
+        fail("Catalog IDs must be sequential and historical rows must stay in place.")
 
     bad_entries = [
         r["编号"] for r in catalog
