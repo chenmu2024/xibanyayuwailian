@@ -54,3 +54,8 @@
 40. V26新增EpicTools #172（仅URL+Design分类可尝试）；Learnlists #173仅教育教学资源有条件，不得投稿普通字体转换首页；Illustration Tools #174官网直访超时，搜索快照不代表当前可投。
 41. Discoverly #175官方要求免费提交前先安装Featured badge，与第三方免徽章线索相矛盾，以官网优先，排除；YAJU #176明确只收墨西哥有实际关系网站，不能只凭西语或虚构国家地点投稿。
 42. The Creative Vault E007为编辑邮件资源建议，必须存入editorial-prospects，不能冒充免费表单、已联系或已获链；没有用户许可时不自动发送。
+
+43. V27新增一份可复用总手册`docs/all-176-backlink-submission-methods.md`，按主库原编号独立列出176个渠道；每条的步骤都从当时记录整理，**并不构成全部平台当日重新实测或已经拿到链接**。历史新增/更新来源后应同步重建总手册和相应链接，保持逐条对应。
+44. `docs/lettering-priority-21-ready-to-fill.md`专门针对Generador de Lettering为21条优先研究候选提供真实字段和值；卡片不是实际完成提交/获链/Follow的证明。切换其他网站必须更换品牌、域名、真实功能、截图、价格、作者与资格。
+45. 从此用户要填写方式，应优先给出`一站一个入口 + 分步骤 + 具体字段值 + 真实限制`，而非长表或只给排名/DR；遇到排除、暂停、无法访问、版权/教育/地域/强制badge，明确写“不提交”。不得因总库176条就称有176条可免费申请。
+46. 新增`docs/all-176-backlink-submission-methods.md`为历史资料的衍生文档，`data/backlinks-master.csv`和`data/submission-ledger.csv`仍是事实来源；不能因为填写卡有示例，就更新台账为已提交、已上线或独立测得Follow。
