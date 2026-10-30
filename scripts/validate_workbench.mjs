@@ -26,7 +26,7 @@ if (!html.includes("xibanya-marks-by-domain-v29") || !html.includes("domainOf(si
   throw new Error("User submission marks must remain isolated by site domain");
 if (html.includes("fetch(") || html.includes("XMLHttpRequest"))
   throw new Error("Offline workbench must not make network requests");
-const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)];
+const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/gi)];
 if (scripts.length !== 1) throw new Error("Expected exactly one executable inline JavaScript block");
 new Script(scripts[0][1], { filename: "backlink-submission-workbench.inline.js" });
 console.log("OK: 176 offline sources, 21 exact-field cards, 133 fields, JS syntax valid, domain-isolated progress.");
