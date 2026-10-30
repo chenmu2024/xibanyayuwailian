@@ -13,6 +13,7 @@ QUEUE = ROOT / "data/priority-queue.csv"
 LEDGER = ROOT / "data/submission-ledger.csv"
 EDITORIAL = ROOT / "data/editorial-prospects.csv"
 EDITORIAL_CONTACTS = ROOT / "data/editorial-outreach-ledger.csv"
+SHORTLIST = ROOT / "data/reusable-free-shortlist.csv"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -35,8 +36,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) < 151:
-        fail(f"V18 baseline has 151 rows; catalog unexpectedly shrank to {len(catalog)}.")
+    if len(catalog) < 154:
+        fail(f"V19 baseline has 154 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -110,9 +111,27 @@ def main():
         if not r["发送日期"].strip():
             fail(f"Outreach marked as sent lacks date: {k}")
 
+
+    headers_s, shortlist = read(SHORTLIST)
+    for key in ["排序", "渠道根域名", "平台名称", "免费提交已证实",
+                "强制反向徽章", "真实Rel实测", "实时DR/AS实测",
+                "最新官方依据", "状态与下一步", "提交状态"]:
+        if key not in headers_s:
+            fail(f"Missing reusable shortlist column: {key}")
+    if len(shortlist) < 8:
+        fail("V19 shortlist must preserve at least eight qualified research candidates.")
+    shortlist_domains = [registered_domain_hint(r["渠道根域名"]) for r in shortlist]
+    if not all(shortlist_domains):
+        fail("Reusable shortlist has an empty domain.")
+    if len(set(shortlist_domains)) != len(shortlist_domains):
+        fail("Reusable shortlist must have unique platform domains.")
+    if any(not r["最新官方依据"].strip() for r in shortlist):
+        fail("All shortlisted channels need an evidence source.")
+
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
     print(f"Editorial: {len(editorial)} prospects, {len(outreach)} historical outreach records.")
+    print(f"Strict free-first shortlist: {len(shortlist)} distinct channels; actual Follow/DR not guaranteed.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
