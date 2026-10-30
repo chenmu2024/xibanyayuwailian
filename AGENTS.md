@@ -41,3 +41,7 @@
 30. V23新增3条真实不重复研究候选：Fountn（独立Notion表单未读到，条件）、UX Resources（公开Typography工具投稿）、LDS Library（编辑审核）。不要将新增候选写成已提交，亦不要倒灌成V22的六家行动名单。
 31. Enlineados官方明确拒绝免费主机托管的网站：自购域名+免费Cloudflare Pages的合规性需向平台核实；禁止猜选国家/城市。不因纯西语适配就跳过其余资格审核。
 32. LDS Library的提交站点是lds-library.vercel.app，运营方为legitdesign.studio；在跨站提交查重时同时核对别名，不能把所有vercel.app子域视为同一来源。Fountn的官网按钮跳Notion，而不是已获编辑收录。
+
+33. V24维护：新增Unikist（#164）、Mark-it（#165）为人工设计投稿候选。DailyLaunch（#166）免费发布不等于免费Dofollow，其官网明确需要回链徽章才改为Dofollow；不能擅自添加。
+34. Software Como Servicio（#167）免费收录明确强制自站徽章与Dofollow反向链接，按排除处理；不为已上线AdSense站引入互链。Illustration.tools抓取超时，不作为当前可申请。
+35. 新增待审核设计目录需真实可用界面和真实作者/联系资料，官网表单无付款字段≠独立获链/高DR。不同网站同平台重复投递前查目标域名×平台注册根域名。
