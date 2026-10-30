@@ -37,8 +37,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) < 157:
-        fail(f"V20 baseline has 157 rows; catalog unexpectedly shrank to {len(catalog)}.")
+    if len(catalog) < 159:
+        fail(f"V21 baseline has 159 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -119,8 +119,8 @@ def main():
                 "最新官方依据", "状态与下一步", "提交状态"]:
         if key not in headers_s:
             fail(f"Missing reusable shortlist column: {key}")
-    if len(shortlist) < 8:
-        fail("V19 shortlist must preserve at least eight qualified research candidates.")
+    if len(shortlist) < 10:
+        fail("V21 shortlist must preserve at least ten qualified research candidates.")
     shortlist_domains = [registered_domain_hint(r["渠道根域名"]) for r in shortlist]
     if not all(shortlist_domains):
         fail("Reusable shortlist has an empty domain.")
@@ -128,6 +128,10 @@ def main():
         fail("Reusable shortlist must have unique platform domains.")
     if any(not r["最新官方依据"].strip() for r in shortlist):
         fail("All shortlisted channels need an evidence source.")
+    master_names = "\\n".join(r["平台/域名"].lower() for r in catalog)
+    for platform in shortlist_domains:
+        if platform not in master_names:
+            fail(f"Shortlisted platform not found in catalog by domain: {platform}")
 
 
     headers_ed, education = read(EDUCATION)
