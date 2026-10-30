@@ -6,9 +6,11 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
+| **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
 | [data/backlinks-master.csv](data/backlinks-master.csv) | V26 累计176条渠道/候选（保留V25的171条，本轮新添5条，含条件/排除），完整保留历史记录 |
 | [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的15家历史申请候选（含条件、低优先项目），不要全部照单提交 |
-| [data/actionable-applications-v22.csv](data/actionable-applications-v22.csv) | **现在先看这张**：6家当前可尝试申请的免费优先渠道，含入口与填写准备（不保证审核/Follow） |
+| [data/actionable-applications-v22.csv](data/actionable-applications-v22.csv) | V22原版6家经证据分级的可尝试来源历史快照；不是本次21家填写卡，也不保证Follow |
 | [data/v26-new-source-audit.csv](data/v26-new-source-audit.csv) | **V26**：五家新渠道的免费、语言、提交入口、Google索引、外链与资格证据 |
 | [docs/v26-typography-education-submission-20261031.md](docs/v26-typography-education-submission-20261031.md) | **V26逐站提交说明**：EpicTools、Learnlists、Illustration Tools、Discoverly与YAJU |
 | [data/v25-spanish-resource-evidence.csv](data/v25-spanish-resource-evidence.csv) | **V25** 四家新研究来源逐条证据与已提交真相：两家可尝试、两家条件 |
@@ -139,3 +141,13 @@
 - 新增独立**编辑邮件线索E007 The Creative Vault**；不与可填表的普通目录混淆，本轮没有发送任何邮件。
 - 这批仅 EpicTools 为当前优先可尝试入口；其免费投稿不等于已获Follow。真实DR/AS、目标页rel、Google实际索引未实测。
 - 实际新申请0、获批0、新确认获链0；保存全部历史和既有提交台账。
+
+## V27｜已存档176个渠道全部逐站填写方法（2026-10-31）
+
+**本次不新增外链渠道，仍是176条历史记录。** 将`data/backlinks-master.csv`第1至176号全部转成独立的可点击操作段落：每段均包含官网/表单、适用网站和语言、收费审核、历史具体步骤、Lettering填写示例、平台限制及证据层级。另从编辑媒体台账引入E001–E007七家联系线索，但不会把它们冒充普通目录。
+
+- **全量手册（176个独立操作段落）**：[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)
+- **优先填写卡（21家、平台真实字段/准备图片）**：[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)
+- 历史分类：**P1 30条 / P2 21条 / 条件77条 / 待核验14条 / 排除33条 / 非外链1条**。其中#026 TopTool官网暂停新申请，#003 Enlineados免费托管资格需询问；这些属于历史状态而非今日全量复核。
+- 2026-10-31官方重核证实：TopTool当前暂停；Enlineados官方排除免费主机站点。已在手册单列醒目警告。
+- 本次**不发送邮件、不申请第三方账号、不实际提交网站、不装回链徽章、不修改历史递交台账**；新增成功获链仍未确认，DR/AS与真实Follow也不冒称已测。
