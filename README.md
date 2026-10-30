@@ -6,19 +6,21 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V18 累计151条渠道/候选（V17原150条保留，本轮新增1条），完整保留历史记录 |
-| [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的当前13家重点渠道，按实际执行顺序排列 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V19 累计154条渠道/候选（V18原151条保留，本轮新增3条），完整保留历史记录 |
+| [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的13家历史申请候选（含部分不推荐项），不要全部照单提交 |
+| [data/reusable-free-shortlist.csv](data/reusable-free-shortlist.csv) | **优先看这张**：8家免强制回链徽章的免费/待核验渠道，区分资格与证据缺口 |
 | [data/submission-ledger.csv](data/submission-ledger.csv) | 跨网站申请台账：以目标域名 × 外链平台注册根域名去重 |
 | [docs/submit-guide-v16.md](docs/submit-guide-v16.md) | V16 逐站操作指南、西语/英文文案、已知限制 |
 | [docs/v17-new-channels-20261030.md](docs/v17-new-channels-20261030.md) | V17 新增4家的官网证据、适配性、申请步骤、风险与填写模板 |
 | [docs/v18-editorial-and-typography-20261030.md](docs/v18-editorial-and-typography-20261030.md) | V18 Typography新入口、4家西语编辑媒体及历史邮件查重报告 |
+| [docs/v19-design-quality-and-shortlist-20261030.md](docs/v19-design-quality-and-shortlist-20261030.md) | **V19**：DesignTrash拒收条款、DesignBookmark语言限制、DesignMunk免费Nofollow、严格申请建议 |
 | [data/editorial-prospects.csv](data/editorial-prospects.csv) | 独立编辑推荐候选清单（不等于免费投稿许可） |
 | [data/editorial-outreach-ledger.csv](data/editorial-outreach-ledger.csv) | 跨网站真实编辑部联络历史：防止重复发送 |
 | [docs/quality-policy.md](docs/quality-policy.md) | 证据等级、DR/AS/rel 核验、风险与验收定义 |
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-30 / V18。** 该版历史台账累计 151 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-30 / V19。** 该版历史台账累计 154 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -62,3 +64,12 @@
 - Lettering 优先队列更新至 **13家**。
 - 新增独立的**编辑媒体线索（4家）**与**既往编辑部联系台账（2条已发送记录）**：Gràffica 已于2026-10-25收到本网站介绍；EDUCACIÓN 3.0 于2026-10-12收到另一网站的教学材料。不能短期重复发送。
 - 历史151个候选并不代表151条有效外链；本轮实际新增成功外链**0条**，未替用户发送新邮件或提交新表单。
+
+## V19（2026-10-30）实际进展
+
+- 新增 **DesignTrash、DesignBookmark、DesignMunk** 三家来源至总库（152–154）；它们都有明确**资格限制或免费Nofollow问题**，均未放进Lettering主优先队列。
+- 新增8家更严格的免费优先/免强制徽章研究清单，先确认语言、广告、工具类型及免费规则，**不能把8家等同于8条已获链或8家已确认Follow**。
+- DesignTrash明确拒绝关键词单功能生成器（举例cursive font generator），因此不建议对其投递Generador de Lettering。
+- DesignMunk免费收录明确Nofollow；付费升级不得算“免费Follow”。
+- Font Blend网页虽然提议通过GitHub提交资源PR，但公开仓库现仅README，没有能直接修改的资源数据文件；未列为可直接投稿入口。
+- 自动校验基线调整为154条，并新增8家严格清单的重复根域名和必填依据检查。实际新增已获链仍为 **0条**；本轮没有第三方提交或邮件发送。
