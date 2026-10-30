@@ -273,19 +273,19 @@ def main():
     # including exclusions, without conflating a submission guide with earned links.
     import re
     all_guide = ALL_GUIDE.read_text(encoding="utf-8")
-    anchors = [int(s) for s in re.findall(r'<a id="link-(\\d{3})"></a>', all_guide)]
+    anchors = [int(s) for s in re.findall(r'<a id="link-(\d{3})"></a>', all_guide)]
     if anchors != list(range(1, len(catalog) + 1)):
         fail(f"Full submission manual anchors are incomplete or out of catalog order: {len(anchors)} / {len(catalog)}")
     for entry in catalog:
         if entry["提交入口URL"].strip() not in all_guide:
             fail(f"Full submission manual lacks official entry for #{entry['编号']}")
-    media_sections = re.findall(r"^### E\\d{3}\\.", all_guide, flags=re.M)
+    media_sections = re.findall(r"^### E\d{3}\.", all_guide, flags=re.M)
     if len(media_sections) != len(editorial):
         fail(f"Full manual must include all editorial-only sources: {len(media_sections)} / {len(editorial)}")
     if not all(text in all_guide for text in ["176是研究渠道数量", "当前没有自动发送"]):
         fail("Guide must disclose research vs actual earned/submitted status")
     quick_guide = QUICK_GUIDE.read_text(encoding="utf-8")
-    quick_cards = re.findall(r"^### \\d+\\. .+｜主库 #(\\d{3})$", quick_guide, flags=re.M)
+    quick_cards = re.findall(r"^### \d+\. .+｜主库 #(\d{3})$", quick_guide, flags=re.M)
     if len(quick_cards) != 21 or len(set(quick_cards)) != 21:
         fail(f"Quickstart must have 21 unique platform-specific filing cards, got {len(quick_cards)}")
     if not all(int(n) in numbers for n in quick_cards):
