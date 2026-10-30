@@ -1,24 +1,47 @@
-name: Validate backlink CSV data
+name: Validate backlink repository
 on:
   push:
     paths:
       - 'data/**'
       - 'scripts/validate_csv.py'
+      - 'docs/all-176-backlink-submission-methods.md'
+      - 'docs/lettering-priority-21-ready-to-fill.md'
+      - 'docs/backlink-submission-workbench.html'
       - '.github/workflows/validate-data.yml'
   pull_request:
     paths:
       - 'data/**'
       - 'scripts/validate_csv.py'
+      - 'docs/all-176-backlink-submission-methods.md'
+      - 'docs/lettering-priority-21-ready-to-fill.md'
+      - 'docs/backlink-submission-workbench.html'
       - '.github/workflows/validate-data.yml'
-
 permissions:
   contents: read
-
 jobs:
   validate:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Validate with Python standard library
-        run: python3 scripts/validate_csv.py
+      - name: Validate CSV and markdown references
+        id: validate
+        shell: bash
+        run: |
+          set +e
+          python3 scripts/validate_csv.py > validation-report.txt 2>&1
+          code=$?
+          cat validation-report.txt
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Publish validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backlink-validation-report
+          path: validation-report.txt
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Fail CI if validation was unsuccessful
+        if: steps.validate.outputs.exit_code != '0'
+        run: exit 1
