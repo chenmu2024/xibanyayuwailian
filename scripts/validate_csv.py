@@ -182,7 +182,7 @@ def main():
         fail("Actionable list may not claim submissions without supported ledger evidence.")
 
     v23_fields, v23 = read(V23)
-    for key in ["平台根域名", "官方投稿入口", "官方资格依据", "核验缺口", "实际提交状态"]:
+    for key in ["平台根域名", "官方投稿入口", "官方资格依据", "核验缺口", "真实提交状态"]:
         if key not in v23_fields:
             fail(f"Missing V23 evidence column: {key}")
     if len(v23) < 4:
@@ -190,7 +190,7 @@ def main():
     v23_domains = [registered_domain_hint(r["平台根域名"]) for r in v23]
     if any(not d for d in v23_domains) or len(set(v23_domains)) != len(v23_domains):
         fail("V23 has an empty or duplicate platform domain.")
-    if any(r["实际提交状态"].strip() != "未提交" for r in v23):
+    if any(r["真实提交状态"].strip() != "未提交" for r in v23):
         fail("V23 research table cannot claim submitted; record actual actions in submission-ledger.")
     if any(not r["核验缺口"].strip() for r in v23):
         fail("Every V23 source must state evidence gaps.")
