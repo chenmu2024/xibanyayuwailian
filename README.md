@@ -6,21 +6,23 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V19 累计154条渠道/候选（V18原151条保留，本轮新增3条），完整保留历史记录 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V20 累计157条渠道/候选（V19原154条保留，本轮新增3条），完整保留历史记录 |
 | [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的13家历史申请候选（含部分不推荐项），不要全部照单提交 |
 | [data/reusable-free-shortlist.csv](data/reusable-free-shortlist.csv) | **优先看这张**：8家免强制回链徽章的免费/待核验渠道，区分资格与证据缺口 |
+| [data/education-resource-submissions.csv](data/education-resource-submissions.csv) | V20：3家教育资源馆藏渠道，明确非广告、教育资格及开放版权硬门槛 |
 | [data/submission-ledger.csv](data/submission-ledger.csv) | 跨网站申请台账：以目标域名 × 外链平台注册根域名去重 |
 | [docs/submit-guide-v16.md](docs/submit-guide-v16.md) | V16 逐站操作指南、西语/英文文案、已知限制 |
 | [docs/v17-new-channels-20261030.md](docs/v17-new-channels-20261030.md) | V17 新增4家的官网证据、适配性、申请步骤、风险与填写模板 |
 | [docs/v18-editorial-and-typography-20261030.md](docs/v18-editorial-and-typography-20261030.md) | V18 Typography新入口、4家西语编辑媒体及历史邮件查重报告 |
 | [docs/v19-design-quality-and-shortlist-20261030.md](docs/v19-design-quality-and-shortlist-20261030.md) | **V19**：DesignTrash拒收条款、DesignBookmark语言限制、DesignMunk免费Nofollow、严格申请建议 |
+| [docs/v20-educational-resource-channels-20261031.md](docs/v20-educational-resource-channels-20261031.md) | **V20**：MERLOT同类素材案例、OER Commons版权要求、Procomún当前HTTP500及逐字段投稿说明 |
 | [data/editorial-prospects.csv](data/editorial-prospects.csv) | 独立编辑推荐候选清单（不等于免费投稿许可） |
 | [data/editorial-outreach-ledger.csv](data/editorial-outreach-ledger.csv) | 跨网站真实编辑部联络历史：防止重复发送 |
 | [docs/quality-policy.md](docs/quality-policy.md) | 证据等级、DR/AS/rel 核验、风险与验收定义 |
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-30 / V19。** 该版历史台账累计 154 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-31 / V20。** 该版历史台账累计 157 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -73,3 +75,11 @@
 - DesignMunk免费收录明确Nofollow；付费升级不得算“免费Follow”。
 - Font Blend网页虽然提议通过GitHub提交资源PR，但公开仓库现仅README，没有能直接修改的资源数据文件；未列为可直接投稿入口。
 - 自动校验基线调整为154条，并新增8家严格清单的重复根域名和必填依据检查。实际新增已获链仍为 **0条**；本轮没有第三方提交或邮件发送。
+
+## V20 更新（2026-10-31）
+
+- 总库新增 **MERLOT (#155)、OER Commons (#156)、Procomún / INTEF (#157)**，累计157条；全部是**有条件**的教育资源渠道，不纳入普通目录的8家免回链清单。
+- 已查到 MERLOT 在2026-10-24收录同类型免费可打印字母描红练习资源，但它**禁止利用社区推广商业产品**；只能诚实提交具体学习材料，不得以广告获链为目的。
+- OER Commons馆藏要求明确教育使用许可证；当前站点练习资源公开版权声明并不能证明具备教学再分发权，**未经用户明确授权不提交或更改许可证**。
+- Procomún由西班牙INTEF提供，面向教师及教育从业者；本轮平台首页返回500，因此暂不能实测注册投稿。
+- 所有 DR/AS/rel/索引数据未冒充实测；新提交数0、成功获链数0。
