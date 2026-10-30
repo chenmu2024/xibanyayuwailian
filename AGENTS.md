@@ -63,3 +63,7 @@
 47. V28新增本地单文件操作台`docs/backlink-submission-workbench.html`。本文件内嵌历史176条数据，仅供检索、复制真实材料和localStorage本机标注；不可把浏览器手动标注的“已自行提交/已上线待验链”自动当作GitHub提交台账或完成外链验收。
 48. 更新`data/backlinks-master.csv`时，应同步更新V27逐站长文、V28HTML操作台（内嵌全部新条目）及其操作指南；GitHub Actions应检验数据ID、入口和名称完全对应，防止长文/HTML数据过期。
 49. V28 HTML须保持离线、零付费依赖，无第三方分析/跟踪、远程脚本、密钥及自动站外网络提交。用户换新网站时不能自动沿用Generador de Lettering功能/教育版权/地区实体事实，须人工改写；本地进度CSV仅是用户的工作记录。
+
+50. V29：网页操作台不仅包含176条历史候选，还直接存储21家平台共133个字段行；任何更新字段的版本需同步维护 `docs/lettering-priority-21-ready-to-fill.md` 和HTML嵌入数据，不得将历史表单字段冒充当日实时全部复核。
+51. V29：操作台本地进度必须以目标站主机名隔离，不能把Lettering申请状态带到其他西语域名；切换品牌/域名后，旧项目的字体与PNG输出功能文案必须要求重新核实，不能仅替换站名就自动复制。
+52. V29：不得把GitHub Actions红灯冒充绿色；至少有一次不检出项目源码、不依赖Python的Runner probe同样失败，暂无有效日志。保持仓库现有真实历史台账，不得为获取绿色徽章删除实质校验项。仓库 `docs/v29-field-level-workbench-and-ci-evidence.md` 记录了证据和后续验收。
