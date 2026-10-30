@@ -299,7 +299,7 @@ def main():
     # V28: offline HTML workbench must mirror the historical CSV exactly.
     workbench = WORKBENCH.read_text(encoding="utf-8")
     workbench_guide = WORKBENCH_GUIDE.read_text(encoding="utf-8")
-    match = re.search(r'<script id="items" type="application/json">([\\s\\S]*?)</script>', workbench)
+    match = re.search(r'<script id="items" type="application/json">(.*?)</script>', workbench, flags=re.S)
     if not match:
         fail("Offline HTML workbench missing embedded catalog JSON")
     try:
