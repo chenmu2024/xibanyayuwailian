@@ -6,15 +6,16 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V16 历史总库：146 条渠道/候选及原始复核字段，完整保留历史记录 |
-| [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的当前9家重点渠道，按实际执行顺序排列 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V17 累计150条渠道/候选（含V16原146条及本轮新增4条），完整保留历史记录 |
+| [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的当前12家重点渠道，按实际执行顺序排列 |
 | [data/submission-ledger.csv](data/submission-ledger.csv) | 跨网站申请台账：以目标域名 × 外链平台注册根域名去重 |
 | [docs/submit-guide-v16.md](docs/submit-guide-v16.md) | V16 逐站操作指南、西语/英文文案、已知限制 |
+| [docs/v17-new-channels-20261030.md](docs/v17-new-channels-20261030.md) | V17 新增4家的官网证据、适配性、申请步骤、风险与填写模板 |
 | [docs/quality-policy.md](docs/quality-policy.md) | 证据等级、DR/AS/rel 核验、风险与验收定义 |
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-30 / V16。** 该版历史台账累计 146 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-30 / V17。** 该版历史台账累计 150 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -44,3 +45,10 @@
 
 仓库内置 [GitHub Actions 验证工作流](.github/workflows/validate-data.yml)，当 `data/` 的 CSV 或脚本发生变化时执行 `python3 scripts/validate_csv.py`。
 此脚本仅验证数据结构和台账一致性，**不代表实际外链的权威度、Follow 属性或搜索引擎收录情况已经核实**。
+
+## V17 本轮更新（2026-10-30）
+
+- 新增四家：Good Design Tools（P1）、NoSignupTools（P1）、PeplioHUB（P1）、HereIsMySaaS（有条件）。
+- Lettering 优先队列由9家更新为12家；未改变已有提交台账的实际状态。
+- 自动检查新增**历史记录不得减少至150条以下、编号连续**规则。
+- 实时 DR/AS、目标新页面 Follow 属性、Google 索引、真实引荐流量未全面实测；**没有任何新站点被代为提交，新增成功获链数为0**。
