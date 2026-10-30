@@ -6,9 +6,9 @@
 
 | 文件 | 用途 |
 | --- | --- |
-| [data/backlinks-master.csv](data/backlinks-master.csv) | V20 累计157条渠道/候选（V19原154条保留，本轮新增3条），完整保留历史记录 |
-| [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的13家历史申请候选（含部分不推荐项），不要全部照单提交 |
-| [data/reusable-free-shortlist.csv](data/reusable-free-shortlist.csv) | **优先看这张**：8家免强制回链徽章的免费/待核验渠道，区分资格与证据缺口 |
+| [data/backlinks-master.csv](data/backlinks-master.csv) | V21 累计159条渠道/候选（V20原157条保留，本轮新增2条），完整保留历史记录 |
+| [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的15家历史申请候选（含条件、低优先项目），不要全部照单提交 |
+| [data/reusable-free-shortlist.csv](data/reusable-free-shortlist.csv) | **优先看这张**：10家无已确认强制回链徽章的免费/待核验渠道，区分资格与证据缺口 |
 | [data/education-resource-submissions.csv](data/education-resource-submissions.csv) | V20：3家教育资源馆藏渠道，明确非广告、教育资格及开放版权硬门槛 |
 | [data/submission-ledger.csv](data/submission-ledger.csv) | 跨网站申请台账：以目标域名 × 外链平台注册根域名去重 |
 | [docs/submit-guide-v16.md](docs/submit-guide-v16.md) | V16 逐站操作指南、西语/英文文案、已知限制 |
@@ -16,13 +16,14 @@
 | [docs/v18-editorial-and-typography-20261030.md](docs/v18-editorial-and-typography-20261030.md) | V18 Typography新入口、4家西语编辑媒体及历史邮件查重报告 |
 | [docs/v19-design-quality-and-shortlist-20261030.md](docs/v19-design-quality-and-shortlist-20261030.md) | **V19**：DesignTrash拒收条款、DesignBookmark语言限制、DesignMunk免费Nofollow、严格申请建议 |
 | [docs/v20-educational-resource-channels-20261031.md](docs/v20-educational-resource-channels-20261031.md) | **V20**：MERLOT同类素材案例、OER Commons版权要求、Procomún当前HTTP500及逐字段投稿说明 |
+| [docs/v21-curated-design-submissions-20261031.md](docs/v21-curated-design-submissions-20261031.md) | **V21**：两家真实设计投稿表单、官方精选规则、editor内页实测与可直接复制英文文案 |
 | [data/editorial-prospects.csv](data/editorial-prospects.csv) | 独立编辑推荐候选清单（不等于免费投稿许可） |
 | [data/editorial-outreach-ledger.csv](data/editorial-outreach-ledger.csv) | 跨网站真实编辑部联络历史：防止重复发送 |
 | [docs/quality-policy.md](docs/quality-policy.md) | 证据等级、DR/AS/rel 核验、风险与验收定义 |
 | [AGENTS.md](AGENTS.md) | AI / Codex 后续研究及更新规范 |
 | [scripts/validate_csv.py](scripts/validate_csv.py) | 不依赖收费API的CSV一致性与重复提交键校验 |
 
-**数据基线：2026-10-31 / V20。** 该版历史台账累计 157 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
+**数据基线：2026-10-31 / V21。** 该版历史台账累计 159 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
 ## 新网站执行流程
 
@@ -83,3 +84,11 @@
 - OER Commons馆藏要求明确教育使用许可证；当前站点练习资源公开版权声明并不能证明具备教学再分发权，**未经用户明确授权不提交或更改许可证**。
 - Procomún由西班牙INTEF提供，面向教师及教育从业者；本轮平台首页返回500，因此暂不能实测注册投稿。
 - 所有 DR/AS/rel/索引数据未冒充实测；新提交数0、成功获链数0。
+
+## V21 更新（2026-10-31）
+
+- 新增 **TOOOLS.design（#158）** 和 **Design Resources Archive（#159）**：均直接验证官方投稿表单；前者官方称人工选中率少于4%，后者已有字体/排版实验工具的真实公开展示页。
+- 当前网站 `https://generadordelettering.org/editor` 直接核验过画布/文字设计及PNG/JPG/WebP导出；设计类目录应优先说明这一**真实功能**，不声称会导出TTF、OTF、SVG或印刷文件。
+- 可实际操作的原历史队列由13增至**15家**；更严格的免费优先研究清单由8增至**10家**。两家新渠道均未测得最新DR/AS，也不能保证出站Follow或Google索引。
+- Usetools.Design 普通收录目前明确需€9.99，因此不应列入免费外链；Itmeo Index虽有字体工具馆藏，但没找到真实官方提交表单，不列入“可直接申请”。
+- 没有向外部表单提交网站，也没有把新增候选计入已获链。**V21新获链0条。**
