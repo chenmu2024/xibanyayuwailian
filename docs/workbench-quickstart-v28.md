@@ -40,4 +40,4 @@
 - [21家优先填写字段卡](lettering-priority-21-ready-to-fill.md)：针对Generador de Lettering准备更细的字段值、图标/截图尺寸与英语/西语说明。
 - [全部历史渠道CSV](../data/backlinks-master.csv)：分类和平台规则的事实底稿。
 - [实际提交记录CSV](../data/submission-ledger.csv)：平台、目标域名、提交日期、审核与公开获链证据。
-- 操作台不依赖这些文件联网加载。若以后将历史CSV增到177条，应**同步重新生成HTML内嵌数据**并由GitHub Actions完整校验。
+- 操作台不依赖这些文件联网加载。若以后将历史CSV增到177条，应**同步重新生成HTML内嵌数据**并重新核对JSON记录与主表、运行脚本语法测试、尝试GitHub Actions校验；目前GitHub Actions未提供本轮成功记录，不能声称已通过。
