@@ -17,6 +17,7 @@ SHORTLIST = ROOT / "data/reusable-free-shortlist.csv"
 AUDIT = ROOT / "data/v22-link-evidence-audit.csv"
 ACTIONABLE = ROOT / "data/actionable-applications-v22.csv"
 EDUCATION = ROOT / "data/education-resource-submissions.csv"
+V23 = ROOT / "data/v23-design-submission-check.csv"
 
 def read(path: Path):
     with path.open(encoding="utf-8-sig", newline="") as f:
@@ -39,8 +40,8 @@ def main():
     needed = ["编号", "平台/域名", "优先级", "提交入口URL", "规则核验情况", "官方来源URL"]
     if any(key not in headers for key in needed):
         fail("Missing columns in backlinks-master.csv")
-    if len(catalog) < 160:
-        fail(f"V22 baseline has 160 rows; catalog unexpectedly shrank to {len(catalog)}.")
+    if len(catalog) < 163:
+        fail(f"V23 baseline has 163 rows; catalog unexpectedly shrank to {len(catalog)}.")
 
     ids = [r["编号"].strip() for r in catalog]
     dup_ids = [k for k, v in Counter(ids).items() if v > 1]
@@ -180,12 +181,31 @@ def main():
     if any(r["当前申请状态"].strip() != "未提交" for r in active):
         fail("Actionable list may not claim submissions without supported ledger evidence.")
 
+    v23_fields, v23 = read(V23)
+    for key in ["平台根域名", "官方投稿入口", "官方资格依据", "核验缺口", "实际提交状态"]:
+        if key not in v23_fields:
+            fail(f"Missing V23 evidence column: {key}")
+    if len(v23) < 4:
+        fail("V23 must preserve at least three new candidates and the preexisting Enlineados review.")
+    v23_domains = [registered_domain_hint(r["平台根域名"]) for r in v23]
+    if any(not d for d in v23_domains) or len(set(v23_domains)) != len(v23_domains):
+        fail("V23 has an empty or duplicate platform domain.")
+    if any(r["实际提交状态"].strip() != "未提交" for r in v23):
+        fail("V23 research table cannot claim submitted; record actual actions in submission-ledger.")
+    if any(not r["核验缺口"].strip() for r in v23):
+        fail("Every V23 source must state evidence gaps.")
+    if set(["fountn.design", "uxresources.info", "lds-library.vercel.app", "enlineados.com"]) - set(v23_domains):
+        fail("V23 baseline source missing.")
+    if not all(str(n) in ids for n in (161, 162, 163)):
+        fail("V23 new numbered entries missing from master.")
+
     priorities = Counter(r["优先级"].strip() for r in catalog)
     print(f"OK: {len(catalog)} catalog entries, {len(queue)} priority targets, {len(ledger)} directory ledger rows.")
     print(f"Editorial: {len(editorial)} prospects, {len(outreach)} historical outreach records.")
     print(f"Strict free-first shortlist: {len(shortlist)} distinct channels; actual Follow/DR not guaranteed.")
     print(f"Education resource platforms: {len(education)} conditional entries; rights/status must be verified.")
     print(f"V22: {len(audit)} audited directory candidates and {len(active)} currently actionable research targets.")
+    print(f"V23: {len(v23)} extra evidence records; no real submissions claimed.")
     print("Priority labels:", ", ".join(f"{k}={v}" for k, v in sorted(priorities.items())))
     print("Note: This verifies data integrity, NOT link quality, DR, rel or indexation.")
 
