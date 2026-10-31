@@ -81,3 +81,8 @@
 61. V32官网硬限制：#003 Enlineados禁止免费托管（自定义域名不等于不属于免费主机）；#026 TopTool目前暂停；#057 ToolGuide以工作效率为编辑门槛且短描述≤120字符；#076 NoUploadTools禁止session replay且隐私特征勾选必须真实、有广告不得声称No ads；#152 DesignTrash拒绝关键词型一招式工具；#170 Ghostbyte的Issue不是已公开上榜链接。
 62. V32新增可操作证据：#074 public.tools官方Tally为4字段、#075 Htrd页尾5字段、#171 FounderOmni西语弹层有公开字段，发布和Follow仍属待验；#141 GainWeb免费档不保证审核；#161 Fountn最终表单不可读。不能把“免费可填”夸大为保证Follow或已获链。
 63. V32更新`docs/backlink-submission-workbench.html`的176主库镜像、21家共161项字段和14条当日核验提示；任何改动需同步`scripts/validate_workbench.mjs`、`scripts/smoke_workbench.mjs`及176站长文。GitHub Actions红灯必须明确披露，不得假报绿色。
+
+64. V33实际出站链接与官方提交资格必须区分：证据见`data/v33-published-outbound-rel-samples-20261031.csv`。public.tools的3条已发布样本均含`nofollow`，因此#074按Follow目标从P1降为条件，但不宣称所有页面均nofollow；其它平台少量样本未带nofollow也不能声称全站均Follow。
+65. 任何`已获外链`必须有用户目标域名真实公开href，不能借第三方Fontjoy/StackEdit/FontsWiki/StencilMaker的外链代替本站；来源目录内容未检出只能按具体检查URL、日期和页面范围记录，不能断言全站被拒或未收录。
+66. V33新增九个页面的核查范围见`data/v33-lettering-public-listing-presence-20261031.csv`，每次重新复核需独立保存原页与实际href/rel证据。GitHub或服务器失败不得冒充通过。
+67. Node验证脚本保持正确职责：`scripts/validate_workbench.mjs`验证176条主表同步、21家字段、公开样本与JS语法，`scripts/smoke_workbench.mjs`负责运行模拟DOM交互；V33修复曾经交换文件内容的故障。未经测试不要交换或随意重命名。
