@@ -9,6 +9,10 @@ on:
       - 'scripts/smoke_workbench.mjs'
       - 'scripts/verify_published_backlink.py'
       - 'scripts/test_verify_published_backlink.py'
+      - 'scripts/audit_p1_published_links.py'
+      - 'scripts/test_audit_p1_published_links.py'
+      - 'scripts/audit_curated_v52.py'
+      - 'scripts/test_audit_curated_v52.py'
       - 'docs/all-176-backlink-submission-methods.md'
       - 'docs/lettering-priority-21-ready-to-fill.md'
       - 'docs/backlink-submission-workbench.html'
@@ -21,6 +25,10 @@ on:
       - 'scripts/smoke_workbench.mjs'
       - 'scripts/verify_published_backlink.py'
       - 'scripts/test_verify_published_backlink.py'
+      - 'scripts/audit_p1_published_links.py'
+      - 'scripts/test_audit_p1_published_links.py'
+      - 'scripts/audit_curated_v52.py'
+      - 'scripts/test_audit_curated_v52.py'
       - 'docs/all-176-backlink-submission-methods.md'
       - 'docs/lettering-priority-21-ready-to-fill.md'
       - 'docs/backlink-submission-workbench.html'
@@ -43,3 +51,7 @@ jobs:
         run: node scripts/smoke_workbench.mjs
       - name: Test published backlink verifier without network
         run: python3 -m unittest discover -s scripts -p "test_verify_published_backlink.py" -v
+      - name: Test P1 third-party raw-link audit without network
+        run: python3 -m unittest discover -s scripts -p "test_audit_p1_published_links.py" -v
+      - name: Test curated V52 raw-link audit without network
+        run: python3 -m unittest discover -s scripts -p "test_audit_curated_v52.py" -v
