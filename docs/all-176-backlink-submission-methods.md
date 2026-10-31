@@ -2,11 +2,13 @@
 
 > 资料基线：2026-10-31；来源：`data/backlinks-master.csv` 的1–176全部记录；示例为 `generadordelettering.org`。**176是研究渠道数量，不是已经为网站获得176条反向链接。**
 >
-> 最新主库分类：P1 25、P2 21、条件 79、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
+> 最新主库分类：P1 24、P2 21、条件 80、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
 >
 > 本手册所有来源均单独列出入口、逐项步骤、费用条件、适用对象和限制。排除/暂停/待核验条目的步骤是**留存的历史参考**，不能当作今天可以立刻投稿。当前没有自动发送邮件、注册账号或提交网站。
 
 **V32官方表单实测提醒（2026-10-31）**：在原176家基础上又复核14家，没有新增来源；#003、#026、#057、#076、#152状态调整，并确认#171 FounderOmni的实际西语表单字段。最新每站详情见 [V32官方复核报告](v32-14-official-source-audit-20261031.md)。
+
+**V33 2026-10-31更新**：抽样检查11条真正发布的出站href原始rel，并核对9个目录页面是否出现Lettering；[查看完整证据表和解释](v33-public-link-rel-and-listing-presence-20261031.md)。public.tools三条样本都带nofollow，已调低Follow目标优先级；未带nofollow的样本不能推导全站均Follow。
 
 ## 1. 实际使用方法
 
@@ -1659,6 +1661,8 @@
 <a id="link-074"></a>
 ### 074. public.tools｜V32官方复核｜P1
 
+**V33公开链接实测警告（2026-10-31）**：StackEdit.io、Dillinger、Glyphr Studio三个公开详情页对外工具网址的HTML `rel` **均为`noopener noreferrer nofollow`**。这是3条真实样本而非全站保证。由于本项目优先获取免费可跟随外链，#074由P1调整为**条件**；仍可为自然引荐流量研究真实Tally免费投稿。尚未发现本站在当前344条公开目录页中列出。依据：[V33详表](v33-public-link-rel-and-listing-presence-20261031.md)。
+
 **直接入口**：[https://tally.so/r/Gx75Qz](https://tally.so/r/Gx75Qz)
 
 **适用语言**：可推荐西语工具；提交说明建议英文
@@ -1686,6 +1690,8 @@
 
 <a id="link-075"></a>
 ### 075. Htrd｜V32官方复核｜P1
+
+**V33公开链接实测（2026-10-31）**：已发布的[Fontjoy](https://htrd.org/tools/fontjoy)与[Squoosh](https://htrd.org/tools/squoosh)外部工具href均为`rel="noopener"`，该两条链接未带nofollow；只代表已检查样本，本站未获收录，编辑审核不保证通过。
 
 **直接入口**：[https://htrd.org/](https://htrd.org/)
 
@@ -2846,6 +2852,8 @@
 <a id="link-128"></a>
 ### 128. Toolfound — 候选可申请（主库更新：V31，2026-10-31）
 
+**V33公开链接实测（2026-10-31）**：[StencilMaker](https://toolfound.com/tool/stencilmaker-app)与[Offistrip](https://toolfound.com/tool/offistrip)对外href均为`rel="noopener"`；样本未带nofollow，但本站仍必须先完成域名所有权验证和人工发布，不得算已获链。
+
 **官方提交入口**：[https://toolfound.com/submit](https://toolfound.com/submit)。
 
 **语言与资格**：国际产品，未核实纯西语规则；英文简介更稳妥；在线计算器、转换器、浏览器免费工具、Lettering编辑器。
@@ -3317,6 +3325,8 @@
 <a id="link-148"></a>
 ### 148. NoSignupTools (nosignuptools.com) — 候选可申请（历史级别：P1）
 
+**V33公开链接实测（2026-10-31）**：[NoSignupTools设计分类页](https://nosignuptools.com/tools?category=design)中`https://fontswiki.com`的真实href为`rel="noopener noreferrer"`，没有nofollow；此结论不能代替审核、本站收录和全站rel保证。
+
 **提交入口/官网**：[https://nosignuptools.com/submit](https://nosignuptools.com/submit)  
 **适合什么网站**：免费免注册的文字工具、设计工具、转换器；匹配Lettering；**西语资格**：英文目录；未见禁止纯西语，投稿后由编辑判断。  
 **费用和审核**：官网免费投稿；人工审核目标24–48小时（非保证）。  
@@ -3383,6 +3393,8 @@
 
 <a id="link-151"></a>
 ### 151. DesignTools.fyi (designtools.fyi) — 候选可申请（主库更新：V31，2026-10-31）
+
+**V33公开链接实测（2026-10-31）**：[Font Explorer详情](https://designtools.fyi/tools/font-explorer-mqp69i9d)指向`https://font.do`的真实href为`rel="noopener noreferrer"`，样本未带nofollow；仍需等待真实投稿和单独核验本站条目。
 
 **官方提交入口**：[https://designtools.fyi/submit/](https://designtools.fyi/submit/)。
 
@@ -3820,6 +3832,8 @@
 
 <a id="link-168"></a>
 ### 168. Herramientas y Recursos (herramientasyrecursos.com) — 候选可申请（历史级别：P1）
+
+**V33公开链接实测（2026-10-31）**：[Recursos分类](https://www.herramientasyrecursos.com/directorio/categoria/recursos)中指向`aprendeygana.net`及`herramientasproductivas.com`的真实href为`rel="noopener"`；是西语目录两条无nofollow样本，不等于已获批自己的域名。
 
 **提交入口/官网**：[https://www.herramientasyrecursos.com/directorio/sugerir](https://www.herramientasyrecursos.com/directorio/sugerir)  
 **适合什么网站**：西语网页工具、设计编辑器、教学与线上资源；适合Lettering首页；**西语资格**：官网及全部投稿字段使用西班牙语；接受非AI数字工具。  
