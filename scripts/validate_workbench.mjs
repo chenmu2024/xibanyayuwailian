@@ -43,6 +43,12 @@ const p74=samples.filter(v=>v["主库编号"]==="74");
 if(p74.length!==3||p74.some(v=>!v["HTML原始rel属性"].split(/\s+/).includes("nofollow")))
   throw new Error("Do not lose public.tools 3/3 published nofollow sample evidence");
 
+if(!html.includes("第三方公开条目URL") || !html.includes("实际指向本站的完整href") ||
+   !html.includes("rel原文") || !html.includes("proof:{") && !html.includes("proof:p"))
+  throw new Error("V35 manual published backlink proof fields are missing");
+if(!html.includes("checked:false")||!html.includes("source:sourceInput.value.trim()")||
+   !html.includes("domainOf(p.href)!==activeDomain"))
+  throw new Error("V35 proof attestation must be revocable and site-domain scoped");
 const all = readJson("items");
 const detailed = readJson("detailedCards");
 const v33 = readJson("auditV33");
