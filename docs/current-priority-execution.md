@@ -79,3 +79,7 @@
 ## V50｜EducaGuía发布样本与待提交资源不再混淆
 
 操作台#58旧“历史公开案例”曾指向用户自有练字SVG页，现更正为真实[Educaguía教育网站公开列表](https://www.educaguia.com/listadoEDU.asp)。列表可见Educaplay等外站链接，但并未证明Generador已在列表。用户拟提交的练字页仍仅为`edu`教育材料目标，免费、人工审核与自动订阅规则照旧。[V50错误纠正明细](v50-educaguia-real-external-example-20261031.md)。
+
+## V51｜11家高相关目录再次核验，建立轻量优先顺序（2026-10-31）
+
+[查看V51当前公开证据与可执行顺序](v51-curated-live-review-and-execution-20261031.md)及[11家逐行CSV](../data/v51-live-curated-submission-audit-20261031.csv)。**本轮建议的人工操作顺序**：先#159 Design Resources Archive、#164 Unikist、#151 DesignTools.fyi（与Typography/Design工具匹配、表单较短），随后#123 LaunchFree、#75 Htrd及#148 NoSignupTools。这里的**填写顺序**不同于主库P1资格优先级：不是调整权威评分或独立确认Follow。#165 Mark-it可作为设计精选补充；#172 EpicTools虽有真实Penpot等第三方出站详情，但首页继续显示已停运/出售/访问错误的Curated噪声内容，应后置。#171 FounderOmni弹层仍待真人核查；#163 LDS Library本轮网页读取失败，不能据此判定关站。所有新用户获链仍为0，未代填任何表单。
