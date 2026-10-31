@@ -161,3 +161,8 @@
 
 126. V50发现#58 Educaguía操作台`items.example`曾误填用户自己的generadordelettering.org SVG练字模板页，UI统一显示“历史公开案例”将其误包装为已刊登证明。现实际示例改为https://www.educaguia.com/listadoEDU.asp历史教育网站目录，其中有Educaplay真正外站href，仍非用户获链、非原始rel证据。
 127. `example`只能是目录实际已刊登他站的公开页，`edu`/target才是用户自己拟投稿的教学资源。JS校验必须自动拒绝`items.example`指向generadordelettering.org，旧例子不应恢复。目录名单巨大含旧站，不保证精选质量。
+
+128. V53（2026-10-31）公开DOM rel真实验证：通过精确CSS定位已出版第三方工具详情/分类页，分别读取14家当前渲染DOM的`<a href rel>`；13家对应样本没有nofollow/ugc/sponsored，一家#149 Peplio AnyFyle的`https://anyfyle.com/?ref=pepliohub`有`rel="noopener ugc nofollow"`。这是当前DOM而非完整HTTP原始响应，不代表未来免费条目或Google索引状态，也不是本站获链。
+129. PeplioHUB #149因已公开普通产品的ugc nofollow实证从P1降为条件：当前176渠道P1 12/P2 27/条件86/待核验16/排除34/非外链1；V47历史13个P1样本可保留但必须标时点。主库、176指南、优先队列、复用名单、操作台和JS校验断言按新分类保持同步；不得改动实际提交台账为已获链。
+130. LDS #163 规范域`https://library.legitdesign.studio/submit`经只读真实form HTML再次验证，Category实际下拉有Design Resources而没有Fonts；Resource name/Link必填、邮件选填、隐藏website反垃圾字段必须留空。旧lds-library.vercel.app canonical归规范域，不得重复投。当前raw rel与meta robots、canonical、实际Google索引必须分别记录。
+131. GitHub Actions长期0步骤失败须如实披露，不能以新增测试脚本或本地结构检查宣称CI通过。任何新PDF/博客/第三方实例必须真实存在，不能把他站案例写成本站获链。
