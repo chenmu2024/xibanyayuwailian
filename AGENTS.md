@@ -129,3 +129,7 @@
 98. DrSEO #4官网Free €0不等于提交/批准可以有高价值Follow；实际ACC64详情为付费Premium Profile/Patrocinado，站外href不能外推普通免费条目，故V42 P1→P2；无DR/AS/索引独立实测，不能仅据知名品牌资料推断严格审核。
 99. Navegax #59首页承诺免费网站登记，点Añadir Web确实提示需要注册/登录；普通IAdicto Digital独立页存在指向iadictodigital.com的直接站外href，但其raw rel和本站获链仍未知。保留P1西语专项候选，严禁声称免登录。
 100. 维护实时总数时HTML可见统计要同步：176历史、41条P1/P2、84条件、16待核验、34排除、1非外链（某些UI未显示非外链也仍须计入总量）。对历史旧版阶段性数字只加新审计说明，不把旧数据强改为当时没发生的新状态。
+
+101. V43 Zearches免费无账号、无互链只是准入便利，不等于高质量外链；超过1.1万自动筛查记录，软件类别约2923且每页10条、公开公益类出现违反其限制的内容。#27从P1降条件，普通公开href不推断原始rel或SEO收益。
+102. Zearches正式提交页https://zearches.com/submit-website-free.php的隐藏Leave this field empty反垃圾字段不可填，网站名≤30字符、西语描述50–250，官方限频及至少5秒表单填写只是防滥用规则；PayPal捐款完全自愿不影响收录，不建议任何批量刷表单。
+103. Navegax公开详情提示Bitakoras为只收博客的独立目录、账号及数据不共享。当前工具站不能因此增列另一个可提交来源。真实获链仍需本站href及raw rel证据。

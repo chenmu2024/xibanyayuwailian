@@ -295,3 +295,8 @@
 
 - [西语三个渠道逐站核验与人工步骤](docs/spanish-native-directory-audit.md)；[7项可追溯公开页面和资格声明](data/spanish-native-directory-audit.csv)。#59 Navegax公开西语详情真实直达外站，但必须注册；#58 Educaguía明确只收教育资源且申请自动加入教育通讯，缺真实教学资源时勿投，P1→条件；#4 DrSEO的€0基本档明确存在，但本次具体直链样本为Premium/Patrocinado，不能当免费rel，P1→P2。
 - 最新176条分类 **P1 17、P2 24、条件84、待核验16、排除34、非外链1**；HTML展示已修正历史误写的“排除33”和现时优先/条件统计。新增候选0、真实申请0、本站新确认获链0。
+
+## V43｜开放式泛目录筛选与免账号提交（2026-10-31）
+
+- [Zearches免费填写与低质量证据](docs/open-directory-quality-audit.md)及[6条逐页证据CSV](data/open-directory-quality-evidence.csv)：#27 Zearches确实无账号/付费/强制回链，但11,600+自动收录、约2,923家软件站、10条/页，且公开分类存在违反其自述内容限制的记录。**P1降条件**，不放首批优质链接队列。正式直达投稿页为https://zearches.com/submit-website-free.php，隐藏反垃圾字段不可填，捐款非强制。
+- #59 Navegax推荐的Bitakoras只接受博客，工具站不可另算新渠道。176家总量不变，最新**P1 16、P2 24、条件85、待核验16、排除34、非外链1**；真实提交0、确认用户站新获链0。

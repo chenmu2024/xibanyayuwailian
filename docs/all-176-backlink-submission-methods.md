@@ -22,6 +22,8 @@
 
 **西语专项目录现行核验（2026-10-31）**：[真实西语渠道申请条件与样本](spanish-native-directory-audit.md)；#4 P1→P2、#58 P1→条件、#59保留P1且已见普通详情直接外站href；详见[可审计证据CSV](../data/spanish-native-directory-audit.csv)。
 
+**V43开放目录审核结果：** #27 Zearches P1→条件（高规模自动收录与类别质量问题），#59补充Bitakoras仅限博客；详见[专项证据](open-directory-quality-audit.md)及[可核对CSV](../data/open-directory-quality-evidence.csv)。
+
 ## 1. 实际使用方法
 
 1. 新建一个西语网站后，先准备真实的名称、规范首页URL、具体工具页面URL、免费/付费状态、目标用户、功能说明、真实Logo与截图以及能收邮件的邮箱。下方Lettering只是示例，换站必须重新写。
@@ -666,26 +668,27 @@
 **实际提交状态**：本轮未提交；尚未确认获批、页面实际href、真实rel/Follow、DR/AS或搜索索引。
 
 <a id="link-027"></a>
-### 027. Zearches — 候选可申请（历史级别：P1）
+### 027. Zearches — V43自动开放目录后置（条件）
 
-**提交入口/官网**：[https://zearches.com/](https://zearches.com/)  
+**提交入口/官网**：[https://zearches.com/submit-website-free.php](https://zearches.com/submit-website-free.php)  
 **适合什么网站**：西语内容站、免费工具、计算器、博客；**西语资格**：不限语言；网站说明可用西语或英文，审批待定。  
-**费用和审核**：免费；无需账号；自动反垃圾。  
+**费用和审核**：官网确实免费、无需注册/反向徽章，自动筛查；PayPal捐款完全可选。不是严格人工精选。  
 
 **具体怎样填/操作（原始官网研究记录）**：
 
-1. 在首页 Submit your website
-2. URL
-3. 名称≤30字
-4. 类别
-5. 50–250字简介
-6. Submit
+1. 打开 https://zearches.com/submit-website-free.php
+2. Website URL：`https://generadordelettering.org/`
+3. Website name：`Generador de Lettering`（不超过30字符）
+4. Category：`Software & SaaS Tools`
+5. Short description：`Editor gratuito de lettering en español para crear imágenes con texto personalizado, colores, contornos, sombras y fondos. Exporta diseños en PNG, JPG y WebP desde el navegador.`（177字符，要求50–250）
+6. `Leave this field empty`反垃圾输入留空
+7. 本人点击免费提交，只保留真实回执；不批量重复
 
 **Lettering参考填写**：名称 `Generador de Lettering`；若入口允许对应页面，则网址 `https://generadordelettering.org/`；描述栏存在时，西语站用 `Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP.`，英文站用 `Free Spanish lettering editor for creating customizable text images.`，长说明取前面的资料包。图片、联系邮箱、价格、分类、真实所在地均按该平台实际字段与事实补全，不要臆造不存在的字段。
 
-**不符合/易被拒的情况**：不能提交跟踪URL；未验证DR；批量提交不代表质量。  
-**历史核对**：新发现。  
-**证据与操作事实**：官方直接核实；[原仓库官方来源](https://zearches.com/)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
+**不符合/易被拒的情况**：不能用跟踪或重定向链接、不能在说明中加其他网址，也不要重复投；官方最短5秒填写、90秒间隔及IP/网络频次限制仅用于反滥用。网站超过1.1万自动记录、软件类别约2923条10条/页，公益类出现违反其成人禁令的分类污染，**不能当高质量人工推荐**。DR、raw rel、Google实际索引、引荐未知。  
+**历史核对**：仍属原176历史来源之一，不新增候选，也不代表本站曾真实提交。  
+**证据与操作事实**：V43实测免登录免费表单、官方规则及普通分类直达站外href；[原仓库官方来源](https://zearches.com/submit-website-free.php)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
 
 
 <a id="link-028"></a>
@@ -1362,6 +1365,8 @@
 
 <a id="link-059"></a>
 ### 059. Navegax — V42西语目录有真实公开站外链接（P1保留）
+
+**V43补充**：[Bitakoras](https://bitakoras.com/)虽然在Navegax的IAdicto Digital详情中被推荐，却是只收博客的独立网站，账号与数据库也不共享。Generador de Lettering目前是工具站，不可以当作第二条可提交的西语工具外链。
 
 **2026-10-31实时步骤**：[首页](https://navegax.com/)明确可免费收录西语站，但点Añadir Web跳转[/erroragregar](https://navegax.com/erroragregar)，说明必须先注册/登录账号，不是免登录提交。[IAdicto Digital普通详情](https://navegax.com/detalle/iadictodigital)明确“**Ir al Sitio Web**”，直接链接到外部iadictodigital.com；但此样本没有获得原始a rel，也没有证实本站获链、实际引荐、DR。下一步：真实注册→选适当类别→填写网站名称/主页/真实简介→等待公开页审核。
 

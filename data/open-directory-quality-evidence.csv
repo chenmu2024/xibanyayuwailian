@@ -1,0 +1,7 @@
+﻿"主库编号","平台","官方URL","证据类型","观察结果","限制/证据边界","等级"
+"27","Zearches","https://zearches.com/submit-website-free.php","官方免费填写入口","无需账号付款或强制回链；URL、名称≤30、类别、说明50–250，隐藏字段留空","实际审核自动化；raw rel与用户站收录未知","P1→条件"
+"27","Zearches","https://zearches.com/free-website-submission.php","官方完整使用规则","至少5秒、90秒间隔、5/IP/日与10/network/日，提交后PayPal可跳过","仅反滥用频率上限；不得当批量提交指南","P1→条件"
+"27","Zearches","https://zearches.com/directory.php?slug=software-saas","普通软件目录","约2923条站点、每页10条，公开第三方直接href","不是独立人工编辑产品页，raw rel/索引/流量未知","P1→条件"
+"27","Zearches","https://zearches.com/","首页与类别污染","约11600站/20类；公益分类出现与官方成人内容禁令冲突的样本","具体规则执行不到位，不能当全站都是不合规","P1→条件"
+"59","Navegax","https://navegax.com/detalle/iadictodigital","真实普通资源详情","公开站外href，另推荐仅博客的独立Bitakoras","不能新增适用目录，raw rel未读","维持P1"
+"59","Bitakoras","https://bitakoras.com/","博客平台官方定位","只接受博客，与Navegax不同库、独立账号","当前设计编辑工具不适合，未加入176主库","不新增"

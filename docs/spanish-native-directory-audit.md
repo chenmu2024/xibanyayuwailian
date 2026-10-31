@@ -39,3 +39,7 @@
 - 主库状态：#59继续P1；#4由P1→P2；#58由P1→条件；原176历史渠道总数不变。
 - 新分布：P1 17、P2 24、条件84、待核验16、排除34、非外链1。主库、176条逐站手册、离线操作台已同步；修正HTML可见统计旧排除33误写。
 - **没有实际申请、收录回执、属于本站的公开href或Follow、真实DR/AS、Google索引或引荐流量数据**。第三方的目录存在、可点击网址或`robots=index,follow`均非真实SEO效果保证。
+
+## V43 备注：Bitakoras不是另一个适合字图编辑器的目录
+
+[Navegax公开详情](https://navegax.com/detalle/iadictodigital)推荐的[Bitakoras](https://bitakoras.com/)明确只接受博客，两站数据库不共享、账户需分别注册。Generador de Lettering目前是在线文字图像编辑器，不能把博客限定渠道记为额外的工具站外链。

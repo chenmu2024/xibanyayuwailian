@@ -55,3 +55,7 @@
 | **#58 Educaguía，条件** | [教育网站加入](https://educaguia.com/inserta-tu-web.asp) | 必须已有真实教育内容，且会自动订阅教育通讯；普通图片文字编辑器不具备明确教育定位则不投 |
 
 详细核验、风险与可复制西语简介：[西语专项报告](spanish-native-directory-audit.md)。
+
+## 补充：Zearches的免费申请不属于高质量第一批
+
+[#27 Zearches正式表单](https://zearches.com/submit-website-free.php)免费无登录，但约11,600家大规模自动收录，软件分类约2,923条、每页10条，已有违反自身限制的错误分类样本；降为条件，仅闲时补充曝光。[逐项操作](open-directory-quality-audit.md)。
