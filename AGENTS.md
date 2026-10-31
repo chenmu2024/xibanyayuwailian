@@ -108,3 +108,7 @@
 82. V38质量核验只抽查现有176条中14个高相关设计/字体/西语目录，不把它们当14个新增渠道。报告见`docs/v38-high-relevance-public-evidence-20261031.md`、逐项CSV见`data/v38-high-relevance-public-evidence-20261031.csv`。本轮新增实际申请0、获链0，原始href/rel不明时只记录外站URL可见，禁止推断Follow。
 83. V38 #171 FounderOmni西语库已能读到`Tipo de solicitud`、`Categoría`、`Nombre de la ficha`、`URL pública`、推荐理由与可选邮箱，并有Hero Patterns单独公开详情指向原站，推翻旧的“只见按钮/完整字段未知”阻断说明；但费用、原始rel、审核仍未知。#168独立详情访问超时不能称Follow；#169仅12条公开工具，广告性用户数宣传不得视为流量实测。
 84. 不得在只修改审计CSV时宣称旧主库、176条手册、离线HTML、实际提交台账已同步。后续若要正式修改主库#171，必须原子同步176条指南及HTML镜像、更新相应校验并实测，不可在镜像冲突时错误宣称已完成。
+
+85. V39：#168 Herramientas y Recursos普通资源详情`Visitar sitio`经过`/salir/slug`内部中转；V33的两条rel=noopener直链来自页脚关联站，不是免费普通条目收录后的实际外链质量证据，正式从P1降为条件。
+86. V39：#171西语表单字段首次核验是V32，不能宣称V38才首次发现。Fontpair与Hero Patterns独立公开详情外站href可见，但raw rel未取得、目标站未获链。#151 Font Explorer在V33已记录原始`noopener noreferrer`，不能重复计数。
+87. 本轮修改主库、176手册和HTML镜像时，仍须分开记录历史外站样本与用户自己确认的目标域名真实获链；当前新增实际申请与获链均0，CI是否成功需单独核查。
