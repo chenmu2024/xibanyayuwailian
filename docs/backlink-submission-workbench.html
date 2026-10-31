@@ -33,7 +33,19 @@ let activeDomain=domainOf(savedSite.home);
 if(activeDomain==="invalid-domain"){activeDomain="generadordelettering.org";savedSite.home=defaults.home}
 let allProfiles=read(storageProfiles,{});
 if(!allProfiles||typeof allProfiles!=="object"||Array.isArray(allProfiles))allProfiles={};
-if(!validProfile(allProfiles[activeDomain],activeDomain))allProfiles[activeDomain]={...savedSite};
+if(!validProfile(allProfiles[activeDomain],activeDomain)){
+  // Legacy V35 stored only one global profile; do not assign Lettering defaults to a different site.
+  const migrated={...savedSite};
+  if(activeDomain!=="generadordelettering.org"){
+    for(const key of ["name","tool","es","en","eslong","enlong"])
+      if(migrated[key]===defaults[key])migrated[key]="";
+  }
+  if(migrated.tool&&domainOf(migrated.tool)!==activeDomain)migrated.tool="";
+  if(!validProfile(migrated,activeDomain)){
+    const home=domainOf(migrated.home)===activeDomain?migrated.home:defaults.home;
+    allProfiles[activeDomain]=blankProfile(home);
+  }else allProfiles[activeDomain]=migrated;
+}
 let site={...allProfiles[activeDomain]},allMarks=read(storageMarks,{});
 if(!Object.keys(allMarks).length){const old=read(oldMarksKey,{});if(Object.keys(old).length){allMarks["generadordelettering.org"]=old;store(storageMarks,allMarks)}}
 let marks=allMarks[activeDomain]||{};
