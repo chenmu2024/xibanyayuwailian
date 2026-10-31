@@ -56,8 +56,8 @@ const hostOf=url=>{try{return new URL(url).hostname.toLowerCase().replace(/^www\
 if(all.some(x=>x.example&&hostOf(x.example)===ownHost))throw new Error("Third-party published samples must not be the user-owned site URL");
 if(all.find(x=>x.id===58)?.example!=="https://www.educaguia.com/listadoEDU.asp")throw new Error("Educaguia example must be its real public directory page");
 const p1Actual = all.filter(x=>x.level==="P1");
-if(p1Actual.length!==13||p1Actual.some(x=>!x.p1Proof||x.p1Proof.date!=="2026-10-31")) throw new Error("V47 all 13 current P1 sources require explicitly dated outbound evidence");
-if(p1Actual.filter(x=>Boolean(x.p1Proof.href)).length!==11||p1Actual.filter(x=>Boolean(x.p1Proof.rawRel)).length!==6)throw new Error("V47 href/raw-rel evidence counts not synchronized");
+if(p1Actual.length!==12||p1Actual.some(x=>!x.p1Proof||x.p1Proof.date!=="2026-10-31")) throw new Error("V53 current 12 P1 sources must retain dated historical outbound evidence");
+if(p1Actual.filter(x=>Boolean(x.p1Proof.href)).length!==10||p1Actual.filter(x=>Boolean(x.p1Proof.rawRel)).length!==6)throw new Error("V47 href/raw-rel evidence counts not synchronized");
 if(!html.includes("V47｜本平台已发布网站的外链证据"))throw new Error("V47 P1 evidence cards missing");
 const v33 = readJson("auditV33");
 const v34 = readJson("auditV34");
