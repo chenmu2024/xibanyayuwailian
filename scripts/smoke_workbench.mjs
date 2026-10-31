@@ -80,5 +80,6 @@ const exported=blobs.at(-1).parts.join("");
 assert.ok(exported.includes("restored.example"));
 assert.ok(exported.includes("审核中"));
 assert.ok(exported.includes("'=HYPERLINK"),"CSV export must escape spreadsheet formulas");
+assert.ok(!exported.includes('"\'"'),"Empty CSV cells must remain empty, not apostrophes");
 
 console.log("PASS: 176 cards, 21 detailed tables, search, per-domain progress, URL reset, JSON backup/restore, CSV formula safety (11 checks).");
