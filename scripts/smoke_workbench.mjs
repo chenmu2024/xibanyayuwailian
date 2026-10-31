@@ -27,6 +27,7 @@ assert.equal(items.filter(x=>x.level==="P1"&&x.p1Proof).length,12,"All P1 cards 
 assert.equal(items.filter(x=>x.level==="P1"&&x.p1Proof?.href).length,10,"V53 exactly 10 current P1 sources have third-party href; Peplio now conditional");
 assert.equal(items.filter(x=>x.level==="P1"&&x.p1Proof?.rawRel).length,6,"Old raw-rel evidence must be explicitly separated from current href");
 assert.equal(items.find(x=>x.id===149).level,"条件","Peplio must be conditional after public ugc nofollow evidence");
+assert.ok(items.find(x=>x.id===149).evidence.includes("ugc nofollow")&&!items.find(x=>x.id===2).evidence.includes("AnyFyle"),"V53 nofollow proof belongs only to Peplio #149");
 assert.equal(items.find(x=>x.id===149).p1Proof.href,"https://anyfyle.com/?ref=pepliohub","Peplio href tracking query is part of the observed destination");
 assert.equal(items.find(x=>x.id===58).level,"P2","Actual practice-sheet resources qualify Educaguía for a reviewable P2 application");
 assert.equal(detailed.length,21);
