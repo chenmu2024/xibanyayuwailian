@@ -12,6 +12,8 @@
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
 | **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
+| **[docs/v32-14-official-source-audit-20261031.md](docs/v32-14-official-source-audit-20261031.md)** | **V32：14家现有平台官网复核，含public.tools/Htrd/FounderOmni真实字段及暂停、隐私、免费托管限制** |
+| [data/v32-official-source-audit-20261031.csv](data/v32-official-source-audit-20261031.csv) | 14家官方表单证据、填写字段、当前限制、未提交状态的结构化CSV |
 | **[docs/v31-17-live-form-verification-20261031.md](docs/v31-17-live-form-verification-20261031.md)** | **V31优先查看：17家官网实时表单复核，准确字段、费用及互链限制；另说明Lugar Latino直访404** |
 | [data/v31-official-form-audit-20261031.csv](data/v31-official-form-audit-20261031.csv) | V31的17家官方表单字段、审核条件与实际获链状态审计表，仍全部未提交 |
 | [data/backlinks-master.csv](data/backlinks-master.csv) | V26 累计176条渠道/候选（保留V25的171条，本轮新添5条，含条件/排除），完整保留历史记录 |
@@ -191,3 +193,12 @@
 - **修正#147 Good Design Tools**：其Tally投稿并没有旧卡所写Category/Tags；实际包括工具名、网址、介绍、定价、优惠、联盟计划、图标（JPG/JPEG/WebP/SVG≤2MB）和Email。**#123 LaunchFree** 的创建者姓名、Short Bio、产品起因、验证码不可省略。**#128 Toolfound** 申请免费但必须完成域名所有权验证。**#151 DesignTools.fyi** 有Source of Truth/Size/公司代表复选框。
 - 更新 [176完整逐站手册](docs/all-176-backlink-submission-methods.md)、[21家精确填表卡](docs/lettering-priority-21-ready-to-fill.md) 与 [离线操作台](docs/backlink-submission-workbench.html)。现在21家共有**149项**已整理的字段行，17家卡片有V31官方复核提醒。
 - **第三方正式申请0、实际新增反向链接0、真实Follow/DR/AS/Google索引不作未经核验的保证**。GitHub Actions前期Runner/作业仍失败，静态核对不等于本轮CI绿灯。
+
+## V32｜第二批14家原有渠道实际表单复核（2026-10-31）
+
+- **本轮只研究已收录的14家来源，不增加新平台，也未为Lettering提交任何表单。** 主库仍176家；最新分类 **P1 25、P2 21、条件79、待核验16、排除34、非外链1**，不是成功获链数。
+- **值得优先研究填写**：`#074 public.tools` 已确认官网页脚Tally真实四字段和Graphics & Design类别；`#075 Htrd` 首页底部有真实五字段表单；`#171 FounderOmni` 西语设计资源馆藏已确认弹层字段“Tipo de solicitud / Categoría / Nombre de la ficha / URL pública / Por qué / 邮箱可选”。免费收录与实际rel仍需等待审核/独立核查。
+- **需要先确认资格**：`#057 ToolGuide`重点是工作效率软件，描述上限120字符不是120词；`#076 NoUploadTools`禁止会话回放且隐私勾选至少一项，AdSense站不得选No ads；`#003 Enlineados`明确禁止免费主机；`#141 GainWeb`的Regular Free不保证审核。
+- **暂时跳过**：`#026 TopTool`官网暂停，`#152 DesignTrash`官方拒此类单一关键词生成器，`#160 Freebie Supply`真实填表未成功读取，`#161 Fountn`外部提交通道无法解析，`#170 Ghostbyte Library`只是GitHub Issue建议而非公开获链。教育类`#173 Learnlists`有严格互动学习内容门槛。
+- [完整V32审计说明](docs/v32-14-official-source-audit-20261031.md)和[CSV](data/v32-official-source-audit-20261031.csv)已建立，`data/backlinks-master.csv`、176条长文、21家具体字段卡及[离线HTML操作台](docs/backlink-submission-workbench.html)已同步。重点21家现在**161行字段**，HTML上该14家带V32提醒。
+- **验证边界**：本次自有V8执行了数据结构检测和模拟交互11项，均通过；不是实际浏览器端到端或第三方目录获链。GitHub Actions曾出现Runner层故障，未得到本轮GitHub CI成功记录。申请0、获链0、真实Follow/DR/AS和索引均未证实。
