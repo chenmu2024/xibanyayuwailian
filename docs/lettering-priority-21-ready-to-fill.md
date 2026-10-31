@@ -17,6 +17,8 @@
 
 ## 各站独立填写（完成一站后核实台账再开下一站）
 
+**V32补充（2026-10-31）**：在原176家中又核查14家官网，重点#074 public.tools和#075 Htrd可进入真实免费表单，#171 FounderOmni现在已可确认西语真实填写字段。#057 ToolGuide的短描述限**120字符**、工作效率工具资格待审核；#076 NoUploadTools隐私未审查不直接提交；#141 GainWeb的Regular Free不保证审核。#026 TopTool仍暂停；#003 Enlineados排除免费主机；#152 DesignTrash明文拒绝关键词生成器。详见 [V32 14站复核清单](v32-14-official-source-audit-20261031.md)。
+
 **V31实测更新（2026-10-31）**：请先查看 [17家官网表单复核结果](v31-17-live-form-verification-20261031.md)。#014 Lugar Latino官方提交页直接请求多次返回404，虽搜索索引可见旧表单，现**暂停手工申请**。#123、#128、#147、#151、#169已经按当日官方表单纠正步骤；平台官方Dofollow声明不等于我们已独立测得Follow。
 
 ### 1. LaunchFree｜主库 #123
@@ -319,15 +321,19 @@
 
 | 实际字段 | 本站参考值 |
 | --- | --- |
-| Nombre | Generador de Lettering |
-| URL de herramienta | https://generadordelettering.org/editor |
-| Categoría | Diseño / Texto（按实际选项） |
-| Descripción（≤120词） | Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP. |
-| Modelo de precio | Gratis |
-| Plataforma | Web |
-| Nombre y email | 【真实站主/作者或团队名称】 / 【你的真实联系邮箱】 |
+| Nombre de la herramienta | Generador de Lettering |
+| Sitio web | https://generadordelettering.org/editor |
+| Categoría | 需按当页工作/设计类真实选择；若无法对应，应跳过 |
+| Descripción corta（≤120字符） | Herramienta gratis de lettering para crear imágenes tipográficas personalizadas en el navegador. |
+| Modelo de precios | Gratis（真实免费时） |
+| Plataformas | Web |
+| Tu nombre | 【真实提交人姓名，不是虚构公司】 |
+| Correo electrónico | 【真实联系邮箱】 |
+| Empresa（可选） | 仅有真实公司信息才填写 |
+| Tu papel | Creo la herramienta / Hago el marketing / Uso la herramienta，按本人实际身份选择 |
+| Consentimiento / Website bevestigen | 理解并按平台真实要求确认 |
 
-**提交前/后核查**：不收空壳内容站；需实际有生产力价值，验证码人工完成。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V32：西语简介上限为120字符而非120词。官网仅收工作和组织效率软件；装饰字体工具是否入选不确定。此站应先确认产品相关性，不宜作为第一梯队。 **本轮没有实际递交**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-057)。
 
 ### 17. public.tools｜主库 #074
@@ -373,13 +379,15 @@
 | --- | --- |
 | Tool name | Generador de Lettering |
 | Tool URL | https://generadordelettering.org/editor |
-| Short description（≤120字符） | Free Spanish lettering editor for creating customizable text images. |
-| Extended description（≤300字符，可选） | A free Spanish-language browser lettering editor for making decorative text images. Adjust fonts, colors, outlines, shadows and canvas settings, then export PNG, JPG or WebP images. No account required. It does not generate TTF or OTF font files. |
-| Category | Design（按实际可选类别） |
-| Privacy feature checkboxes | **先真实技术验证，再勾选；不能猜测** |
-| Email | 【你的真实联系邮箱】 |
+| One-line description（≤120 chars） | Free Spanish lettering editor for customizable text images. |
+| Longer description（≤300 chars，可选） | A browser-based Spanish lettering editor with fonts, colors, outlines and shadows, exporting artwork as PNG, JPG or WebP. No account required. Not a TTF or OTF font generator. |
+| Category | Design（当页可选时） |
+| Privacy features | 至少勾1项已证实为真的特征；有AdSense不得选No ads，未核实脚本不得声称No upload/Works offline |
+| Your email | 【你的真实联系邮箱】 |
+| Your name / handle（可选） | 【如实填写，可留空】 |
+| Company（可选） | 【有真实公司才填写，否则留空】 |
 
-**提交前/后核查**：AdSense/分析脚本是否触发站方追踪禁令需核实；此项不是默认立刻可投。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V32：站方明文禁止Microsoft Clarity、Hotjar、FullStory、LogRocket、Mouseflow等会话回放；隐私勾选项至少一项，当前站点必须先检查广告、Cookie、浏览器网络请求及相关脚本。未经审计暂缓。 **本轮没有实际递交**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-076)。
 
 ### 20. GainWeb｜主库 #141
@@ -390,14 +398,20 @@
 
 | 实际字段 | 本站参考值 |
 | --- | --- |
-| Plan | Regular Free |
+| Plan | Regular — Free（不要购买Premium $25或Featured $45） |
 | Title | Generador de Lettering |
 | URL | https://generadordelettering.org/ |
-| Category | Design and Graphics / Internet（实际匹配） |
-| Description | A free Spanish-language browser lettering editor for making decorative text images. Adjust fonts, colors, outlines, shadows and canvas settings, then export PNG, JPG or WebP images. No account required. It does not generate TTF or OTF font files. |
+| Category | 按官网下拉真实类别选择，优先设计/字体相关 |
+| Description | A free Spanish-language browser lettering editor for creating custom decorative text artwork, with fonts, colors, shadows and PNG/JPG/WebP exports. |
+| Owner Name | 【真实站长姓名】 |
 | Owner Email | 【你的真实联系邮箱】 |
+| META Keywords | lettering, editor de lettering, texto decorativo |
+| META Description | Crea diseños de lettering gratis desde el navegador y exporta imágenes en PNG, JPG o WebP. |
+| Address / City / State / Country | 仅在真实、适用且平台明确要求时提供，不得虚构地址 |
+| Phone / Logo / Deep Links | 可选的真实资料才填写，不购买付费展示 |
+| Submission Rules | 仔细阅读后本人如实确认 |
 
-**提交前/后核查**：不能保证审核、索引或流量；检查此前是否已填。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V32：Regular Free明确不保证审核或收录；付费档$25/$45非必要且不符合本项目免费优先规则。Owner Name和Meta信息是官网可见字段，原表遗漏已补。 **本轮没有实际递交**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-141)。
 
 ### 21. Good Design Tools｜主库 #147
