@@ -18,6 +18,8 @@
 
 **V41最新提醒（2026-10-31）**：EpicTools #172现有两项Curated异常内容（域名待售、Cloudflare拦截），由P1降至P2；#159人机验证码每次按当页题目填写，不能复用旧数值。四个优先平台及一个次优先平台的实际逐字段材料见[V41申请包](v41-editorial-quality-and-ready-to-submit-pack-20261031.md)，跨域投稿必须替换自己的真实信息。
 
+**当前首批执行资料（2026-10-31）**：[现行可填工作单](current-priority-execution.md)、[5条公开证据表](../data/current-priority-evidence.csv)、[GitHub Actions 0ms/无步骤故障排查](actions-pre-execution-diagnosis.md)。
+
 ## 1. 实际使用方法
 
 1. 新建一个西语网站后，先准备真实的名称、规范首页URL、具体工具页面URL、免费/付费状态、目标用户、功能说明、真实Logo与截图以及能收邮件的邮箱。下方Lettering只是示例，换站必须重新写。
@@ -1701,6 +1703,9 @@
 <a id="link-075"></a>
 ### 075. Htrd｜V32官方复核｜P1
 
+**质量实证补充**：公开[Fontjoy详情](https://htrd.org/tools/fontjoy)已确认外站href，V33历史raw rel=noopener。官网自称178工具、近7天新增76条；不把hand-picked标签和新增数量直接等同严格审核。仍需核查本站是否确实免登录免费可用。
+
+
 **V33公开链接实测（2026-10-31）**：已发布的[Fontjoy](https://htrd.org/tools/fontjoy)与[Squoosh](https://htrd.org/tools/squoosh)外部工具href均为`rel="noopener"`，该两条链接未带nofollow；只代表已检查样本，本站未获收录，编辑审核不保证通过。
 
 **直接入口**：[https://htrd.org/](https://htrd.org/)
@@ -2736,6 +2741,8 @@
 
 <a id="link-123"></a>
 ### 123. LaunchFree.io — 候选可申请（主库更新：V31，2026-10-31）
+
+**现行优先证据（2026-10-31）**：已正式刊登[Fontique Lettering](https://launchfree.io/listings/fontique.html)、[Free Text Symbols Fancy Text](https://launchfree.io/listings/free-text-symbols.html)及西语[Rueda Decide](https://launchfree.io/listings/rueda-decide.html)，均有独立详情和实际直达各自官网的href。官方[FAQ](https://launchfree.io/faq.html)称免费永久、Dofollow与可选徽章，但没有本轮原始rel实测。真实姓名邮箱、Why built和Short Bio不可杜撰。当前首批第一位和四步填写包详见[现行人工清单](current-priority-execution.md)。
 
 **官方提交入口**：[https://launchfree.io/submit.html](https://launchfree.io/submit.html)。
 

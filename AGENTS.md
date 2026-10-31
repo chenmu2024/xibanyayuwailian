@@ -120,3 +120,7 @@
 91. V41：除了原始`href/rel`，还应审计人工精选的真实内容品质。EpicTools #172的Newest Additions出现过期域名拍卖和Cloudflare拦截，虽然标Curated；所以从P1降P2。V34旧真实href/rel数据不删除，不把Partner/Curated混成一类。
 92. V41：对每个渠道按实际表单字段填写。#159数学反人机问答为动态题、禁止硬编码旧题目；#164 Short description受280字符上限；#151姓名邮箱与公司代表资格须真；#163 LDS当前规范页只取到投稿介绍，所列更细字段来自V23历史记录，不能说本轮重查全量字段；#172仅URL+Category。
 93. V41已创建五家人工填写准备卡和逐字段CSV，文本仅针对generadordelettering.org/editor且应二次实站校验，严禁复用到其他网站不改产品信息。实际投稿成功只在人工完成并有凭证后登记；raw rel、索引、访问量各需独立证据。
+
+94. 当前LaunchFree #123 首批高优先证据含Fontique（Creator Tools/Lettering）、Free Text Symbols（Fancy Text）及Rueda Decide（西语工具）三个实际公开详情的站外href。FAQ的永久免费/Dofollow是官方陈述，raw rel和本站获链未实证。填写真实开发动机/创建者信息，详见docs/current-priority-execution.md。
+95. GitHub Actions运行41160234903 job124415981348失败但steps=null、日志404、计费0ms，无证据表明任何验证脚本曾执行；不得谎称Python/JS测试失败，也不得无诊断提高付费预算。见docs/actions-pre-execution-diagnosis.md。
+96. 优先延续有真实同类投稿成功样本的来源，维护现行申请包而非无限追加版本号。76等发布数量不等于人工严审，也不等于用户网站获链。

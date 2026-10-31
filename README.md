@@ -59,6 +59,8 @@
 
 **数据基线：2026-10-31 / V26。** 当前历史台账累计 176 条，包含 P1/P2、条件使用、待核验、排除及非外链渠道。过往第三方 DR 和 Follow 抽检信息应视为“历史证据”，不是实时保证。
 
+**当前首批优先（2026-10-31）**：[LaunchFree四步真实填写与5家高相关目录执行清单](docs/current-priority-execution.md)；[GitHub Actions无法进入Runner的故障证据](docs/actions-pre-execution-diagnosis.md)。
+
 ## 新网站执行流程
 
 1. 首先在 **submission-ledger.csv** 按 `目标站点根域名 + 外链平台注册根域名` 查重，再检查历史外链邮件和其他台账。
@@ -282,3 +284,9 @@
 - **#172 EpicTools从P1降为P2**：其“Newest Additions”将过期域名拍卖页面与Cloudflare安全拦截内容标为Curated，显示编辑过滤有明显噪声。仍保留已确认的真正产品详情站外href和两字段官方表单，不误称平台无外链。
 - #159 Design Resources Archive实时验证的表单仅有Link URL、Description、当页人机题目，旧数学题目不可复用；#164 Unikist严格按≤280字符；#151 DesignTools.fyi姓名/邮箱真实且“代表公司”选项依事实；#163 LDS新规范域可访问但完整表单字段本轮未重新抓取，仍按V23历史字段待人工复核。
 - 历史176家：**P1 19、P2 23、条件83、待核验16、排除34、非外链1**。实际新投稿0、本站新确认获链0；未独立实测DR/AS、Google索引和本网站获批页raw rel。CI仍须独立运行验证，不能从提交成功推断通过。
+
+## 当前执行优先级与CI阻断证据（2026-10-31）
+
+- **[现行首批真正可人工执行的高相关渠道清单](docs/current-priority-execution.md)**。LaunchFree有真实Fontique（Lettering）、Free Text Symbols（Fancy Text）和西语Rueda Decide的独立公开页，可优先试申请。完整四步材料已核对Tagline 54字符、Description 252字符，真实开发动机/个人身份不能代编；另附[5条原始公开证据](data/current-priority-evidence.csv)。官网自称Dofollow，并非本轮raw rel已证实。
+- **[CI启动前故障诊断](docs/actions-pre-execution-diagnosis.md)**：实测运行41160234903的validate job steps=null、billable duration=0ms、没有runner及日志，无法把failure归咎于Python/Node测试，也不能声称修复。仓库/账户Actions设置与Billing须以网页系统错误为准，优先免费排查。
+- 现有176家总库和P1 19 / P2 23 / 条件83等历史分类不变；没有代提交或获得本站确认外链。
