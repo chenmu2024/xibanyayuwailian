@@ -83,3 +83,8 @@
 ## V51｜11家高相关目录再次核验，建立轻量优先顺序（2026-10-31）
 
 [查看V51当前公开证据与可执行顺序](v51-curated-live-review-and-execution-20261031.md)及[11家逐行CSV](../data/v51-live-curated-submission-audit-20261031.csv)。**本轮建议的人工操作顺序**：先#159 Design Resources Archive、#164 Unikist、#151 DesignTools.fyi（与Typography/Design工具匹配、表单较短），随后#123 LaunchFree、#75 Htrd及#148 NoSignupTools。这里的**填写顺序**不同于主库P1资格优先级：不是调整权威评分或独立确认Follow。#165 Mark-it可作为设计精选补充；#172 EpicTools虽有真实Penpot等第三方出站详情，但首页继续显示已停运/出售/访问错误的Curated噪声内容，应后置。#171 FounderOmni弹层仍待真人核查；#163 LDS Library本轮网页读取失败，不能据此判定关站。所有新用户获链仍为0，未代填任何表单。
+
+
+## V52｜规范域名、robots与现时raw rel分离（2026-10-31）
+
+[查看9家公开案例的本轮canonical/robots/外站href证据](v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md)｜[V52逐行CSV](../data/v52-curated-published-anchor-metadata-20261031.csv)｜[只读核验脚本](../scripts/audit_curated_v52.py)。LDS Library #163 的正式域 `library.legitdesign.studio` 本轮已可读取实际字体资源外站href和提交页；旧 `lds-library.vercel.app` 的canonical指向正式域，**只可申请一次**。但其动态投稿全部表单字段未得到实时确认，仍需人工按当时界面填写。页面meta robots/canonical不等于实际raw a[rel]或Google已收录；脚本有9页请求上限，未在本次执行环境运行在线raw HTML检查。没有任何生成本站的新确认外链。
