@@ -33,7 +33,7 @@
 
 ## 原始HTML rel的9页只读核验工具
 
-新增 [scripts/audit_curated_v52.py](../scripts/audit_curated_v52.py) 和 [离线测试](../scripts/test_audit_curated_v52.py)。它**复用V49的HTTPS安全读取、单页2MB上限、最大5次跳转、精确href（包含跟踪参数）与逗号分隔rel判定**。默认最多只检查本报告中9条**其他网站的公开样本页**，没有申请表单POST、注册、Google搜索或全站爬取；不会把现场结果自动回写GitHub。
+新增 [scripts/audit_curated_v52.py](../scripts/audit_curated_v52.py) 和 [离线测试](../scripts/test_audit_curated_v52.py)。它**复用V49的HTTPS安全读取、单页2MB上限、最大5次跳转、精确href（包含跟踪参数）与逗号分隔rel判定**。默认最多检查本报告中9条**其他网站的公开样本起始URL**（每个URL如发生跳转，可有最多5次重定向），没有申请表单POST、注册、Google搜索或全站爬取；不会把现场结果自动回写GitHub。
 
 在Windows PowerShell中，在仓库根目录运行：
 
@@ -41,10 +41,10 @@
 # 先看9条将检查的页面，不访问外网（每条标记未扫描）
 py .\scripts\audit_curated_v52.py --max-requests 0 --output v52-preview.csv
 
-# 先尝试3个真实公开页面，单次不超过3个GET
+# 先尝试3个真实公开页面：最多3个起始URL；跳转可增加实际GET次数
 py .\scripts\audit_curated_v52.py --max-requests 3 --output v52-three-pages.csv
 
-# 如上轮完成再完整核查9个公开页面（至多9个GET）
+# 如上轮完成再检查9个公开页面（最多9个起始URL，可能有有限重定向）
 py .\scripts\audit_curated_v52.py --max-requests 9 --output v52-raw-rel.csv
 
 # 单元测试，仅模拟CSV与请求数量，不联网
