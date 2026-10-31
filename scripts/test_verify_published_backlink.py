@@ -45,6 +45,19 @@ class BacklinkVerifierTests(unittest.TestCase):
         result = inspect_html("<p>generadordelettering.org</p>", SOURCE, TARGET)
         self.assertEqual(result["links"], [])
 
+    def test_malformed_anchor_does_not_hide_valid_link(self):
+        html = '<a href="http://[">broken</a><a href="https://generadordelettering.org/">valid</a>'
+        result = inspect_html(html, SOURCE, TARGET)
+        self.assertEqual(result["status"], "found")
+        self.assertEqual(len(result["links"]), 1)
+        self.assertEqual(result["links"][0]["href"], TARGET)
+
+    def test_valueless_rel_does_not_crash(self):
+        result = inspect_html('<a href="https://generadordelettering.org/" rel>valid</a>', SOURCE, TARGET)
+        self.assertEqual(result["status"], "found")
+        self.assertEqual(result["links"][0]["rel"], "(none)")
+        self.assertEqual(result["links"][0]["rel_result"], "no_restriction_token_observed")
+
     def test_rel_classification(self):
         self.assertEqual(classify_rel("noopener NOFOLLOW sponsored"), "nofollow+sponsored")
         self.assertEqual(classify_rel("noopener noreferrer"), "no_restriction_token_observed")
