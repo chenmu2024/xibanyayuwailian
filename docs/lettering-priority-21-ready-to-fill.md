@@ -483,3 +483,9 @@
 ## V48实时表单提醒
 
 以前字段中NoSignupTools只写“截图”，现已查证0–6张真实截图且每张≤2MB，图标≤1MB，标签No Ads不适用于有广告的本站。LaunchFree个人简介及开发原因必须真实。详细见[V48实际填写卡](v48-top5-forms-ready-to-fill-20261031.md)。
+
+
+
+## V54｜7家高相关目录官方表单现场复核（2026-10-31）
+
+[完整现场字段、限制与可复制英文说明](docs/v54-live-submission-forms-and-ready-to-fill-pack-20261031.md)｜[7家逐行表单CSV](data/v54-live-submission-form-audit-20261031.csv)。V54确认#159表单只有URL/介绍/动态算术题必填，验证码会变；#164动态分类/价格未展开；#151需要真实姓名邮箱，Logo可选；#075需区分首页工具投稿表单与Newsletter；#148不要选No Ads；#123需真实创办故事与身份。**尚未人工提交，本站新增确认外链仍为0。**
