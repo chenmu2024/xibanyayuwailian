@@ -1,0 +1,12 @@
+﻿编号,平台,本次核查的提交或入口,本次表单观察,公开第三方样本页,当次提取的明确外站href（空表示未逐条取得）,样本类型,Lettering主题相关性,证据限制,下一步与分层
+"123","LaunchFree","https://launchfree.io/submit.html","可读，4步真实表单","https://launchfree.io/listings/fontique.html","https://fontique.art/","独立Lettering工具详情","高","官网称免费且声称dofollow；原始a rel仍未本轮取得","P1；产品发布型，需要本人故事与真实身份"
+"159","Design Resources Archive","https://resourcesfor.design/submit","可读，URL/简介/当页人机题","https://resourcesfor.design/resource/mixweight-594817","https://mixweight.pages.dev/?utm_source=ig&utm_medium=social&utm_content=link_in_bio","Typography独立详情","高","本次可见真实外站href，rel只保留V34历史样本","优先低成本人工投稿/editor"
+"151","DesignTools.fyi","https://designtools.fyi/submit/","可读，Typography/Free/身份/Source of Truth","https://designtools.fyi/tools/font-explorer-mqp69i9d","https://font.do","Typography独立详情","高","本次可见真实外站href，rel只保留V33历史样本","优先；真实姓名邮箱与产品规模"
+"164","Unikist","https://unikist.com/submit","可读，名称/URL/分类/定价/280字/邮箱","https://unikist.com/categories/fonts","https://fontshare.com","Fonts分类真实Visit外链","高","本次可见外站href，V34历史rel仅针对同一旧样本","优先；Design Tools而非字库下载"
+"148","NoSignupTools","https://nosignuptools.com/submit","可读，免费免注册门槛与真实图标截图","https://nosignuptools.com/tools/fontswiki","https://fontswiki.com","FontsWiki独立详情","高","历史rel来自分类页，不能照搬至详情页","优先；需备自有图标图片"
+"75","Htrd","https://htrd.org/","可读，首页Submit a tool","https://htrd.org/tools/fontjoy","https://fontjoy.com","Fontjoy独立详情","高","官网自称精选178家，人工严格度未独立证实","优先；只限无需账户即时可用"
+"165","Mark-it","https://markitnow.net/submit-a-resource","可读，真实作者/邮箱/简介/真实性确认","https://markitnow.net/font","https://fontmeme.com","Font分类目录真实外链","中高","独立字体列表可见，首页其他独立互动目录仍未核全部链接","P2；比低质量泛目录更相关"
+"172","EpicTools","https://epictools.dev/submit","可读，URL+Design分类","https://epictools.dev/penpot","https://penpot.app","设计工具独立详情","中","4639+站点自称；首页存在停运、域名出售、Cloudflare错误仍被列Curated；Partner与免费Curated不同","P2后置；实际相关但质量不宜高估"
+"171","FounderOmni","https://founderomni.com/es/library/design-brand-assets/","可见Sugerir un recurso；本次未逐步操作弹层","https://founderomni.com/es/library/design-brand-assets/","","西语设计目录及资源卡片","中高","官网2026-10-30显示74个设计资源；该页单个外链的原始href/rel未本轮逐项核查","条件；先真人核对弹层与允许自荐"
+"58","Educaguía","https://educaguia.com/inserta-tu-web.asp","可读，Paso1 Recursos Educativos，免费且自动订阅通讯","https://www.educaguia.com/listadoEDU.asp","","教育Web总列表，不是本站公开详情","中，仅教学练字资源","本轮证实列表和申请规则；未逐项重取列表中其他站的完整href/rel","P2；仅申请A4练习材料，非普通编辑器"
+"163","LDS Library","https://library.legitdesign.studio/submit","本轮读取失败，不推断网站停运","https://library.legitdesign.studio/design-resources/fonts","","规范域字体栏目（V40历史案例）","高但现场待复核","本轮访问工具不可达；不能把V40历史证据写成当前成功","P2待浏览器复核；旧Vercel别名不得重复投"
