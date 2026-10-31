@@ -64,6 +64,8 @@
 
 ## 五、#163 LDS Library｜规范域名已确认，但完整字段仅有历史证据
 
+**2026-10-31 V52后续纠正（保留本V41当时未取到表单的历史事实）：** 已通过只读公开页面获取规范域`/submit`表单的实际HTML：`Resource name`（必填≤120字符）、`Link`（必填URL≤500字符）、`Category=Design Resources`（真实选项，无独立Fonts）、`Pricing=Free`（需符合真实免费条件）、`What is it?`（≤600字符）、`Why is it useful?`（≤1500字符）、`Your email`（可选），防垃圾`website`字段必须留空。V52具体复制文案与元信息：[最新证据](v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md)。下文“V41当前未能读取完整字段”只是V41时点，不再代表最新状态。
+
 [唯一建议使用的规范域提交页](https://library.legitdesign.studio/submit)可公开读取页面标题与“建议资源由团队审阅、好的资源进入周二简报”的说明；旧Vercel页面canonical指向相同平台规范域。**V41当前页面抓取未获取完整表单输入结构**。此前V23记录的Resource name、Link、Category、Pricing、What is it?、Why is it useful?、Email（历史可选）应视作**待现场核对的参考**，绝对不能声称这些字段此次实时确认。只投规范域一次，拒绝把旧Vercel地址重复算渠道。
 
 可预备：
