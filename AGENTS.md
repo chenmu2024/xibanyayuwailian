@@ -86,3 +86,9 @@
 65. 任何`已获外链`必须有用户目标域名真实公开href，不能借第三方Fontjoy/StackEdit/FontsWiki/StencilMaker的外链代替本站；来源目录内容未检出只能按具体检查URL、日期和页面范围记录，不能断言全站被拒或未收录。
 66. V33新增九个页面的核查范围见`data/v33-lettering-public-listing-presence-20261031.csv`，每次重新复核需独立保存原页与实际href/rel证据。GitHub或服务器失败不得冒充通过。
 67. Node验证脚本保持正确职责：`scripts/validate_workbench.mjs`验证176条主表同步、21家字段、公开样本与JS语法，`scripts/smoke_workbench.mjs`负责运行模拟DOM交互；V33修复曾经交换文件内容的故障。未经测试不要交换或随意重命名。
+
+68. V34新增`data/v34-21-published-link-rel-samples-20261031.csv`（21条已发布外站href、具体页面和原始rel）与`data/v34-11-category-presence-checks-20261031.csv`（11个有限范围页面检查）。所有样本指向其他人的网站，不代表已为Lettering取得任何链接。
+69. V34 #005 The Free Tools Directory的1000 Font Generator真实公开样本rel含nofollow；#162 UX Resources的4个Typography资源详情样本含sponsored。两者由P1调整为条件；不推断这些平台所有链接都相同，也不把第三方免费投稿当免费Follow保证。
+70. V34 #159资源详情、#163/#164字体分类、#165设计资源、#172 EpicTools Curated详情中已实测到未带nofollow/ugc/sponsored的公开外站href；EpicTools Partner显式follow与免费Curated必须分开。不得用抽样rel代替新申请审核/真实条目rel。
+71. V34 `docs/backlink-submission-workbench.html`新加11家实际公开href/rel提示和单独的`design`排序，保留V33旧排序及跨域进度隔离。`scripts/validate_workbench.mjs`应检查V34 21条原始样本、#005 nofollow、#162 4/4 sponsored；`scripts/smoke_workbench.mjs`新增第二批排序回归。修改主库、CSV、HTML或测试要同步。
+72. GitHub Actions本轮如未得到明确绿色运行，只能报告独立V8校验结果及Actions尚未修复，不能假报获批外链或CI成功。
