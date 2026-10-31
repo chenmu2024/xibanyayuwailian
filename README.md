@@ -6,6 +6,7 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| **[docs/v30-cross-site-field-mapping-and-backup.md](docs/v30-cross-site-field-mapping-and-backup.md)** | **V30：不同西语网站共用176平台填写卡、JSON备份恢复、CSV安全及11项模拟交互测试** |
 | [docs/v29-field-level-workbench-and-ci-evidence.md](docs/v29-field-level-workbench-and-ci-evidence.md) | **V29更新：21家平台共133个真实历史字段示例、进度按网站域名隔离、GitHub Actions故障取证** |
 | **[docs/backlink-submission-workbench.html](docs/backlink-submission-workbench.html)** | **V28离线可用的176条外链操作台**：可搜索/筛选/排序，独立展开每站入口与逐条步骤，复制自己的西语/英语材料，浏览器本地标注进度并下载CSV；需下载原始HTML后用Chrome打开 |
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
@@ -172,3 +173,11 @@
 - 当切换到新品牌或域名，Lettering特有介绍、功能类别和教学资源路径不再作为可直接复制的事实；要用新站真实功能重写。
 - 保留历史Python验证，加了 `scripts/validate_workbench.mjs`，用于当Runner恢复时检查176条JSON、21家字段133行、页面JavaScript语法和无外部网络依赖。
 - **CI仍显示失败，未取得绿色结果**：曾添加不依赖checkout/用户代码的Runner探针也失败，换成`ubuntu-24.04`仍失败；无法取得GitHub失败作业的日志，故不能确定确切原因，更不能声称全部测试通过。证据详见 [V29执行与CI记录](docs/v29-field-level-workbench-and-ci-evidence.md)。
+
+## V30｜跨站真实填写 + 备份恢复（2026-10-31）
+
+- **不新增外链渠道**：仍是176条历史记录，21家重点平台共133行字段。升级后新站可直接使用自己在顶部改写的西语/英语短描述与长说明；原Lettering专用文案不会冒充别的网站真实功能。类别/收费/地域/身份须人工核实。
+- **多站独立进度真正可备份**：新增“备份所有网站JSON”和“恢复进度备份”，含使用者当前网站资料及所有目标域名的本地标注。恢复时检查渠道编号、文件大小、阶段与实际域名并提示是否覆盖。**备份可能含邮箱与备注，不得上传公开仓库**。
+- 仍保留当前域名CSV导出，并增加对电子表格危险公式起始字符的转义，减少Excel/Sheets直接打开的注入风险。
+- **本轮V8模拟交互11项通过**（176渲染、EpicTools检索、状态、域名隔离、JSON备份/恢复、CSV等），单独字段映射逻辑7项通过；新增可复现`scripts/smoke_workbench.mjs`。不等于真实Chrome端到端或第三方目录提交测试。
+- **GitHub Actions暂未成功**：此前最小Runner探针不依赖项目代码也失败，连接器无法提供日志；因此继续保留`ci失败/原因未定`的明确状态。使用说明和[详细证据](docs/v30-cross-site-field-mapping-and-backup.md)均已更新。没有修改真实递交台账，没有生成已获链记录。
