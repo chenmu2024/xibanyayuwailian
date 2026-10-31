@@ -17,6 +17,8 @@
 
 ## 各站独立填写（完成一站后核实台账再开下一站）
 
+**V34观察样本提醒（2026-10-31）**：新增21个已发布真实href/rel抽样，#005 The Free Tools Directory的字体工具样本含nofollow，#162 UX Resources的4个Typography样本均含sponsored，均从P1降为条件。优先核对#159、#163、#164、#172、#165的字体设计真实公开链接；完整记录见 [V34核查](v34-21-public-link-samples-and-priority-update-20261031.md)，[第二批5家可复制字段](v34-five-more-design-font-directories-ready-to-fill.md)。
+
 **V33公开页面实际链接属性审查（2026-10-31）**：public.tools三条公开详情样本全部nofollow，已从P1调整为“条件”，不再作为Follow优先提交。Htrd、Toolfound、DesignTools.fyi、NoSignupTools及Herramientas y Recursos检查到的公开链接样本未带nofollow，详情见 [V33 href/rel与本站收录核验](v33-public-link-rel-and-listing-presence-20261031.md)。**没有替你提交申请或获得任何新增外链**。
 
 **V32补充（2026-10-31）**：在原176家中又核查14家官网，重点#074 public.tools和#075 Htrd可进入真实免费表单，#171 FounderOmni现在已可确认西语真实填写字段。#057 ToolGuide的短描述限**120字符**、工作效率工具资格待审核；#076 NoUploadTools隐私未审查不直接提交；#141 GainWeb的Regular Free不保证审核。#026 TopTool仍暂停；#003 Enlineados排除免费主机；#152 DesignTrash明文拒绝关键词生成器。详见 [V32 14站复核清单](v32-14-official-source-audit-20261031.md)。
@@ -74,6 +76,8 @@
 
 ### 3. Design Resources Archive｜主库 #159
 
+**V34已检查两个真实排版工具专页：MixWeight与Type Garden指向外站的href都是rel=`noopener noreferrer`，样本未带nofollow/ugc/sponsored。人工精选不保证未来自己的条目同样属性。[详情](v34-21-public-link-samples-and-priority-update-20261031.md)。**
+
 **入口**：[https://resourcesfor.design/submit](https://resourcesfor.design/submit)  
 **为什么选它**：相关的字体实验/排版工具已获公开资料页；免费表单无强制徽章字段。  
 **按真实页面填写**：
@@ -111,6 +115,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-128)。
 
 ### 5. PeplioHUB｜主库 #149
+
+**V34 PeplioHUB此次可读取的HTML锚点未能辨认明确指向产品官网的外链，不能据此断言没有外链或拥有Follow。原来的截图和审核要求仍保留。[页面](https://peplio.com/pepliohub/)。**
 
 **入口**：[https://peplio.com/pepliohub/#submit-tool](https://peplio.com/pepliohub/#submit-tool)  
 **为什么选它**：免费免登录，Design and images分类相关，但可被改nofollow/ugc。  
@@ -159,6 +165,8 @@
 
 ### 7. UX Resources｜主库 #162
 
+**V34已检查4个Typography详情：Minglyph、Fontmojo、Cursive Generator、Fontshare对外href全部为rel=`noopener sponsored`，包括免费工具。按普通Follow目标已由P1调为**条件**。不宣称全站都如此。[核验](v34-21-public-link-samples-and-priority-update-20261031.md)。**
+
 **入口**：[https://uxresources.info/submit.php](https://uxresources.info/submit.php)  
 **为什么选它**：Typography分类已有对应工具案例；可见公开建议表单。  
 **按真实页面填写**：
@@ -177,6 +185,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-162)。
 
 ### 8. LDS Library｜主库 #163
+
+**V34 Fonts分类里Fontjoy与Fontshare两个真实外站href均为rel=`noopener`，样本未带nofollow；仍未有本站获链。[分类](https://lds-library.vercel.app/design-resources/fonts)。**
 
 **入口**：[https://lds-library.vercel.app/submit](https://lds-library.vercel.app/submit)  
 **为什么选它**：人工维护的设计资源库，已有字体馆藏，周度编辑。  
@@ -197,6 +207,8 @@
 
 ### 9. Unikist｜主库 #164
 
+**V34 Unikist的Fonts类别中Fontshare和Velvetyne出站href均为rel=`noreferrer`，样本未带nofollow；仅代表当前公开分类。[页面](https://unikist.com/categories/fonts)。**
+
 **入口**：[https://unikist.com/submit](https://unikist.com/submit)  
 **为什么选它**：设计及Fonts分类有第三方真实外链样例。  
 **按真实页面填写**：
@@ -214,6 +226,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-164)。
 
 ### 10. Mark-it｜主库 #165
+
+**V34 Mark-it首页Fontmeme与CMD Supply出站href均未设置rel；是否成功人工入选仍未知。[首页](https://markitnow.net/)。**
 
 **入口**：[https://markitnow.net/submit-a-resource](https://markitnow.net/submit-a-resource)  
 **为什么选它**：创作者工具编辑精选，公开Resource提交表单。  
@@ -258,6 +272,8 @@
 
 ### 12. FreeDesignerTools｜主库 #169
 
+**V34 FreeDesignerTools首页Figma与Unsplash实际出站href均为rel=`noopener noreferrer`，但首页只展示12项大工具，不能声称容易收录小网站或拥有50M真实访问。[首页](https://www.freedesignertools.com/)。**
+
 **入口**：[https://www.freedesignertools.com/suggest/](https://www.freedesignertools.com/suggest/)  
 **为什么选它**：投稿字段公开，设计工具匹配，但本次只看见约12条展示，实际权重和引荐未知。  
 **按真实页面填写**：
@@ -274,6 +290,8 @@
 
 ### 13. EpicTools｜主库 #172
 
+**V34 EpicTools的三个Curated工具详情（Penpot、Stockimg AI、Snappify）外站href无rel；Design类Partner位有显式rel=`follow`，不能将Partner曝光当免费投稿待遇。[Curated样本](https://epictools.dev/penpot)。**
+
 **入口**：[https://epictools.dev/submit](https://epictools.dev/submit)  
 **为什么选它**：最省事的真实表单：主要字段仅URL和Category，设计类别已有字体工具样例。  
 **按真实页面填写**：
@@ -287,6 +305,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-172)。
 
 ### 14. The Free Tools Directory｜主库 #005
+
+**V34实际链接属性：同类1000 Font Generator公开详情指向其官网的href为rel=`noopener nofollow`，样本为nofollow，已由P1调为**条件**。并非证明所有免费投稿均nofollow。[样本](https://thefreetoolsdirectory.com/sites/1000-font-generator)。**
 
 **入口**：[https://thefreetoolsdirectory.com/submit](https://thefreetoolsdirectory.com/submit)  
 **为什么选它**：已有字体生成器同类工具，普通免费工具可尝试。  
@@ -406,6 +426,8 @@
 
 ### 20. GainWeb｜主库 #141
 
+**V34 GainWeb的Latest Links存在无rel外部链接，但不能从页面判断是Regular Free还是Premium/Featured付费档，不因本次样本升优先。[最新链接](https://gainweb.org/latest-links.html)。**
+
 **入口**：[https://gainweb.org/submit.php](https://gainweb.org/submit.php)  
 **为什么选它**：Regular免费基本目录，编辑审核，获得Follow的事实未知。  
 **按真实页面填写**：
@@ -429,6 +451,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-141)。
 
 ### 21. Good Design Tools｜主库 #147
+
+**V34 Good Design Tools具体字体样本详情页当前读取失败target_unreachable，实际公开href/rel未知；此前Tally表单字段仍保留，不得将访问失败写成网站关闭。**
 
 **入口**：[https://tally.so/r/mBbA8N](https://tally.so/r/mBbA8N)  
 **为什么选它**：公开的第三方字体/设计工具样例；官网指向Tally建议表单。  
