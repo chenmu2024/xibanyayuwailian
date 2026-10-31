@@ -232,7 +232,7 @@
 - **#005 The Free Tools Directory** 已发表的`1000 Font Generator`详情页真实href带`rel="noopener nofollow"`；**#162 UX Resources** 4条Typography工具（Minglyph、Fontmojo、Cursive Generator、Fontshare）的真实外站href均`rel="noopener sponsored"`。两者在免费普通Follow目标下由P1调为**条件**，不声称整站全是nofollow或sponsored。
 - **第二批5家设计/字体目录优先人工研究**：`#159 Design Resources Archive`、`#163 LDS Library`、`#164 Unikist`、`#172 EpicTools`、`#165 Mark-it`。字体、排版、设计类的已公开样本未见nofollow/ugc/sponsored，但免费投稿获批、自己条目的rel及DR/AS仍未证实。EpicTools的Partner展示与Curated详情严格区分。
 - 还抽查`#169 FreeDesignerTools`与`#141 GainWeb`出站链接；GainWeb的免费/收费来源难以区分，不据此升优先。`#149 PeplioHUB`没有抽出可识别的产品官网静态href，`#147 Good Design Tools`样本详情读取失败，均保持未知，不误判成无外链或Follow。
-- 当前主库分类：**P1 22、P2 21、条件82、待核验16、排除34、非外链1，共176家**。V34离线HTML新加11家实际href/rel提醒及“V34字体设计样本优先（非保证）”排序。21家优先卡仍含161项实际表单字段。可以直接从[第二批5家填写指南](docs/v34-five-more-design-font-directories-ready-to-fill.md)逐站操作。
+- 当前主库分类：**P1 21、P2 21、条件83、待核验16、排除34、非外链1，共176家**。V34离线HTML新加11家实际href/rel提醒及“V34字体设计样本优先（非保证）”排序。21家优先卡仍含161项实际表单字段。可以直接从[第二批5家填写指南](docs/v34-five-more-design-font-directories-ready-to-fill.md)逐站操作。
 - V34校验：独立V8执行`scripts/validate_workbench.mjs`逻辑，验证176条主表、V33的11条和V34的21条证据、21家字段；`scripts/smoke_workbench.mjs`模拟DOM与两种排序，共**13项**交互检查通过。**这些不代表GitHub Actions CI或实际Chrome点击已通过**，也不代表第三方申请成功。
 
 ## V35｜外链申请后必须有可验证的公开href（2026-10-31）
@@ -264,3 +264,8 @@
 - **[V38 14家逐站实时公开核验与3张新填写卡](docs/v38-high-relevance-public-evidence-20261031.md)**；**[机器可读公开证据CSV](data/v38-high-relevance-public-evidence-20261031.csv)**。这一轮不新增目录，仅复核原176家中的14家：具体提交表单、相关第三方公开资料页、是否实际出现站外href、受限入口及风险。
 - 新发现：#171 FounderOmni此前只见建议按钮，这次已读到西语表单完整字段，并观察到Hero Patterns公开独立详情指向原站；#168西语目录能见文字图形同类项目，但单条详情页仍超时；#151 DesignTools.fyi有104个工具及Typography栏目与独立公开外站链接。#169 FreeDesignerTools虽可投稿，首页只有12项，质量优先级后置。
 - **不要误记**：本轮再次验证的是其他人的公开链接形式，raw rel不是每页都能独立获取；既未提交，也未给generadordelettering.org新增已确认外链。V38证据文件是待同步主表的细化审计，不直接改176主库、衍生手册或离线HTML的事实镜像。当前依然**0条本轮确认获链**。
+
+## V39｜真实出站链接路径核验与176项同步（2026-10-31）
+
+- [V39链接路径质量报告](docs/v39-link-path-quality-reconciliation-20261031.md)与[6个样本CSV](data/v39-sample-link-path-audit-20261031.csv)：#168普通详情通过`/salir/`站内中转，旧两条`noopener`外链实际来自页脚关联站，因此从P1降至**条件**，不作为已验证普通Follow；#151的Font Explorer原始rel早在V33已记录；#171六项表单字段早在V32已核，本轮新确认Fontpair和Hero Patterns独立详情外站href，但原始rel未知。
+- 已同步176主库、176条逐站手册、离线操作台；新增来源0、实际申请0、本站新确认外链0。GitHub Actions未因此被证明成功。
