@@ -83,3 +83,11 @@
 **不能把这些公开样本计入Lettering获链。** public.tools已核对3个详情页，每条真实外站href都含`nofollow`，虽然可免费填表，按Follow目标已从P1调整为条件。另9个目录只是已检视公开页面内未发现本站，不代表全站肯定未收录。详细表格见 [V33独立href及本站出现情况核验](v33-public-link-rel-and-listing-presence-20261031.md)。
 
 V33还校正了静态Node数据验证与模拟交互脚本的职责，并新增对176条主表和11个真实链接属性证据的同步检查。GitHub Actions既往失败仍需通过网站作业日志定位，不得仅凭页面可打开声称CI成功。
+
+## 十一、V34：第二批字体/设计外链样本排序及真实填写
+
+离线操作台版本升级V34。顶部排序现在有`V34字体设计样本优先（非保证）`，前5名为 **#159 Design Resources Archive、#163 LDS Library、#164 Unikist、#172 EpicTools、#165 Mark-it**。这些站点与字体/排版/设计资源更相近，已抽查其公开样本href和rel；[点击查看5家逐字段填表资料](v34-five-more-design-font-directories-ready-to-fill.md)。
+
+注意两处降级：**#005 The Free Tools Directory**真实字体工具条目含nofollow；**#162 UX Resources**的4个字体工具条目均含sponsored，二者已从P1改为条件。无法将这些部分样本结果绝对化为全站规则。完整21条真实外站href/rel及11页目标域名检查见 [V34核验报告](v34-21-public-link-samples-and-priority-update-20261031.md)。
+
+当前主库176、21家优先卡161个字段，新增11家样本标注。V33 Follow样本排序仍独立保留。静态与模拟交互13项通过不等于真实浏览器或CI通过；没有任何新站外提交、审核通过或Lettering获链记录。
