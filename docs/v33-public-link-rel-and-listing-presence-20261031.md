@@ -79,3 +79,7 @@
 访问平台官网 → 查是否已收录同一域名 → 填真实姓名、首页/编辑器、说明和截图 → 自己完成验证码/邮箱所有权验证 → 保存回执与实际公开条目URL → 新开公开页检查是否有`href="https://generadordelettering.org/..."` → 读取链接的`rel` → 再记录实际外链台账。**没公开条目就不计数**。
 
 **本轮状态：完成公开现有样本审查，未开展第三方投稿。**
+
+## V39 证据用途纠错
+
+V33两条来自#168的`rel=noopener`外链属[Recursos分类页](https://www.herramientasyrecursos.com/directorio/categoria/recursos)页脚关联网站，而普通独立[Agenvas详情](https://www.herramientasyrecursos.com/sitio/agenvas-7a4477)的`Visitar sitio`经过`/salir/agenvas-7a4477`重定向外站。原始rel历史观察不删除，但它们不能代表普通免费投稿的直接Follow待遇；本轮#168由P1降为条件。
