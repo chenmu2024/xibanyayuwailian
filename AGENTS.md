@@ -145,7 +145,7 @@
 110. V46对原16家P1重新核官方：kis.tools #6强制五条资格包括核心区域无干扰广告、免费输出可无署名和商用限制；站方隐私政策披露AdSense/Monetag/Adsterra，但未核广告覆盖、字体许可，不能宣称完全符合，P1→条件。
 111. Resource.fyi #88官网普通免费用户自助目录和个人编辑的Best-of精选榜完全分离：免费至少七天队列，不保证精选，OpenYC普通产品页面有直达外链；由P1降P2。
 112. Good Design Tools #147历史Tally真实表单今天仍可访问，但gooddesign.tools首页/Type Trials详情本次抓取502，提交邮箱直接同意每周推荐邮件；未获已发布普通详情/rel证据前先P2，不断言永久停站。
-113. SideProjects.net #129官方免费永久页和Dofollow仅为站方承诺，须先注册；PeplioHUB #149采取AI初筛、徽章自愿但可能早排期，保留修改nofollow/ugc权利。两者P1不等于真实用户获链/Follow实测。最新P1=13、P2=27、条件85，新增申请0。
+113. SideProjects.net #129官方免费永久页和Dofollow仅为站方承诺，须先注册；PeplioHUB #149采取AI初筛、徽章自愿但可能早排期，保留修改nofollow/ugc权利。两者在V46时被列为P1不等于真实用户获链/Follow实测。V46当时P1=13、P2=27、条件85；V53的Peplio已降条件，现P1=12/条件86，新增申请0。
 
 114. V47为全部现有13家P1创建逐行公开产品/工具页可观察外站href证据、单独历史原始rel样本列；其中11家查到他站公开直接href、6家有V33/V34旧raw rel、2家无可用独立样本。严格区分：当前清理HTML抽到的href不含真实raw rel，meta robots=index,follow也不等于a标签follow。
 115. 现实href可能带查询参数：PeplioHUB普通AnyFyle出站URL为https://anyfyle.com/?ref=pepliohub，Design Resources Archive Mixweight为带utm_source/medium/content的页面；两者仍是实际站外href，但不能随意改写为没有参数的href宣称实测。
