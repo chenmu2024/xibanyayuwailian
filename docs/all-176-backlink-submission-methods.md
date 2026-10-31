@@ -2,7 +2,7 @@
 
 > 资料基线：2026-10-31；来源：`data/backlinks-master.csv` 的1–176全部记录；示例为 `generadordelettering.org`。**176是研究渠道数量，不是已经为网站获得176条反向链接。**
 >
-> 最新主库分类：P1 22、P2 21、条件 82、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
+> 最新主库分类：P1 21、P2 21、条件 83、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
 >
 > 本手册所有来源均单独列出入口、逐项步骤、费用条件、适用对象和限制。排除/暂停/待核验条目的步骤是**留存的历史参考**，不能当作今天可以立刻投稿。当前没有自动发送邮件、注册账号或提交网站。
 
@@ -11,6 +11,8 @@
 **V33 2026-10-31更新**：抽样检查11条真正发布的出站href原始rel，并核对9个目录页面是否出现Lettering；[查看完整证据表和解释](v33-public-link-rel-and-listing-presence-20261031.md)。public.tools三条样本都带nofollow，已调低Follow目标优先级；未带nofollow的样本不能推导全站均Follow。
 
 **V34新证据（2026-10-31）**：从旧目录再核验21条已发布href、11个分类/详情页的本站域名出现情况。#005字体工具样本为nofollow、#162四个字体工具样本均为sponsored，两者调为条件；#159、#163、#164、#165、#172有相关无nofollow样本。详情见 [V34公开href/rel核查](v34-21-public-link-samples-and-priority-update-20261031.md)，可按 [第二批5家逐站可填写指南](v34-five-more-design-font-directories-ready-to-fill.md) 手工提交；没有代为提交。
+
+**V39质量纠错（2026-10-31）**：#168原V33链接样本仅能证明页脚关联站，不代表普通获批工具的主出站按钮；#151 Font Explorer的原始rel已有V33历史记录，V38新检的Affinity rel仍未知；#171六项字段V32已核实，新增证据为字体详情链接。[完整V39报告](v39-link-path-quality-reconciliation-20261031.md)。
 
 ## 1. 实际使用方法
 
@@ -3851,7 +3853,9 @@
 
 
 <a id="link-168"></a>
-### 168. Herramientas y Recursos (herramientasyrecursos.com) — 候选可申请（历史级别：P1）
+### 168. Herramientas y Recursos (herramientasyrecursos.com) — 条件（V39，历史P1）
+
+**V39链接质量更正**：V33两条`rel=noopener`外站链接来自[Recursos目录页](https://www.herramientasyrecursos.com/directorio/categoria/recursos)页脚“Más de nuestra red”关联网站，并非普通用户提交后发布的主访问链接。真实[Agenvas条目](https://www.herramientasyrecursos.com/sitio/agenvas-7a4477)的`Visitar sitio`经`/salir/agenvas-7a4477`再重定向到`agenvas.com`；只作潜在引荐候选，不宣传免费直接Follow。
 
 **V33公开链接实测（2026-10-31）**：[Recursos分类](https://www.herramientasyrecursos.com/directorio/categoria/recursos)中指向`aprendeygana.net`及`herramientasproductivas.com`的真实href为`rel="noopener"`；是西语目录两条无nofollow样本，不等于已获批自己的域名。
 
@@ -3940,7 +3944,9 @@
 **实际提交状态**：本轮未提交；尚未确认获批、页面实际href、真实rel/Follow、DR/AS或搜索索引。
 
 <a id="link-171"></a>
-### 171. FounderOmni (founderomni.com)｜V32官方复核｜条件
+### 171. FounderOmni (founderomni.com)｜V39真实独立详情核验｜条件
+
+**V39新确认**：[Fontpair](https://founderomni.com/es/library/design-brand-assets/design-brand-assets-fontpair-f007476b/)和[Hero Patterns](https://founderomni.com/es/library/design-brand-assets/design-brand-assets-hero-patterns-0ea1791d/)各有独立公开资源详情及Abrir recurso链接直达原站，原始`rel`本次未获取；六项西语表单字段早在V32已核实，而非V38首次。
 
 **直接入口**：[https://founderomni.com/es/library/design-brand-assets/](https://founderomni.com/es/library/design-brand-assets/)
 
@@ -3948,7 +3954,7 @@
 
 **适用网站**：真正免费设计/排版工具、可视化Lettering画布；不是上传字库
 
-**费用和审核**：馆藏页面可见Sugerir un recurso控件；本轮未能验证弹窗后全部字段/账号资格及费用，不能称可直接提交
+**费用和审核**：V32已核实Sugerir un recurso西语弹层六项字段与人工审核；未见即时付费或强制徽章字段，长期免费展示、获批及rel未知
 
 **逐项具体填写/操作（2026-10-31公开官网记录）**：
 
