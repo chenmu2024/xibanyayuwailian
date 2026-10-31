@@ -347,7 +347,7 @@
 
 ## V53｜最新可执行质量分层（2026-10-31）
 
-最新[14家真实站外链接DOM属性证据](docs/v53-current-rendered-dom-rel-and-peplio-downgrade-20261031.md)：13个特定公开样本未观察到nofollow/ugc/sponsored，PeplioHUB #149的[AnyFyle公开详情](https://peplio.com/anyfyle/)含`rel="noopener ugc nofollow"`，从P1降条件。**当前P1=12、P2=27、条件=86、待核验=16、排除=34、非外链=1，合计176**。以前README的P1 13/16/19等数字是当时历史快照，不能作为最新提交名单。历史第三方样本不是Generador获链：**真正新增确认链接0**。优先填#159/#151/#164/#163、后#123/#75/#148；不要凭无nofollow样本宣称SEO权重。
+最新[14家真实站外链接DOM属性证据](docs/v53-current-rendered-dom-rel-and-peplio-downgrade-20261031.md)：13个特定公开样本未观察到nofollow/ugc/sponsored，PeplioHUB #149的[AnyFyle公开详情](https://peplio.com/anyfyle/)含`rel="noopener ugc nofollow"`，从P1降条件。**当前P1=12、P2=27、条件=86、待核验=16、排除=34、非外链=1，合计176**。以前README的P1 13/16/19等数字是当时历史快照，不能作为最新提交名单。历史第三方样本不是Generador获链：**真正新增确认链接0**。V54按现场表单摩擦重排为#159→#164→#163→#151→#075→#148→#123；不要凭无nofollow样本宣称SEO权重。
 
 ## V54｜7家高相关目录官方表单现场复核（2026-10-31）
 
