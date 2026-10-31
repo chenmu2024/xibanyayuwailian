@@ -43,3 +43,15 @@
 **验链标准**：每站按目标域名+来源主域查重；提交记录、审核邮件、公开第三方列表URL、真实指向generadordelettering.org的`a href`、原始`rel`、是否实际被索引、引荐会话各自分开记录。历史176家都是研究记录，**本轮没有代提交，新增确认获链为0**。所有第三方样本链接都属于其他网站。
 
 [当前公开证据CSV](../data/current-priority-evidence.csv)。
+
+## 西语专属渠道补充（2026-10-31）
+
+原首批5家仍适用真实Typography创作工具；以下西语本土目录需另外考虑质量与真实资格：
+
+| 平台 | 真实填写入口 | 决策 |
+| --- | --- | --- |
+| **#59 Navegax，P1** | [首页加入](https://navegax.com/)→需要先登录或注册→选择`Informática, Tecnología, e Internet`或真实符合的艺术类别→提交URL/站名/准确西语说明 | 存在[IAdicto Digital真实普通详情](https://navegax.com/detalle/iadictodigital)及指向外站href；raw rel未知，不是免账号渠道 |
+| **#4 DrSEO，P2** | [西语提交](https://drseo.eu/es/submit/)（本轮抓取403；[英文版表单](https://drseo.eu/submit/)可读） | €0永久基础档，可选€19/€9付费升级；抽检外链来自[Premium/Patrocinado](https://drseo.eu/es/listing/acc64/)而非Free，暂不据此高估免费质量 |
+| **#58 Educaguía，条件** | [教育网站加入](https://educaguia.com/inserta-tu-web.asp) | 必须已有真实教育内容，且会自动订阅教育通讯；普通图片文字编辑器不具备明确教育定位则不投 |
+
+详细核验、风险与可复制西语简介：[西语专项报告](spanish-native-directory-audit.md)。

@@ -1,0 +1,8 @@
+﻿"主库编号","平台","实际URL","可核实字段/href","证据类型","对Lettering网站的限制","raw rel与免费待遇边界","当前等级变更","申请状态"
+"4","DrSEO.eu","https://drseo.eu/es/","Basic Free €0 forever and optional paid upgrades","官方首页与分类","西语可用但大量全球大品牌示例；无法证实由用户独立提交","仅官网承诺免费，不代表raw rel","P1→P2","未提交"
+"4","DrSEO.eu","https://drseo.eu/submit/","English full submission form visible; Spanish /es/submit/ returned 403 to crawler","官网提交表单","Free提交需新建/连接DrSEO账号+验证码+真实联系信息；付费可选","表单可读不等于提交成功","P2","未提交"
+"4","DrSEO.eu","https://drseo.eu/es/listing/acc64/","https://acc64.com","真实独立详情外站href","页面标注Premium Profile/Patrocinado；不能外推普通Free权益","raw rel未知，付费样本不代表免费","P2","非本站获链"
+"58","Educaguía","https://educaguia.com/inserta-tu-web.asp","Sitios relacionados de uno u otro modo con la educación","官方免费加入条件","严格教育相关、每个网站人工访问审阅、注册自动订阅boletín educativo","推荐徽章为额外优先展示，非基础收录必装","P1→条件","未提交"
+"58","Educaguía","https://educaguia.com/software-educativo.asp","https://www.educaplay.com","软件教育分类真实资源href","有真正在线教育工具，不能证明一般字图工具合格","raw rel未知，本站未获链","条件","非本站获链"
+"59","Navegax","https://navegax.com/erroragregar","Para poder añadir un Sitio Web debe acceder mediante un usuario registrado","官方加入错误/账户门槛","首页承诺免费网站登记，点击Añadir Web却要求先登录/注册","不是免登录提交","P1保留","未提交"
+"59","Navegax","https://navegax.com/detalle/iadictodigital","https://iadictodigital.com/","真实普通独立详情页","Ir al Sitio Web直连站外；本例不代表高DR、实际Google索引或Follow","raw rel未知，本站未获链","P1保留","非本站获链"

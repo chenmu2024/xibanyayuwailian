@@ -290,3 +290,8 @@
 - **[现行首批真正可人工执行的高相关渠道清单](docs/current-priority-execution.md)**。LaunchFree有真实Fontique（Lettering）、Free Text Symbols（Fancy Text）和西语Rueda Decide的独立公开页，可优先试申请。完整四步材料已核对Tagline 54字符、Description 252字符，真实开发动机/个人身份不能代编；另附[5条原始公开证据](data/current-priority-evidence.csv)。官网自称Dofollow，并非本轮raw rel已证实。
 - **[CI启动前故障诊断](docs/actions-pre-execution-diagnosis.md)**：实测运行41160234903的validate job steps=null、billable duration=0ms、没有runner及日志，无法把failure归咎于Python/Node测试，也不能声称修复。仓库/账户Actions设置与Billing须以网页系统错误为准，优先免费排查。
 - 现有176家总库和P1 19 / P2 23 / 条件83等历史分类不变；没有代提交或获得本站确认外链。
+
+## 西语本土目录有效性核验（2026-10-31）
+
+- [西语三个渠道逐站核验与人工步骤](docs/spanish-native-directory-audit.md)；[7项可追溯公开页面和资格声明](data/spanish-native-directory-audit.csv)。#59 Navegax公开西语详情真实直达外站，但必须注册；#58 Educaguía明确只收教育资源且申请自动加入教育通讯，缺真实教学资源时勿投，P1→条件；#4 DrSEO的€0基本档明确存在，但本次具体直链样本为Premium/Patrocinado，不能当免费rel，P1→P2。
+- 最新176条分类 **P1 17、P2 24、条件84、待核验16、排除34、非外链1**；HTML展示已修正历史误写的“排除33”和现时优先/条件统计。新增候选0、真实申请0、本站新确认获链0。

@@ -20,6 +20,8 @@
 
 **当前首批执行资料（2026-10-31）**：[现行可填工作单](current-priority-execution.md)、[5条公开证据表](../data/current-priority-evidence.csv)、[GitHub Actions 0ms/无步骤故障排查](actions-pre-execution-diagnosis.md)。
 
+**西语专项目录现行核验（2026-10-31）**：[真实西语渠道申请条件与样本](spanish-native-directory-audit.md)；#4 P1→P2、#58 P1→条件、#59保留P1且已见普通详情直接外站href；详见[可审计证据CSV](../data/spanish-native-directory-audit.csv)。
+
 ## 1. 实际使用方法
 
 1. 新建一个西语网站后，先准备真实的名称、规范首页URL、具体工具页面URL、免费/付费状态、目标用户、功能说明、真实Logo与截图以及能收邮件的邮箱。下方Lettering只是示例，换站必须重新写。
@@ -163,7 +165,10 @@
 **实际提交状态**：本轮未提交；尚未确认获批、页面实际href、真实rel/Follow、DR/AS或搜索索引。
 
 <a id="link-004"></a>
-### 004. DrSEO.eu — 候选可申请（历史级别：P1）
+### 004. DrSEO.eu — V42降为次优先（P2）
+
+**2026-10-31付费/免费证据区分**：[官网免费与付费规则](https://drseo.eu/es/pricing/)显示Free €0且公开基本档；可选Premium €19一次、Featured €9/月。公开[ACC64](https://drseo.eu/es/listing/acc64/)详情确实直达acc64.com，但明确是**Premium Profile / Patrocinado**，不能当作免费投稿的Follow保证。首页刊登大量通用大品牌目录资料，也不足以证明它们通过了普通自助投稿审批。西语提交URL本轮抓取403但[英文提交页](https://drseo.eu/submit/)可读，不能推断表单关闭。P1→P2，等明确Free普通条目详情raw rel/实际引荐证据再提升。
+
 
 **提交入口/官网**：[https://drseo.eu/es/submit/](https://drseo.eu/es/submit/)  
 **适合什么网站**：在线工具、内容站、服务网站；**西语资格**：支持西语。  
@@ -1333,7 +1338,10 @@
 **实际提交状态**：本轮未提交；尚未确认获批、页面实际href、真实rel/Follow、DR/AS或搜索索引。
 
 <a id="link-058"></a>
-### 058. Educaguía — 候选可申请（历史级别：P1）
+### 058. Educaguía — V42仅教育资格成立才申请（条件）
+
+**2026-10-31重要限制**：[官方投稿页](https://educaguia.com/inserta-tu-web.asp)明确只接受与教育相关的网站，人工逐页审核，且**申请将自动订阅教育通讯**。精选网站可获推荐徽章代码以提升额外展示，但普通免费申请未见硬性必须安装徽章。[Software Educativo栏目](https://educaguia.com/software-educativo.asp)可见已刊登的真实教育工具外站链接。单纯造字图编辑器不等同教学资源；只有现有真实教育场景与合规页面才考虑，无则不投，P1→条件。
+
 
 **提交入口/官网**：[https://educaguia.com/inserta-tu-web.asp](https://educaguia.com/inserta-tu-web.asp)  
 **适合什么网站**：教学、学生计算器、文字排版教学资源；**西语资格**：西班牙语教育定位。  
@@ -1353,7 +1361,10 @@
 
 
 <a id="link-059"></a>
-### 059. Navegax — 候选可申请（历史级别：P1）
+### 059. Navegax — V42西语目录有真实公开站外链接（P1保留）
+
+**2026-10-31实时步骤**：[首页](https://navegax.com/)明确可免费收录西语站，但点Añadir Web跳转[/erroragregar](https://navegax.com/erroragregar)，说明必须先注册/登录账号，不是免登录提交。[IAdicto Digital普通详情](https://navegax.com/detalle/iadictodigital)明确“**Ir al Sitio Web**”，直接链接到外部iadictodigital.com；但此样本没有获得原始a rel，也没有证实本站获链、实际引荐、DR。下一步：真实注册→选适当类别→填写网站名称/主页/真实简介→等待公开页审核。
+
 
 **提交入口/官网**：[https://navegax.com/](https://navegax.com/)  
 **适合什么网站**：西语字体、计算器、工具、游戏工具和资讯内容；**西语资格**：专收西语站。  

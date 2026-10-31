@@ -124,3 +124,8 @@
 94. 当前LaunchFree #123 首批高优先证据含Fontique（Creator Tools/Lettering）、Free Text Symbols（Fancy Text）及Rueda Decide（西语工具）三个实际公开详情的站外href。FAQ的永久免费/Dofollow是官方陈述，raw rel和本站获链未实证。填写真实开发动机/创建者信息，详见docs/current-priority-execution.md。
 95. GitHub Actions运行41160234903 job124415981348失败但steps=null、日志404、计费0ms，无证据表明任何验证脚本曾执行；不得谎称Python/JS测试失败，也不得无诊断提高付费预算。见docs/actions-pre-execution-diagnosis.md。
 96. 优先延续有真实同类投稿成功样本的来源，维护现行申请包而非无限追加版本号。76等发布数量不等于人工严审，也不等于用户网站获链。
+
+97. 西班牙语渠道不以语种相关就自动P1。Educaguía #58官网限制只收教育资源，且申请自动订阅教育通讯；若用户工具没有真实教学内容，必须条件后置，不虚构教学用途，不把精选“推荐徽章”说成所有申请均必装。V42 P1→条件。
+98. DrSEO #4官网Free €0不等于提交/批准可以有高价值Follow；实际ACC64详情为付费Premium Profile/Patrocinado，站外href不能外推普通免费条目，故V42 P1→P2；无DR/AS/索引独立实测，不能仅据知名品牌资料推断严格审核。
+99. Navegax #59首页承诺免费网站登记，点Añadir Web确实提示需要注册/登录；普通IAdicto Digital独立页存在指向iadictodigital.com的直接站外href，但其raw rel和本站获链仍未知。保留P1西语专项候选，严禁声称免登录。
+100. 维护实时总数时HTML可见统计要同步：176历史、41条P1/P2、84条件、16待核验、34排除、1非外链（某些UI未显示非外链也仍须计入总量）。对历史旧版阶段性数字只加新审计说明，不把旧数据强改为当时没发生的新状态。
