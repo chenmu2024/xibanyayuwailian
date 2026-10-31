@@ -65,7 +65,7 @@ class Anchors(HTMLParser):
             return
         a = dict(attrs)
         if a.get("href"):
-            self.anchors.append((a["href"], a.get("rel", "")))
+            self.anchors.append((a["href"], a.get("rel") or ""))
 
 
 def classify_rel(rel):
@@ -83,14 +83,18 @@ def inspect_html(html, source_url, target_url, match="domain"):
     parser.feed(html)
     found = []
     for raw_href, raw_rel in parser.anchors:
-        actual = urljoin(source_url, raw_href)
-        parts = urlsplit(actual)
-        if parts.scheme.lower() not in ("http", "https"):
-            continue
-        host = (parts.hostname or "").lower().removeprefix("www.")
-        if host != target_host:
-            continue
-        if match == "exact" and normalized(actual) != normalized(target_url):
+        try:
+            actual = urljoin(source_url, raw_href)
+            parts = urlsplit(actual)
+            if parts.scheme.lower() not in ("http", "https"):
+                continue
+            host = (parts.hostname or "").lower().removeprefix("www.")
+            if host != target_host:
+                continue
+            if match == "exact" and normalized(actual) != normalized(target_url):
+                continue
+        except ValueError:
+            # A broken anchor must not mask later valid backlinks on the page.
             continue
         found.append({
             "href": actual,
