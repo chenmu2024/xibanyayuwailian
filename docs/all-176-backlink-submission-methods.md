@@ -3398,9 +3398,11 @@
 
 
 <a id="link-149"></a>
-### 149. PeplioHUB (peplio.com) — 候选可申请（历史级别：P1）
+### 149. PeplioHUB (peplio.com) — V53当前有条件（历史级别：P1）
 
 **V34 PeplioHUB此次可读取的HTML锚点未能辨认明确指向产品官网的外链，不能据此断言没有外链或拥有Follow。原来的截图和审核要求仍保留。[页面](https://peplio.com/pepliohub/)。**
+
+**V53新证据优先于V34旧未知**：已独立获取[AnyFyle真实已刊登详情](https://peplio.com/anyfyle/)→`https://anyfyle.com/?ref=pepliohub`的本轮公开渲染DOM外站锚点`rel="noopener ugc nofollow"`，因此从P1降到**条件**。此样本不等于整站所有条目均nofollow，也不是Generador已获链接。[14站具体证据](v53-current-rendered-dom-rel-and-peplio-downgrade-20261031.md)。
 
 **提交入口/官网**：[https://peplio.com/pepliohub/#submit-tool](https://peplio.com/pepliohub/#submit-tool)  
 **适合什么网站**：免费浏览器设计工具、转换器及文字编辑器；有 Design and images 类；**西语资格**：国际社区；纯西语工具无明确禁止，审核待定。  
