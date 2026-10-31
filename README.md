@@ -6,6 +6,8 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| **[docs/v53-current-rendered-dom-rel-and-peplio-downgrade-20261031.md](docs/v53-current-rendered-dom-rel-and-peplio-downgrade-20261031.md)** | **V53：14家已发布第三方外站DOM rel实测（13个样本未见限制词，Peplio真实样本ugc nofollow）；现行P1=12、条件=86** |
+| [data/v53-current-rendered-dom-outbound-rel-20261031.csv](data/v53-current-rendered-dom-outbound-rel-20261031.csv) | 14条具体实际href、当前DOM rel及证据范围（不是用户已获链） |
 | **[docs/v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md](docs/v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md)** | **V52：9个字体/设计目录真实外站链接、规范网址与robots独立记录；LDS已重获公开证据，并提供只读raw rel验证步骤** |
 | [data/v52-curated-published-anchor-metadata-20261031.csv](data/v52-curated-published-anchor-metadata-20261031.csv) | 9家已发布第三方示例的实际href、canonical、robots及历史rel局限 |
 | [scripts/audit_curated_v52.py](scripts/audit_curated_v52.py) | **Windows零付费、只读、最多9页**：核对真实原始a href/rel；本机运行后才有实时结果 |
@@ -340,3 +342,7 @@
 ## V50｜Educaguía公开案例误标自家网址修正
 
 #58在旧操作台“历史公开案例”误放用户自有练字教学页，现在改为[Educaguía公开教育网站目录](https://www.educaguia.com/listadoEDU.asp)；名录的确有[Educaplay](https://www.educaplay.com/)等外站href，但不证明用户站已获批。拟提交目标仍是实际练字资料，不能把自己的网址视为反向链接。静态和模拟测试新增防误标断言。[详细V50修正](docs/v50-educaguia-real-external-example-20261031.md)。
+
+## V53｜最新可执行质量分层（2026-10-31）
+
+最新[14家真实站外链接DOM属性证据](docs/v53-current-rendered-dom-rel-and-peplio-downgrade-20261031.md)：13个特定公开样本未观察到nofollow/ugc/sponsored，PeplioHUB #149的[AnyFyle公开详情](https://peplio.com/anyfyle/)含`rel="noopener ugc nofollow"`，从P1降条件。**当前P1=12、P2=27、条件=86、待核验=16、排除=34、非外链=1，合计176**。以前README的P1 13/16/19等数字是当时历史快照，不能作为最新提交名单。历史第三方样本不是Generador获链：**真正新增确认链接0**。优先填#159/#151/#164/#163、后#123/#75/#148；不要凭无nofollow样本宣称SEO权重。
