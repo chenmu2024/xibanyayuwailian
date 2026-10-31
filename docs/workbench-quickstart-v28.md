@@ -115,3 +115,11 @@ V35的离线操作台模拟验收已通过；新的Python离线8项测试**已�
 V36点击“备份所有网站JSON”导出**V2文件**，不仅保留所有站点进度，还完整保留各站资料。仍能导入旧V1备份，但不能恢复旧备份从未储存的其他网站字段。若上传或共享备份，可能泄露真实邮箱、备注和证据，**不要放到公开GitHub仓库**。
 
 详细说明见 [V36多站隔离与备份完整教程](v36-domain-isolated-profiles-and-v2-backups.md)。本轮独立V8静态和23项交互模拟通过；尚未证明GitHub Actions CI、真实Chrome流程或新Python单测成功。
+
+## 十四、V37：Python验链脚本11项真实测试已通过
+
+[公开href/rel核验脚本](../scripts/verify_published_backlink.py)及[单元测试](../scripts/test_verify_published_backlink.py)现在已经在真实Python 3.13.5环境执行（非模拟），11个测试全部通过。新增加对无效链接、空rel属性、HTML惰性`template`链接的处理，避免因目录HTML有坏标记而误判。
+
+Windows中可执行`python -m unittest discover -s scripts -p "test_verify_published_backlink.py" -v`复核；若想验自己的真实获链，必须向核验脚本提供**对方实际公开的HTTPS详情页**，此测试不代表真的收录。
+
+完整证据（包括提交后的Git blob哈希）在 [V37测试记录](v37-python-backlink-verifier-tested-and-ci-diagnosis.md)。**GitHub Actions仍失败**，独立Python 11/11测试通过与Actions失败并不矛盾；无需付费API。
