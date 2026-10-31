@@ -17,6 +17,8 @@
 
 ## 各站独立填写（完成一站后核实台账再开下一站）
 
+**V33公开页面实际链接属性审查（2026-10-31）**：public.tools三条公开详情样本全部nofollow，已从P1调整为“条件”，不再作为Follow优先提交。Htrd、Toolfound、DesignTools.fyi、NoSignupTools及Herramientas y Recursos检查到的公开链接样本未带nofollow，详情见 [V33 href/rel与本站收录核验](v33-public-link-rel-and-listing-presence-20261031.md)。**没有替你提交申请或获得任何新增外链**。
+
 **V32补充（2026-10-31）**：在原176家中又核查14家官网，重点#074 public.tools和#075 Htrd可进入真实免费表单，#171 FounderOmni现在已可确认西语真实填写字段。#057 ToolGuide的短描述限**120字符**、工作效率工具资格待审核；#076 NoUploadTools隐私未审查不直接提交；#141 GainWeb的Regular Free不保证审核。#026 TopTool仍暂停；#003 Enlineados排除免费主机；#152 DesignTrash明文拒绝关键词生成器。详见 [V32 14站复核清单](v32-14-official-source-audit-20261031.md)。
 
 **V31实测更新（2026-10-31）**：请先查看 [17家官网表单复核结果](v31-17-live-form-verification-20261031.md)。#014 Lugar Latino官方提交页直接请求多次返回404，虽搜索索引可见旧表单，现**暂停手工申请**。#123、#128、#147、#151、#169已经按当日官方表单纠正步骤；平台官方Dofollow声明不等于我们已独立测得Follow。
@@ -49,6 +51,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-123)。
 
 ### 2. NoSignupTools｜主库 #148
+
+**V33公开链接实测（2026-10-31）**：[NoSignupTools设计分类页](https://nosignuptools.com/tools?category=design)中`https://fontswiki.com`的真实href为`rel="noopener noreferrer"`，没有nofollow；此结论不能代替审核、本站收录和全站rel保证。
 
 **入口**：[https://nosignuptools.com/submit](https://nosignuptools.com/submit)  
 **为什么选它**：存在FontsWiki类例子，免费和无需账户是核心门槛。  
@@ -85,6 +89,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-159)。
 
 ### 4. Toolfound｜主库 #128
+
+**V33公开链接实测（2026-10-31）**：[StencilMaker](https://toolfound.com/tool/stencilmaker-app)与[Offistrip](https://toolfound.com/tool/offistrip)对外href均为`rel="noopener"`；样本未带nofollow，但本站仍必须先完成域名所有权验证和人工发布，不得算已获链。
 
 **入口**：[https://toolfound.com/submit](https://toolfound.com/submit)  
 **为什么选它**：官网有基础免费排队，首屏只需少量信息。  
@@ -126,6 +132,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-149)。
 
 ### 6. DesignTools.fyi｜主库 #151
+
+**V33公开链接实测（2026-10-31）**：[Font Explorer详情](https://designtools.fyi/tools/font-explorer-mqp69i9d)指向`https://font.do`的真实href为`rel="noopener noreferrer"`，样本未带nofollow；仍需等待真实投稿和单独核验本站条目。
 
 **入口**：[https://designtools.fyi/submit/](https://designtools.fyi/submit/)  
 **为什么选它**：官方有Typography类别，对实际可视化文字排版相符。  
@@ -224,6 +232,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-165)。
 
 ### 11. Herramientas y Recursos｜主库 #168
+
+**V33公开链接实测（2026-10-31）**：[Recursos分类](https://www.herramientasyrecursos.com/directorio/categoria/recursos)中指向`aprendeygana.net`及`herramientasproductivas.com`的真实href为`rel="noopener"`；是西语目录两条无nofollow样本，不等于已获批自己的域名。
 
 **入口**：[https://www.herramientasyrecursos.com/directorio/sugerir](https://www.herramientasyrecursos.com/directorio/sugerir)  
 **为什么选它**：最贴近西语站：西语实际表单、有独立工具资料页与外站访问链接。  
@@ -338,6 +348,8 @@
 
 ### 17. public.tools｜主库 #074
 
+**V33公开链接实测警告（2026-10-31）**：StackEdit.io、Dillinger、Glyphr Studio三个公开详情页对外工具网址的HTML `rel` **均为`noopener noreferrer nofollow`**。这是3条真实样本而非全站保证。由于本项目优先获取免费可跟随外链，#074由P1调整为**条件**；仍可为自然引荐流量研究真实Tally免费投稿。尚未发现本站在当前344条公开目录页中列出。依据：[V33详表](v33-public-link-rel-and-listing-presence-20261031.md)。
+
 **入口**：[https://tally.so/r/Gx75Qz](https://tally.so/r/Gx75Qz)  
 **为什么选它**：官方Tally建议工具表单，免费工具可提交。  
 **按真实页面填写**：
@@ -353,6 +365,8 @@
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-074)。
 
 ### 18. Htrd｜主库 #075
+
+**V33公开链接实测（2026-10-31）**：已发布的[Fontjoy](https://htrd.org/tools/fontjoy)与[Squoosh](https://htrd.org/tools/squoosh)外部工具href均为`rel="noopener"`，该两条链接未带nofollow；只代表已检查样本，本站未获收录，编辑审核不保证通过。
 
 **入口**：[https://htrd.org/](https://htrd.org/)  
 **为什么选它**：网站底部有真实提交表单，不一定需要单独投稿页。  
