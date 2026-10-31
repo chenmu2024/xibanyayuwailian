@@ -12,6 +12,8 @@
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
 | **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
+| **[docs/v31-17-live-form-verification-20261031.md](docs/v31-17-live-form-verification-20261031.md)** | **V31优先查看：17家官网实时表单复核，准确字段、费用及互链限制；另说明Lugar Latino直访404** |
+| [data/v31-official-form-audit-20261031.csv](data/v31-official-form-audit-20261031.csv) | V31的17家官方表单字段、审核条件与实际获链状态审计表，仍全部未提交 |
 | [data/backlinks-master.csv](data/backlinks-master.csv) | V26 累计176条渠道/候选（保留V25的171条，本轮新添5条，含条件/排除），完整保留历史记录 |
 | [data/priority-queue.csv](data/priority-queue.csv) | 面向 Generador de Lettering 的15家历史申请候选（含条件、低优先项目），不要全部照单提交 |
 | [data/actionable-applications-v22.csv](data/actionable-applications-v22.csv) | V22原版6家经证据分级的可尝试来源历史快照；不是本次21家填写卡，也不保证Follow |
@@ -181,3 +183,11 @@
 - 仍保留当前域名CSV导出，并增加对电子表格危险公式起始字符的转义，减少Excel/Sheets直接打开的注入风险。
 - **本轮V8模拟交互11项通过**（176渲染、EpicTools检索、状态、域名隔离、JSON备份/恢复、CSV等），单独字段映射逻辑7项通过；新增可复现`scripts/smoke_workbench.mjs`。不等于真实Chrome端到端或第三方目录提交测试。
 - **GitHub Actions暂未成功**：此前最小Runner探针不依赖项目代码也失败，连接器无法提供日志；因此继续保留`ci失败/原因未定`的明确状态。使用说明和[详细证据](docs/v30-cross-site-field-mapping-and-backup.md)均已更新。没有修改真实递交台账，没有生成已获链记录。
+
+## V31｜17家官网表单实测，纠正旧字段（2026-10-31）
+
+- 主库仍为**176条历史外链渠道**，分类已更新为：P1 29、P2 21、条件77、待核验15、排除33、非外链1。#014 Lugar Latino虽然搜索索引仍有西语提交入口，但本轮官方入口多次直访404，改为**待核验**，暂不当可操作来源。
+- 本轮对**17家已有来源**重新读取官网真实表单，核实入口、限制、需不需要图片/邮箱、是否强制badge，**0家重复新增**。审查记录见 [17家官方复核说明](docs/v31-17-live-form-verification-20261031.md) 和 [机器可读审计表](data/v31-official-form-audit-20261031.csv)。
+- **修正#147 Good Design Tools**：其Tally投稿并没有旧卡所写Category/Tags；实际包括工具名、网址、介绍、定价、优惠、联盟计划、图标（JPG/JPEG/WebP/SVG≤2MB）和Email。**#123 LaunchFree** 的创建者姓名、Short Bio、产品起因、验证码不可省略。**#128 Toolfound** 申请免费但必须完成域名所有权验证。**#151 DesignTools.fyi** 有Source of Truth/Size/公司代表复选框。
+- 更新 [176完整逐站手册](docs/all-176-backlink-submission-methods.md)、[21家精确填表卡](docs/lettering-priority-21-ready-to-fill.md) 与 [离线操作台](docs/backlink-submission-workbench.html)。现在21家共有**149项**已整理的字段行，17家卡片有V31官方复核提醒。
+- **第三方正式申请0、实际新增反向链接0、真实Follow/DR/AS/Google索引不作未经核验的保证**。GitHub Actions前期Runner/作业仍失败，静态核对不等于本轮CI绿灯。
