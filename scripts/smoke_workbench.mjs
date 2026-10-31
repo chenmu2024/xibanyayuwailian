@@ -117,6 +117,11 @@ assert.equal($("name").value,"","New domain must not inherit the old site name")
 assert.equal($("en").value,"","New domain must not inherit old English marketing copy");
 assert.equal($("eslong").value,"","New domain must not inherit old Spanish long description");
 assert.equal($("email").value,"","New domain must not inherit previous contact email");
+assert.equal($("edu").value,"","New domain must not inherit Generador education URL");
+$("edu").value="https://generadordelettering.org/herramientas/plantillas-practica";$("edu").events.input();$("edu").events.change();
+assert.equal($("edu").value,"","Foreign education URL must be rejected");
+$("edu").value="https://other-tool.example/learning/real";$("edu").events.input();$("edu").events.change();
+assert.equal($("edu").value,"https://other-tool.example/learning/real","Local educational page should be accepted");
 $("name").value="Another Spanish Tool";$("name").events.input();
 $("en").value="Unique English copy for the second site";$("en").events.input();
 $("es").value="Descripción española del segundo sitio";$("es").events.input();
@@ -124,6 +129,7 @@ $("email").value="owner@other-tool.example";$("email").events.input();
 $("tool").value="https://other-tool.example/editor";$("tool").events.input();
 let profiles=JSON.parse(storage.get("xibanya-profiles-by-domain-v36"));
 assert.equal(profiles["other-tool.example"].email,"owner@other-tool.example");
+assert.equal(profiles["other-tool.example"].edu,"https://other-tool.example/learning/real","Second-site education URL must persist independently");
 assert.equal(profiles["generadordelettering.org"].name,"Generador de Lettering");
 
 assert.match($("marked").textContent,/已标注 0 条/,"New domain cannot inherit old progress");
@@ -132,11 +138,13 @@ $("home").value="https://generadordelettering.org/";$("home").events.input();$("
 assert.match($("marked").textContent,/已标注 1 条/,"Switching back restores original progress");
 assert.equal($("name").value,"Generador de Lettering","Switching back should restore original site identity");
 assert.equal($("tool").value,"https://generadordelettering.org/editor","Switching back should restore original editor URL");
+assert.equal($("edu").value,"https://generadordelettering.org/herramientas/plantillas-practica","First site keeps its own education URL");
 assert.equal($("email").value,"","Contact email cannot leak from another site");
 $("home").value="https://other-tool.example/";$("home").events.input();$("home").events.change();
 assert.equal($("name").value,"Another Spanish Tool","Second site profile must survive switching away and back");
 assert.equal($("email").value,"owner@other-tool.example","Second site's email must be restored only on the right domain");
 assert.equal($("tool").value,"https://other-tool.example/editor","Second editor URL must not be replaced by Lettering");
+assert.equal($("edu").value,"https://other-tool.example/learning/real","Second site keeps its own education URL");
 $("home").value="https://generadordelettering.org/";$("home").events.input();$("home").events.change();
 
 
@@ -145,6 +153,9 @@ const backup=JSON.parse(blobs.at(-1).parts.join(""));
 assert.equal(backup.type,"spanish-backlink-offline-backup");
 assert.equal(backup.version,2,"New backup must include per-domain profiles");
 assert.equal(backup.profiles["other-tool.example"].email,"owner@other-tool.example");
+assert.equal(backup.profiles["other-tool.example"].edu,"https://other-tool.example/learning/real","New V2 backup includes educational resources");
+const oldV2=JSON.parse(JSON.stringify(backup));delete oldV2.profile.edu;
+for(const profile of Object.values(oldV2.profiles))delete profile.edu;
 assert.equal(backup.profiles["generadordelettering.org"].name,"Generador de Lettering");
 const tampered=JSON.parse(JSON.stringify(backup));
 tampered.profiles["other-tool.example"].home="https://generadordelettering.org/";
@@ -154,6 +165,9 @@ assert.equal(storage.get("xibanya-profiles-by-domain-v36"),beforeTampered,"Cross
 await $("restoreFile").events.change({target:{files:[{size:950,text:async()=>JSON.stringify(backup)}]}});
 assert.equal($("home").value,"https://generadordelettering.org/","V2 restore should retain current profile");
 assert.equal(JSON.parse(storage.get("xibanya-profiles-by-domain-v36"))["other-tool.example"].email,"owner@other-tool.example","V2 restore must retain all profile emails by website");
+await $("restoreFile").events.change({target:{files:[{size:990,text:async()=>JSON.stringify(oldV2)}]}});
+assert.equal($("edu").value,"","Legacy V2 backup without edu must be accepted, not silently filled");
+assert.equal(JSON.parse(storage.get("xibanya-profiles-by-domain-v36"))["other-tool.example"].edu,"","Legacy V2 profiles must be migrated");
 
 assert.ok(backup.progress["generadordelettering.org"]);
 assert.equal(backup.progress["generadordelettering.org"]["1"].proof.checked,true);
@@ -171,6 +185,7 @@ assert.equal(storage.get("xibanya-marks-by-domain-v29"),beforeInvalid,"Invalid r
 await $("restoreFile").events.change({target:{files:[{size:480,text:async()=>JSON.stringify(restored)}]}});
 assert.match($("marked").textContent,/restored.example.*已标注 1 条/);
 assert.equal($("name").value,"Restored Website","V1 restore must preserve legacy profile");
+assert.equal($("edu").value,"","Legacy V1 restores with empty education URL");
 assert.equal(JSON.parse(storage.get("xibanya-profiles-by-domain-v36"))["restored.example"].name,"Restored Website","V1 backup should migrate its single profile");
 
 assert.match($("marked").textContent,/人工自查证据 1 条/,"Confirmed manual evidence should survive JSON restore");
@@ -183,4 +198,4 @@ assert.ok(exported.includes("https://directory.valid.org/tools/restored")&&expor
 assert.ok(exported.includes("'=HYPERLINK"),"CSV export must escape spreadsheet formulas");
 assert.ok(!exported.includes('"\'"'),"Empty CSV cells must remain empty, not apostrophes");
 
-console.log("PASS: 176 cards, 21 detailed tables, search, per-domain progress, URL reset, JSON backup/restore, CSV formula safety (23 checks including V36 per-domain name/email/URL isolation, V1/V2 backup, tamper rejection and V35 evidence).");
+console.log("PASS: 176 cards, 21 detailed tables, per-domain education HTTPS URLs and V1/V2 backups, search, per-domain marks and CSV proof.");

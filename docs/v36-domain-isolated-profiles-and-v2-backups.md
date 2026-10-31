@@ -86,3 +86,9 @@ V36升级至`spanish-backlink-offline-backup` **`version:2`**：
 - [验证脚本](../scripts/validate_workbench.mjs)与[DOM回归测试](../scripts/smoke_workbench.mjs)
 
 **V36结果：真实获链新增0条、实际第三方申请0条。**
+
+## V45补充：专门的教育页面字段
+
+操作台在每个网站资料里新增可选的`edu`：只填已有公开教学资源的**本域HTTPS页面**。跨域链接会被拒绝，教育目录不会再套用普通编辑器路径。
+
+**兼容性**：原localStorage资料及进度键未更换，JSON备份版本继续为2。旧V1和V2备份没有`edu`时，会自动按空值恢复；用户需要时再填。新V2备份保留各网站自己的`edu`值，不会自动复制到另一个站点。[V45说明](v45-education-url-backward-compatible-20261031.md)。

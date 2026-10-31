@@ -86,6 +86,7 @@ if (/<script[^>]+src=/i.test(html)) throw new Error("Remote JS is forbidden in o
 if (!html.includes("function publicSampleScore(")||!html.includes("function featuredScore(")||!html.includes('activeDomain==="generadordelettering.org"?"https://generadordelettering.org/herramientas/plantillas-practica":""')) throw new Error("V44 priority gating and cross-site education safeguards missing");
 if (!html.includes("xibanya-marks-by-domain-v29") || !html.includes("xibanya-profiles-by-domain-v36") || !html.includes("activeDomain=domainOf(savedSite.home)"))
   throw new Error("User submission marks must remain isolated by site domain");
+if (!html.includes('id="edu"') || !html.includes("function withOptionalEducation(") || !html.includes("site.edu&&") || !html.includes('key==="edu"&&val===undefined'))throw new Error("V45 education URL, legacy V1/V2 backups or per-domain isolation missing");
 if (!html.includes("version:2") || !html.includes("validProfile(profile,domain)") || !html.includes("blankProfile(requested)"))
   throw new Error("V36 per-site profiles and JSON v2 migration must be available");
 if (html.includes("fetch(") || html.includes("XMLHttpRequest"))
