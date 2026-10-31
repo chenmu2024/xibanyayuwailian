@@ -50,7 +50,7 @@ document.getElementById("auditV33").textContent=JSON.stringify(v33);
 document.getElementById("auditV34").textContent=JSON.stringify(v34);
 const localStorage={getItem:key=>storage.get(key)||null,setItem:(key,val)=>storage.set(key,String(val))};
 class MockURL{
-  constructor(s){const m=String(s).match(/^https?:\/\/([^/]+)/);if(!m)throw new Error("Invalid URL");this.hostname=m[1];}
+  constructor(s){const m=String(s).match(/^(https?):\/\/([^/]+)/);if(!m)throw new Error("Invalid URL");this.protocol=m[1]+":";this.hostname=m[2];}
   static createObjectURL(blob){return "blob:unit-"+blobs.indexOf(blob);}
   static revokeObjectURL(){}
 }
