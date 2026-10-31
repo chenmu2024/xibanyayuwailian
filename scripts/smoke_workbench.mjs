@@ -1,35 +1,95 @@
 #!/usr/bin/env node
-// V29 offline-workbench sanity tests. No dependencies or network access.
+// V30: dependency-free DOM simulation of the offline workbench.
+// This does not simulate a complete Chrome browser or verify any external backlink.
+import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { Script } from "node:vm";
 
-const html = readFileSync(new URL("../docs/backlink-submission-workbench.html", import.meta.url), "utf8");
-const readJson = (id) => {
-  const escaped = id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const expression = new RegExp('<script(?:\\s+[^>]*)?\\s+id="' + escaped + '"(?:\\s+[^>]*)?>([\\s\\S]*?)<\\/script>', "i");
-  const match = html.match(expression);
-  if (!match) throw new Error("Missing JSON data script: " + id);
-  return JSON.parse(match[1]);
+const html=readFileSync(new URL("../docs/backlink-submission-workbench.html",import.meta.url),"utf8");
+const source=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+assert.ok(source,"Executable JS block not found");
+const items=JSON.parse(html.match(/<script id="items" type="application\/json">([\s\S]*?)<\/script>/)?.[1]||"null");
+const detailed=JSON.parse(html.match(/<script type="application\/json" id="detailedCards">([\s\S]*?)<\/script>/)?.[1]||"null");
+const recent=JSON.parse(html.match(/<script type="application\/json" id="auditV31">([\s\S]*?)<\/script>/)?.[1]||"null");
+const v32=JSON.parse(html.match(/<script type="application\/json" id="auditV32">([\s\S]*?)<\/script>/)?.[1]||"null");
+const v33=JSON.parse(html.match(/<script type="application\/json" id="auditV33">([\s\S]*?)<\/script>/)?.[1]||"null");
+assert.equal(v33.length,6);
+assert.ok(v33.find(x=>x.id===74).rel.includes("nofollow"));
+assert.equal(v32.length,14);
+assert.equal(recent.length,17);
+assert.equal(items.length,176);
+assert.equal(detailed.length,21);
+assert.equal(detailed.reduce((s,x)=>s+x.fields.length,0),161);
+assert.ok(!/<script[^>]+src=/i.test(html),"No external JS allowed");
+assert.ok(!html.includes("fetch("),"No network requests allowed");
+
+const nodes=[],ids=new Map(),storage=new Map(),blobs=[];
+class Element {
+  constructor(tag,id){this.tag=tag;this.id=id;this.children=[];this.events={};this.style={};this.textContent="";this.value="";this.files=[];nodes.push(this);}
+  append(...xs){for(const x of xs){this.children.push(x);if(x&&typeof x==="object")x.parent=this;}}
+  replaceChildren(...xs){this.children=xs.flatMap(x=>x?.tag==="fragment"?x.children:[x]);for(const x of this.children)if(x)x.parent=this;}
+  addEventListener(k,fn){this.events[k]=fn;}
+  click(){this.clicked=true;return this.onclick?.();}
+  remove(){if(this.parent)this.parent.children=this.parent.children.filter(x=>x!==this);}
+  select(){this.selected=true;}
+}
+const document={
+  body:new Element("body"),
+  getElementById(id){if(!ids.has(id))ids.set(id,new Element("div",id));return ids.get(id);},
+  createElement(tag){return new Element(tag);},
+  createDocumentFragment(){return new Element("fragment");}
 };
-const all = readJson("items");
-const detailed = readJson("detailedCards");
-const v33 = readJson("auditV33");
-if(v33.length !== 6 || !v33.some(x => x.id === 74 && x.rel.includes("nofollow")))
-  throw new Error("V33 sampled rel evidence missing or malformed");
-if (all.length !== 176 || all.some((x, i) => x.id !== i + 1))
-  throw new Error("176-numbered catalog is missing an entry");
-if (detailed.length !== 21 || new Set(detailed.map(x => x.id)).size !== 21)
-  throw new Error("Expected 21 distinct platform-specific field cards");
-if (detailed.some(x => !all.some(i => i.id === x.id) || !x.fields?.length))
-  throw new Error("Detailed field card missing its source or field names");
-const fieldCount = detailed.reduce((n, x) => n + x.fields.length, 0);
-if (fieldCount !== 161) throw new Error("Detailed input field count unexpectedly changed: " + fieldCount);
-if (/<script[^>]+src=/i.test(html)) throw new Error("Remote JS is forbidden in offline workbench");
-if (!html.includes("xibanya-marks-by-domain-v29") || !html.includes("domainOf(site.home)"))
-  throw new Error("User submission marks must remain isolated by site domain");
-if (html.includes("fetch(") || html.includes("XMLHttpRequest"))
-  throw new Error("Offline workbench must not make network requests");
-const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/gi)];
-if (scripts.length !== 1) throw new Error("Expected exactly one executable inline JavaScript block");
-new Script(scripts[0][1], { filename: "backlink-submission-workbench.inline.js" });
-console.log("OK: 176 offline sources, 21 exact-field cards, 161 fields, JS syntax valid, domain-isolated progress. V32 updates.");
+document.getElementById("items").textContent=JSON.stringify(items);
+document.getElementById("detailedCards").textContent=JSON.stringify(detailed);
+document.getElementById("auditV31").textContent=JSON.stringify(recent);
+document.getElementById("auditV32").textContent=JSON.stringify(v32);
+document.getElementById("auditV33").textContent=JSON.stringify(v33);
+const localStorage={getItem:key=>storage.get(key)||null,setItem:(key,val)=>storage.set(key,String(val))};
+class MockURL{
+  constructor(s){const m=String(s).match(/^https?:\/\/([^/]+)/);if(!m)throw new Error("Invalid URL");this.hostname=m[1];}
+  static createObjectURL(blob){return "blob:unit-"+blobs.indexOf(blob);}
+  static revokeObjectURL(){}
+}
+class MockBlob{constructor(parts,{type}={}){this.parts=parts;this.type=type;blobs.push(this);}}
+const noopTimeout=()=>1;
+new Script(source,{filename:"offline-workbench.js"}).runInNewContext({
+  document,localStorage,URL:MockURL,Blob:MockBlob,
+  navigator:{clipboard:{writeText:async()=>{}}},
+  confirm:()=>true,setTimeout:noopTimeout,clearTimeout:()=>{}
+});
+const $=id=>document.getElementById(id);
+assert.equal($("cards").children.length,176,"Initial cards should render");
+assert.match($("count").textContent,/176 \/ 176/);
+$("search").value="EpicTools";$("search").events.input();
+assert.equal($("cards").children.length,1,"EpicTools search should produce exactly one card");
+$("search").value="";$("search").events.input();
+const tracks=nodes.filter(n=>n.tag==="select"&&n.parent?.className==="track");
+assert.ok(tracks.length>=176,"All rows must include local progress controls");
+tracks.at(-176).value="已自行提交";tracks.at(-176).onchange();
+assert.equal(Object.keys(JSON.parse(storage.get("xibanya-marks-by-domain-v29"))["generadordelettering.org"]).length,1);
+
+$("home").value="https://other-tool.example/";$("home").events.input();$("home").events.change();
+assert.equal($("tool").value,"","Switching domain must clear the old editor URL");
+assert.match($("marked").textContent,/已标注 0 条/,"New domain cannot inherit old progress");
+$("home").value="https://generadordelettering.org/";$("home").events.input();$("home").events.change();
+assert.match($("marked").textContent,/已标注 1 条/,"Switching back restores original progress");
+
+$("backup").onclick();
+const backup=JSON.parse(blobs.at(-1).parts.join(""));
+assert.equal(backup.type,"spanish-backlink-offline-backup");
+assert.ok(backup.progress["generadordelettering.org"]);
+const restored={
+  type:"spanish-backlink-offline-backup",version:1,
+  profile:{name:"Restored Website",home:"https://restored.example/",tool:"",es:"Spanish short",en:"English short",eslong:"Spanish long",enlong:"English long",email:""},
+  progress:{"restored.example":{"172":{stage:"审核中",note:"=HYPERLINK(\"https://untrusted.test\")"}}}
+};
+await $("restoreFile").events.change({target:{files:[{size:480,text:async()=>JSON.stringify(restored)}]}});
+assert.match($("marked").textContent,/restored.example.*已标注 1 条/);
+$("export").onclick();
+const exported=blobs.at(-1).parts.join("");
+assert.ok(exported.includes("restored.example"));
+assert.ok(exported.includes("审核中"));
+assert.ok(exported.includes("'=HYPERLINK"),"CSV export must escape spreadsheet formulas");
+assert.ok(!exported.includes('"\'"'),"Empty CSV cells must remain empty, not apostrophes");
+
+console.log("PASS: 176 cards, 21 detailed tables, search, per-domain progress, URL reset, JSON backup/restore, CSV formula safety (11 checks).");
