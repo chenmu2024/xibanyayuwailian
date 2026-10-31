@@ -92,3 +92,7 @@
 70. V34 #159资源详情、#163/#164字体分类、#165设计资源、#172 EpicTools Curated详情中已实测到未带nofollow/ugc/sponsored的公开外站href；EpicTools Partner显式follow与免费Curated必须分开。不得用抽样rel代替新申请审核/真实条目rel。
 71. V34 `docs/backlink-submission-workbench.html`新加11家实际公开href/rel提示和单独的`design`排序，保留V33旧排序及跨域进度隔离。`scripts/validate_workbench.mjs`应检查V34 21条原始样本、#005 nofollow、#162 4/4 sponsored；`scripts/smoke_workbench.mjs`新增第二批排序回归。修改主库、CSV、HTML或测试要同步。
 72. GitHub Actions本轮如未得到明确绿色运行，只能报告独立V8校验结果及Actions尚未修复，不能假报获批外链或CI成功。
+
+73. V35：操作台只可把“用户已亲自查验”记作**本地自我确认**，不能转换成GitHub正式台账上的已核验链接。必须提供第三方公开HTTPS页面、指向同一个目标域名的真实href和原始rel；字段修改撤销确认。进度按域名隔离；JSON备份/恢复对proof对象严格校验，旧V30格式仍需兼容。
+74. V35 `scripts/verify_published_backlink.py`用于只读HTTPS公开页面href/rel检查，禁止它自动申请外链、访问登录后页面或尝试绕过Cloudflare/验证码。输出`found`只代表指定HTML见到<a href>，`not_found_in_fetched_html`只是限定单页未发现；没有nofollow不保证Google SEO传权，`--html-file`离线fixture不可充当线上证据。
+75. V35 `scripts/test_verify_published_backlink.py`的8组不联网测试已提交并接入.github/workflows/validate-data.yml，必须在真实Python/CI通过后才可宣称其测试完成。GitHub Actions run若返回0个job步骤，不足以唯一确定故障原因，禁止无证据归因于账户或Runner。V35的V8离线工作台模拟测试与Python测试状态必须分别表述。
