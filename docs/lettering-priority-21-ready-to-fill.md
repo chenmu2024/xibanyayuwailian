@@ -17,6 +17,8 @@
 
 ## 各站独立填写（完成一站后核实台账再开下一站）
 
+**V31实测更新（2026-10-31）**：请先查看 [17家官网表单复核结果](v31-17-live-form-verification-20261031.md)。#014 Lugar Latino官方提交页直接请求多次返回404，虽搜索索引可见旧表单，现**暂停手工申请**。#123、#128、#147、#151、#169已经按当日官方表单纠正步骤；平台官方Dofollow声明不等于我们已独立测得Follow。
+
 ### 1. LaunchFree｜主库 #123
 
 **入口**：[https://launchfree.io/submit.html](https://launchfree.io/submit.html)  
@@ -26,14 +28,22 @@
 | 实际字段 | 本站参考值 |
 | --- | --- |
 | Launch Name | Generador de Lettering |
-| URL | https://generadordelettering.org/ |
-| Tagline（≤80字符） | Free Spanish lettering editor for custom text images |
-| Category | Creator Tools（按真实当前选项） |
-| Description（≥100字符） | A free Spanish-language browser lettering editor for making decorative text images. Adjust fonts, colors, outlines, shadows and canvas settings, then export PNG, JPG or WebP images. No account required. It does not generate TTF or OTF font files. |
-| Why built | To make creating decorative Spanish text images easier without installing software.（仅在符合实际开发动机时采用） |
-| Contact email | 【你的真实联系邮箱】 |
+| Launch URL | https://generadordelettering.org/ |
+| Tagline ≤80 characters | Free Spanish lettering editor for custom text images |
+| Category | Creator Tools（官网当前实际选项） |
+| Description 100–1200 chars | A free Spanish-language lettering editor for custom text art. Adjust fonts, colors, outlines, shadows and canvas, then export PNG, JPG or WebP images. It does not generate TTF or OTF files. |
+| Why did you build this? | To make decorative Spanish text art easier to create in a browser.（仅真实动机时采用） |
+| Launch Status | 根据真实上线状态选 |
+| Pricing | Free（若实际免费） |
+| MRR（可选） | 不虚构实际营收；没有可不填 |
+| Screenshots（可选） | 最多3条自己的真实图片URL |
+| Your Name | 【真实创建者姓名】 |
+| Email | 【你的真实联系邮箱】 |
+| Short Bio | 【真实本人/团队介绍】 |
+| How did you hear about us? | 据实选择 |
+| Terms and Human verification | 本人阅读同意、完成真人验证 |
 
-**提交前/后核查**：人工审核；用户的品牌与项目初衷必须真实，且同域先查重。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V31官方四阶段表单；个人简介、创建动机、真实身份和人机验证都需完成。免费Dofollow仅为平台官方宣称，实际rel未测。 **目前仅是未提交的准备材料**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-123)。
 
 ### 2. NoSignupTools｜主库 #148
@@ -81,12 +91,15 @@
 | 实际字段 | 本站参考值 |
 | --- | --- |
 | Product URL | https://generadordelettering.org/ |
-| Email | 【你的真实联系邮箱】 |
-| Logo（如出现） | 真实产品logo |
-| Product name（后续如出现） | Generador de Lettering |
-| Description（后续如出现） | A free Spanish-language browser lettering editor for making decorative text images. Adjust fonts, colors, outlines, shadows and canvas settings, then export PNG, JPG or WebP images. No account required. It does not generate TTF or OTF font files. |
+| Logo（可选） | 真实Logo PNG/JPG/GIF/WebP≤2MB，不接受SVG；可使用favicon |
+| Your email | 【建议同域邮箱，填写真实地址】 |
+| Founder's X handle（可选） | 有真实X账号才填 |
+| Requested launch date（可选） | 按实际排期 |
+| Pricing（可选） | Free（如核心功能真实免费） |
+| Keep it free | 不选择$29优先与$99/年Plus |
+| Verify ownership | 同域邮箱魔术链接；普通邮箱需要Meta标签/DNS TXT |
 
-**提交前/后核查**：仅按当日表单完成第一步；后续是否要求域名所有权证明依实际通知，不能代替用户操作DNS/邮件。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V31已证实所有权验证是上线前硬条件。免付费、Badge可选与Dofollow为官方说明，不等于本网站已获链。 **目前仅是未提交的准备材料**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-128)。
 
 ### 5. PeplioHUB｜主库 #149
@@ -120,14 +133,18 @@
 | --- | --- |
 | Tool Name | Generador de Lettering |
 | Tool URL | https://generadordelettering.org/editor |
-| Description | A free Spanish-language browser lettering editor for making decorative text images. Adjust fonts, colors, outlines, shadows and canvas settings, then export PNG, JPG or WebP images. No account required. It does not generate TTF or OTF font files. |
+| X handle（可选） | 真实社媒账号存在才填 |
+| Description | Free Spanish browser lettering editor with fonts, colors, outlines, shadows and canvas options. Export PNG, JPG or WebP images. |
 | Type | Typography |
-| Price | Free |
-| Logo（可选） | 真实正方形logo ≥250×250 |
-| Contact name | 【真实站主/作者或团队名称】 |
-| Contact email | 【你的真实联系邮箱】 |
+| Source of Truth | 依据真实产品选择，不可假装Figma等 |
+| Price | Free（若核心功能免费） |
+| Size | 按当页真实规模选项选 |
+| Logo（可选） | PNG/JPG/WebP方形图，至少250×250像素 |
+| Your Name | 【你的真实姓名】 |
+| Email | 【你的真实联系邮箱】 |
+| I work for or represent this company | 只有确实代表某公司时才勾选 |
 
-**提交前/后核查**：字体转换器不等于TTF字库；人工审核，纯西语产品被接受未知。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V31官网还有Source of Truth、Size和代表公司身份选择；不适合随意选择Figma或冒充公司。 **目前仅是未提交的准备材料**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-151)。
 
 ### 7. UX Resources｜主库 #162
@@ -237,10 +254,10 @@
 | --- | --- |
 | Tool Name | Generador de Lettering |
 | Website URL | https://generadordelettering.org/editor |
-| Description | A free Spanish-language browser lettering editor for making decorative text images. Adjust fonts, colors, outlines, shadows and canvas settings, then export PNG, JPG or WebP images. No account required. It does not generate TTF or OTF font files. |
-| Tags | Typography, Lettering, Text design（按实际表单逐项添加） |
+| Description | Free Spanish-language lettering editor for custom text images with font, color and shadow controls and PNG, JPG or WebP image export. |
+| Tags | Typography, Lettering, Text Design（按官网控件） |
 
-**提交前/后核查**：提交后等待编辑；不得把其站内宣传的用户规模当成独立流量证据。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V31带www官网真实表单只有四项主要字段；当前没有必填邮箱/Logo，但仍有人工审核。 **目前仅是未提交的准备材料**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-169)。
 
 ### 13. EpicTools｜主库 #172
@@ -274,10 +291,10 @@
 **提交前/后核查**：只能提交实际可免费操作的工具页，不投纯文章。 **当前仅为填写草稿，未自动递交**。  
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-005)。
 
-### 15. Lugar Latino｜主库 #014
+### 15. Lugar Latino｜主库 #014（暂缓：直访404）
 
 **入口**：[https://www.lugarlatino.com/directorio/enviar.php](https://www.lugarlatino.com/directorio/enviar.php)  
-**为什么选它**：只收西语网站，存在西语完整表单。  
+**为什么选它**：只收西语网站，但V31官方投递页直访返回404；搜索索引仍有原先免费表单。**暂停认为它可直接提交**。  
 **按真实页面填写**：
 
 | 实际字段 | 本站参考值 |
@@ -291,7 +308,7 @@
 | Categoría | 按网站真实功能选择 |
 | Idioma | Español（主站实际是西语时） |
 
-**提交前/后核查**：若站点规则要求真实国家/业务地址，应据实提供；不可伪称西班牙/墨西哥企业。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V31直访表单404；只有个人浏览器确认恢复后才使用。不得虚构所在国家或企业。 **当前仅为填写草稿，未自动递交**。  
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-014)。
 
 ### 16. ToolGuide｜主库 #057
@@ -391,15 +408,16 @@
 
 | 实际字段 | 本站参考值 |
 | --- | --- |
-| Name | Generador de Lettering |
-| Website | https://generadordelettering.org/editor |
-| Short Description（≤130字符） | Free Spanish lettering editor for creating customizable text images. |
-| Pricing | Free |
-| Category | Typography（若提供） |
-| Icon | 真实方形图标，官网最终格式规则需核对 |
-| Email | 【你的真实联系邮箱】 |
+| What is the name of your tool? | Generador de Lettering |
+| Provide a link to your tool | https://generadordelettering.org/editor |
+| Describe your tool | A free Spanish browser lettering editor for decorative text artwork with font, color, outline and shadow controls and PNG, JPG or WebP export. |
+| How much does your tool cost? | Free（实际当期选项） |
+| Exclusive deal for users? | 无真实独家优惠选No |
+| Affiliate scheme? | 无真实联盟计划选No |
+| Provide an icon for your tool | 真实方形纯色背景图标，JPG/JPEG/WebP/SVG，≤2MB |
+| What is your email address? | 【你的真实联系邮箱】 |
 
-**提交前/后核查**：第三方声称非PNG、DR25、Follow并非我们的独立复测；官网首页当期存在可访问性问题，谨慎核对Tally归属。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：V31 Tally官网表单没有Category/Tags，原填写卡已纠正；需用JPG/JPEG/WebP/SVG≤2MB的方形图标，实际rel未测。 **目前仅是未提交的准备材料**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-147)。
 
 ## 审核记录与“外链成功”的严格区别
