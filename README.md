@@ -12,6 +12,10 @@
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
 | **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
+| **[docs/v34-five-more-design-font-directories-ready-to-fill.md](docs/v34-five-more-design-font-directories-ready-to-fill.md)** | **V34第二批5家字体/设计目录：逐字段、实际URL、真实获链样本与注意事项** |
+| [docs/v34-21-public-link-samples-and-priority-update-20261031.md](docs/v34-21-public-link-samples-and-priority-update-20261031.md) | V34新增21条已发布href/rel证据、样本适用边界与两家降级依据 |
+| [data/v34-21-published-link-rel-samples-20261031.csv](data/v34-21-published-link-rel-samples-20261031.csv) | 21条可复核的公开来源页面→真实href→原始rel属性 |
+| [data/v34-11-category-presence-checks-20261031.csv](data/v34-11-category-presence-checks-20261031.csv) | 11个实际读取页面对Lettering的检出范围；明确访问失败不等于未收录 |
 | **[docs/v33-five-follow-first-ready-to-fill.md](docs/v33-five-follow-first-ready-to-fill.md)** | **直接使用：5家公开样本未见nofollow的外链投稿，逐家真实表单字段和Lettering可复制文案** |
 | **[docs/v33-public-link-rel-and-listing-presence-20261031.md](docs/v33-public-link-rel-and-listing-presence-20261031.md)** | **V33：11条真实已发布外站href/rel，9个页面的Lettering出现范围；public.tools公开样本3/3 nofollow** |
 | [data/v33-published-outbound-rel-samples-20261031.csv](data/v33-published-outbound-rel-samples-20261031.csv) | 11个可复核的公开详情页外部href、原始rel及样本结论 |
@@ -216,3 +220,12 @@
 - **主库仍176条**：最新P1 **24**、P2 **21**、条件 **80**、待核验16、排除34、非外链1。优先执行5家公开样本未带nofollow的研究候选：Htrd、Herramientas y Recursos、NoSignupTools、DesignTools.fyi、Toolfound（后者必须核验域名所有权）。离线V33操作台加入真实rel提醒和“V33公开样本优先”排序。
 - 为防止镜像数据错乱，`scripts/validate_workbench.mjs`现在将176条离线页面JSON与主表CSV逐条核对，并核对11条真实样本及public.tools 3/3 nofollow事实。V33还修复了上版两份Node验证脚本内容错放路径的问题。**GitHub Actions旧Runner失败问题尚无可信绿色结果**；本地验证通过不等于CI通过。V33新增第12项交互排序回归检查，并修复测试文件职责对调问题。
 - [详情与边界](docs/v33-public-link-rel-and-listing-presence-20261031.md)。实际新增为Lettering确认的反向链接仍是 **0**。
+
+## V34｜字体和设计类平台的21条真实公开href/rel复核（2026-10-31）
+
+- 本轮**没有新增目录来源**，在原176家内检查21条其他网站已发布的外部href，另做11个类别/详情页的目标域名出现核查。**没有代投网站，没有替Lettering获得新的确认外链**。
+- **#005 The Free Tools Directory** 已发表的`1000 Font Generator`详情页真实href带`rel="noopener nofollow"`；**#162 UX Resources** 4条Typography工具（Minglyph、Fontmojo、Cursive Generator、Fontshare）的真实外站href均`rel="noopener sponsored"`。两者在免费普通Follow目标下由P1调为**条件**，不声称整站全是nofollow或sponsored。
+- **第二批5家设计/字体目录优先人工研究**：`#159 Design Resources Archive`、`#163 LDS Library`、`#164 Unikist`、`#172 EpicTools`、`#165 Mark-it`。字体、排版、设计类的已公开样本未见nofollow/ugc/sponsored，但免费投稿获批、自己条目的rel及DR/AS仍未证实。EpicTools的Partner展示与Curated详情严格区分。
+- 还抽查`#169 FreeDesignerTools`与`#141 GainWeb`出站链接；GainWeb的免费/收费来源难以区分，不据此升优先。`#149 PeplioHUB`没有抽出可识别的产品官网静态href，`#147 Good Design Tools`样本详情读取失败，均保持未知，不误判成无外链或Follow。
+- 当前主库分类：**P1 22、P2 21、条件82、待核验16、排除34、非外链1，共176家**。V34离线HTML新加11家实际href/rel提醒及“V34字体设计样本优先（非保证）”排序。21家优先卡仍含161项实际表单字段。可以直接从[第二批5家填写指南](docs/v34-five-more-design-font-directories-ready-to-fill.md)逐站操作。
+- V34校验：独立V8执行`scripts/validate_workbench.mjs`逻辑，验证176条主表、V33的11条和V34的21条证据、21家字段；`scripts/smoke_workbench.mjs`模拟DOM与两种排序，共**13项**交互检查通过。**这些不代表GitHub Actions CI或实际Chrome点击已通过**，也不代表第三方申请成功。
