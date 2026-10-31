@@ -77,7 +77,7 @@
 5. [#149 PeplioHUB (peplio.com)](#link-149) — [提交入口](https://peplio.com/pepliohub/#submit-tool) · 候选可申请
 6. [#151 DesignTools.fyi (designtools.fyi)](#link-151) — [提交入口](https://designtools.fyi/submit/) · 候选可申请
 7. [#162 UX Resources (uxresources.info)](#link-162) — [提交入口](https://uxresources.info/submit.php) · 候选可申请
-8. [#163 LDS Library (lds-library.vercel.app)](#link-163) — [提交入口](https://lds-library.vercel.app/submit) · 候选可申请
+8. [#163 LDS Library (library.legitdesign.studio)](#link-163) — [提交入口](https://library.legitdesign.studio/submit) · 候选可申请
 9. [#164 Unikist (unikist.com)](#link-164) — [提交入口](https://unikist.com/submit) · 候选可申请
 10. [#165 Mark-it (markitnow.net)](#link-165) — [提交入口](https://markitnow.net/submit-a-resource) · 候选可申请
 11. [#168 Herramientas y Recursos (herramientasyrecursos.com)](#link-168) — [提交入口](https://www.herramientasyrecursos.com/directorio/sugerir) · 候选可申请
@@ -3773,7 +3773,7 @@
 
 1. Resource name填Generador de Lettering
 2. Link填编辑器URL
-3. Category选Design Resources/Fonts等真实可选项
+3. Category选Design Resources（官网当前确有此选项，无单独Fonts选项）
 4. Pricing选Free
 5. What is it?填简短准确英语
 6. Why is it useful?描述具体场景
@@ -3782,7 +3782,7 @@
 
 **Lettering参考填写**：名称 `Generador de Lettering`；若入口允许对应页面，则网址 `https://generadordelettering.org/editor`；描述栏存在时，西语站用 `Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP.`，英文站用 `Free Spanish lettering editor for creating customizable text images.`，长说明取前面的资料包。图片、联系邮箱、价格、分类、真实所在地均按该平台实际字段与事实补全，不要臆造不存在的字段。
 
-**不符合/易被拒的情况**：仅收真实有用且持续维护的设计资源；不保证编辑入选；站点托管在vercel.app子域名，品牌方legitdesign.studio与托管域名不混为一谈。  
+**不符合/易被拒的情况**：仅收真实有用且持续维护的设计资源；不保证编辑入选；现行规范域是library.legitdesign.studio；旧lds-library.vercel.app只是canonical归一的别名，不可重复申请。  
 **历史核对**：总库未见此品牌/主机旧记录，仍需旧邮件检索。  
 **已有公开样例（不是本站获链）**：https://library.legitdesign.studio/design-resources/fonts。  
 **证据与操作事实**：官方表单字段、每周审核规范和Fonts资源例页已直接核实；[原仓库官方来源](https://library.legitdesign.studio/submit)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
