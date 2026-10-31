@@ -124,15 +124,22 @@ assert.equal(backup.progress["generadordelettering.org"]["1"].proof.rel,"noopene
 const restored={
   type:"spanish-backlink-offline-backup",version:1,
   profile:{name:"Restored Website",home:"https://restored.example/",tool:"",es:"Spanish short",en:"English short",eslong:"Spanish long",enlong:"English long",email:""},
-  progress:{"restored.example":{"172":{stage:"审核中",note:"=HYPERLINK(\"https://untrusted.test\")"}}}
+  progress:{"restored.example":{"172":{stage:"审核中",note:"=HYPERLINK(\"https://untrusted.test\")",proof:{source:"https://directory.valid.org/tools/restored",href:"https://restored.example/",rel:"(none)",checked:true,checkedAt:"2026-10-31"}}}}
 };
+const invalidCopy=JSON.parse(JSON.stringify(restored));
+invalidCopy.progress["restored.example"]["172"].proof.href="https://restored.example.evil.com/";
+const beforeInvalid=storage.get("xibanya-marks-by-domain-v29");
+await $("restoreFile").events.change({target:{files:[{size:750,text:async()=>JSON.stringify(invalidCopy)}]}});
+assert.equal(storage.get("xibanya-marks-by-domain-v29"),beforeInvalid,"Invalid restored proof must not overwrite the user's local data");
 await $("restoreFile").events.change({target:{files:[{size:480,text:async()=>JSON.stringify(restored)}]}});
 assert.match($("marked").textContent,/restored.example.*已标注 1 条/);
+assert.match($("marked").textContent,/人工自查证据 1 条/,"Confirmed manual evidence should survive JSON restore");
 $("export").onclick();
 const exported=blobs.at(-1).parts.join("");
 assert.ok(exported.includes("restored.example"));
 assert.ok(exported.includes("审核中"));
 assert.ok(exported.includes("第三方公开页")&&exported.includes("实际目标href")&&exported.includes("rel原文"),"CSV needs evidence columns");
+assert.ok(exported.includes("https://directory.valid.org/tools/restored")&&exported.includes("本人确认"),"Verified local evidence must export with its source URL");
 assert.ok(exported.includes("'=HYPERLINK"),"CSV export must escape spreadsheet formulas");
 assert.ok(!exported.includes('"\'"'),"Empty CSV cells must remain empty, not apostrophes");
 
