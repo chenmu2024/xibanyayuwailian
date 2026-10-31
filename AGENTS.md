@@ -100,3 +100,7 @@
 76. V36操作台新增`xibanya-profiles-by-domain-v36`作为每域名完整网站资料的唯一当前数据表，与`xibanya-marks-by-domain-v29`逐域名进度配合。新域名不得继承其他网站的名称、邮箱、西语/英语文案或工具URL；切回旧站必须恢复原资料。
 77. V36 JSON备份的`version:2`需要`profile`、`profiles`和`progress`，恢复时要检查每个profiles的`home`和`tool`域名一致、字段类型与长度及域名数量。必须向下兼容V1：其其他域名历史进度可以恢复，但缺失的其他站资料无法补造。
 78. V36必须维持`scripts/validate_workbench.mjs`结构校验以及`scripts/smoke_workbench.mjs`模拟23项检查，覆盖跨站文本/email泄漏、跨域JSON篡改、V2备份与V1迁移；不能把模拟V8声称为真实Windows Chrome端到端，也不宣称GitHub Actions CI或Python新单测已经成功。
+
+79. V37已在真实Python 3.13.5解释器执行验链11项测试且0失败，Git blob SHA与仓库最终两份Python源码完全一致（见`docs/v37-python-backlink-verifier-tested-and-ci-diagnosis.md`）；与GitHub Actions未恢复是两个不同事实，不得以CI失败否认已完成本地测试，也不能以本地通过谎称CI绿色。
+80. V37解析真实HTML的`<a href>`时必须容忍个别无效href与只有属性名的空rel；排除`<template>`中的惰性锚点。维持3个新回归测试和8个原测试。不得把fixture中的目标URL算成真实外链，也不得从HTML没有nofollow推论Google保证排名。
+81. Actions当前task在数秒内失败且API步骤为空、日志历史返回BlobNotFound，明确保持原因“尚待确认”，避免无证据改runner、删质量门槛或无限重试。
