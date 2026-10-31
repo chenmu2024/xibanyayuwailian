@@ -12,7 +12,7 @@ const items=JSON.parse(html.match(/<script id="items" type="application\/json">(
 const detailed=JSON.parse(html.match(/<script type="application\/json" id="detailedCards">([\s\S]*?)<\/script>/)?.[1]||"null");
 assert.equal(items.length,176);
 assert.equal(detailed.length,21);
-assert.equal(detailed.reduce((s,x)=>s+x.fields.length,0),133);
+assert.equal(detailed.reduce((s,x)=>s+x.fields.length,0),149);
 assert.ok(!/<script[^>]+src=/i.test(html),"No external JS allowed");
 assert.ok(!html.includes("fetch("),"No network requests allowed");
 
