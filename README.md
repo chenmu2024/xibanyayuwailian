@@ -326,3 +326,7 @@
 ## V48｜前五家直接填写材料（2026-10-31）
 
 [当前5家逐字段申请包](docs/v48-top5-forms-ready-to-fill-20261031.md)与[38组字段CSV](data/v48-top5-submission-fields-20261031.csv)已按当日官方表单刷新。NoSignupTools真实图标≤1MB、可选截图最多6张各≤2MB，本站有广告不可勾No Ads；LaunchFree个人真实资料/为什么开发不可编造；DesignTools.fyi不可伪称公司代表。早期176家手册首页过期统计更新到P1 13、P2 27、条件85。**仍未代提交，新增确认外链0。**
+
+## V49｜一条免费命令复核13家P1原始HTML的rel（2026-10-31）
+
+[Windows PowerShell教程](docs/v49-p1-raw-rel-batch-audit-and-comma-fix-20261031.md)：`py .\scripts\audit_p1_published_links.py`。读取现有13家P1证据CSV、只抓其中11个真实公开详情页的原始HTML，一次一页、无付费API，单独记录实际完整href、本次raw rel和历史rel。另修复`nofollow,ugc`逗号写法被旧脚本误报无限制的错误，增加离线单元测试。**没有在本仓库声称本轮已实际运行在线批量抓取，其他网站的原始rel不等于Generador已获得外链**。

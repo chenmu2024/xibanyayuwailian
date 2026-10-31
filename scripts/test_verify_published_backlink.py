@@ -69,8 +69,18 @@ class BacklinkVerifierTests(unittest.TestCase):
 
     def test_rel_classification(self):
         self.assertEqual(classify_rel("noopener NOFOLLOW sponsored"), "nofollow+sponsored")
+        self.assertEqual(classify_rel("ugc,nofollow"), "nofollow+ugc")
+        self.assertEqual(classify_rel("noopener,nofollow, sponsored"), "nofollow+sponsored")
+        self.assertEqual(classify_rel("noopener\tnofollow,UGC"), "nofollow+ugc")
         self.assertEqual(classify_rel("noopener noreferrer"), "no_restriction_token_observed")
         self.assertEqual(classify_rel(""), "no_restriction_token_observed")
+
+    def test_comma_delimited_rel_in_actual_anchor(self):
+        html = '<a href="https://generadordelettering.org/" rel="nofollow,ugc">Direct link</a>'
+        result = inspect_html(html, SOURCE, TARGET)
+        self.assertEqual(result["status"], "found")
+        self.assertEqual(result["links"][0]["rel"], "nofollow,ugc")
+        self.assertEqual(result["links"][0]["rel_result"], "nofollow+ugc")
 
     def test_reject_non_public_urls_and_same_site(self):
         for url in ("http://directory.valid.org/", "https://localhost/", "https://127.0.0.1/",

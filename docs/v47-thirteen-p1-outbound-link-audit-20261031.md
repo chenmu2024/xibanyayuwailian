@@ -44,3 +44,7 @@
 优先针对确实与Typography/Lettering相关的[LaunchFree](https://launchfree.io/submit.html)、[Design Resources Archive](https://resourcesfor.design/submit)、[Unikist](https://unikist.com/submit)、[DesignTools.fyi](https://designtools.fyi/submit/)和[NoSignupTools](https://nosignuptools.com/submit)手动核对并填表；[Htrd](https://htrd.org/)可列入第二批；[Navegax](https://navegax.com/)优先用于西语专属目录，但须真实注册；[Toolfound](https://toolfound.com/submit)有真实所有权验证门槛。PeplioHUB虽有外部链接，但`nofollow/ugc`未来可变，比较适合作为用户曝光而非Follow承诺。
 
 完整官方来源、保留资格与未证内容：[逐行证据CSV](../data/v47-current-p1-outbound-proof-matrix-20261031.csv)。没有代理注册、代提交、付费、SEO指标捏造、任何新增确认用户站获链。**主库仍是176条：P1 13、P2 27、条件85、待核验16、排除34、非外链1；新增确认用户站外链0**。
+
+## V49｜原始 rel 的逗号分隔漏洞与一次性样本验收
+
+Google 官方允许`rel="nofollow,ugc"`，旧版验链器只按空格拆分会误判为无限制。本次Python已修复；新增[13家P1单次批量原始HTML核验](v49-p1-raw-rel-batch-audit-and-comma-fix-20261031.md)（只实际请求有公开样本的11家），运行结果另存本地CSV；不把V33/V34历史原始rel当成本次实时事实。没有在本会话环境取得新raw rel，因此不改变当前6条历史样本及平台P1级别。

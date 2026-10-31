@@ -154,3 +154,7 @@
 
 121. V48前五家官方现场表单已再查，字段表真实为38组而非错误预估39组，统计须与实际CSV行数一致。LaunchFree必须真人填写Why built/姓名/Email/Bio；Unikist≤280字符，DesignTools.fyi Logo可选≥250×250，Design Resources Archive实时动态人机问题。
 122. NoSignupTools真实图标格式PNG/JPG/SVG/WebP≤1MB，截图0–6张各≤2MB，用户姓名及Email为optional；广告网站不得选择No Ads，其他标签Open Source/Offline Access/Multi Language等须真实具备。历史手册抬头不得再显示P1 19旧状态。
+
+123. V49修复原验链器classify_rel必须按空白或逗号拆分rel值；Google官方允许`nofollow,ugc`，不能误判为无限制。新离线测试需要覆盖空格、逗号、大小写混排、真实HTML anchor。
+124. P1批量真实HTML验证只对V47中已记录的11个公开第三方案例各读取一次，13行矩阵里另外2行明确no_verifiable_public_sample，未经网络访问或JS失败保留未判定。该结果仍是**其他站点的外链**，不可当成本用户已获链。历史V33/V34 raw rel和新live rel必须分字段保留。
+125. 不在网络受限的执行环境宣称成功抓到了本轮新raw rel；运行脚本离线模拟测试不等于已实际联网。CSV对外部数据防公式注入，保留url追踪参数和精确匹配，不用robots index,follow推断锚点rel或排名权重。日志错误不等于链接不存在。

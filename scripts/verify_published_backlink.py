@@ -3,6 +3,7 @@
 import argparse
 import ipaddress
 import json
+import re
 import socket
 import sys
 from datetime import datetime, timezone
@@ -77,7 +78,9 @@ class Anchors(HTMLParser):
 
 
 def classify_rel(rel):
-    tokens = set(rel.lower().split())
+    # Google documents comma- OR whitespace-separated rel values.
+    # `rel="nofollow,ugc"` must not be mistaken for an unrestricted link.
+    tokens = set(re.split(r"[\s,]+", rel.lower().strip()))
     restricted = sorted(tokens & {"nofollow", "ugc", "sponsored"})
     return "+".join(restricted) if restricted else "no_restriction_token_observed"
 
