@@ -25,19 +25,19 @@
 
 **V40更新：**旧Vercel页canonical已指向[规范域投稿页](https://library.legitdesign.studio/submit)与[规范域字体分类](https://library.legitdesign.studio/design-resources/fonts)。两域同一LDS Library，只投稿一次；下文V34原始rel为历史旧域取样。
 
-**官方提交**：https://lds-library.vercel.app/submit
+**官方提交（唯一正式地址）**：https://library.legitdesign.studio/submit
 
 | 字段 | 复制或操作 |
 | --- | --- |
 | Resource name | `Generador de Lettering` |
 | Link | `https://generadordelettering.org/editor` |
-| Category | 真实表单存在时选`Design Resources` / `Fonts`，不要凭空增加类别 |
+| Category | **`Design Resources`**：V52取得真实下拉字段，无单独`Fonts`选项 |
 | Pricing | `Free`（核心工具确实免费时） |
 | What is it? | `A free Spanish online lettering image editor.` |
 | Why is it useful? | `It lets creators make decorative Spanish text artwork with customizable styling and export images as PNG, JPG or WebP, without installing fonts or creating an account.` |
 | Optional email | 真实可用邮箱，确属选填时可留空 |
 
-**样本证据**：[Fonts类别页面](https://lds-library.vercel.app/design-resources/fonts)真实列有Fontjoy、Fontshare等。两条已发布外部链接`rel="noopener"`，未带nofollow，**不等于本站已经刊登**。其域名是`lds-library.vercel.app`，不要将其他Vercel子域的权重混为一谈。
+**样本证据**：[Fonts类别页面](https://lds-library.vercel.app/design-resources/fonts)真实列有Fontjoy、Fontshare等。两条已发布外部链接`rel="noopener"`，未带nofollow，**不等于本站已经刊登**。旧样本出自`lds-library.vercel.app`，现在唯一规范域是`library.legitdesign.studio`，不重复计算两家。
 
 **提交后**：保留真正公开的资源条目URL、本站href和rel。
 
