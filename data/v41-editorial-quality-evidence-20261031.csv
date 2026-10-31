@@ -1,0 +1,6 @@
+﻿"主库编号","目录","可复核证据和质量事实","官方提交入口","公开样本来源","V41行动等级","本站状态","未验证限制"
+"159","Design Resources Archive","V41表单Link URL+Description+人机验证；已刊登MixWeight和Type Garden字体/设计资源，V34真实原始rel=noopener noreferrer","https://resourcesfor.design/submit","https://resourcesfor.design/resource/mixweight-594817","优先人工提交；高相关度","未提交；本站未获链","没有实时DR、索引或本目标收录证据"
+"164","Unikist","真实官网人工审核：Resource name、URL、Category、Pricing、≤280字符描述、邮箱；Fonts与Design Tools分类有同类产品","https://unikist.com/submit","https://unikist.com/categories/fonts","优先人工提交；编辑器选Design Tools","未提交；本站未获链","长期免费及西语网站录取未知"
+"151","DesignTools.fyi","Typography、Free选项真实可见；姓名邮箱必填；历史Font Explorer外部href原始rel=noopener noreferrer","https://designtools.fyi/submit/","https://designtools.fyi/tools/font-explorer-mqp69i9d","优先人工提交；截图/Logo真实","未提交；本站未获链","纯西语录取未知；部分源页本轮读取超时；旧样本rel仍有效"
+"163","LDS Library","规范域library.legitdesign.studio/submit页面可访问但本轮仅能读到建议投稿介绍，具体字段来自V23历史；历史V34旧域Fonts样本rel=noopener","https://library.legitdesign.studio/submit","https://library.legitdesign.studio/design-resources/fonts","条件：需现场复查字段后提交一次","未提交；本站未获链","旧Vercel与规范域同一来源，不能双投；新域raw rel未知"
+"172","EpicTools","首页Newest Additions已将过期域名售卖页与Cloudflare拦截页标记Curated；目录编辑质量与官方human filtered宣传不完全一致；投稿URL+Category","https://epictools.dev/submit","https://epictools.dev/","P1→P2：后置，仍可研究","未提交；本站未获链","原V34真实Curated外链样本保留，噪声不足以认定平台全站无效；无DR/流量测量"

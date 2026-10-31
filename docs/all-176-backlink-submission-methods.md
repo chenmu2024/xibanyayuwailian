@@ -2,7 +2,7 @@
 
 > 资料基线：2026-10-31；来源：`data/backlinks-master.csv` 的1–176全部记录；示例为 `generadordelettering.org`。**176是研究渠道数量，不是已经为网站获得176条反向链接。**
 >
-> 最新主库分类：P1 20、P2 22、条件 83、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
+> 最新主库分类：P1 19、P2 23、条件 83、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
 >
 > 本手册所有来源均单独列出入口、逐项步骤、费用条件、适用对象和限制。排除/暂停/待核验条目的步骤是**留存的历史参考**，不能当作今天可以立刻投稿。当前没有自动发送邮件、注册账号或提交网站。
 
@@ -15,6 +15,8 @@
 **V39质量纠错（2026-10-31）**：#168原V33链接样本仅能证明页脚关联站，不代表普通获批工具的主出站按钮；#151 Font Explorer的原始rel已有V33历史记录，V38新检的Affinity rel仍未知；#171六项字段V32已核实，新增证据为字体详情链接。[完整V39报告](v39-link-path-quality-reconciliation-20261031.md)。
 
 **V40质量补充（2026-10-31）**：#163规范域迁移不可重复投稿，#165因站外资源展示不确定降至P2；详情见[V40质量审计](v40-curated-font-design-quality-audit-20261031.md)。
+
+**V41最新提醒（2026-10-31）**：EpicTools #172现有两项Curated异常内容（域名待售、Cloudflare拦截），由P1降至P2；#159人机验证码每次按当页题目填写，不能复用旧数值。四个优先平台及一个次优先平台的实际逐字段材料见[V41申请包](v41-editorial-quality-and-ready-to-submit-pack-20261031.md)，跨域投稿必须替换自己的真实信息。
 
 ## 1. 实际使用方法
 
@@ -3984,7 +3986,9 @@
 **实际提交状态**：本轮未提交；尚未确认获批、页面实际href、真实rel/Follow、DR/AS或搜索索引。
 
 <a id="link-172"></a>
-### 172. EpicTools (epictools.dev) — 候选可申请（历史级别：P1）
+### 172. EpicTools (epictools.dev) — V41内容质量降级（P2）
+
+**V41真实内容质量核验**：[首页](https://epictools.dev/)的Newest Additions公开将过期域名出售页面和Cloudflare安全拦截提示都标为Curated；因此不能仅凭Curated、人审声明、无nofollow旧样本就假定是高质量人工精选。保留真实投稿表单（仅URL和Category）及V34普通详情外链样本，后置为P2。详见[V41申请包与质量报告](v41-editorial-quality-and-ready-to-submit-pack-20261031.md)。
 
 **V34 EpicTools的三个Curated工具详情（Penpot、Stockimg AI、Snappify）外站href无rel；Design类Partner位有显式rel=`follow`，不能将Partner曝光当免费投稿待遇。[Curated样本](https://epictools.dev/penpot)。**
 

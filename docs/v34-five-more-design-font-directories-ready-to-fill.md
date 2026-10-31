@@ -99,3 +99,9 @@
 - 当前此5家**均没有由本项目实际代提交**。本轮为Lettering确认新增反向链接数量仍为0。
 
 **本表为历史与当日公开事实结合的可复制准备稿**，网站UI和限制将来可能改变；最终必须以当天真实表单为准。[完整21条href/rel样本](v34-21-public-link-samples-and-priority-update-20261031.md)。
+
+## V41（2026-10-31）重要质量纠错
+
+[EpicTools首页](https://epictools.dev/)目前公开将“porkbun.com | domain for sale（已过期域名）”和“Attention Required! | Cloudflare（安全拦截页）”列在最新Curated项目中，说明其批量上新并非严格内容质量过滤。**#172从P1降为P2**。旧V34 Penpot/Stockimg AI等真实`a href`与raw `rel`历史证据不撤销，但必须区别“能获得href”和“值得追求的编辑外链”。[V41完整理由](v41-editorial-quality-and-ready-to-submit-pack-20261031.md)。
+
+#159 Design Resources Archive的数学人机题目会更新，旧“4+5”绝不能当固定答案；提交者应按实时题目操作。[V41逐字段可复制申请包](v41-editorial-quality-and-ready-to-submit-pack-20261031.md)。

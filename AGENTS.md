@@ -116,3 +116,7 @@
 88. V40 #163 LDS Library旧lds-library.vercel.app与规范域library.legitdesign.studio是同一个编辑平台，旧域Fonts和Submit页面的canonical均指向规范域同路径，规范域也可访问。只算一家、不可重复投；V23/V34历史原始rel样本应保留来源旧域。
 89. V40 #165 Mark-it主域/font只有少量字体网址，首页All Resources跳另一个Vercel交互目录，暂未核实具体刊登href；旧首页Fontmeme样本不能推出申请自动取得独立Follow，故从P1降为P2。
 90. V40主库、176指南、HTML镜像应同步；0真实新提交、0用户站新获链，历史rel非实时当前新产品或Google索引保证。
+
+91. V41：除了原始`href/rel`，还应审计人工精选的真实内容品质。EpicTools #172的Newest Additions出现过期域名拍卖和Cloudflare拦截，虽然标Curated；所以从P1降P2。V34旧真实href/rel数据不删除，不把Partner/Curated混成一类。
+92. V41：对每个渠道按实际表单字段填写。#159数学反人机问答为动态题、禁止硬编码旧题目；#164 Short description受280字符上限；#151姓名邮箱与公司代表资格须真；#163 LDS当前规范页只取到投稿介绍，所列更细字段来自V23历史记录，不能说本轮重查全量字段；#172仅URL+Category。
+93. V41已创建五家人工填写准备卡和逐字段CSV，文本仅针对generadordelettering.org/editor且应二次实站校验，严禁复用到其他网站不改产品信息。实际投稿成功只在人工完成并有凭证后登记；raw rel、索引、访问量各需独立证据。
