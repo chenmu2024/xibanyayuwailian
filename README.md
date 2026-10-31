@@ -6,6 +6,8 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| **[docs/v51-curated-live-review-and-execution-20261031.md](docs/v51-curated-live-review-and-execution-20261031.md)** | **V51：11家字体/设计/西语目录再次核验，区别实时公开href、历史rel与质量问题；给出最短表单与主题相关性优先级** |
+| [data/v51-live-curated-submission-audit-20261031.csv](data/v51-live-curated-submission-audit-20261031.csv) | 11家现场公开实例、真实入口及证据不确定性逐行记录；不代表11条已获链 |
 | **[docs/v30-cross-site-field-mapping-and-backup.md](docs/v30-cross-site-field-mapping-and-backup.md)** | **V30：不同西语网站共用176平台填写卡、JSON备份恢复、CSV安全及11项模拟交互测试** |
 | [docs/v29-field-level-workbench-and-ci-evidence.md](docs/v29-field-level-workbench-and-ci-evidence.md) | **V29更新：21家平台共133个真实历史字段示例、进度按网站域名隔离、GitHub Actions故障取证** |
 | **[docs/backlink-submission-workbench.html](docs/backlink-submission-workbench.html)** | **V28离线可用的176条外链操作台**：可搜索/筛选/排序，独立展开每站入口与逐条步骤，复制自己的西语/英语材料，浏览器本地标注进度并下载CSV；需下载原始HTML后用Chrome打开 |
