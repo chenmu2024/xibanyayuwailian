@@ -105,3 +105,13 @@ python .\scripts\verify_published_backlink.py --source "https://实际目录域�
 填入对方实际公示的URL，**不能使用占位符URL或提交表单URL**。退出码0=发现真实匹配`a[href]`；1=只在该页HTML未检出；2=请求或安全验证错误。支持`nofollow`、`ugc`、`sponsored`分类，且不会假设Google一定传权。详细字段和演示请看 [V35完整教程](v35-evidence-based-backlink-verification.md)。
 
 V35的离线操作台模拟验收已通过；新的Python离线8项测试**已编写但尚未在真实Python运行器成功执行**。GitHub Actions原有故障仍须单独定位，不能声称CI已恢复。
+
+## 十三、V36：一个离线工具管理多个西语网站，不串用简介或邮箱
+
+打开 [V36最新操作台](backlink-submission-workbench.html) 后，**先填写顶部当前网站资料，再进行任何外链平台的复制操作**。将网站`home`修改为另一个`https://`域名后，用Tab让输入框提交变动。首次切换到新域名时，站名、工具URL、西语/英语长短介绍和Email应当**全部为空**，不能继续使用Lettering示例文案。填写该站真实材料后会在此浏览器本地单独保存。
+
+再切回`https://generadordelettering.org/`，原来的名称、介绍、编辑器URL、渠道进度及V35证据应恢复；以后再切到第二站，其自己的Email和介绍也会恢复。
+
+V36点击“备份所有网站JSON”导出**V2文件**，不仅保留所有站点进度，还完整保留各站资料。仍能导入旧V1备份，但不能恢复旧备份从未储存的其他网站字段。若上传或共享备份，可能泄露真实邮箱、备注和证据，**不要放到公开GitHub仓库**。
+
+详细说明见 [V36多站隔离与备份完整教程](v36-domain-isolated-profiles-and-v2-backups.md)。本轮独立V8静态和23项交互模拟通过；尚未证明GitHub Actions CI、真实Chrome流程或新Python单测成功。
