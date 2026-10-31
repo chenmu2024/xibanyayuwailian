@@ -59,13 +59,21 @@ class Anchors(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.anchors = []
+        self.template_depth = 0
 
     def handle_starttag(self, tag, attrs):
-        if tag.lower() != "a":
+        if tag.lower() == "template":
+            self.template_depth += 1
+            return
+        if tag.lower() != "a" or self.template_depth:
             return
         a = dict(attrs)
         if a.get("href"):
             self.anchors.append((a["href"], a.get("rel") or ""))
+
+    def handle_endtag(self, tag):
+        if tag.lower() == "template" and self.template_depth:
+            self.template_depth -= 1
 
 
 def classify_rel(rel):
