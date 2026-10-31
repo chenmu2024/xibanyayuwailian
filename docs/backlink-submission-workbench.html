@@ -30,6 +30,41 @@ function fallback(s){const t=E("textarea");t.value=s;document.body.append(t);t.s
 function btn(text,callback){const b=E("button","",text);b.type="button";b.onclick=callback;return b}
 function mark(r){return marks[String(r.id)]||{stage:"未处理",note:""}}
 function target(r){if([58,99,100,155,156,157,173].includes(r.id))return activeDomain==="generadordelettering.org"?"https://generadordelettering.org/herramientas/plantillas-practica":(site.tool||"【填写真实教学资源URL】");if([5,57,74,76,147,148,149,151,158,159,162,163,164,165,169,170,171,172,174].includes(r.id))return site.tool;return site.home}
+
+// Pure field mapping: a new domain may use its own profile texts, never Lettering claims.
+function mappedField(r,field,original){
+  const changed=site.name.trim()!=="Generador de Lettering"||activeDomain!=="generadordelettering.org";
+  if(!changed){
+    const v=original.replaceAll("【你的真实联系邮箱】",site.email||"【请填真实邮箱】");
+    return {value:v,locked:v.includes("【")||v.includes("按打开页面即时"),reason:""};
+  }
+  const label=field.toLowerCase(),manual=why=>({value:"【"+why+"】",locked:true,reason:why});
+  const mine=(key,why)=>{
+    const v=String(site[key]||"").trim();
+    return (!v||v===defaults[key])?manual("请先在顶部填写新网站的真实"+why):{value:v,locked:false,reason:""};
+  };
+  if(/(?:country|país|categor|category|tipo|^type$|^tags$|^cost$|pricing|precio|price|plan|audience|público|palabras clave|keywords|human verification|privacy feature|modelo de precio|idioma|plataforma|platform|why built|tema principal)/i.test(field))return manual("按新站真实属性及官网当前选项手工选择");
+  if(/(?:screenshot|logo|icon|rss|redes sociales|creator details 2)/i.test(field))return manual("按新站实际图片、授权或社交资料准备");
+  if(/(?:contact name|creator name|name \/ email|nombre y email)/i.test(field))return manual("填写真实个人姓名或团队联系人，不得用网站名冒充姓名");
+  if(/(?:email|correo|contact|creator details 1)/i.test(field))return mine("email","联系邮箱");
+  if(/(?:url|website|^link$|^website$|url del sitio)/i.test(field)){
+    const useTool=/(?:tool url|url de herramienta|^link$)/i.test(field)||[5,57,74,76,147,148,149,151,158,159,162,163,164,165,169,170,171,172].includes(r.id);
+    const v=useTool?site.tool:site.home;
+    if(!v||domainOf(v)!==activeDomain)return manual("填写当前网站真实且同域的主页或工具页URL");
+    return {value:v,locked:false,reason:""};
+  }
+  if(/(?:tagline|eslogan)/i.test(field)){
+    const z=mine("en","英文短口号");
+    if(!z.locked&&z.value.length>80)return manual("短口号超过80字符，请先修改顶部英文简述");
+    return z;
+  }
+  if(/(?:descripción breve)/i.test(field))return mine("es","西语短描述");
+  if(/(?:descripción completa|descripción)/i.test(field))return mine("eslong","西语详细说明");
+  if(/(?:short description)/i.test(field))return mine("en","英文短描述");
+  if(/(?:description|describe your resource|what is it|why is it|why is it great)/i.test(field))return mine("enlong","英文详细说明");
+  if(/(?:title|name|nombre|resource name)/i.test(field))return mine("name","网站名称");
+  return manual("无法安全推断此字段，请按新站真实情况手工填写");
+}
 function renderCard(r){
 const d=E("details");const top=E("summary");const header=E("div","row");
 header.append(E("span","num","#"+String(r.id).padStart(3,"0")),E("span","name",r.name));
@@ -46,19 +81,18 @@ const ol=E("ol");(r.steps||"入口未核验，暂不填写").split("→").forEac
 const detail=detailedCards.get(r.id);
 if(detail){
   body.append(E("h3","","逐字段填写卡 · 原始21家精细资料"));
-  body.append(E("p","fieldnote","以下是Generador de Lettering的历史填写样例，最终以官网当前表单为准。更换其他网站时，仅自动替换品牌、网址、联系邮箱，功能描述和类别必须重新核实。"));
+  body.append(E("p","fieldnote","以下是Generador de Lettering的历史填写样例，最终以官网当前表单为准。换站后仅从顶部读取用户主动改写的真实资料；类别、价格、所在地区等仍必须按事实手动选择。"));
   const wrap=E("div","fieldtable-wrap"),tab=E("table","fieldtable"),head=E("thead"),hr=E("tr");
   ["官网字段","推荐填写内容",""].forEach(s=>hr.append(E("th","",s)));
   head.append(hr);tab.append(head);
   const tbody=E("tbody");
   detail.fields.forEach(pair=>{
     const tr=E("tr"),field=pair[0],original=pair[1];
-    const changed=site.name.trim()!=="Generador de Lettering"||activeDomain!=="generadordelettering.org";
-    const val=original.replaceAll("https://generadordelettering.org/editor",site.tool||"【填写真实工具页面】").replaceAll("https://generadordelettering.org/",site.home||"【填写真实网址】").replaceAll("Generador de Lettering",site.name||"【网站真实名称】").replaceAll("【你的真实联系邮箱】",site.email||"【请填真实邮箱】");
-    const researchText=/lettering|fonts?|typograph|tipograf|decorative|custom text|imágenes|PNG|JPG|WebP/i.test(original);
-    const unsafe=changed&&researchText;
-    tr.append(E("td","",field),E("td",unsafe?"【此字段是Lettering专属内容，必须根据新网站真实功能修改】":val));
-    const td=E("td");const b=btn("复制",()=>copy(val));if(unsafe||val.includes("【")||val.includes("按打开页面即时")){b.disabled=true;b.title="必须先完成或核实真实内容";}td.append(b);tr.append(td);tbody.append(tr);
+    const mapped=mappedField(r,field,original),val=mapped.value;
+    tr.append(E("td","",field),E("td","",val));
+    const td=E("td"),b=btn("复制",()=>copy(val));
+    if(mapped.locked||val.includes("【")){b.disabled=true;b.title=mapped.reason||"请核实并填写真实内容";}
+    td.append(b);tr.append(td);tbody.append(tr);
   });
   tab.append(tbody);wrap.append(tab);body.append(wrap);
   body.append(E("p","fieldwarning",detail.note));
