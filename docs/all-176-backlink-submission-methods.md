@@ -2,13 +2,15 @@
 
 > 资料基线：2026-10-31；来源：`data/backlinks-master.csv` 的1–176全部记录；示例为 `generadordelettering.org`。**176是研究渠道数量，不是已经为网站获得176条反向链接。**
 >
-> 最新主库分类：P1 24、P2 21、条件 80、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
+> 最新主库分类：P1 22、P2 21、条件 82、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
 >
 > 本手册所有来源均单独列出入口、逐项步骤、费用条件、适用对象和限制。排除/暂停/待核验条目的步骤是**留存的历史参考**，不能当作今天可以立刻投稿。当前没有自动发送邮件、注册账号或提交网站。
 
 **V32官方表单实测提醒（2026-10-31）**：在原176家基础上又复核14家，没有新增来源；#003、#026、#057、#076、#152状态调整，并确认#171 FounderOmni的实际西语表单字段。最新每站详情见 [V32官方复核报告](v32-14-official-source-audit-20261031.md)。
 
 **V33 2026-10-31更新**：抽样检查11条真正发布的出站href原始rel，并核对9个目录页面是否出现Lettering；[查看完整证据表和解释](v33-public-link-rel-and-listing-presence-20261031.md)。public.tools三条样本都带nofollow，已调低Follow目标优先级；未带nofollow的样本不能推导全站均Follow。
+
+**V34新证据（2026-10-31）**：从旧目录再核验21条已发布href、11个分类/详情页的本站域名出现情况。#005字体工具样本为nofollow、#162四个字体工具样本均为sponsored，两者调为条件；#159、#163、#164、#165、#172有相关无nofollow样本。详情见 [V34公开href/rel核查](v34-21-public-link-samples-and-priority-update-20261031.md)，可按 [第二批5家逐站可填写指南](v34-five-more-design-font-directories-ready-to-fill.md) 手工提交；没有代为提交。
 
 ## 1. 实际使用方法
 
@@ -179,6 +181,8 @@
 
 <a id="link-005"></a>
 ### 005. The Free Tools Directory — 候选可申请（历史级别：P1）
+
+**V34实际链接属性：同类1000 Font Generator公开详情指向其官网的href为rel=`noopener nofollow`，样本为nofollow，已由P1调为**条件**。并非证明所有免费投稿均nofollow。[样本](https://thefreetoolsdirectory.com/sites/1000-font-generator)。**
 
 **提交入口/官网**：[https://thefreetoolsdirectory.com/submit](https://thefreetoolsdirectory.com/submit)  
 **适合什么网站**：免费计算器、转换器、文字工具等；**西语资格**：多语产品适用性提交后审核。  
@@ -3155,6 +3159,8 @@
 <a id="link-141"></a>
 ### 141. GainWeb｜V32官方复核｜条件
 
+**V34 GainWeb的Latest Links存在无rel外部链接，但不能从页面判断是Regular Free还是Premium/Featured付费档，不因本次样本升优先。[最新链接](https://gainweb.org/latest-links.html)。**
+
 **直接入口**：[https://gainweb.org/submit.php](https://gainweb.org/submit.php)
 
 **适用语言**：未见官网明确禁止纯西语，尚待正式审核
@@ -3294,6 +3300,8 @@
 <a id="link-147"></a>
 ### 147. Good Design Tools (gooddesign.tools) — 候选可申请（主库更新：V31，2026-10-31）
 
+**V34 Good Design Tools具体字体样本详情页当前读取失败target_unreachable，实际公开href/rel未知；此前Tally表单字段仍保留，不得将访问失败写成网站关闭。**
+
 **官方提交入口**：[https://tally.so/r/mBbA8N](https://tally.so/r/mBbA8N)。
 
 **语言与资格**：英文目录；西语工具可按设计作品投稿，最终审核待确认；Generador de Lettering 的编辑器、字体与图形设计工具；不适合纯文章。
@@ -3346,6 +3354,8 @@
 
 <a id="link-149"></a>
 ### 149. PeplioHUB (peplio.com) — 候选可申请（历史级别：P1）
+
+**V34 PeplioHUB此次可读取的HTML锚点未能辨认明确指向产品官网的外链，不能据此断言没有外链或拥有Follow。原来的截图和审核要求仍保留。[页面](https://peplio.com/pepliohub/)。**
 
 **提交入口/官网**：[https://peplio.com/pepliohub/#submit-tool](https://peplio.com/pepliohub/#submit-tool)  
 **适合什么网站**：免费浏览器设计工具、转换器及文字编辑器；有 Design and images 类；**西语资格**：国际社区；纯西语工具无明确禁止，审核待定。  
@@ -3602,6 +3612,8 @@
 <a id="link-159"></a>
 ### 159. Design Resources Archive (resourcesfor.design) — 候选可申请（历史级别：P1）
 
+**V34已检查两个真实排版工具专页：MixWeight与Type Garden指向外站的href都是rel=`noopener noreferrer`，样本未带nofollow/ugc/sponsored。人工精选不保证未来自己的条目同样属性。[详情](v34-21-public-link-samples-and-priority-update-20261031.md)。**
+
 **提交入口/官网**：[https://resourcesfor.design/submit](https://resourcesfor.design/submit)  
 **适合什么网站**：Typography / Inspiration / Tools 类型的视觉Lettering在线编辑、文字排版创作；不将普通关键词页面当设计产品；**西语资格**：官网未明确限定语言；可提交真实西语设计/排版资源供人工编辑判断。  
 **费用和审核**：官网公开简单提交表单，无收费项/强制反链项；编辑审核后刊登；能否免费永久展示未承诺。  
@@ -3676,6 +3688,8 @@
 <a id="link-162"></a>
 ### 162. UX Resources (uxresources.info) — 候选可申请（历史级别：P1）
 
+**V34已检查4个Typography详情：Minglyph、Fontmojo、Cursive Generator、Fontshare对外href全部为rel=`noopener sponsored`，包括免费工具。按普通Follow目标已由P1调为**条件**。不宣称全站都如此。[核验](v34-21-public-link-samples-and-priority-update-20261031.md)。**
+
 **提交入口/官网**：[https://uxresources.info/submit.php](https://uxresources.info/submit.php)  
 **适合什么网站**：字体图像编辑器，Typography与Utilities类别对应；适合Lettering实际编辑器；**西语资格**：官网英文；纯西语工具接受情况未承诺。  
 **费用和审核**：官网2026-10-31公开免费建议表单；人工审核，未见必选收费或徽章。  
@@ -3701,6 +3715,8 @@
 
 <a id="link-163"></a>
 ### 163. LDS Library (lds-library.vercel.app) — 候选可申请（历史级别：P2）
+
+**V34 Fonts分类里Fontjoy与Fontshare两个真实外站href均为rel=`noopener`，样本未带nofollow；仍未有本站获链。[分类](https://lds-library.vercel.app/design-resources/fonts)。**
 
 **提交入口/官网**：[https://lds-library.vercel.app/submit](https://lds-library.vercel.app/submit)  
 **适合什么网站**：实际字体排版或品牌设计用途；可提交Lettering画布编辑器而非普通昵称页；**西语资格**：官网英文；未见语言一票否决条款；能否收纯西语待审核。  
@@ -3728,6 +3744,8 @@
 <a id="link-164"></a>
 ### 164. Unikist (unikist.com) — 候选可申请（历史级别：P1）
 
+**V34 Unikist的Fonts类别中Fontshare和Velvetyne出站href均为rel=`noreferrer`，样本未带nofollow；仅代表当前公开分类。[页面](https://unikist.com/categories/fonts)。**
+
 **提交入口/官网**：[https://unikist.com/submit](https://unikist.com/submit)  
 **适合什么网站**：真实可视化排版、Lettering图像设计、字体搭配、画布编辑器；不是提供TTF字库；**西语资格**：官网英文；未见拒绝纯西语，但编辑能否理解实际产品待确认。  
 **费用和审核**：官方公开提交表单无付款步骤；人工审核，官网未承诺永久免费刊登。  
@@ -3752,6 +3770,8 @@
 
 <a id="link-165"></a>
 ### 165. Mark-it (markitnow.net) — 候选可申请（历史级别：P1）
+
+**V34 Mark-it首页Fontmeme与CMD Supply出站href均未设置rel；是否成功人工入选仍未知。[首页](https://markitnow.net/)。**
 
 **提交入口/官网**：[https://markitnow.net/submit-a-resource](https://markitnow.net/submit-a-resource)  
 **适合什么网站**：视觉排版编辑器、设计资源、Fonts与创意工具；优先实际浏览器设计内页；**西语资格**：英语设计资源站；纯西语是否获选仍需编辑确定。  
@@ -3864,6 +3884,8 @@
 <a id="link-169"></a>
 ### 169. FreeDesignerTools (freedesignertools.com) — 候选可申请（主库更新：V31，2026-10-31）
 
+**V34 FreeDesignerTools首页Figma与Unsplash实际出站href均为rel=`noopener noreferrer`，但首页只展示12项大工具，不能声称容易收录小网站或拥有50M真实访问。[首页](https://www.freedesignertools.com/)。**
+
 **官方提交入口**：[https://www.freedesignertools.com/suggest/](https://www.freedesignertools.com/suggest/)。
 
 **语言与资格**：英文投稿，未公布西语工具禁令；语言审核未知；真正免费的文字图像编辑器、字体排版及设计工具；适合/editor。
@@ -3951,6 +3973,8 @@
 
 <a id="link-172"></a>
 ### 172. EpicTools (epictools.dev) — 候选可申请（历史级别：P1）
+
+**V34 EpicTools的三个Curated工具详情（Penpot、Stockimg AI、Snappify）外站href无rel；Design类Partner位有显式rel=`follow`，不能将Partner曝光当免费投稿待遇。[Curated样本](https://epictools.dev/penpot)。**
 
 **提交入口/官网**：[https://epictools.dev/submit](https://epictools.dev/submit)  
 **适合什么网站**：浏览器在线排版和Lettering图片编辑器；官网Design栏目及字体工具有案例；**西语资格**：英语目录，设计工具适配，纯西语产品的最终入选资格未明。  
