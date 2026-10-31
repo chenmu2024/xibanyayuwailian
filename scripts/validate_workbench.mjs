@@ -83,7 +83,7 @@ if (detailed.some(x => !all.some(i => i.id === x.id) || !x.fields?.length))
 const fieldCount = detailed.reduce((n, x) => n + x.fields.length, 0);
 if (fieldCount !== 161) throw new Error("Detailed input field count unexpectedly changed: " + fieldCount);
 if (/<script[^>]+src=/i.test(html)) throw new Error("Remote JS is forbidden in offline workbench");
-if (!html.includes("function publicSampleScore(")||!html.includes("function featuredScore(")||!html.includes('activeDomain==="generadordelettering.org"?"https://generadordelettering.org/herramientas/plantillas-practica":""')) throw new Error("V44 priority gating and cross-site education safeguards missing");
+if (!html.includes("function publicSampleScore(")||!html.includes("function featuredScore(")||!html.includes("function target(r){if([58,99,100,155,156,157,173].includes(r.id))")||!html.includes("site.edu&&")||!html.includes("domainOf(site.edu)===activeDomain")) throw new Error("V44/V45 priority gating and per-site education URL safeguards missing");
 if (!html.includes("xibanya-marks-by-domain-v29") || !html.includes("xibanya-profiles-by-domain-v36") || !html.includes("activeDomain=domainOf(savedSite.home)"))
   throw new Error("User submission marks must remain isolated by site domain");
 if (!html.includes('id="edu"') || !html.includes("function withOptionalEducation(") || !html.includes("site.edu&&") || !html.includes('key==="edu"&&val===undefined'))throw new Error("V45 education URL, legacy V1/V2 backups or per-domain isolation missing");
