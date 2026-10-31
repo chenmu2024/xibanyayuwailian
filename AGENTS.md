@@ -96,3 +96,7 @@
 73. V35：操作台只可把“用户已亲自查验”记作**本地自我确认**，不能转换成GitHub正式台账上的已核验链接。必须提供第三方公开HTTPS页面、指向同一个目标域名的真实href和原始rel；字段修改撤销确认。进度按域名隔离；JSON备份/恢复对proof对象严格校验，旧V30格式仍需兼容。
 74. V35 `scripts/verify_published_backlink.py`用于只读HTTPS公开页面href/rel检查，禁止它自动申请外链、访问登录后页面或尝试绕过Cloudflare/验证码。输出`found`只代表指定HTML见到<a href>，`not_found_in_fetched_html`只是限定单页未发现；没有nofollow不保证Google SEO传权，`--html-file`离线fixture不可充当线上证据。
 75. V35 `scripts/test_verify_published_backlink.py`的8组不联网测试已提交并接入.github/workflows/validate-data.yml，必须在真实Python/CI通过后才可宣称其测试完成。GitHub Actions run若返回0个job步骤，不足以唯一确定故障原因，禁止无证据归因于账户或Runner。V35的V8离线工作台模拟测试与Python测试状态必须分别表述。
+
+76. V36操作台新增`xibanya-profiles-by-domain-v36`作为每域名完整网站资料的唯一当前数据表，与`xibanya-marks-by-domain-v29`逐域名进度配合。新域名不得继承其他网站的名称、邮箱、西语/英语文案或工具URL；切回旧站必须恢复原资料。
+77. V36 JSON备份的`version:2`需要`profile`、`profiles`和`progress`，恢复时要检查每个profiles的`home`和`tool`域名一致、字段类型与长度及域名数量。必须向下兼容V1：其其他域名历史进度可以恢复，但缺失的其他站资料无法补造。
+78. V36必须维持`scripts/validate_workbench.mjs`结构校验以及`scripts/smoke_workbench.mjs`模拟23项检查，覆盖跨站文本/email泄漏、跨域JSON篡改、V2备份与V1迁移；不能把模拟V8声称为真实Windows Chrome端到端，也不宣称GitHub Actions CI或Python新单测已经成功。
