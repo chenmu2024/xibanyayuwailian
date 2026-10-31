@@ -60,6 +60,10 @@ new Script(source,{filename:"offline-workbench.js"}).runInNewContext({
 const $=id=>document.getElementById(id);
 assert.equal($("cards").children.length,176,"Initial cards should render");
 assert.match($("count").textContent,/176 \/ 176/);
+$("sort").value="follow";$("sort").events.change();
+const topFive=$("cards").children.slice(0,5).map(node=>node.children[0].children[0].children[0].textContent);
+assert.equal(topFive.join(","),"#075,#168,#148,#151,#128","V33 observed non-nofollow sample priorities must appear first");
+$("sort").value="id";$("sort").events.change();
 $("search").value="EpicTools";$("search").events.input();
 assert.equal($("cards").children.length,1,"EpicTools search should produce exactly one card");
 $("search").value="";$("search").events.input();
