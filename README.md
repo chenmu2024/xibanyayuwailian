@@ -12,6 +12,9 @@
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
 | **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
+| **[docs/v35-evidence-based-backlink-verification.md](docs/v35-evidence-based-backlink-verification.md)** | **V35操作指南：离线记录公开页面href/rel、自查确认，以及Windows免费核验命令** |
+| [scripts/verify_published_backlink.py](scripts/verify_published_backlink.py) | **新增：单页公开HTTPS外链检查，无付费API，真正解析a[href]和原始rel，生成可留存JSON** |
+| [scripts/test_verify_published_backlink.py](scripts/test_verify_published_backlink.py) | 8组离线单元测试，包含相似域名、防止普通文本冒充链接、nofollow/ugc/sponsored |
 | **[docs/v34-five-more-design-font-directories-ready-to-fill.md](docs/v34-five-more-design-font-directories-ready-to-fill.md)** | **V34第二批5家字体/设计目录：逐字段、实际URL、真实获链样本与注意事项** |
 | [docs/v34-21-public-link-samples-and-priority-update-20261031.md](docs/v34-21-public-link-samples-and-priority-update-20261031.md) | V34新增21条已发布href/rel证据、样本适用边界与两家降级依据 |
 | [data/v34-21-published-link-rel-samples-20261031.csv](data/v34-21-published-link-rel-samples-20261031.csv) | 21条可复核的公开来源页面→真实href→原始rel属性 |
@@ -229,3 +232,12 @@
 - 还抽查`#169 FreeDesignerTools`与`#141 GainWeb`出站链接；GainWeb的免费/收费来源难以区分，不据此升优先。`#149 PeplioHUB`没有抽出可识别的产品官网静态href，`#147 Good Design Tools`样本详情读取失败，均保持未知，不误判成无外链或Follow。
 - 当前主库分类：**P1 22、P2 21、条件82、待核验16、排除34、非外链1，共176家**。V34离线HTML新加11家实际href/rel提醒及“V34字体设计样本优先（非保证）”排序。21家优先卡仍含161项实际表单字段。可以直接从[第二批5家填写指南](docs/v34-five-more-design-font-directories-ready-to-fill.md)逐站操作。
 - V34校验：独立V8执行`scripts/validate_workbench.mjs`逻辑，验证176条主表、V33的11条和V34的21条证据、21家字段；`scripts/smoke_workbench.mjs`模拟DOM与两种排序，共**13项**交互检查通过。**这些不代表GitHub Actions CI或实际Chrome点击已通过**，也不代表第三方申请成功。
+
+## V35｜外链申请后必须有可验证的公开href（2026-10-31）
+
+- **版本继续使用176条候选主库，没有增加任何未经核实的平台，也没有新提交或确认获链。** 本轮转向完善公开获链证据与收录跟进：把“已填表”“审核中”“已上线待验链”与实际发布的HTML链接证据严格隔离。
+- [V35离线工作台](docs/backlink-submission-workbench.html)为每家平台新增**真实第三方公开条目URL、指向自己站点的实际href、原始rel**三个字段，以及“我已亲自检查”的按钮。用户明确点击才记为**本地人工自查确认**；字段编辑会撤销之前确认；每个目标域名分别保存，不会跨网站借用。**本地自查不是联网确认，更不会自动写入GitHub正式submission-ledger。**
+- 原CSV导出追加公开页/href/rel/自查状态/自查日期；JSON全站备份与导入严格保留并校验V35证据字段，旧版本不含证据的备份仍兼容。
+- [零付费公开HTML验链脚本](scripts/verify_published_backlink.py) 允许Windows本地 `python scripts/verify_published_backlink.py --source "真实第三方公开页HTTPS" --target "https://generadordelettering.org/"`，读取指定公开页实际`<a href>`、匹配真实目标域名与`rel`，生成JSON。不假设跨页收录、不爬全站、不登录、不提交、不绕过验证，受HTTPS、私网限制及2MB大小约束。
+- **已实测**：V8独立运行离线HTML结构核验及含人工证据保存、无效源拒绝、改动撤销、跨域隔离、备份与CSV导出的交互模拟；正常通过。**尚未实测**：8组Python离线测试在真实Python解释器的执行结果；仓库已增加测试源码并接入Actions，但Actions仍在任务启动前/无步骤状态失败，不夸大为通过。
+- 详细示例及Windows操作见 [V35完整说明](docs/v35-evidence-based-backlink-verification.md)。实际为`generadordelettering.org`新增确认外链仍是**0**。
