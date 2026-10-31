@@ -12,6 +12,7 @@
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
 | **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
+| **[docs/v36-domain-isolated-profiles-and-v2-backups.md](docs/v36-domain-isolated-profiles-and-v2-backups.md)** | **V36：多西语网站的名称、简介、邮箱及编辑器URL完全按域名隔离，V2 JSON完整备份与V1兼容恢复** |
 | **[docs/v35-evidence-based-backlink-verification.md](docs/v35-evidence-based-backlink-verification.md)** | **V35操作指南：离线记录公开页面href/rel、自查确认，以及Windows免费核验命令** |
 | [scripts/verify_published_backlink.py](scripts/verify_published_backlink.py) | **新增：单页公开HTTPS外链检查，无付费API，真正解析a[href]和原始rel，生成可留存JSON** |
 | [scripts/test_verify_published_backlink.py](scripts/test_verify_published_backlink.py) | 8组离线单元测试，包含相似域名、防止普通文本冒充链接、nofollow/ugc/sponsored |
@@ -241,3 +242,11 @@
 - [零付费公开HTML验链脚本](scripts/verify_published_backlink.py) 允许Windows本地 `python scripts/verify_published_backlink.py --source "真实第三方公开页HTTPS" --target "https://generadordelettering.org/"`，读取指定公开页实际`<a href>`、匹配真实目标域名与`rel`，生成JSON。不假设跨页收录、不爬全站、不登录、不提交、不绕过验证，受HTTPS、私网限制及2MB大小约束。
 - **已实测**：V8独立运行离线HTML结构核验及含人工证据保存、无效源拒绝、改动撤销、跨域隔离、备份与CSV导出的交互模拟；正常通过。**尚未实测**：8组Python离线测试在真实Python解释器的执行结果；仓库已增加测试源码并接入Actions，但Actions仍在任务启动前/无步骤状态失败，不夸大为通过。
 - 详细示例及Windows操作见 [V35完整说明](docs/v35-evidence-based-backlink-verification.md)。实际为`generadordelettering.org`新增确认外链仍是**0**。
+
+## V36｜多网站资料隔离，旧网站的信息不再被误填给新站（2026-10-31）
+
+- 操作台以前只隔离`submission marks`，网站名称、站点简介、联系邮箱和工具URL却是单个全局资料。V36改为 **`xibanya-profiles-by-domain-v36`** 逐域名储存：新网站第一次切入时，只保留自己主页；名称、西语/英语长短说明、邮箱、编辑器URL全部留空。切回旧网站时自动恢复该站自己的完整资料和原提交进度。
+- 现在备份格式为**V2**：包含`profile`（当前站）+`profiles`（所有站）+`progress`（所有站原进度与人工href/rel证据）。旧版**V1文件仍能恢复**，但它只曾记录一个站的资料，不能还原从未备份的其他站简介或Email。
+- V2恢复加入跨域资料真实性校验：`profiles[域名].home`须与域名匹配、`tool`不得是另一个域名链接、资料和域名数量均有限制；无效文件不得覆盖本机数据。**所有资料仍存本地，不会自动发布外链或发送至GitHub。**
+- 已通过独立V8运行的176主表、21家161项字段、V33/V34公开链接证据、HTML语法与**23项模拟交互检查**，包括跨域切换、返回旧站、V2多站备份、V1兼容迁移及非法跨域导入拒绝。不是实际Chrome端到端或GitHub Actions成功运行。
+- **[查看V36完整Windows操作说明](docs/v36-domain-isolated-profiles-and-v2-backups.md)**。仓库仍176条历史候选，本轮第三方实际提交0、确认新增获链0。GitHub Actions继续失败，其job步骤/日志仍不可用，根因未证实。
