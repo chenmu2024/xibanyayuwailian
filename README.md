@@ -6,6 +6,10 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| **[docs/v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md](docs/v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md)** | **V52：9个字体/设计目录真实外站链接、规范网址与robots独立记录；LDS已重获公开证据，并提供只读raw rel验证步骤** |
+| [data/v52-curated-published-anchor-metadata-20261031.csv](data/v52-curated-published-anchor-metadata-20261031.csv) | 9家已发布第三方示例的实际href、canonical、robots及历史rel局限 |
+| [scripts/audit_curated_v52.py](scripts/audit_curated_v52.py) | **Windows零付费、只读、最多9页**：核对真实原始a href/rel；本机运行后才有实时结果 |
+| [scripts/test_audit_curated_v52.py](scripts/test_audit_curated_v52.py) | 6项不联网CSV矩阵/请求上限测试，源码已提交，不代表GitHub Actions通过 |
 | **[docs/v51-curated-live-review-and-execution-20261031.md](docs/v51-curated-live-review-and-execution-20261031.md)** | **V51：11家字体/设计/西语目录再次核验，区别实时公开href、历史rel与质量问题；给出最短表单与主题相关性优先级** |
 | [data/v51-live-curated-submission-audit-20261031.csv](data/v51-live-curated-submission-audit-20261031.csv) | 11家现场公开实例、真实入口及证据不确定性逐行记录；不代表11条已获链 |
 | **[docs/v30-cross-site-field-mapping-and-backup.md](docs/v30-cross-site-field-mapping-and-backup.md)** | **V30：不同西语网站共用176平台填写卡、JSON备份恢复、CSV安全及11项模拟交互测试** |
