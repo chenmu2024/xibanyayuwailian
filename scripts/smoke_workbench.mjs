@@ -10,6 +10,8 @@ const source=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert.ok(source,"Executable JS block not found");
 const items=JSON.parse(html.match(/<script id="items" type="application\/json">([\s\S]*?)<\/script>/)?.[1]||"null");
 const detailed=JSON.parse(html.match(/<script type="application\/json" id="detailedCards">([\s\S]*?)<\/script>/)?.[1]||"null");
+const recent=JSON.parse(html.match(/<script type="application\/json" id="auditV31">([\s\S]*?)<\/script>/)?.[1]||"null");
+assert.equal(recent.length,17);
 assert.equal(items.length,176);
 assert.equal(detailed.length,21);
 assert.equal(detailed.reduce((s,x)=>s+x.fields.length,0),149);
@@ -34,6 +36,7 @@ const document={
 };
 document.getElementById("items").textContent=JSON.stringify(items);
 document.getElementById("detailedCards").textContent=JSON.stringify(detailed);
+document.getElementById("auditV31").textContent=JSON.stringify(recent);
 const localStorage={getItem:key=>storage.get(key)||null,setItem:(key,val)=>storage.set(key,String(val))};
 class MockURL{
   constructor(s){const m=String(s).match(/^https?:\/\/([^/]+)/);if(!m)throw new Error("Invalid URL");this.hostname=m[1];}
