@@ -188,7 +188,7 @@
 
 **V34 Fonts分类里Fontjoy与Fontshare两个真实外站href均为rel=`noopener`，样本未带nofollow；仍未有本站获链。[分类](https://lds-library.vercel.app/design-resources/fonts)。**
 
-**入口**：[https://lds-library.vercel.app/submit](https://lds-library.vercel.app/submit)  
+**入口**：[https://library.legitdesign.studio/submit](https://library.legitdesign.studio/submit)  
 **为什么选它**：人工维护的设计资源库，已有字体馆藏，周度编辑。  
 **按真实页面填写**：
 
@@ -196,13 +196,13 @@
 | --- | --- |
 | Resource name | Generador de Lettering |
 | Link | https://generadordelettering.org/editor |
-| Category | Design Resources / Fonts（按实际可选项） |
+| Category | Design Resources（官网真实下拉项；没有独立Fonts） |
 | Pricing | Free |
 | What is it? | A free Spanish-language browser lettering image editor. |
 | Why is it useful? | A free Spanish-language browser lettering editor for making decorative text images. Adjust fonts, colors, outlines, shadows and canvas settings, then export PNG, JPG or WebP images. No account required. It does not generate TTF or OTF font files. |
 | Optional email | 【你的真实联系邮箱】 |
 
-**提交前/后核查**：站点实际托管于lds-library.vercel.app，不能把所有Vercel子域当同一目录。 **当前仅为填写草稿，未自动递交**。  
+**提交前/后核查**：正式域名为library.legitdesign.studio，旧lds-library.vercel.app只是canonical别名，不可重复投稿。 **当前仅为填写草稿，未自动递交**。  
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-163)。
 
 ### 9. Unikist｜主库 #164
