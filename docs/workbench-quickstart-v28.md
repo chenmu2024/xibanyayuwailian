@@ -91,3 +91,17 @@ V33还校正了静态Node数据验证与模拟交互脚本的职责，并新增�
 注意两处降级：**#005 The Free Tools Directory**真实字体工具条目含nofollow；**#162 UX Resources**的4个字体工具条目均含sponsored，二者已从P1改为条件。无法将这些部分样本结果绝对化为全站规则。完整21条真实外站href/rel及11页目标域名检查见 [V34核验报告](v34-21-public-link-samples-and-priority-update-20261031.md)。
 
 当前主库176、21家优先卡161个字段，新增11家样本标注。V33 Follow样本排序仍独立保留。静态与模拟交互13项通过不等于真实浏览器或CI通过；没有任何新站外提交、审核通过或Lettering获链记录。
+
+## 十二、V35：真实外链人工验收、零付费Python脚本和备份
+
+外链目录填写完成后不要立即记“已获链”。**获得第三方公开条目URL**后，在V35操作台展开对应平台，最下方可以填写：①对方公开条目完整HTTPS URL ②该页面真实指向你网站的`href` ③此链接在HTML的原始`rel`。然后**亲自点“我已亲自检查...”**确认；该确认只存在于你的本地浏览器，**没有自动联网核验，不能当成已获Follow**。如果改动链接或rel，会自动撤销旧确认，必须重新查验。
+
+V35的备份JSON仍包含所有站点的进度与备注，同时包含上述证据与自查状态；CSV新增源页面、href、rel、自查日期等列。包含隐私信息的JSON不要上传公开GitHub。
+
+如要**真实联网读取指定第三方公开页面HTML**，Windows中在仓库目录运行免费脚本：
+```powershell
+python .\scripts\verify_published_backlink.py --source "https://实际目录域名/实际公开条目" --target "https://generadordelettering.org/" --output "lettering-backlink-evidence.json"
+```
+填入对方实际公示的URL，**不能使用占位符URL或提交表单URL**。退出码0=发现真实匹配`a[href]`；1=只在该页HTML未检出；2=请求或安全验证错误。支持`nofollow`、`ugc`、`sponsored`分类，且不会假设Google一定传权。详细字段和演示请看 [V35完整教程](v35-evidence-based-backlink-verification.md)。
+
+V35的离线操作台模拟验收已通过；新的Python离线8项测试**已编写但尚未在真实Python运行器成功执行**。GitHub Actions原有故障仍须单独定位，不能声称CI已恢复。
