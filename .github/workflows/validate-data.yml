@@ -7,6 +7,8 @@ on:
       - 'scripts/validate_csv.py'
       - 'scripts/validate_workbench.mjs'
       - 'scripts/smoke_workbench.mjs'
+      - 'scripts/verify_published_backlink.py'
+      - 'scripts/test_verify_published_backlink.py'
       - 'docs/all-176-backlink-submission-methods.md'
       - 'docs/lettering-priority-21-ready-to-fill.md'
       - 'docs/backlink-submission-workbench.html'
@@ -16,6 +18,9 @@ on:
       - 'data/**'
       - 'scripts/validate_csv.py'
       - 'scripts/validate_workbench.mjs'
+      - 'scripts/smoke_workbench.mjs'
+      - 'scripts/verify_published_backlink.py'
+      - 'scripts/test_verify_published_backlink.py'
       - 'docs/all-176-backlink-submission-methods.md'
       - 'docs/lettering-priority-21-ready-to-fill.md'
       - 'docs/backlink-submission-workbench.html'
@@ -36,3 +41,5 @@ jobs:
         run: node scripts/validate_workbench.mjs
       - name: Smoke test offline search, per-site progress and backup restore
         run: node scripts/smoke_workbench.mjs
+      - name: Test published backlink verifier without network
+        run: python3 -m unittest discover -s scripts -p "test_verify_published_backlink.py" -v
