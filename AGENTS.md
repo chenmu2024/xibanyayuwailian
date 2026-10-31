@@ -104,3 +104,7 @@
 79. V37已在真实Python 3.13.5解释器执行验链11项测试且0失败，Git blob SHA与仓库最终两份Python源码完全一致（见`docs/v37-python-backlink-verifier-tested-and-ci-diagnosis.md`）；与GitHub Actions未恢复是两个不同事实，不得以CI失败否认已完成本地测试，也不能以本地通过谎称CI绿色。
 80. V37解析真实HTML的`<a href>`时必须容忍个别无效href与只有属性名的空rel；排除`<template>`中的惰性锚点。维持3个新回归测试和8个原测试。不得把fixture中的目标URL算成真实外链，也不得从HTML没有nofollow推论Google保证排名。
 81. Actions当前task在数秒内失败且API步骤为空、日志历史返回BlobNotFound，明确保持原因“尚待确认”，避免无证据改runner、删质量门槛或无限重试。
+
+82. V38质量核验只抽查现有176条中14个高相关设计/字体/西语目录，不把它们当14个新增渠道。报告见`docs/v38-high-relevance-public-evidence-20261031.md`、逐项CSV见`data/v38-high-relevance-public-evidence-20261031.csv`。本轮新增实际申请0、获链0，原始href/rel不明时只记录外站URL可见，禁止推断Follow。
+83. V38 #171 FounderOmni西语库已能读到`Tipo de solicitud`、`Categoría`、`Nombre de la ficha`、`URL pública`、推荐理由与可选邮箱，并有Hero Patterns单独公开详情指向原站，推翻旧的“只见按钮/完整字段未知”阻断说明；但费用、原始rel、审核仍未知。#168独立详情访问超时不能称Follow；#169仅12条公开工具，广告性用户数宣传不得视为流量实测。
+84. 不得在只修改审计CSV时宣称旧主库、176条手册、离线HTML、实际提交台账已同步。后续若要正式修改主库#171，必须原子同步176条指南及HTML镜像、更新相应校验并实测，不可在镜像冲突时错误宣称已完成。
