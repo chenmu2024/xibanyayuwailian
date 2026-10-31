@@ -87,4 +87,4 @@
 
 ## V52｜规范域名、robots与现时raw rel分离（2026-10-31）
 
-[查看9家公开案例的本轮canonical/robots/外站href证据](v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md)｜[V52逐行CSV](../data/v52-curated-published-anchor-metadata-20261031.csv)｜[只读核验脚本](../scripts/audit_curated_v52.py)。LDS Library #163 的正式域 `library.legitdesign.studio` 本轮已可读取实际字体资源外站href和提交页；旧 `lds-library.vercel.app` 的canonical指向正式域，**只可申请一次**。但其动态投稿全部表单字段未得到实时确认，仍需人工按当时界面填写。页面meta robots/canonical不等于实际raw a[rel]或Google已收录；脚本有9页请求上限，未在本次执行环境运行在线raw HTML检查。没有任何生成本站的新确认外链。
+[查看9家公开案例的本轮canonical/robots/外站href证据](v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md)｜[V52逐行CSV](../data/v52-curated-published-anchor-metadata-20261031.csv)｜[只读核验脚本](../scripts/audit_curated_v52.py)。LDS Library #163 的正式域 `library.legitdesign.studio` 本轮已读取实际字体资源外站href与`/submit`表单完整HTML：Category当前应选`Design Resources`而非不存在的Fonts，Pricing可选Free，Resource name/Link必填，描述和邮箱选填，隐藏反垃圾website留空。旧 `lds-library.vercel.app` 的canonical指向正式域，**只可申请一次**。全部字段见[V52报告](v52-nine-curated-canonical-robots-and-raw-rel-workflow-20261031.md)。页面meta robots/canonical不等于实际raw a[rel]或Google已收录；脚本有9页请求上限，未在本次执行环境运行在线raw HTML检查。没有任何生成本站的新确认外链。
