@@ -112,3 +112,7 @@
 85. V39：#168 Herramientas y Recursos普通资源详情`Visitar sitio`经过`/salir/slug`内部中转；V33的两条rel=noopener直链来自页脚关联站，不是免费普通条目收录后的实际外链质量证据，正式从P1降为条件。
 86. V39：#171西语表单字段首次核验是V32，不能宣称V38才首次发现。Fontpair与Hero Patterns独立公开详情外站href可见，但raw rel未取得、目标站未获链。#151 Font Explorer在V33已记录原始`noopener noreferrer`，不能重复计数。
 87. 本轮修改主库、176手册和HTML镜像时，仍须分开记录历史外站样本与用户自己确认的目标域名真实获链；当前新增实际申请与获链均0，CI是否成功需单独核查。
+
+88. V40 #163 LDS Library旧lds-library.vercel.app与规范域library.legitdesign.studio是同一个编辑平台，旧域Fonts和Submit页面的canonical均指向规范域同路径，规范域也可访问。只算一家、不可重复投；V23/V34历史原始rel样本应保留来源旧域。
+89. V40 #165 Mark-it主域/font只有少量字体网址，首页All Resources跳另一个Vercel交互目录，暂未核实具体刊登href；旧首页Fontmeme样本不能推出申请自动取得独立Follow，故从P1降为P2。
+90. V40主库、176指南、HTML镜像应同步；0真实新提交、0用户站新获链，历史rel非实时当前新产品或Google索引保证。

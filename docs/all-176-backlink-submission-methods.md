@@ -2,7 +2,7 @@
 
 > 资料基线：2026-10-31；来源：`data/backlinks-master.csv` 的1–176全部记录；示例为 `generadordelettering.org`。**176是研究渠道数量，不是已经为网站获得176条反向链接。**
 >
-> 最新主库分类：P1 21、P2 21、条件 83、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
+> 最新主库分类：P1 20、P2 22、条件 83、待核验 16、排除 34、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
 >
 > 本手册所有来源均单独列出入口、逐项步骤、费用条件、适用对象和限制。排除/暂停/待核验条目的步骤是**留存的历史参考**，不能当作今天可以立刻投稿。当前没有自动发送邮件、注册账号或提交网站。
 
@@ -13,6 +13,8 @@
 **V34新证据（2026-10-31）**：从旧目录再核验21条已发布href、11个分类/详情页的本站域名出现情况。#005字体工具样本为nofollow、#162四个字体工具样本均为sponsored，两者调为条件；#159、#163、#164、#165、#172有相关无nofollow样本。详情见 [V34公开href/rel核查](v34-21-public-link-samples-and-priority-update-20261031.md)，可按 [第二批5家逐站可填写指南](v34-five-more-design-font-directories-ready-to-fill.md) 手工提交；没有代为提交。
 
 **V39质量纠错（2026-10-31）**：#168原V33链接样本仅能证明页脚关联站，不代表普通获批工具的主出站按钮；#151 Font Explorer的原始rel已有V33历史记录，V38新检的Affinity rel仍未知；#171六项字段V32已核实，新增证据为字体详情链接。[完整V39报告](v39-link-path-quality-reconciliation-20261031.md)。
+
+**V40质量补充（2026-10-31）**：#163规范域迁移不可重复投稿，#165因站外资源展示不确定降至P2；详情见[V40质量审计](v40-curated-font-design-quality-audit-20261031.md)。
 
 ## 1. 实际使用方法
 
@@ -3716,11 +3718,13 @@
 
 
 <a id="link-163"></a>
-### 163. LDS Library (lds-library.vercel.app) — 候选可申请（历史级别：P2）
+### 163. LDS Library (library.legitdesign.studio) — V40规范域名确认（P2）
 
-**V34 Fonts分类里Fontjoy与Fontshare两个真实外站href均为rel=`noopener`，样本未带nofollow；仍未有本站获链。[分类](https://lds-library.vercel.app/design-resources/fonts)。**
+**V40规范域名备注**：旧lds-library.vercel.app与新library.legitdesign.studio同属一家LDS Library。前者仍可访问，但其Fonts与Submit页面canonical指向后者；后者同路径可读且自指canonical。只填写规范域名一次，V34历史样本保留原始旧页证据。详见[V40](v40-curated-font-design-quality-audit-20261031.md)。
 
-**提交入口/官网**：[https://lds-library.vercel.app/submit](https://lds-library.vercel.app/submit)  
+**V34 Fonts分类里Fontjoy与Fontshare两个真实外站href均为rel=`noopener`，样本未带nofollow；仍未有本站获链。[分类](https://library.legitdesign.studio/design-resources/fonts)。**
+
+**提交入口/官网**：[https://library.legitdesign.studio/submit](https://library.legitdesign.studio/submit)  
 **适合什么网站**：实际字体排版或品牌设计用途；可提交Lettering画布编辑器而非普通昵称页；**西语资格**：官网英文；未见语言一票否决条款；能否收纯西语待审核。  
 **费用和审核**：官网公开Suggest a resource表单；无提交付费字段，人工每周审核/可能周二简报。  
 
@@ -3739,8 +3743,8 @@
 
 **不符合/易被拒的情况**：仅收真实有用且持续维护的设计资源；不保证编辑入选；站点托管在vercel.app子域名，品牌方legitdesign.studio与托管域名不混为一谈。  
 **历史核对**：总库未见此品牌/主机旧记录，仍需旧邮件检索。  
-**已有公开样例（不是本站获链）**：https://lds-library.vercel.app/design-resources/fonts。  
-**证据与操作事实**：官方表单字段、每周审核规范和Fonts资源例页已直接核实；[原仓库官方来源](https://lds-library.vercel.app/submit)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
+**已有公开样例（不是本站获链）**：https://library.legitdesign.studio/design-resources/fonts。  
+**证据与操作事实**：官方表单字段、每周审核规范和Fonts资源例页已直接核实；[原仓库官方来源](https://library.legitdesign.studio/submit)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
 
 
 <a id="link-164"></a>
@@ -3771,7 +3775,9 @@
 
 
 <a id="link-165"></a>
-### 165. Mark-it (markitnow.net) — 候选可申请（历史级别：P1）
+### 165. Mark-it (markitnow.net) — V40质量后置（P2）
+
+**V40优先级下调**：[markitnow.net/font](https://markitnow.net/font)可看到少量真实字体网站直链；首页“All Resources”另跳Vercel交互站，目前未能从其公开HTML提取具体外站锚点；并不等于无链，但不宜算高信心直接Follow。P1调整为P2，原V34历史href/rel不删除。
 
 **V34 Mark-it首页Fontmeme与CMD Supply出站href均未设置rel；是否成功人工入选仍未知。[首页](https://markitnow.net/)。**
 

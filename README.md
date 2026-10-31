@@ -232,7 +232,7 @@
 - **#005 The Free Tools Directory** 已发表的`1000 Font Generator`详情页真实href带`rel="noopener nofollow"`；**#162 UX Resources** 4条Typography工具（Minglyph、Fontmojo、Cursive Generator、Fontshare）的真实外站href均`rel="noopener sponsored"`。两者在免费普通Follow目标下由P1调为**条件**，不声称整站全是nofollow或sponsored。
 - **第二批5家设计/字体目录优先人工研究**：`#159 Design Resources Archive`、`#163 LDS Library`、`#164 Unikist`、`#172 EpicTools`、`#165 Mark-it`。字体、排版、设计类的已公开样本未见nofollow/ugc/sponsored，但免费投稿获批、自己条目的rel及DR/AS仍未证实。EpicTools的Partner展示与Curated详情严格区分。
 - 还抽查`#169 FreeDesignerTools`与`#141 GainWeb`出站链接；GainWeb的免费/收费来源难以区分，不据此升优先。`#149 PeplioHUB`没有抽出可识别的产品官网静态href，`#147 Good Design Tools`样本详情读取失败，均保持未知，不误判成无外链或Follow。
-- 当前主库分类：**P1 21、P2 21、条件83、待核验16、排除34、非外链1，共176家**。V34离线HTML新加11家实际href/rel提醒及“V34字体设计样本优先（非保证）”排序。21家优先卡仍含161项实际表单字段。可以直接从[第二批5家填写指南](docs/v34-five-more-design-font-directories-ready-to-fill.md)逐站操作。
+- 当前主库分类：**P1 20、P2 22、条件83、待核验16、排除34、非外链1，共176家**。V34离线HTML新加11家实际href/rel提醒及“V34字体设计样本优先（非保证）”排序。21家优先卡仍含161项实际表单字段。可以直接从[第二批5家填写指南](docs/v34-five-more-design-font-directories-ready-to-fill.md)逐站操作。
 - V34校验：独立V8执行`scripts/validate_workbench.mjs`逻辑，验证176条主表、V33的11条和V34的21条证据、21家字段；`scripts/smoke_workbench.mjs`模拟DOM与两种排序，共**13项**交互检查通过。**这些不代表GitHub Actions CI或实际Chrome点击已通过**，也不代表第三方申请成功。
 
 ## V35｜外链申请后必须有可验证的公开href（2026-10-31）
@@ -269,3 +269,9 @@
 
 - [V39链接路径质量报告](docs/v39-link-path-quality-reconciliation-20261031.md)与[6个样本CSV](data/v39-sample-link-path-audit-20261031.csv)：#168普通详情通过`/salir/`站内中转，旧两条`noopener`外链实际来自页脚关联站，因此从P1降至**条件**，不作为已验证普通Follow；#151的Font Explorer原始rel早在V33已记录；#171六项表单字段早在V32已核，本轮新确认Fontpair和Hero Patterns独立详情外站href，但原始rel未知。
 - 已同步176主库、176条逐站手册、离线操作台；新增来源0、实际申请0、本站新确认外链0。GitHub Actions未因此被证明成功。
+
+## V40｜高相关字体目录规范域名与刊登路径质量（2026-10-31）
+
+- [V40最新审计](docs/v40-curated-font-design-quality-audit-20261031.md)与[9条公开网页样本CSV](data/v40-curated-link-evidence-20261031.csv)。在原176渠道中核查真实的编辑目录资源链接和提交资格，不新增泛目录。
+- #163 LDS Library的旧lds-library.vercel.app目录/表单canonical指向library.legitdesign.studio，同路径在规范域可访问；主库与填写卡更换规范域入口，仅算一个渠道。
+- #165 Mark-it的/font虽有真实直接外链，但资源较少，首页All Resources转到独立Vercel交互目录且无法确认普通收录详情；P1降为P2。当前P1 20、P2 22、条件83、待核验16、排除34、非外链1，共176；本站新增实际申请0、确认新获链0。

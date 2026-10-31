@@ -23,6 +23,8 @@
 
 ## 2. LDS Library #163｜Fonts分类已发布免费字体工具
 
+**V40更新：**旧Vercel页canonical已指向[规范域投稿页](https://library.legitdesign.studio/submit)与[规范域字体分类](https://library.legitdesign.studio/design-resources/fonts)。两域同一LDS Library，只投稿一次；下文V34原始rel为历史旧域取样。
+
 **官方提交**：https://lds-library.vercel.app/submit
 
 | 字段 | 复制或操作 |
@@ -68,6 +70,8 @@
 **特别提醒**：若提交页临时增加身份、价格或验证码字段，以它当时的真实表单为准，不能编造信息。别把“点击Submit”算成已获链。
 
 ## 5. Mark-it #165｜真实创作者姓名必填
+
+**V40更新：**[Mark-it主域字体分类](https://markitnow.net/font)有少量字体外链，首页All Resources则跳独立Vercel交互目录且具体外站链接未能独立核查。由P1降为P2，不删V34已核实的原始样本。
 
 **官方提交**：https://markitnow.net/submit-a-resource
 
