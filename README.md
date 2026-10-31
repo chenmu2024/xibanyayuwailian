@@ -12,6 +12,7 @@
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
 | **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
+| **[docs/v33-five-follow-first-ready-to-fill.md](docs/v33-five-follow-first-ready-to-fill.md)** | **直接使用：5家公开样本未见nofollow的外链投稿，逐家真实表单字段和Lettering可复制文案** |
 | **[docs/v33-public-link-rel-and-listing-presence-20261031.md](docs/v33-public-link-rel-and-listing-presence-20261031.md)** | **V33：11条真实已发布外站href/rel，9个页面的Lettering出现范围；public.tools公开样本3/3 nofollow** |
 | [data/v33-published-outbound-rel-samples-20261031.csv](data/v33-published-outbound-rel-samples-20261031.csv) | 11个可复核的公开详情页外部href、原始rel及样本结论 |
 | [data/v33-lettering-public-listing-presence-20261031.csv](data/v33-lettering-public-listing-presence-20261031.csv) | 9个目录当日所读取页面有没有出现Lettering域名；**不等于全站穷尽** |
@@ -213,5 +214,5 @@
 - **已读到非nofollow样本**：Htrd（Fontjoy、Squoosh各1条）、Toolfound（StencilMaker、Offistrip各1条）、DesignTools.fyi（Font Explorer）、NoSignupTools（FontsWiki）、Herramientas y Recursos（Recursos两个第三方链接）。这些样本均未看到nofollow/ugc/sponsored，但不保证Google传递排名信号、更不保证审核和Lettering获链。
 - **Lettering未检出范围**：已读取的public.tools 344工具目录内容，及Htrd首页、Toolfound首页、DesignTools首页、NoSignupTools设计类别、西语Recursos分类、FounderOmni西语设计页、UX Resources/Typography与LaunchFree首页等；这些只是**检查范围内未检出**，不得报告“整站一定没有”或“被拒”。
 - **主库仍176条**：最新P1 **24**、P2 **21**、条件 **80**、待核验16、排除34、非外链1。优先执行5家公开样本未带nofollow的研究候选：Htrd、Herramientas y Recursos、NoSignupTools、DesignTools.fyi、Toolfound（后者必须核验域名所有权）。离线V33操作台加入真实rel提醒和“V33公开样本优先”排序。
-- 为防止镜像数据错乱，`scripts/validate_workbench.mjs`现在将176条离线页面JSON与主表CSV逐条核对，并核对11条真实样本及public.tools 3/3 nofollow事实。V33还修复了上版两份Node验证脚本内容错放路径的问题。**GitHub Actions旧Runner失败问题尚无可信绿色结果**；本地验证通过不等于CI通过。
+- 为防止镜像数据错乱，`scripts/validate_workbench.mjs`现在将176条离线页面JSON与主表CSV逐条核对，并核对11条真实样本及public.tools 3/3 nofollow事实。V33还修复了上版两份Node验证脚本内容错放路径的问题。**GitHub Actions旧Runner失败问题尚无可信绿色结果**；本地验证通过不等于CI通过。V33新增第12项交互排序回归检查，并修复测试文件职责对调问题。
 - [详情与边界](docs/v33-public-link-rel-and-listing-presence-20261031.md)。实际新增为Lettering确认的反向链接仍是 **0**。
