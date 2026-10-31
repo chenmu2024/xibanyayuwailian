@@ -75,3 +75,11 @@
 **特别注意**：#026 TopTool已经暂停新投，#003 Enlineados明确排除免费托管站，#152 DesignTrash排除单一关键词生成器，#161 Fountn真实投稿落地页本轮不可读。这些不是默认提交项目；不可为了骗审核而添加假证书或假国家身份。详情见 [V32官方复核报告](v32-14-official-source-audit-20261031.md)。
 
 静态数据完整性和11项模拟交互检查已通过，第三方真正审核/实际Follow/索引/流量仍待取得公开证据。GitHub Actions当前暂无可确认的本轮成功记录。
+
+## 十、V33：打开真实外链样本与Follow优先排序
+
+请下载[最新HTML操作台](backlink-submission-workbench.html)，顶部排序选`V33公开样本优先（非保证）`。它会先展示Htrd、Herramientas y Recursos、NoSignupTools、DesignTools.fyi、Toolfound五个已有公开href样本中未见nofollow的研究候选；点击相应卡片会显示V33实测的原始rel及“查看V33实际公开样本”链接。
+
+**不能把这些公开样本计入Lettering获链。** public.tools已核对3个详情页，每条真实外站href都含`nofollow`，虽然可免费填表，按Follow目标已从P1调整为条件。另9个目录只是已检视公开页面内未发现本站，不代表全站肯定未收录。详细表格见 [V33独立href及本站出现情况核验](v33-public-link-rel-and-listing-presence-20261031.md)。
+
+V33还校正了静态Node数据验证与模拟交互脚本的职责，并新增对176条主表和11个真实链接属性证据的同步检查。GitHub Actions既往失败仍需通过网站作业日志定位，不得仅凭页面可打开声称CI成功。
