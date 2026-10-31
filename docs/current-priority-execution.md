@@ -1,48 +1,56 @@
-# 当前首批高相关外链人工填写工作单（2026-10-31）
+# 当前首批高相关外链人工填写工作单（V54｜2026-10-31）
 
-目标站：`https://generadordelettering.org/`，真实编辑器：`https://generadordelettering.org/editor`。
+目标站：`https://generadordelettering.org/`；首选产品落地页：`https://generadordelettering.org/editor`。
 
-**为什么推荐LaunchFree第一位**：该平台2026-10-16已发布[Fontique](https://launchfree.io/listings/fontique.html)（Creator Tools；Lettering工具；公开href指向fontique.art），9月24日发布[Free Text Symbols](https://launchfree.io/listings/free-text-symbols.html)（Fancy Text / PNG；公开href指向freetextsymbols.com），10月28日发布[Rueda Decide](https://launchfree.io/listings/rueda-decide.html)（西语在线轮盘；公开href指向ruedadecide.com）。三个真实产品页对应功能/语言，**并非证明本网站已经获链**。这三条href的原始`rel`本次没有获得。平台官网[FAQ](https://launchfree.io/faq.html)自称基础刊登永久免费、徽章可选、每条链接Dofollow和通常24小时审核，都是**网站自述而非我们独立实测的SEO指标或真实审核承诺**。
+**V54现场重新读取目标网站和7家官方投稿表单。**当前主页/编辑器均可公开访问；核心编辑器西语、免费、无需注册，可调整字体、大小、颜色、字间距、描边、阴影、旋转、背景并导出PNG/JPG/WebP。它不是TTF/OTF字库生成器、SVG矢量软件或专业印刷DPI工具，投稿描述不应夸大。
 
-## 第一家：LaunchFree 四步实际表单（优先级1）
+## 当前人工投稿顺序（V54覆盖旧LaunchFree优先顺序）
 
-提交地址：[https://launchfree.io/submit.html](https://launchfree.io/submit.html)
+| 次序 | 主库编号/平台 | 当前官方入口 | 为什么先后 |
+| ---: | --- | --- | --- |
+| 1 | **#159 Design Resources Archive** | https://resourcesfor.design/submit | 真实Typography资源样本；表单最短，只需URL、描述、动态算术验证码 |
+| 2 | **#164 Unikist** | https://unikist.com/submit | 设计/字体目录，短表单；需当场确认动态分类/价格选项 |
+| 3 | **#163 LDS Library** | https://library.legitdesign.studio/submit | 表单字段清楚，真实Design Resources类别；每周人工审核 |
+| 4 | **#151 DesignTools.fyi** | https://designtools.fyi/submit/ | Typography高度匹配；需真实姓名、邮箱 |
+| 5 | **#075 Htrd** | https://htrd.org/ | 免费免登录工具定位；首页表单，类别动态加载 |
+| 6 | **#148 NoSignupTools** | https://nosignuptools.com/submit | 免费免注册工具相关；图标/截图可选，不能勾选No Ads |
+| 7 | **#123 LaunchFree** | https://launchfree.io/submit.html | 有Lettering/西语案例，但需要真实个人故事、姓名、邮箱、简介与Turnstile，故后置 |
 
-| 步骤/官方字段 | 为 Generador de Lettering 填写 |
+以上是**实际填写优先级**，不代表改变主库权威评分、获得Follow或被Google索引。#149 Peplio已因V53公开样本`ugc nofollow`降为条件，不列入Follow优先队列。
+
+## 第一家：#159 Design Resources Archive（V54现场字段）
+
+入口：[https://resourcesfor.design/submit](https://resourcesfor.design/submit)
+
+| 实际字段 | 建议填写 |
 | --- | --- |
-| 1 — Launch Name | `Generador de Lettering` |
-| 1 — Launch URL | `https://generadordelettering.org/` （发布产品主页） |
-| 1 — Tagline，最多80字符 | `Free Spanish lettering editor for custom text graphics`（54字符） |
-| 2 — Category | `Creator Tools` |
-| 2 — Description，100–1200字符 | `Generador de Lettering is a free Spanish-language lettering editor for creating custom text graphics in a web browser. Customize styles, colours, outlines, shadows, rotation and backgrounds, then export your finished design as a PNG, JPG or WebP image.`（252字符） |
-| 2 — Why did you build this?（必填） | **站长亲自写真实开发原因**。不能替用户杜撰创办历史或动机。 |
-| 2 — Launch Status / Pricing | 确认现在实际在线再选`Live`；核心工具实际免费才选`Free` |
-| 2 — MRR | 可选，建议留空，不虚构收入 |
-| 2 — Screenshots | 可选最多3条可公开打开的**真实图片URL**，没有则留空 |
-| 3 — Your Name / Email | **真实创建者姓名及能接收审核邮件的实际邮箱** |
-| 3 — Short Bio | **创建者真实简介**，不虚构公司或经历 |
-| 3 — X / LinkedIn / Photo / Logo | 可选；有真实账号及自有素材时再填 |
-| 3 — How did you hear about us? | 按实际来源选（必填） |
-| 3 — Newsletter | 可选，无须为了提交而订阅 |
-| 3 — Terms、验证码 | 阅读规则，只由人完成实际验证；确认无费用及强制互链变化 |
-| 4 — Confirm | 自己提交后保存回执；“成功收到表单”不等于“获批公开” |
+| Link URL（必填） | `https://generadordelettering.org/editor` |
+| Description（必填，至少10字符） | 见下方英文文案 |
+| Human verification（必填） | 现场动态算术题，打开时重新计算；本轮一次读到3+5，随后刷新读到6+8（当时答案14） |
+| subscribeEmail | 可选周报订阅，留空即可 |
 
-**实站能力范围**：西语浏览器文字图形编辑、颜色、字体样式、描边、阴影、旋转、背景、PNG/JPG/WebP导出。不宣称导出真实TTF/OTF字库、矢量SVG、专业印刷DPI或已有完整英语界面。
+**Description可复制：**
 
-## 后续首批高相关目录
+```text
+A free Spanish-language browser lettering editor for creating decorative text images. Customize fonts, size, colors, spacing, outlines, shadows, rotation and canvas background, then export your design as PNG, JPG or WebP. No account required.
+```
 
-| 次序 | 主库编号/平台 | 真实入口 | 关键审核依据与限制 |
-| --- | --- | --- | --- |
-| 2 | #159 Design Resources Archive | https://resourcesfor.design/submit | MixWeight/Type Garden的独立字体资源详情有真实外站href，V34历史raw rel为`noopener noreferrer`。给`/editor`网址+准确英文描述+当页动态人机题，人工审核，非保证免费Follow |
-| 3 | #164 Unikist | https://unikist.com/submit | Fonts/Design Tools有真实外链；应选`Design Tools`（按实际下拉）、Free、≤280字符描述与真实邮箱。旧Fonts样本rel=`noreferrer`，非本站获链 |
-| 4 | #151 DesignTools.fyi | https://designtools.fyi/submit/ | Typography有Font Explorer独立页，V33历史rel=`noopener noreferrer`；需真实姓名邮箱、Typography/Free，Source of Truth、Size按事实，Logo可选 |
-| 5 | #075 Htrd | https://htrd.org/ | [Fontjoy详情](https://htrd.org/tools/fontjoy)已有真实href至fontjoy.com；旧V33 raw rel=`noopener`。只接收免费免登录即时可用工具，表单位于首页底部。当前官网自称178个工具/近7天新增76个；不能仅靠“hand-picked”四字就断言人工严审 |
+注意：本轮两次读取到不同算术题，证明验证码动态变化。不要依赖本报告的14作为未来答案。页面没有看到姓名、个人邮箱或注册字段；未提交表单。
 
-#128 Toolfound仍要求真实域名归属验证；#147 Good Design Tools正文详情此前出现502；#163 LDS要认准`library.legitdesign.studio`唯一规范域；#165、#172已因刊登价值/内容问题降低优先级。不要为了数量重复提交或买推广位。
+## 其他高相关表单的V54现场结论
 
-**验链标准**：每站按目标域名+来源主域查重；提交记录、审核邮件、公开第三方列表URL、真实指向generadordelettering.org的`a href`、原始`rel`、是否实际被索引、引荐会话各自分开记录。历史176家都是研究记录，**本轮没有代提交，新增确认获链为0**。所有第三方样本链接都属于其他网站。
+- **#164 Unikist**：[入口](https://unikist.com/submit)。Resource name、Website URL、Category、Pricing、Short description（≤280）、Your email。类别/价格是动态combobox，静态HTML未展开；打开后若存在，选择Design Tools和Free，不要强选不存在的选项。
+- **#163 LDS Library**：[唯一规范入口](https://library.legitdesign.studio/submit)。Resource name、Link必填；Category真实值是Design Resources（没有Fonts）；Pricing按事实选Free；What is it/Why useful/邮箱可选；隐藏website反垃圾字段留空。旧Vercel别名canonical归一，禁止重复投稿。
+- **#151 DesignTools.fyi**：[入口](https://designtools.fyi/submit/)。必填Tool Name、Tool URL、Your Name、Email；可选X、Description、Logo、公司代表勾选。类别复选框可选Typography；Source of Truth若按真实线上代码产品可选Production Code；Price选Free。Logo可不传；如传PNG/JPG/WebP方形≥250×250。隐藏website留空、timestamp自动生成；不真实代表公司就不要勾选。
+- **#075 Htrd**：[首页底部表单](https://htrd.org/)。Tool name（≤80）和Website（≤300）必填；Category为动态下拉；email（≤120）和Why is it great?（≤600）可选；隐藏company字段留空。不要误用首页独立Newsletter表单。
+- **#148 NoSignupTools**：[入口](https://nosignuptools.com/submit)。Tool Name、Tool URL、Category、Short Description（≤140）、Detailed Description；图标≤1MB；最多6张截图、每张≤2MB；姓名邮箱optional。Category动态加载；不要选No Ads，其他标签逐项按事实。
+- **#123 LaunchFree**：[四步入口](https://launchfree.io/submit.html)。Launch Name、URL、Tagline、Category、Description（100–1200）、Why did you build this、真实姓名/邮箱/Short Bio、How did you hear、Terms和Turnstile。个人起源故事、身份不可代编；无MRR证据不填。
 
-[当前公开证据CSV](../data/current-priority-evidence.csv)。
+完整逐字段说明、当前限制、可复制文案和证据边界：[V54现场报告](v54-live-submission-forms-and-ready-to-fill-pack-20261031.md)｜[逐行CSV](../data/v54-live-submission-form-audit-20261031.csv)。
+
+**验链标准**：只有当第三方已公开刊登且真实`a href`指向`generadordelettering.org`时，才算出现本站反链；随后单独记录该锚点rel、Google实际索引与GSC引荐流量。第三方别人的字体样本不属于本站获链。
+
+**当前真实状态：** V54只读取公开表单与目标网站，没有登录、输入个人信息、POST提交或代发；人工投稿0、审核结果0、本站新增确认反链0。用户本人确认并提交后，才更新`data/submission-ledger.csv`。
 
 ## 西语专属渠道补充（2026-10-31）
 
