@@ -67,3 +67,11 @@
 特别注意：**Lugar Latino #014** 直接投递地址返回404，因此暂缓；**Good Design Tools #147** 不存在旧记录误写的Category/Tags，官网Tally要求费用、优惠/联盟和真实图标；**LaunchFree #123** 需要真实创建者身份与自我介绍；**Toolfound #128** 需要持有域名并完成邮箱/Meta/DNS验证；**DesignTools.fyi #151** 必须如实回答Source of Truth、Size及公司身份勾选。
 
 平台自称免费或Dofollow不代表实际发布详情页有Follow链接；没有真人提交的记录也不应计入外链数量。
+
+## 九、V32：14家优先复查、161项具体字段
+
+2026-10-31再次从176条旧平台中核实14条，并同步到HTML操作台。此时**21家重点卡片有161条字段行**。所有被复核渠道可在详情里看到V32提醒。主要变化是 #074 public.tools、#075 Htrd、#171 FounderOmni的准确表单；#057 ToolGuide（120字符、必须有工作工具用途）、#076 NoUploadTools（真实隐私保障且拒session replay）及#141 GainWeb（免费无保证）。
+
+**特别注意**：#026 TopTool已经暂停新投，#003 Enlineados明确排除免费托管站，#152 DesignTrash排除单一关键词生成器，#161 Fountn真实投稿落地页本轮不可读。这些不是默认提交项目；不可为了骗审核而添加假证书或假国家身份。详情见 [V32官方复核报告](v32-14-official-source-audit-20261031.md)。
+
+静态数据完整性和11项模拟交互检查已通过，第三方真正审核/实际Follow/索引/流量仍待取得公开证据。GitHub Actions当前暂无可确认的本轮成功记录。
