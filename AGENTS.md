@@ -133,3 +133,7 @@
 101. V43 Zearches免费无账号、无互链只是准入便利，不等于高质量外链；超过1.1万自动筛查记录，软件类别约2923且每页10条、公开公益类出现违反其限制的内容。#27从P1降条件，普通公开href不推断原始rel或SEO收益。
 102. Zearches正式提交页https://zearches.com/submit-website-free.php的隐藏Leave this field empty反垃圾字段不可填，网站名≤30字符、西语描述50–250，官方限频及至少5秒表单填写只是防滥用规则；PayPal捐款完全自愿不影响收录，不建议任何批量刷表单。
 103. Navegax公开详情提示Bitakoras为只收博客的独立目录、账号及数据不共享。当前工具站不能因此增列另一个可提交来源。真实获链仍需本站href及raw rel证据。
+
+104. V44再次实时读到Generador的/herramientas/plantillas-practica四种A4 SVG练习纸和/blog/plan-practica-lettering-siete-dias七天练字练习，Educaguía #58恢复为P2教育资源可尝试，但不可声称/editor矢量导出或教育认证，也没有编辑批准。
+105. 现行排序必须以当前P1/P2资格为闸门，不许旧V33/V34公开rel样本或featured把条件/排除的#168、#171、#172抬入优先列表。历史样本仍按原始rel保存。
+106. 新网站复用教育资源投稿卡时不能自动拿普通工具URL当教学资源；若不具有真实教育内容，复制教育目标留空。普通工具URL也应在本地核对当前活跃域名一致后才允许复制。

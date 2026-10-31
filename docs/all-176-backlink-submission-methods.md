@@ -24,6 +24,8 @@
 
 **V43开放目录审核结果：** #27 Zearches P1→条件（高规模自动收录与类别质量问题），#59补充Bitakoras仅限博客；详见[专项证据](open-directory-quality-audit.md)及[可核对CSV](../data/open-directory-quality-evidence.csv)。
 
+**V44教育适用性实证及排序纠错**：[Educaguía与操作台修复详细报告](v44-education-qualification-and-workbench-priority-20261031.md)。
+
 ## 1. 实际使用方法
 
 1. 新建一个西语网站后，先准备真实的名称、规范首页URL、具体工具页面URL、免费/付费状态、目标用户、功能说明、真实Logo与截图以及能收邮件的邮箱。下方Lettering只是示例，换站必须重新写。
@@ -1341,7 +1343,9 @@
 **实际提交状态**：本轮未提交；尚未确认获批、页面实际href、真实rel/Follow、DR/AS或搜索索引。
 
 <a id="link-058"></a>
-### 058. Educaguía — V42仅教育资格成立才申请（条件）
+### 058. Educaguía — V44真实教学资源使其恢复为P2
+
+**V44官网新证据，优先于V42历史评级**：现已确认本站[4种A4 SVG练字练习纸](https://generadordelettering.org/herramientas/plantillas-practica)及[7天练习计划](https://generadordelettering.org/blog/plan-practica-lettering-siete-dias)真正存在，既有练习模板，也有逐日训练目标；可据此向[Educaguía免费教育Web入口](https://educaguia.com/inserta-tu-web.asp)尝试申请，首项选`Recursos Educativos`。但不代表网站整体为教育软件、更不代表/editor会输出SVG、已有教学认证或平台已经批准。官方对申请者自动订阅教育通讯；推荐徽章为精选条目额外展示，非普通免费申请强制交换。具体字段取决于官网后续页面，详见[V44报告](v44-education-qualification-and-workbench-priority-20261031.md)。
 
 **2026-10-31重要限制**：[官方投稿页](https://educaguia.com/inserta-tu-web.asp)明确只接受与教育相关的网站，人工逐页审核，且**申请将自动订阅教育通讯**。精选网站可获推荐徽章代码以提升额外展示，但普通免费申请未见硬性必须安装徽章。[Software Educativo栏目](https://educaguia.com/software-educativo.asp)可见已刊登的真实教育工具外站链接。单纯造字图编辑器不等同教学资源；只有现有真实教育场景与合规页面才考虑，无则不投，P1→条件。
 

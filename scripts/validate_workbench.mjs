@@ -69,6 +69,7 @@ if(master.some((row,i)=>Number(row["编号"])!==all[i].id||
  row["平台/域名"]!==all[i].name||row["提交入口URL"]!==all[i].url||
  row["优先级"]!==all[i].level))
   throw new Error("Workbench source mirror is out of sync with master CSV");
+if(all[57].level!=="P2"||all[57].status!=="候选") throw new Error("V44 Educaguía must be P2 after verifiable practice sheets");
 if(all[4].level!=="条件"||all[161].level!=="条件")
   throw new Error("V34: The Free Tools Directory and UX Resources must remain conditional");
 if(all[73].status!=="条件"||all[73].level!=="条件")
@@ -82,6 +83,7 @@ if (detailed.some(x => !all.some(i => i.id === x.id) || !x.fields?.length))
 const fieldCount = detailed.reduce((n, x) => n + x.fields.length, 0);
 if (fieldCount !== 161) throw new Error("Detailed input field count unexpectedly changed: " + fieldCount);
 if (/<script[^>]+src=/i.test(html)) throw new Error("Remote JS is forbidden in offline workbench");
+if (!html.includes("function publicSampleScore(")||!html.includes("function featuredScore(")||!html.includes('activeDomain==="generadordelettering.org"?"https://generadordelettering.org/herramientas/plantillas-practica":""')) throw new Error("V44 priority gating and cross-site education safeguards missing");
 if (!html.includes("xibanya-marks-by-domain-v29") || !html.includes("xibanya-profiles-by-domain-v36") || !html.includes("activeDomain=domainOf(savedSite.home)"))
   throw new Error("User submission marks must remain isolated by site domain");
 if (!html.includes("version:2") || !html.includes("validProfile(profile,domain)") || !html.includes("blankProfile(requested)"))

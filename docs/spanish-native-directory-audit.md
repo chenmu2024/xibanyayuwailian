@@ -43,3 +43,7 @@
 ## V43 备注：Bitakoras不是另一个适合字图编辑器的目录
 
 [Navegax公开详情](https://navegax.com/detalle/iadictodigital)推荐的[Bitakoras](https://bitakoras.com/)明确只接受博客，两站数据库不共享、账户需分别注册。Generador de Lettering目前是在线文字图像编辑器，不能把博客限定渠道记为额外的工具站外链。
+
+## V44当前站点实际已具教育练习资源
+
+原V42降低#58 Educaguía是基于泛文字图片编辑器不构成教育内容的判断；但本站已实际有[4种A4 SVG练字模板](https://generadordelettering.org/herramientas/plantillas-practica)和[7天练习计划](https://generadordelettering.org/blog/plan-practica-lettering-siete-dias)。2026-10-31实站再次确认，现可向[Educaguía教育Web](https://educaguia.com/inserta-tu-web.asp)以这两个真资源申请审查，**条件→P2**；人工入选、免费链接rel、最终索引依旧未知，申请会自动订阅教育简报。[V44完整报告](v44-education-qualification-and-workbench-priority-20261031.md)。
