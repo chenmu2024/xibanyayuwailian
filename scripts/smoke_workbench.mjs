@@ -79,9 +79,39 @@ assert.ok(tracks.length>=176,"All rows must include local progress controls");
 tracks.at(-176).value="已自行提交";tracks.at(-176).onchange();
 assert.equal(Object.keys(JSON.parse(storage.get("xibanya-marks-by-domain-v29"))["generadordelettering.org"]).length,1);
 
+const proofBoxes=nodes.filter(n=>n.className==="proof");
+assert.ok(proofBoxes.length>=176,"Each directory needs a manual evidence panel");
+const proofBox=proofBoxes.at(-176);
+const proofInputs=proofBox.children.filter(n=>n.tag==="input");
+const selfCheck=proofBox.children.find(n=>n.className==="verify");
+assert.equal(proofInputs.length,3);
+assert.ok(selfCheck);
+proofInputs[0].value="https://generadordelettering.org/editor";
+proofInputs[1].value="https://generadordelettering.org/";
+proofInputs[2].value="noopener noreferrer nofollow";
+selfCheck.onclick();
+let stored=JSON.parse(storage.get("xibanya-marks-by-domain-v29"));
+assert.ok(!stored["generadordelettering.org"]["1"].proof?.checked,"Self-domain source must never be marked as external proof");
+proofInputs[0].value="https://example-directory.test/tools/lettering";
+proofInputs.forEach(n=>n.events.change());
+stored=JSON.parse(storage.get("xibanya-marks-by-domain-v29"));
+assert.equal(stored["generadordelettering.org"]["1"].proof.checked,false,"Editing proof only saves a draft");
+selfCheck.onclick();
+stored=JSON.parse(storage.get("xibanya-marks-by-domain-v29"));
+assert.equal(stored["generadordelettering.org"]["1"].proof.checked,true,"Explicit self-check should save attestation");
+assert.equal(stored["generadordelettering.org"]["1"].proof.rel,"noopener noreferrer nofollow");
+assert.match($("marked").textContent,/人工自查证据 1 条/);
+proofInputs[2].value="noopener sponsored";proofInputs[2].events.change();
+stored=JSON.parse(storage.get("xibanya-marks-by-domain-v29"));
+assert.equal(stored["generadordelettering.org"]["1"].proof.checked,false,"Rel edits revoke prior self-attestation");
+selfCheck.onclick();
+assert.match($("marked").textContent,/人工自查证据 1 条/);
+
+
 $("home").value="https://other-tool.example/";$("home").events.input();$("home").events.change();
 assert.equal($("tool").value,"","Switching domain must clear the old editor URL");
 assert.match($("marked").textContent,/已标注 0 条/,"New domain cannot inherit old progress");
+assert.match($("marked").textContent,/人工自查证据 0 条/,"Other domains cannot inherit manual backlink evidence");
 $("home").value="https://generadordelettering.org/";$("home").events.input();$("home").events.change();
 assert.match($("marked").textContent,/已标注 1 条/,"Switching back restores original progress");
 
@@ -89,6 +119,8 @@ $("backup").onclick();
 const backup=JSON.parse(blobs.at(-1).parts.join(""));
 assert.equal(backup.type,"spanish-backlink-offline-backup");
 assert.ok(backup.progress["generadordelettering.org"]);
+assert.equal(backup.progress["generadordelettering.org"]["1"].proof.checked,true);
+assert.equal(backup.progress["generadordelettering.org"]["1"].proof.rel,"noopener sponsored");
 const restored={
   type:"spanish-backlink-offline-backup",version:1,
   profile:{name:"Restored Website",home:"https://restored.example/",tool:"",es:"Spanish short",en:"English short",eslong:"Spanish long",enlong:"English long",email:""},
@@ -100,7 +132,8 @@ $("export").onclick();
 const exported=blobs.at(-1).parts.join("");
 assert.ok(exported.includes("restored.example"));
 assert.ok(exported.includes("审核中"));
+assert.ok(exported.includes("第三方公开页")&&exported.includes("实际目标href")&&exported.includes("rel原文"),"CSV needs evidence columns");
 assert.ok(exported.includes("'=HYPERLINK"),"CSV export must escape spreadsheet formulas");
 assert.ok(!exported.includes('"\'"'),"Empty CSV cells must remain empty, not apostrophes");
 
-console.log("PASS: 176 cards, 21 detailed tables, search, per-domain progress, URL reset, JSON backup/restore, CSV formula safety (13 checks including V33 Follow-priority and V34 typography ordering).");
+console.log("PASS: 176 cards, 21 detailed tables, search, per-domain progress, URL reset, JSON backup/restore, CSV formula safety (17 checks including explicit manual href/rel evidence, domain isolation, revocation and V34 typography sorting).");
