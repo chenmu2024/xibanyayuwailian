@@ -40,6 +40,8 @@
 与V52相比，只有#149 **P1 -1、条件 +1**。原V47“13家P1观察矩阵”仍是**2026-10-31较早时段的历史快照**，不能悄悄删掉Peplio旧样本；当前P1运行时门槛更新为12，已有公开href样本10，保留历史raw rel样本6。
 
 ## 3. 当前真正优先人工填写的队列
+> **后续更新说明（V54）**：上面顺序是V53按样本证据强弱排的历史队列；V54现场读取7家真实投稿表单后，按主题相关性与实际填写摩擦调整当前执行顺序为 **#159 → #164 → #163 → #151 → #075 → #148 → #123**。以[V54实时表单报告](v54-live-submission-forms-and-ready-to-fill-pack-20261031.md)为当前执行依据。
+
 
 第一梯队：#159 [Design Resources Archive](https://resourcesfor.design/submit)、#151 [DesignTools.fyi](https://designtools.fyi/submit/)、#164 [Unikist](https://unikist.com/submit)、#163 [LDS Library规范域](https://library.legitdesign.studio/submit)。这四家在字体/视觉排版工具上有直接的第三方公开链接证据；#163当前完整真实表单已证实`Category=Design Resources`，**没有Fonts下拉项**，并且旧Vercel别名不重复投稿。
 
