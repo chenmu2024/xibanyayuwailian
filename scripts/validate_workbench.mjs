@@ -37,6 +37,7 @@ function parseCSV(input) {
 const master=parseCSV(readFileSync(new URL("../data/backlinks-master.csv",import.meta.url),"utf8"));
 const samples=parseCSV(readFileSync(new URL("../data/v33-published-outbound-rel-samples-20261031.csv",import.meta.url),"utf8"));
 const v34Samples=parseCSV(readFileSync(new URL("../data/v34-21-published-link-rel-samples-20261031.csv",import.meta.url),"utf8"));
+const v53=parseCSV(readFileSync(new URL("../data/v53-current-rendered-dom-outbound-rel-20261031.csv",import.meta.url),"utf8"));
 if(master.length!==176)throw new Error("Master CSV must include 176 records");
 if(samples.length!==11)throw new Error("V33 real published href audit must keep 11 public anchor observations");
 const p74=samples.filter(v=>v["主库编号"]==="74");
@@ -59,6 +60,17 @@ const p1Actual = all.filter(x=>x.level==="P1");
 if(p1Actual.length!==12||p1Actual.some(x=>!x.p1Proof||x.p1Proof.date!=="2026-10-31")) throw new Error("V53 current 12 P1 sources must retain dated historical outbound evidence");
 if(p1Actual.filter(x=>Boolean(x.p1Proof.href)).length!==10||p1Actual.filter(x=>Boolean(x.p1Proof.rawRel)).length!==6)throw new Error("V47 href/raw-rel evidence counts not synchronized");
 if(!html.includes("V47｜本平台已发布网站的外链证据"))throw new Error("V47 P1 evidence cards missing");
+const peplio=all.find(x=>x.id===149);
+if(peplio?.level!=="条件"||peplio.status!=="条件"||!peplio.evidence.includes("ugc nofollow"))
+  throw new Error("V53 Peplio must be conditional with documented published ugc nofollow example");
+if(v53.length!==14||new Set(v53.map(r=>r.source_id)).size!==14)
+  throw new Error("V53 published DOM rel matrix must have 14 unique existing sources");
+if(v53.filter(r=>r.rel_classification!=="no_restriction_token_observed").length!==1||
+   v53.find(r=>r.source_id==="149")?.rel_classification!=="nofollow+ugc"||
+   v53.find(r=>r.source_id==="149")?.current_rendered_dom_rel!=="noopener ugc nofollow"||
+   v53.some(r=>r.current_target_site_acquired!=="NO"))
+  throw new Error("V53 specific Peplio sample restriction and no-user-acquired-link scope must remain explicit");
+
 const v33 = readJson("auditV33");
 const v34 = readJson("auditV34");
 if(v34.length!==11||!v34.some(x=>x.id===5&&x.rel.includes("nofollow"))||!v34.some(x=>x.id===162&&x.rel.includes("sponsored")))throw new Error("V34 rel audit JSON is incomplete");
