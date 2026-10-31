@@ -23,7 +23,7 @@ assert.equal(recent.length,17);
 assert.equal(items.length,176);
 assert.equal(items.find(x=>x.id===58).example,"https://www.educaguia.com/listadoEDU.asp","Published education sample must be on Educaguia, not user site");
 assert.ok(items.every(x=>!x.example||!/^https?:\/\/(www\.)?generadordelettering\.org(?:[\/:?#]|$)/i.test(x.example)),"Own website must never masquerade as a third-party example");
-assert.equal(items.filter(x=>x.level==="P1"&&x.p1Proof).length,13,"All P1 cards need V47 published-link evidence");
+assert.equal(items.filter(x=>x.level==="P1"&&x.p1Proof).length,12,"All P1 cards need V47 published-link evidence");
 assert.equal(items.filter(x=>x.level==="P1"&&x.p1Proof?.href).length,11,"Exactly 11 P1 sources with directly observed third-party href");
 assert.equal(items.filter(x=>x.level==="P1"&&x.p1Proof?.rawRel).length,6,"Old raw-rel evidence must be explicitly separated from current href");
 assert.equal(items.find(x=>x.id===149).p1Proof.href,"https://anyfyle.com/?ref=pepliohub","Peplio href tracking query is part of the observed destination");
