@@ -4,7 +4,7 @@
 
 用户网站现已真实存在[四份A4练习SVG](https://generadordelettering.org/herramientas/plantillas-practica)：笔画、小写、大写字母、装饰连接，可打印/在浏览器中下载。另有[七天练习计划](https://generadordelettering.org/blog/plan-practica-lettering-siete-dias)，明确逐日练习步骤和检查标准。这意味着已有可供艺术、Lettering学习的实际教育内容，不能继续将其视作完全没有教育用途的普通图片编辑工具。
 
-[Educaguía教育网站免费提交] (https://educaguia.com/inserta-tu-web.asp)（打开后第1步选`Recursos Educativos`）允许提交真实教育相关网站，人工审核并自动订阅教育简报，是否接受混合工具站仍取决于编辑。精选Logo仅作为额外展示，非明确的普通收录强制回链。不要把练字SVG下载页面能力误称为`/editor`能下载SVG，也不能虚构教师、学校或课程认证。[教育软件单独申请](https://educaguia.com/inserta-tu-app.asp)有学科/年龄/作者等字段，不应为普通图片编辑器填假数据。
+[Educaguía教育网站免费提交](https://educaguia.com/inserta-tu-web.asp)（打开后第1步选`Recursos Educativos`）允许提交真实教育相关网站，人工审核并自动订阅教育简报，是否接受混合工具站仍取决于编辑。精选Logo仅作为额外展示，非明确的普通收录强制回链。不要把练字SVG下载页面能力误称为`/editor`能下载SVG，也不能虚构教师、学校或课程认证。[教育软件单独申请](https://educaguia.com/inserta-tu-app.asp)有学科/年龄/作者等字段，不应为普通图片编辑器填假数据。
 
 | 官网表单与真实资料 | 应填写/说明 |
 |---|---|
