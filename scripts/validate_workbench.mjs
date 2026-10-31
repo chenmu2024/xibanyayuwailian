@@ -20,7 +20,7 @@ if (detailed.length !== 21 || new Set(detailed.map(x => x.id)).size !== 21)
 if (detailed.some(x => !all.some(i => i.id === x.id) || !x.fields?.length))
   throw new Error("Detailed field card missing its source or field names");
 const fieldCount = detailed.reduce((n, x) => n + x.fields.length, 0);
-if (fieldCount !== 149) throw new Error("Detailed input field count unexpectedly changed: " + fieldCount);
+if (fieldCount !== 161) throw new Error("Detailed input field count unexpectedly changed: " + fieldCount);
 if (/<script[^>]+src=/i.test(html)) throw new Error("Remote JS is forbidden in offline workbench");
 if (!html.includes("xibanya-marks-by-domain-v29") || !html.includes("domainOf(site.home)"))
   throw new Error("User submission marks must remain isolated by site domain");
@@ -29,4 +29,4 @@ if (html.includes("fetch(") || html.includes("XMLHttpRequest"))
 const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/gi)];
 if (scripts.length !== 1) throw new Error("Expected exactly one executable inline JavaScript block");
 new Script(scripts[0][1], { filename: "backlink-submission-workbench.inline.js" });
-console.log("OK: 176 offline sources, 21 exact-field cards, 149 fields, JS syntax valid, domain-isolated progress.");
+console.log("OK: 176 offline sources, 21 exact-field cards, 161 fields, JS syntax valid, domain-isolated progress. V32 updates.");
