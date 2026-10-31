@@ -2,7 +2,7 @@
 
 > 资料基线：2026-10-31；来源：`data/backlinks-master.csv` 的1–176全部记录；示例为 `generadordelettering.org`。**176是研究渠道数量，不是已经为网站获得176条反向链接。**
 >
-> 历史状态：P1 30、P2 21、条件 77、待核验 14、排除 33、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
+> 历史状态：P1 29、P2 21、条件 77、待核验 15、排除 33、非外链 1。这些标签是历史研究分类，**不等于本次实时独立测得DR/AS、Follow、索引、审核成功或已提交**；历史的登录后字段/费用可能改变。2026-10-31优先复查TopTool与Enlineados的官方规则，其他来源按原证据日期标注。
 >
 > 本手册所有来源均单独列出入口、逐项步骤、费用条件、适用对象和限制。排除/暂停/待核验条目的步骤是**留存的历史参考**，不能当作今天可以立刻投稿。当前没有自动发送邮件、注册账号或提交网站。
 
@@ -69,6 +69,8 @@
 > 上述只是**研究优先顺序**，不是21个可保证免费Follow的站点。特别注意 #076 有隐私硬条件；#147 的Follow样本来自第三方；#026 TopTool提交暂停、#003 Enlineados免费主机资格不明，暂不在立即提交名单。
 
 ## 4. 全部176个渠道：一个网站、一段逐项填写说明
+
+**V31校正**：#014 Lugar Latino官网直达表单返回404，暂列待核验；#123 LaunchFree、#128 Toolfound、#147 Good Design Tools、#151 DesignTools.fyi及#169 FreeDesignerTools已按2026-10-31官网纠正步骤。17家官方证据及缺口见 [V31核验指南](v31-17-live-form-verification-20261031.md)。
 
 每条的“提交入口”按仓库历史记录链接到官网、邮箱或表单；如果只有主页、价格页、等待名单或无效入口，会在该条说明并不推荐实际操作。
 
@@ -366,31 +368,35 @@
 
 
 <a id="link-014"></a>
-### 014. Lugar Latino — 候选可申请（历史级别：P1）
+### 014. Lugar Latino — 待核验（主库更新：V31，2026-10-31）
 
-**提交入口/官网**：[https://www.lugarlatino.com/directorio/enviar.php](https://www.lugarlatino.com/directorio/enviar.php)  
-**适合什么网站**：只收主要内容为西语的网站；**西语资格**：只收西语。  
-**费用和审核**：宣称免费、人工审核。  
+**官方提交入口**：[https://www.lugarlatino.com/directorio/enviar.php](https://www.lugarlatino.com/directorio/enviar.php)。
 
-**具体怎样填/操作（原始官网研究记录）**：
+**语言与资格**：只收西语；只收主要内容为西语的网站。
 
-1. 打开发送页
-2. 输入https网址
-3. Name
-4. Email
-5. 100词内西语描述
-6. 关键字≤70字符
-7. 真实国家
-8. 类别
-9. 确认主要为西语
-10. Enviar
+**费用/审核**：宣称免费、人工审核。
 
-**Lettering参考填写**：名称 `Generador de Lettering`；若入口允许对应页面，则网址 `https://generadordelettering.org/`；描述栏存在时，西语站用 `Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP.`，英文站用 `Free Spanish lettering editor for creating customizable text images.`，长说明取前面的资料包。图片、联系邮箱、价格、分类、真实所在地均按该平台实际字段与事实补全，不要臆造不存在的字段。
+**本轮直访阻断**：提交页直接打开返回404；搜索索引仍有旧版表单，但不能当作当前可用。暂缓提交。
 
-**不符合/易被拒的情况**：纯西语网站；人工审核；不保证收录；禁止重复提交/虚假国家，中文或英文站不要投。  
-**历史核对**：未见已申请。  
-**证据与操作事实**：官网完整免费表单已核实；[原仓库官方来源](https://www.lugarlatino.com/directorio/enviar.php)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
+**具体怎样填（按官网最新公开表单）**：
 
+1. V31直接官方入口多次访问返回404，暂不提交；仅官网搜索索引仍保留的表单显示：网站https URL
+2. Name
+3. 真实联系Email
+4. 西语简介≤100词
+5. 关键词≤70字符
+6. 真实国家
+7. 实际类别
+8. 确认主要为西语
+9. 人工审核。官网恢复后再核实时有效字段，不能虚填国别。
+
+**Lettering填写资料**：名称`Generador de Lettering`；可使用`https://generadordelettering.org/editor`（只收首页的平台则用`https://generadordelettering.org/`）；介绍、价格、登录账户和真实创建者信息必须与本网站一致，不能凭空编造。
+
+**重点限制**：纯西语网站；人工审核；不保证收录；禁止重复提交/虚假国家，中文或英文站不要投。
+
+**2026-10-31官方证据**：2026-10-31 V31：官网首页可打开且搜索索引仍有历史免费提交表单；但直接访问/directorio/enviar.php返回404，当前暂停当作稳定可提交入口，待真人浏览器复核。。查看[官方来源](https://www.lugarlatino.com/directorio/enviar.php)。
+
+**实际状态**：这只是再次核验公开表单；没有替网站提交或获取公开反向链接。真实外链的href、rel/Follow、DR/AS和Google收录均未独立证明。
 
 <a id="link-015"></a>
 ### 015. bequo — 待核验（历史级别：待核验）
@@ -2685,28 +2691,40 @@
 
 
 <a id="link-123"></a>
-### 123. LaunchFree.io — 候选可申请（历史级别：P1）
+### 123. LaunchFree.io — 候选可申请（主库更新：V31，2026-10-31）
 
-**提交入口/官网**：[https://launchfree.io/submit.html](https://launchfree.io/submit.html)  
-**适合什么网站**：西语字体转换、编辑器、在线计算器、真实Web App；**西语资格**：已收录过西语随机转盘等西语工具案例。  
-**费用和审核**：官网明确免费、人工审核；无必选回链徽章。  
+**官方提交入口**：[https://launchfree.io/submit.html](https://launchfree.io/submit.html)。
 
-**具体怎样填/操作（原始官网研究记录）**：
+**语言与资格**：已收录过西语随机转盘等西语工具案例；西语字体转换、编辑器、在线计算器、真实Web App。
 
-1. 填写Launch Name/URL/Tagline≤80字符
-2. Creator Tools
-3. Description≥100字符
-4. Why built
-5. 联系人与邮箱
-6. 确认提交
+**费用/审核**：官网明确免费、人工审核；无必选回链徽章。
 
-**Lettering参考填写**：名称 `Generador de Lettering`；若入口允许对应页面，则网址 `https://generadordelettering.org/`；描述栏存在时，西语站用 `Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP.`，英文站用 `Free Spanish lettering editor for creating customizable text images.`，长说明取前面的资料包。图片、联系邮箱、价格、分类、真实所在地均按该平台实际字段与事实补全，不要臆造不存在的字段。
+**四步真实资料要求**：个人身份、项目起源、Short Bio和人机验证不可省略。
 
-**不符合/易被拒的情况**：正文最好英文说明真实产品；纯西语产品有实际收录案例，但不是自动批准。  
-**历史核对**：未查到已提交的公开列表或相关申请邮件；不能排除其他邮箱提交。  
-**已有公开样例（不是本站获链）**：https://launchfree.io/listings/rueda-decide.html。  
-**证据与操作事实**：官网2026-10-30核验提交表单；第三方2026-10-19抽检4页Follow；[原仓库官方来源](https://launchfree.io/submit.html)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
+**具体怎样填（按官网最新公开表单）**：
 
+1. 打开官网四步表单
+2. Launch Name填真实品牌
+3. Launch URL填规范首页
+4. Tagline≤80字符
+5. Category选择Creator Tools
+6. Description 100–1200字符
+7. Why did you build this填写真实开发动机
+8. Launch Status及Pricing据实
+9. MRR/截图真实时才填
+10. Your Name与Email填真实本人
+11. Short Bio如实
+12. How did you hear about us按实际
+13. 同意Terms与真人验证
+14. 提交并等确认；官网自称免费发布Dofollow，但未独立测rel。
+
+**Lettering填写资料**：名称`Generador de Lettering`；可使用`https://generadordelettering.org/editor`（只收首页的平台则用`https://generadordelettering.org/`）；介绍、价格、登录账户和真实创建者信息必须与本网站一致，不能凭空编造。
+
+**重点限制**：正文最好英文说明真实产品；纯西语产品有实际收录案例，但不是自动批准。
+
+**2026-10-31官方证据**：2026-10-31 V31官网实时四步投稿表单确认；免费永久、无强制徽章及Dofollow为官方宣传，未独立实测发表页rel。。查看[官方来源](https://launchfree.io/submit.html)。
+
+**实际状态**：这只是再次核验公开表单；没有替网站提交或获取公开反向链接。真实外链的href、rel/Follow、DR/AS和Google收录均未独立证明。
 
 <a id="link-124"></a>
 ### 124. Launch List — 有条件（历史级别：条件）
@@ -2798,29 +2816,36 @@
 
 
 <a id="link-128"></a>
-### 128. Toolfound — 候选可申请（历史级别：P1）
+### 128. Toolfound — 候选可申请（主库更新：V31，2026-10-31）
 
-**提交入口/官网**：[https://toolfound.com/submit](https://toolfound.com/submit)  
-**适合什么网站**：在线计算器、转换器、浏览器免费工具、Lettering编辑器；**西语资格**：国际产品，未核实纯西语规则；英文简介更稳妥。  
-**费用和审核**：官网确认基础Launch免费；排队；需证明域名所有权。  
+**官方提交入口**：[https://toolfound.com/submit](https://toolfound.com/submit)。
 
-**具体怎样填/操作（原始官网研究记录）**：
+**语言与资格**：国际产品，未核实纯西语规则；英文简介更稳妥；在线计算器、转换器、浏览器免费工具、Lettering编辑器。
 
-1. 输入Product URL
-2. Email
-3. 可选Logo/X/日期
-4. 获取免费排队位置
-5. 用域名邮箱验证或Meta/DNS证明控制权
-6. 检查草稿并排队
-7. 上架验收
+**费用/审核**：官网确认基础Launch免费；排队；需证明域名所有权。
 
-**Lettering参考填写**：名称 `Generador de Lettering`；若入口允许对应页面，则网址 `https://generadordelettering.org/`；描述栏存在时，西语站用 `Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP.`，英文站用 `Free Spanish lettering editor for creating customizable text images.`，长说明取前面的资料包。图片、联系邮箱、价格、分类、真实所在地均按该平台实际字段与事实补全，不要臆造不存在的字段。
+**发布前硬条件**：必须验证域名所有权；未验证不计已获链接，不强制加徽章。
 
-**不符合/易被拒的情况**：不可用未验证邮箱强行提交；个人邮箱需要网站所有权验证；具体DR/AS未独立实测。  
-**历史核对**：V13 127项无相同根域名；邮箱搜索未见匹配（不代表其他邮箱未提交）。  
-**已有公开样例（不是本站获链）**：https://toolfound.com/tool/fileontap。  
-**证据与操作事实**：2026-10-30 官网实时核查；[原仓库官方来源](https://toolfound.com/submit)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
+**具体怎样填（按官网最新公开表单）**：
 
+1. 进入toolfound.com/submit
+2. 选择免费发布不要$29优先选项
+3. Product URL填主站
+4. 上传实际Logo（可选、≤2MB，无SVG）或使用站点icon
+5. 填真实Email（同域邮箱最省步骤）
+6. X/日期/Pricing按真实资料可选
+7. 提交草稿
+8. 必须验证站点所有权：同域邮箱魔术链接，非同域邮箱按官网Meta或DNS TXT
+9. 审核真正排期
+10. 上线后验收href及rel。徽章完全可选。
+
+**Lettering填写资料**：名称`Generador de Lettering`；可使用`https://generadordelettering.org/editor`（只收首页的平台则用`https://generadordelettering.org/`）；介绍、价格、登录账户和真实创建者信息必须与本网站一致，不能凭空编造。
+
+**重点限制**：不可用未验证邮箱强行提交；个人邮箱需要网站所有权验证；具体DR/AS未独立实测。
+
+**2026-10-31官方证据**：2026-10-31 V31官网实时明确免费及自称Dofollow、不强制Badge、所有权验证、同Email 3次/天限制；实际发布rel未独立抽检。。查看[官方来源](https://toolfound.com/submit)。
+
+**实际状态**：这只是再次核验公开表单；没有替网站提交或获取公开反向链接。真实外链的href、rel/Follow、DR/AS和Google收录均未独立证明。
 
 <a id="link-129"></a>
 ### 129. SideProjects.net — 候选可申请（历史级别：P1）
@@ -3224,28 +3249,35 @@
 
 
 <a id="link-147"></a>
-### 147. Good Design Tools (gooddesign.tools) — 候选可申请（历史级别：P1）
+### 147. Good Design Tools (gooddesign.tools) — 候选可申请（主库更新：V31，2026-10-31）
 
-**提交入口/官网**：[https://tally.so/r/mBbA8N](https://tally.so/r/mBbA8N)  
-**适合什么网站**：Generador de Lettering 的编辑器、字体与图形设计工具；不适合纯文章；**西语资格**：英文目录；西语工具可按设计作品投稿，最终审核待确认。  
-**费用和审核**：官方链接的 Tally 投稿表单可访问；第三方称免费/免账号/无强制徽章；需编辑审核。  
-**必须先看**：官网Tally表单确有入口，第三方对DR/rel的抽样不等于本站独立实测。  
+**官方提交入口**：[https://tally.so/r/mBbA8N](https://tally.so/r/mBbA8N)。
 
-**具体怎样填/操作（原始官网研究记录）**：
+**语言与资格**：英文目录；西语工具可按设计作品投稿，最终审核待确认；Generador de Lettering 的编辑器、字体与图形设计工具；不适合纯文章。
 
-1. 在 gooddesign.tools 进入 Submit a tool
-2. Tally 表单
-3. 名称、网址、≤130字符简介、定价/类别、正方形图标及邮箱
-4. 提交
-5. 等待人工收录
+**费用/审核**：官方链接的 Tally 投稿表单可访问；第三方称免费/免账号/无强制徽章；需编辑审核。
 
-**Lettering参考填写**：名称 `Generador de Lettering`；若入口允许对应页面，则网址 `https://generadordelettering.org/editor`；描述栏存在时，西语站用 `Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP.`，英文站用 `Free Spanish lettering editor for creating customizable text images.`，长说明取前面的资料包。图片、联系邮箱、价格、分类、真实所在地均按该平台实际字段与事实补全，不要臆造不存在的字段。
+**重要修正**：官方Tally表单**没有Category和Tags字段**，已改为费用、优惠、联盟及方形图标（≤2MB）等真实字段。
 
-**不符合/易被拒的情况**：图标建议 JPG/JPEG/WEBP/SVG（第三方称不收PNG）；不保证纯西语站收录、排名或Follow；别把第三方DR25当独立实测。  
-**历史核对**：未在本仓库历史名单及已连接邮箱查到；不代表其他账号未提交。  
-**已有公开样例（不是本站获链）**：https://www.gooddesign.tools/tools/type-trials。  
-**证据与操作事实**：官网公开字体页与官网提交跳转确认；第三方2026-09-15抽样60页报告直接Follow链接；[原仓库官方来源](https://www.gooddesign.tools/tools/type-trials)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
+**具体怎样填（按官网最新公开表单）**：
 
+1. 从gooddesign.tools官网进入官方Tally投稿
+2. What is the name of your tool填Generador de Lettering
+3. Provide a link to your tool填/editor URL
+4. Describe your tool如实写设计功能
+5. How much does your tool cost据实选Free
+6. Exclusive deal/affiliate scheme按真实情况（没有则选否）
+7. 上传正方形纯色背景JPG/JPEG/WebP/SVG图标≤2MB
+8. 真实Email
+9. Submit；V31实际表单没有Category和Tags字段，不可沿用旧猜测。
+
+**Lettering填写资料**：名称`Generador de Lettering`；可使用`https://generadordelettering.org/editor`（只收首页的平台则用`https://generadordelettering.org/`）；介绍、价格、登录账户和真实创建者信息必须与本网站一致，不能凭空编造。
+
+**重点限制**：图标建议 JPG/JPEG/WEBP/SVG（第三方称不收PNG）；不保证纯西语站收录、排名或Follow；别把第三方DR25当独立实测。
+
+**2026-10-31官方证据**：2026-10-31 V31官网绑定Tally实际表单已读取：名称/链接/介绍/定价/可选优惠/联盟计划/≤2MB图标/邮箱。此前猜测Category、Tags字段已纠正。。查看[官方来源](https://www.gooddesign.tools/tools/type-trials)。
+
+**实际状态**：这只是再次核验公开表单；没有替网站提交或获取公开反向链接。真实外链的href、rel/Follow、DR/AS和Google收录均未独立证明。
 
 <a id="link-148"></a>
 ### 148. NoSignupTools (nosignuptools.com) — 候选可申请（历史级别：P1）
@@ -3315,30 +3347,39 @@
 
 
 <a id="link-151"></a>
-### 151. DesignTools.fyi (designtools.fyi) — 候选可申请（历史级别：P1）
+### 151. DesignTools.fyi (designtools.fyi) — 候选可申请（主库更新：V31，2026-10-31）
 
-**提交入口/官网**：[https://designtools.fyi/submit/](https://designtools.fyi/submit/)  
-**适合什么网站**：有真实设计功能的在线工具；Typography类，适合generadordelettering.org的视觉编辑器；**西语资格**：官方未要求必须英文；纯西语工具审核接受性仍待确认。  
-**费用和审核**：2026-10-30官方在线表单未见付费门槛；人工审核并邮件通知；不能认定永久免费。  
+**官方提交入口**：[https://designtools.fyi/submit/](https://designtools.fyi/submit/)。
 
-**具体怎样填/操作（原始官网研究记录）**：
+**语言与资格**：官方未要求必须英文；纯西语工具审核接受性仍待确认；有真实设计功能的在线工具；Typography类，适合generadordelettering.org的视觉编辑器。
 
-1. Tool Name填Generador de Lettering
-2. Tool URL填https://generadordelettering.org/
-3. 英文真实介绍
-4. Type选Typography，可选Images如实勾选
-5. Price选Free
-6. 上传≥250×250正方形Logo(可选)
-7. 填写姓名、邮箱
-8. Submit Tool；收到确认后核验公开URL
+**费用/审核**：2026-10-30官方在线表单未见付费门槛；人工审核并邮件通知；不能认定永久免费。
 
-**Lettering参考填写**：名称 `Generador de Lettering`；若入口允许对应页面，则网址 `https://generadordelettering.org/editor`；描述栏存在时，西语站用 `Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP.`，英文站用 `Free Spanish lettering editor for creating customizable text images.`，长说明取前面的资料包。图片、联系邮箱、价格、分类、真实所在地均按该平台实际字段与事实补全，不要臆造不存在的字段。
+**身份要求**：Source of Truth/Size须据实；不要在未代表某公司时勾选公司代表。
 
-**不符合/易被拒的情况**：需工具真实可用；人工审核、免费与Follow不保证；不可把Unicode文字转换当作真实字体文件下载器；官方未明确允许广告站与纯西语站。  
-**历史核对**：V18新渠道；总库按域名检查不存在；申请前仍需查其他邮箱/站点。  
-**已有公开样例（不是本站获链）**：https://designtools.fyi/tools。  
-**证据与操作事实**：2026-10-30官方提交表单直接可读；含Typography、Price Free、邮件审核说明；[原仓库官方来源](https://designtools.fyi/submit/)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
+**具体怎样填（按官网最新公开表单）**：
 
+1. 打开官方表单
+2. Tool Name=Generador de Lettering
+3. Tool URL=/editor
+4. Description写真实英文设计用途
+5. Type选Typography
+6. Source of Truth按真实类型选Other/Production Code等当日选项，不得虚填Figma
+7. Price选Free
+8. Size按真实产品规模选
+9. 可选上传≥250×250方Logo
+10. 真实Your Name和Email
+11. 只有确实为公司成员/代表时勾I work for or represent this company
+12. Submit Tool
+13. 等编辑邮件。
+
+**Lettering填写资料**：名称`Generador de Lettering`；可使用`https://generadordelettering.org/editor`（只收首页的平台则用`https://generadordelettering.org/`）；介绍、价格、登录账户和真实创建者信息必须与本网站一致，不能凭空编造。
+
+**重点限制**：需工具真实可用；人工审核、免费与Follow不保证；不可把Unicode文字转换当作真实字体文件下载器；官方未明确允许广告站与纯西语站。
+
+**2026-10-31官方证据**：2026-10-31 V31官网实时表单核实Type/Typography、Source of Truth、Size、真实姓名Email及公司代表勾选；不保证免费Follow或纯西语通过。。查看[官方来源](https://designtools.fyi/submit/)。
+
+**实际状态**：这只是再次核验公开表单；没有替网站提交或获取公开反向链接。真实外链的href、rel/Follow、DR/AS和Google收录均未独立证明。
 
 <a id="link-152"></a>
 ### 152. DesignTrash (designtrash.com) — 有条件（历史级别：条件）
@@ -3766,27 +3807,32 @@
 
 
 <a id="link-169"></a>
-### 169. FreeDesignerTools (freedesignertools.com) — 候选可申请（历史级别：P2）
+### 169. FreeDesignerTools (freedesignertools.com) — 候选可申请（主库更新：V31，2026-10-31）
 
-**提交入口/官网**：[https://www.freedesignertools.com/suggest/](https://www.freedesignertools.com/suggest/)  
-**适合什么网站**：真正免费的文字图像编辑器、字体排版及设计工具；适合/editor；**西语资格**：英文投稿，未公布西语工具禁令；语言审核未知。  
-**费用和审核**：官网公开Suggest a Design Tool表单无收费项/回链徽章；目前馆藏仅12条，真实引荐价值很难判断。  
+**官方提交入口**：[https://www.freedesignertools.com/suggest/](https://www.freedesignertools.com/suggest/)。
 
-**具体怎样填/操作（原始官网研究记录）**：
+**语言与资格**：英文投稿，未公布西语工具禁令；语言审核未知；真正免费的文字图像编辑器、字体排版及设计工具；适合/editor。
 
-1. Tool Name用真实品牌名
-2. Website URL填/editor
-3. Description写真实功能
-4. Tags填Typography、lettering、text design（实际如何添加按页面）
-5. Submit Tool for Review
+**费用/审核**：官网公开Suggest a Design Tool表单无收费项/回链徽章；目前馆藏仅12条，真实引荐价值很难判断。
 
-**Lettering参考填写**：名称 `Generador de Lettering`；若入口允许对应页面，则网址 `https://generadordelettering.org/editor`；描述栏存在时，西语站用 `Crea diseños de lettering gratis en español: personaliza estilos, colores y sombras y exporta imágenes en PNG, JPG o WebP.`，英文站用 `Free Spanish lettering editor for creating customizable text images.`，长说明取前面的资料包。图片、联系邮箱、价格、分类、真实所在地均按该平台实际字段与事实补全，不要臆造不存在的字段。
+**修正**：本轮官网只确认4项提交字段，不虚构Logo/邮箱必填。
 
-**不符合/易被拒的情况**：官网首页声称50M+ users但缺少独立可信佐证；当前仅12条示例，不能把首页宣传当真实访问量；不保证永久免费及Follow。  
-**历史核对**：V25主库根域未重复；不等于此前无人工操作。  
-**已有公开样例（不是本站获链）**：https://www.freedesignertools.com/。  
-**证据与操作事实**：2026-10-31官网表单字段及12条产品示例已直接核对；[原仓库官方来源](https://www.freedesignertools.com/suggest/)。**本轮没有新提交；本站在该平台的获批、真实href、rel/Follow、DR/AS、Google实际索引均未由本手册验收。**
+**具体怎样填（按官网最新公开表单）**：
 
+1. 打开https://www.freedesignertools.com/suggest/
+2. Tool Name填真实品牌
+3. Website URL填/editor真实工具地址
+4. Description写明确真实字体编辑功能
+5. Tags添加Typography、Lettering等匹配标签
+6. Submit Tool for Review。当前官网只有这4项主要填写字段，未要求邮箱或Logo，不要虚构额外字段。
+
+**Lettering填写资料**：名称`Generador de Lettering`；可使用`https://generadordelettering.org/editor`（只收首页的平台则用`https://generadordelettering.org/`）；介绍、价格、登录账户和真实创建者信息必须与本网站一致，不能凭空编造。
+
+**重点限制**：官网首页声称50M+ users但缺少独立可信佐证；当前仅12条示例，不能把首页宣传当真实访问量；不保证永久免费及Follow。
+
+**2026-10-31官方证据**：2026-10-31 V31官网带www的实际投稿页成功打开；只看见Tool Name、Website URL、Description、Tags与Submit按钮；此轮未见收费或Badge字段，真实Follow/流量未知。。查看[官方来源](https://www.freedesignertools.com/suggest/)。
+
+**实际状态**：这只是再次核验公开表单；没有替网站提交或获取公开反向链接。真实外链的href、rel/Follow、DR/AS和Google收录均未独立证明。
 
 <a id="link-170"></a>
 ### 170. Ghostbyte Library (library.ghostbyte.dev) — 有条件（历史级别：条件）
