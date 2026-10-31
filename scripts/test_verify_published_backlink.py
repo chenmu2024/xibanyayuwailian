@@ -52,6 +52,15 @@ class BacklinkVerifierTests(unittest.TestCase):
         self.assertEqual(len(result["links"]), 1)
         self.assertEqual(result["links"][0]["href"], TARGET)
 
+    def test_inert_html_template_does_not_count_as_a_live_backlink(self):
+        html = ('<template><a href="https://generadordelettering.org/">not active</a></template>'
+                '<a href="https://generadordelettering.org/editor">live</a>')
+        result = inspect_html(html, SOURCE, TARGET)
+        self.assertEqual(len(result["links"]), 1)
+        self.assertEqual(result["links"][0]["href"], "https://generadordelettering.org/editor")
+        only_inert = inspect_html('<template><a href="https://generadordelettering.org/">not active</a></template>', SOURCE, TARGET)
+        self.assertEqual(only_inert["status"], "not_found_in_fetched_html")
+
     def test_valueless_rel_does_not_crash(self):
         result = inspect_html('<a href="https://generadordelettering.org/" rel>valid</a>', SOURCE, TARGET)
         self.assertEqual(result["status"], "found")
