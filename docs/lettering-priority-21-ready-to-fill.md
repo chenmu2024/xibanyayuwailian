@@ -114,9 +114,11 @@
 **提交前/后核查**：V31已证实所有权验证是上线前硬条件。免付费、Badge可选与Dofollow为官方说明，不等于本网站已获链。 **目前仅是未提交的准备材料**。
 [返回完整176条手册对应平台](all-176-backlink-submission-methods.md#link-128)。
 
-### 5. PeplioHUB｜主库 #149
+### 5. PeplioHUB｜主库 #149（V53降条件，仅为引荐曝光备选）
 
 **V34 PeplioHUB此次可读取的HTML锚点未能辨认明确指向产品官网的外链，不能据此断言没有外链或拥有Follow。原来的截图和审核要求仍保留。[页面](https://peplio.com/pepliohub/)。**
+
+**V53更新：**[AnyFyle第三方正式详情](https://peplio.com/anyfyle/)的真实外站DOM`rel="noopener ugc nofollow"`已经核验。优先追求普通Follow外链时暂不建议为此准备大尺寸截图；如果希望引荐访问，可以自行考虑。**这不是本站已获链**。
 
 **入口**：[https://peplio.com/pepliohub/#submit-tool](https://peplio.com/pepliohub/#submit-tool)  
 **为什么选它**：免费免登录，Design and images分类相关，但可被改nofollow/ugc。  
