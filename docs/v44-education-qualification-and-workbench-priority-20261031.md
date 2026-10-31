@@ -25,3 +25,7 @@
 ## 三、证据边界
 
 历史176来源不增加；现行**P1 16，P2 25，条件84，待核验16，排除34，非外链1**。历史目录样本不代表目标站获链；本轮没有自动发邮件、注册、提交、付款或新增确认外链。JS脚本语法及CSV和JSON镜像可在提交前检查，GitHub Actions此前启动前失败仍需单独检查是否真实恢复。
+
+## V50重要纠错：待提交目标≠已经刊登的第三方案例
+
+原V44操作台把用户自己的[SVG练字实践页](https://generadordelettering.org/herramientas/plantillas-practica)错误放入`example`，UI显示“历史公开案例”，易误导为Educaguía已有用户外链。V50现将例子更正为[Educaguía真实公开教育网站列表](https://www.educaguia.com/listadoEDU.asp)，其中能看到“Actividades educativas - Educaplay”等真实第三方外站href。**这张目录不是用户网站已获批的证据**，其raw rel、索引及SEO收益没有独立实测；本站练字页仍只在`edu`/投稿目标里使用。静态校验防止再出现用户自有网站被当作平台刊登样本。

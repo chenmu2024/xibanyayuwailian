@@ -75,3 +75,7 @@
 ## V48｜前五家真实表单和38组具体填写字段
 
 [查看可复制提交包](v48-top5-forms-ready-to-fill-20261031.md)及[CSV](../data/v48-top5-submission-fields-20261031.csv)。LaunchFree四步需真实开发起因、创建者资料；Design Resources Archive现场题目不能复用旧答案；Unikist英文≤280字符；DesignTools.fyi Logo≥250像素方形且公司身份据实；NoSignupTools PNG/JPG/SVG/WebP图标≤1MB、截图最多6张各≤2MB，本站有广告绝对不要选No Ads。此处仍无任何真实提交。
+
+## V50｜EducaGuía发布样本与待提交资源不再混淆
+
+操作台#58旧“历史公开案例”曾指向用户自有练字SVG页，现更正为真实[Educaguía教育网站公开列表](https://www.educaguia.com/listadoEDU.asp)。列表可见Educaplay等外站链接，但并未证明Generador已在列表。用户拟提交的练字页仍仅为`edu`教育材料目标，免费、人工审核与自动订阅规则照旧。[V50错误纠正明细](v50-educaguia-real-external-example-20261031.md)。

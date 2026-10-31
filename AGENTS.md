@@ -158,3 +158,6 @@
 123. V49修复原验链器classify_rel必须按空白或逗号拆分rel值；Google官方允许`nofollow,ugc`，不能误判为无限制。新离线测试需要覆盖空格、逗号、大小写混排、真实HTML anchor。
 124. P1批量真实HTML验证只对V47中已记录的11个公开第三方案例各读取一次，13行矩阵里另外2行明确no_verifiable_public_sample，未经网络访问或JS失败保留未判定。该结果仍是**其他站点的外链**，不可当成本用户已获链。历史V33/V34 raw rel和新live rel必须分字段保留。
 125. 不在网络受限的执行环境宣称成功抓到了本轮新raw rel；运行脚本离线模拟测试不等于已实际联网。CSV对外部数据防公式注入，保留url追踪参数和精确匹配，不用robots index,follow推断锚点rel或排名权重。日志错误不等于链接不存在。
+
+126. V50发现#58 Educaguía操作台`items.example`曾误填用户自己的generadordelettering.org SVG练字模板页，UI统一显示“历史公开案例”将其误包装为已刊登证明。现实际示例改为https://www.educaguia.com/listadoEDU.asp历史教育网站目录，其中有Educaplay真正外站href，仍非用户获链、非原始rel证据。
+127. `example`只能是目录实际已刊登他站的公开页，`edu`/target才是用户自己拟投稿的教学资源。JS校验必须自动拒绝`items.example`指向generadordelettering.org，旧例子不应恢复。目录名单巨大含旧站，不保证精选质量。

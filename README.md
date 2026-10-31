@@ -330,3 +330,7 @@
 ## V49｜一条免费命令复核13家P1原始HTML的rel（2026-10-31）
 
 [Windows PowerShell教程](docs/v49-p1-raw-rel-batch-audit-and-comma-fix-20261031.md)：`py .\scripts\audit_p1_published_links.py`。读取现有13家P1证据CSV、只抓其中11个真实公开详情页的原始HTML，一次一页、无付费API，单独记录实际完整href、本次raw rel和历史rel。另修复`nofollow,ugc`逗号写法被旧脚本误报无限制的错误，增加离线单元测试。**没有在本仓库声称本轮已实际运行在线批量抓取，其他网站的原始rel不等于Generador已获得外链**。
+
+## V50｜Educaguía公开案例误标自家网址修正
+
+#58在旧操作台“历史公开案例”误放用户自有练字教学页，现在改为[Educaguía公开教育网站目录](https://www.educaguia.com/listadoEDU.asp)；名录的确有[Educaplay](https://www.educaplay.com/)等外站href，但不证明用户站已获批。拟提交目标仍是实际练字资料，不能把自己的网址视为反向链接。静态和模拟测试新增防误标断言。[详细V50修正](docs/v50-educaguia-real-external-example-20261031.md)。
