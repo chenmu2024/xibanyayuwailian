@@ -13,6 +13,9 @@ const detailed=JSON.parse(html.match(/<script type="application\/json" id="detai
 const recent=JSON.parse(html.match(/<script type="application\/json" id="auditV31">([\s\S]*?)<\/script>/)?.[1]||"null");
 const v32=JSON.parse(html.match(/<script type="application\/json" id="auditV32">([\s\S]*?)<\/script>/)?.[1]||"null");
 const v33=JSON.parse(html.match(/<script type="application\/json" id="auditV33">([\s\S]*?)<\/script>/)?.[1]||"null");
+const v34=JSON.parse(html.match(/<script type="application\/json" id="auditV34">([\s\S]*?)<\/script>/)?.[1]||"null");
+assert.equal(v34.length,11);
+assert.ok(v34.some(x=>x.id===162&&x.rel.includes("sponsored")));
 assert.equal(v33.length,6);
 assert.ok(v33.find(x=>x.id===74).rel.includes("nofollow"));
 assert.equal(v32.length,14);
@@ -44,6 +47,7 @@ document.getElementById("detailedCards").textContent=JSON.stringify(detailed);
 document.getElementById("auditV31").textContent=JSON.stringify(recent);
 document.getElementById("auditV32").textContent=JSON.stringify(v32);
 document.getElementById("auditV33").textContent=JSON.stringify(v33);
+document.getElementById("auditV34").textContent=JSON.stringify(v34);
 const localStorage={getItem:key=>storage.get(key)||null,setItem:(key,val)=>storage.set(key,String(val))};
 class MockURL{
   constructor(s){const m=String(s).match(/^https?:\/\/([^/]+)/);if(!m)throw new Error("Invalid URL");this.hostname=m[1];}
@@ -63,6 +67,9 @@ assert.match($("count").textContent,/176 \/ 176/);
 $("sort").value="follow";$("sort").events.change();
 const topFive=$("cards").children.slice(0,5).map(node=>node.children[0].children[0].children[0].textContent);
 assert.equal(topFive.join(","),"#075,#168,#148,#151,#128","V33 observed non-nofollow sample priorities must appear first");
+$("sort").value="design";$("sort").events.change();
+const designTop=$("cards").children.slice(0,5).map(node=>node.children[0].children[0].children[0].textContent);
+assert.equal(designTop.join(","),"#159,#163,#164,#172,#165","V34 typography/design published-source sample ordering regression");
 $("sort").value="id";$("sort").events.change();
 $("search").value="EpicTools";$("search").events.input();
 assert.equal($("cards").children.length,1,"EpicTools search should produce exactly one card");
@@ -96,4 +103,4 @@ assert.ok(exported.includes("审核中"));
 assert.ok(exported.includes("'=HYPERLINK"),"CSV export must escape spreadsheet formulas");
 assert.ok(!exported.includes('"\'"'),"Empty CSV cells must remain empty, not apostrophes");
 
-console.log("PASS: 176 cards, 21 detailed tables, search, per-domain progress, URL reset, JSON backup/restore, CSV formula safety (12 checks including new V33 Follow-priority ordering).");
+console.log("PASS: 176 cards, 21 detailed tables, search, per-domain progress, URL reset, JSON backup/restore, CSV formula safety (13 checks including V33 Follow-priority and V34 typography ordering).");
