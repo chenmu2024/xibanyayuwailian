@@ -12,6 +12,7 @@
 | [docs/workbench-quickstart-v28.md](docs/workbench-quickstart-v28.md) | 操作台的Windows/Chrome打开方法、进度备份、隐私、条件及避免虚报已获链的规则 |
 | **[docs/all-176-backlink-submission-methods.md](docs/all-176-backlink-submission-methods.md)** | **先看这里：176个平台一个接一个，分别列实际入口、具体操作字段、真实填表示例、费用、语言、风险和排除理由；另附7家媒体编辑线索** |
 | **[docs/lettering-priority-21-ready-to-fill.md](docs/lettering-priority-21-ready-to-fill.md)** | **最方便直接填写：围绕generadordelettering.org，21家优先研究平台分别给出完整复制用的字段/值/图片要求，需先看各站条件** |
+| **[docs/v37-python-backlink-verifier-tested-and-ci-diagnosis.md](docs/v37-python-backlink-verifier-tested-and-ci-diagnosis.md)** | **V37：Python 3.13真实单测11/11通过，修复坏href/空rel/惰性template链接误计，附Git blob哈希及CI独立故障说明** |
 | **[docs/v36-domain-isolated-profiles-and-v2-backups.md](docs/v36-domain-isolated-profiles-and-v2-backups.md)** | **V36：多西语网站的名称、简介、邮箱及编辑器URL完全按域名隔离，V2 JSON完整备份与V1兼容恢复** |
 | **[docs/v35-evidence-based-backlink-verification.md](docs/v35-evidence-based-backlink-verification.md)** | **V35操作指南：离线记录公开页面href/rel、自查确认，以及Windows免费核验命令** |
 | [scripts/verify_published_backlink.py](scripts/verify_published_backlink.py) | **新增：单页公开HTTPS外链检查，无付费API，真正解析a[href]和原始rel，生成可留存JSON** |
@@ -250,3 +251,10 @@
 - V2恢复加入跨域资料真实性校验：`profiles[域名].home`须与域名匹配、`tool`不得是另一个域名链接、资料和域名数量均有限制；无效文件不得覆盖本机数据。**所有资料仍存本地，不会自动发布外链或发送至GitHub。**
 - 已通过独立V8运行的176主表、21家161项字段、V33/V34公开链接证据、HTML语法与**23项模拟交互检查**，包括跨域切换、返回旧站、V2多站备份、V1兼容迁移及非法跨域导入拒绝。不是实际Chrome端到端或GitHub Actions成功运行。
 - **[查看V36完整Windows操作说明](docs/v36-domain-isolated-profiles-and-v2-backups.md)**。仓库仍176条历史候选，本轮第三方实际提交0、确认新增获链0。GitHub Actions继续失败，其job步骤/日志仍不可用，根因未证实。
+
+## V37｜实际运行Python验证与外链误判修复（2026-10-31）
+
+- 此轮**真实Python 3.13.5执行**`python -m unittest discover -s . -p 'test_verify_published_backlink.py' -v`，结果**11 tests OK**，语法编译也通过；两份测试文件与GitHub提交后的Git blob SHA**逐字节一致**：`verify_published_backlink.py`=`8a085d84057e17557a7ffff2f5c937ea68caa20c`，`test_verify_published_backlink.py`=`e86742cee41db53c85e774a790aeb850c4c9a2f8`。
+- 修复三种误判：损坏的`<a href>`不再中断整页检查；空值`rel`不会导致崩溃；HTML`<template>`内惰性链接不再被算成真实公开锚点。新增3个回归测试、原8项仍通过。**不代表已经联网确认目标网站获链。**
+- **[完整V37测试证据与GitHub Actions故障说明](docs/v37-python-backlink-verifier-tested-and-ci-diagnosis.md)**：最新Actions仍失败，validate任务缺少已执行步骤记录，因此不能声称CI通过，也不能擅自归因为Python测试失败或Runner限制。
+- 主库、目录、实际提交记录没有增删；**176条来源/21家161项字段，新确认反向链接0、申请0**。V36每域名资料隔离和V2备份保持有效。
