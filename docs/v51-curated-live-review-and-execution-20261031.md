@@ -35,3 +35,9 @@
 **抽样搜索边界：** 本轮检索了6个平台域名与 `generadordelettering.org` 的组合，未返回可用结果。搜索无结果不代表全站不存在链接；因此仓库**已确认真实获链数仍为0**，不是判定所有平台已拒绝申请。
 
 **本轮数据处理规则：** 历史176条总库、现有13家P1标签、外链审批台账均不更改；新增的只是**近期现场证据与建议操作顺序**。对V33/V34历史raw rel的记录保留历史性质，不覆写为本轮实时结果。
+
+## D. GitHub落库与验证状态（不可假报CI通过）
+
+- 本次落库：新增本报告及 `data/v51-live-curated-submission-audit-20261031.csv`（11个独立平台编号，不含新增渠道），并在 `README.md` 和 `docs/current-priority-execution.md` 链接。
+- 只读一致性自检：V51 CSV有11行且11个ID不重复，文档导航可访问，`data/submission-ledger.csv` 原始Git blob SHA保持 `4060ec21037bd3a2d9167c21a5928b7c217502a4`，没有擅自填报用户已提交。
+- **GitHub Actions仍是失败**：[run 41173607836](https://github.com/chenmu2024/xibanyayuwailian/actions/runs/41173607836)（2026-10-31）。其validate job返回`conclusion=failure`，可取到的步骤为0条；请求job日志返回BlobNotFound (404)。这**不足以判断数据校验代码有错或Runner因何失败**。本次未在完整仓库checkout环境成功执行`python scripts/validate_csv.py`，因此不声称CI或完整校验通过。后续取得真实日志再排错。
