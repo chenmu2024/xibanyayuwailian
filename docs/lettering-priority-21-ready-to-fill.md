@@ -477,3 +477,7 @@
 每个站点完成真实表单后，填写`data/submission-ledger.csv`，记录目标域名、平台根域名、实际提交日期、确认邮件与审核状态。**只有编辑发布了公开详情页且存在指向目标网站的实际HTML链接，才算真实获链**；是否Follow及Google索引再分开检验。不要为了链接向原网站安装强制Badge、买付费升级或伪造站主所在国家。
 
 **需要暂时跳过的旧渠道**：#026 TopTool官网暂停新投稿；#003 Enlineados存在免费托管资格争议；#109 AI Webcatalog与#167 Software Como Servicio以及#175 Discoverly强制badge；#176 YAJU必须有真实墨西哥关联；#130 LeanVibe排除AdSense；#152 DesignTrash拒简单关键词型字体站。
+
+## V48实时表单提醒
+
+以前字段中NoSignupTools只写“截图”，现已查证0–6张真实截图且每张≤2MB，图标≤1MB，标签No Ads不适用于有广告的本站。LaunchFree个人简介及开发原因必须真实。详细见[V48实际填写卡](v48-top5-forms-ready-to-fill-20261031.md)。

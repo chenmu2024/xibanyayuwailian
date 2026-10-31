@@ -151,3 +151,6 @@
 115. 现实href可能带查询参数：PeplioHUB普通AnyFyle出站URL为https://anyfyle.com/?ref=pepliohub，Design Resources Archive Mixweight为带utm_source/medium/content的页面；两者仍是实际站外href，但不能随意改写为没有参数的href宣称实测。
 116. V47证据不能挪作本站已获链；#148 NoSignupTools本次观察FontsWiki详情，旧rel来自Design分类；#128 Toolfound当前FileOnTap，旧rel来自StencilMaker，两者不可写成同一张页面的实时raw rel。
 117. 当前工作单#58 Educaguía已从历史条件更新为真实现行P2，V42降级仅历史状态；独立HTML 13个P1证据卡必须与CSV样本逐一对应，非P1不显示这块独立证明。
+
+121. V48前五家官方现场表单已再查，字段表真实为38组而非错误预估39组，统计须与实际CSV行数一致。LaunchFree必须真人填写Why built/姓名/Email/Bio；Unikist≤280字符，DesignTools.fyi Logo可选≥250×250，Design Resources Archive实时动态人机问题。
+122. NoSignupTools真实图标格式PNG/JPG/SVG/WebP≤1MB，截图0–6张各≤2MB，用户姓名及Email为optional；广告网站不得选择No Ads，其他标签Open Source/Offline Access/Multi Language等须真实具备。历史手册抬头不得再显示P1 19旧状态。

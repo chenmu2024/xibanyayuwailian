@@ -71,3 +71,7 @@
 ## V47｜现行13家P1真实外站href/rel证据矩阵
 
 [13家逐站公开页面、真实href、历史raw rel与提交建议](v47-thirteen-p1-outbound-link-audit-20261031.md)｜[逐行CSV](../data/v47-current-p1-outbound-proof-matrix-20261031.csv)。其中**11家**找到可访问的已发布第三方外站直链页面，**6家**保留此前V33/V34针对相应样本页的原始`a rel`（不是新抓HTML）；另外**2家**产品Launch平台目前未能确认独立产品外站href。所有资料均非本站已申请/获链，且不把robots或官方Dofollow声明冒充原始rel。
+
+## V48｜前五家真实表单和38组具体填写字段
+
+[查看可复制提交包](v48-top5-forms-ready-to-fill-20261031.md)及[CSV](../data/v48-top5-submission-fields-20261031.csv)。LaunchFree四步需真实开发起因、创建者资料；Design Resources Archive现场题目不能复用旧答案；Unikist英文≤280字符；DesignTools.fyi Logo≥250像素方形且公司身份据实；NoSignupTools PNG/JPG/SVG/WebP图标≤1MB、截图最多6张各≤2MB，本站有广告绝对不要选No Ads。此处仍无任何真实提交。

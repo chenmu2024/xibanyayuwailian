@@ -322,3 +322,7 @@
 - [13家实际发布链接与验收边界](docs/v47-thirteen-p1-outbound-link-audit-20261031.md) + [13行可审计矩阵CSV](data/v47-current-p1-outbound-proof-matrix-20261031.csv)；现行13家P1都有HTML操作台证据段。11家读到已刊登的**其他网站**的直接站外href，6家有旧V33/V34针对来源页的原始`rel`历史样本；其余2家产品Launch暂没有可核验具体独立第三方站外href。多数本轮网页只能抽取清理后的HTML，不能从其推断原始rel。
 - **纠正旧版填写工作单**：Educaguía已因网站真实Lettering练习纸和七天计划恢复P2，不再在现行申请表中显示V42过期条件。PeplioHUB详情出站href含`?ref=pepliohub`，Mixweight详情出站含UTM，必须与无跟踪的直接URL、raw rel分开理解；Unikist旧`noreferrer`会影响referrer统计，不等于nofollow。
 - 主库176与P1 13/P2 27/条件85等分类不变；这只是证据深化，用户实际申请0，本站新增确认获链0。
+
+## V48｜前五家直接填写材料（2026-10-31）
+
+[当前5家逐字段申请包](docs/v48-top5-forms-ready-to-fill-20261031.md)与[38组字段CSV](data/v48-top5-submission-fields-20261031.csv)已按当日官方表单刷新。NoSignupTools真实图标≤1MB、可选截图最多6张各≤2MB，本站有广告不可勾No Ads；LaunchFree个人真实资料/为什么开发不可编造；DesignTools.fyi不可伪称公司代表。早期176家手册首页过期统计更新到P1 13、P2 27、条件85。**仍未代提交，新增确认外链0。**
