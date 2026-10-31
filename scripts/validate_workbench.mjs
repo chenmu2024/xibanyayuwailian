@@ -61,6 +61,8 @@ if(p1Actual.length!==12||p1Actual.some(x=>!x.p1Proof||x.p1Proof.date!=="2026-10-
 if(p1Actual.filter(x=>Boolean(x.p1Proof.href)).length!==10||p1Actual.filter(x=>Boolean(x.p1Proof.rawRel)).length!==6)throw new Error("V47 href/raw-rel evidence counts not synchronized");
 if(!html.includes("V47｜本平台已发布网站的外链证据"))throw new Error("V47 P1 evidence cards missing");
 const peplio=all.find(x=>x.id===149);
+if(all.find(r=>r.id===2)?.evidence.includes("AnyFyle"))
+  throw new Error("Third-party AnyFyle/Peplio evidence must never leak into Product Hunt");
 if(peplio?.level!=="条件"||peplio.status!=="条件"||!peplio.evidence.includes("ugc nofollow"))
   throw new Error("V53 Peplio must be conditional with documented published ugc nofollow example");
 if(v53.length!==14||new Set(v53.map(r=>r.source_id)).size!==14)
