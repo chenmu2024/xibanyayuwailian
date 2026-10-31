@@ -29,7 +29,21 @@
 
 这次已能读取正式[Suggest a resource](https://library.legitdesign.studio/submit)和[Fonts目录](https://library.legitdesign.studio/design-resources/fonts)。旧版`https://lds-library.vercel.app/submit`与Fonts分类也可读取，但两页canonical都指向`library.legitdesign.studio`的对应路径。因此**不可以分别算两个来源、更不可两站重复投稿**。
 
-最新公开抓取可见“Suggest a resource”、团队审核及周二资源周报说明；因为动态表单的所有实际字段未在此次网页文本中全部取得，**仍应按打开时的表单核对真实类别、作者和联系人字段**，不能声称已完成投递。
+**V52现场已提取官方真实表单HTML字段**（正式域`/submit`，只读获取`form`，未提交）：
+
+| 官方字段 | 给 Generador de Lettering 的正确填法 |
+| --- | --- |
+| Resource name（必填，最多120字符） | `Generador de Lettering` |
+| Link（必填，URL最多500字符） | `https://generadordelettering.org/editor` |
+| Category（可选下拉） | **`Design Resources`**。当前真实选项另有 Inspiration、Learning Resources、AI Tools、AI Skills、Courses、Design News、Not sure，**不存在单独的Fonts分类** |
+| Pricing（可选下拉） | 核实编辑器免费后选 `Free`；另有Freemium、Paid、Not sure |
+| What is it?（最多600字符） | `Free Spanish-language browser lettering editor for creating decorative text images.` |
+| Why is it useful?（最多1500字符） | `Create custom lettering images without an account. Adjust typography, colors, outlines, shadows, spacing and backgrounds, then export PNG, JPG or WebP. Useful for social graphics, cards and typography experiments. It does not generate installable TTF or OTF fonts.` |
+| Your email（可选） | 仅填自己真实可接收通知的邮箱，不用提供虚构身份 |
+| 隐藏字段 `website` | 防垃圾提交字段，**必须留空，不填写自有域名** |
+| Send suggestion | 本人确认内容与条款后手动发送；团队每周审核、可能入选周二通讯，不保证获链 |
+
+填写界面来源：<https://library.legitdesign.studio/submit>。表单实际方法为`POST /api/suggest`，**本轮没有调用该接口**。基础表单未显示付款、必备Badge或强制提交邮箱步骤，不等于保证免费永久发布或Follow。
 
 ## 原始HTML rel的9页只读核验工具
 
@@ -59,4 +73,4 @@ py -m unittest discover -s scripts -p "test_audit_curated_v52.py" -v
 - #58 Educaguía、#171 FounderOmni没有在本轮取得适合该脚本的完整HTTPS第三方样本目标；不借无关或HTTP页面编造标准HTTPS实例，也不使用用户自己的SVG页冒充已发布案例。
 - 本次远程读取无法保留真实raw a[rel]，因此只提供**可以由站长电脑实际运行**的零付费核验脚本；未在当前执行环境联网运行该脚本，不能声称已有9条raw rel实时值。
 - 2026-10-31历史GitHub Actions依然失败；已观察到最近一次验证从创建到失败仅约3秒、账单报告Linux runner运行0ms，且其job步骤清单为空、日志404。**可判断没有拿到有效的实际执行步骤记录，但不能唯一定位是账户、Runner调度、权限或YAML问题，也不能声称CI通过。**
-- 后续优先顺序：#159 → #151/#164 → #163（本人实际核对表单后）→ #123 → #75/#148；#165、#172后置。任何用户真正提交后须留下时间、邮件回执，获批后验本域href/rel。
+- 后续优先顺序：#159 → #151/#164 → #163（已确认字段，仅用户本人确认内容后提交）→ #123 → #75/#148；#165、#172后置。任何用户真正提交后须留下时间、邮件回执，获批后验本域href/rel。
