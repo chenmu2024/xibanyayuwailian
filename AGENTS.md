@@ -76,3 +76,8 @@
 57. #014 Lugar Latino官方提交页2026-10-31直访404、搜索索引仍保留历史表单，因此主库改为待核验；必须真人浏览器或后续官方恢复验证再投，不得因平台P1历史标签继续推荐立即填写。
 58. #147 Good Design Tools已通过官方Tally表单核验**没有Category/Tags字段**，而有定价/优惠/联盟/2MB指定图标/Email；#123 LaunchFree有真实创办人和4阶段身份/验证要求；#128 Toolfound要求域名验证；#151 DesignTools.fyi有Source of Truth和公司代表复选框。
 59. V31填写手册/离线HTML的21家优先平台字段合计已从133变为149，任何修改须同步其操作台JSON和Node测试；所有申请、获批、href、Follow、索引均要独立留证。
+
+60. V32已对历史总库14家再次做官网可读表单复核：`data/v32-official-source-audit-20261031.csv`和`docs/v32-14-official-source-audit-20261031.md`为本轮证据基线，不应视为14家新平台或14条已获反向链接。
+61. V32官网硬限制：#003 Enlineados禁止免费托管（自定义域名不等于不属于免费主机）；#026 TopTool目前暂停；#057 ToolGuide以工作效率为编辑门槛且短描述≤120字符；#076 NoUploadTools禁止session replay且隐私特征勾选必须真实、有广告不得声称No ads；#152 DesignTrash拒绝关键词型一招式工具；#170 Ghostbyte的Issue不是已公开上榜链接。
+62. V32新增可操作证据：#074 public.tools官方Tally为4字段、#075 Htrd页尾5字段、#171 FounderOmni西语弹层有公开字段，发布和Follow仍属待验；#141 GainWeb免费档不保证审核；#161 Fountn最终表单不可读。不能把“免费可填”夸大为保证Follow或已获链。
+63. V32更新`docs/backlink-submission-workbench.html`的176主库镜像、21家共161项字段和14条当日核验提示；任何改动需同步`scripts/validate_workbench.mjs`、`scripts/smoke_workbench.mjs`及176站长文。GitHub Actions红灯必须明确披露，不得假报绿色。
