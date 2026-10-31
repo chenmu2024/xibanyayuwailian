@@ -51,9 +51,9 @@ if(v34.length!==11||!v34.some(x=>x.id===5&&x.rel.includes("nofollow"))||!v34.som
 if(v34Samples.length!==21)throw new Error("V34 must retain 21 published href/rel audit samples");
 const source005=v34Samples.filter(x=>x["主库编号"]==="5");
 const source162=v34Samples.filter(x=>x["主库编号"]==="162");
-if(source005.length!==1||!source005[0]["实际rel原文"].split(/\\s+/).includes("nofollow"))
+if(source005.length!==1||!source005[0]["实际rel原文"].split(/\s+/).includes("nofollow"))
   throw new Error("Free Tools Directory nofollow example was lost");
-if(source162.length!==4||source162.some(x=>!x["实际rel原文"].split(/\\s+/).includes("sponsored")))
+if(source162.length!==4||source162.some(x=>!x["实际rel原文"].split(/\s+/).includes("sponsored")))
   throw new Error("UX Resources sponsored samples must remain 4 of 4");
 
 if(v33.length !== 6 || !v33.some(x => x.id === 74 && x.rel.includes("nofollow")))
