@@ -51,6 +51,10 @@ if(!html.includes("checked:false")||!html.includes("source:sourceInput.value.tri
   throw new Error("V35 proof attestation must be revocable and site-domain scoped");
 const all = readJson("items");
 const detailed = readJson("detailedCards");
+const p1Actual = all.filter(x=>x.level==="P1");
+if(p1Actual.length!==13||p1Actual.some(x=>!x.p1Proof||x.p1Proof.date!=="2026-10-31")) throw new Error("V47 all 13 current P1 sources require explicitly dated outbound evidence");
+if(p1Actual.filter(x=>Boolean(x.p1Proof.href)).length!==11||p1Actual.filter(x=>Boolean(x.p1Proof.rawRel)).length!==6)throw new Error("V47 href/raw-rel evidence counts not synchronized");
+if(!html.includes("V47｜本平台已发布网站的外链证据"))throw new Error("V47 P1 evidence cards missing");
 const v33 = readJson("auditV33");
 const v34 = readJson("auditV34");
 if(v34.length!==11||!v34.some(x=>x.id===5&&x.rel.includes("nofollow"))||!v34.some(x=>x.id===162&&x.rel.includes("sponsored")))throw new Error("V34 rel audit JSON is incomplete");

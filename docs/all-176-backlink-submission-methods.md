@@ -28,6 +28,8 @@
 
 **V46更新（2026-10-31）**：核对现有16家原P1，#6 kis.tools降条件，#88 Resource.fyi/#147 Good Design Tools降P2；现P1=13，P2=27，条件85。见[高优先16家核验报告](v46-p1-official-eligibility-and-link-evidence-20261031.md)与[逐页证据CSV](../data/v46-p1-official-evidence-20261031.csv)。
 
+**V47 13家P1重新取回已刊登外站href**：新增[13家当前样本与原始rel分层](v47-thirteen-p1-outbound-link-audit-20261031.md)与[CSV](../data/v47-current-p1-outbound-proof-matrix-20261031.csv)，11家有直接站外href，6家有V33/V34历史原始rel，2家未取得可核实项目直链。仅Link存在不等于用户已获SEO外链。**#58 Educaguía目前实际等级P2**（站内已有真练字课程），V42“条件”仅为当时历史意见，不可误用。
+
 ## 1. 实际使用方法
 
 1. 新建一个西语网站后，先准备真实的名称、规范首页URL、具体工具页面URL、免费/付费状态、目标用户、功能说明、真实Logo与截图以及能收邮件的邮箱。下方Lettering只是示例，换站必须重新写。

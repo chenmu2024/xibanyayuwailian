@@ -52,7 +52,7 @@
 | --- | --- | --- |
 | **#59 Navegax，P1** | [首页加入](https://navegax.com/)→需要先登录或注册→选择`Informática, Tecnología, e Internet`或真实符合的艺术类别→提交URL/站名/准确西语说明 | 存在[IAdicto Digital真实普通详情](https://navegax.com/detalle/iadictodigital)及指向外站href；raw rel未知，不是免账号渠道 |
 | **#4 DrSEO，P2** | [西语提交](https://drseo.eu/es/submit/)（本轮抓取403；[英文版表单](https://drseo.eu/submit/)可读） | €0永久基础档，可选€19/€9付费升级；抽检外链来自[Premium/Patrocinado](https://drseo.eu/es/listing/acc64/)而非Free，暂不据此高估免费质量 |
-| **#58 Educaguía，条件** | [教育网站加入](https://educaguia.com/inserta-tu-web.asp) | 必须已有真实教育内容，且会自动订阅教育通讯；普通图片文字编辑器不具备明确教育定位则不投 |
+| **#58 Educaguía，P2（有真实学习材料）** | [教育网站加入](https://educaguia.com/inserta-tu-web.asp) | 已证站内有A4 SVG练字实践页及7天训练计划，可申请Recursos Educativos；人工审核且自动订阅教育简报，未实际获批 |
 
 详细核验、风险与可复制西语简介：[西语专项报告](spanish-native-directory-audit.md)。
 
@@ -67,3 +67,7 @@
 ## V46：不要因历史P1标签无条件提交
 
 #6 kis.tools虽无需账号，仅URL/Email，却有广告干扰及输出商业许可严格条件：本站隐私政策有多个广告系统，未做页面真实遮挡和素材授权审计，降条件。#88 Resource.fyi只有普通免费目录账号申请，**不能保证进入编辑Best-of短榜**，降P2。#147 Good Design Tools主站/样本读取502且Tally邮箱默认同意周更邮件，降P2。其他首批字体/设计目录正常维持原顺序。完整官方来源与真实边界：[V46逐站复核](v46-p1-official-eligibility-and-link-evidence-20261031.md)。
+
+## V47｜现行13家P1真实外站href/rel证据矩阵
+
+[13家逐站公开页面、真实href、历史raw rel与提交建议](v47-thirteen-p1-outbound-link-audit-20261031.md)｜[逐行CSV](../data/v47-current-p1-outbound-proof-matrix-20261031.csv)。其中**11家**找到可访问的已发布第三方外站直链页面，**6家**保留此前V33/V34针对相应样本页的原始`a rel`（不是新抓HTML）；另外**2家**产品Launch平台目前未能确认独立产品外站href。所有资料均非本站已申请/获链，且不把robots或官方Dofollow声明冒充原始rel。

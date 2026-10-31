@@ -316,3 +316,9 @@
 - [16家逐项定位与3家降级解释](docs/v46-p1-official-eligibility-and-link-evidence-20261031.md)；[15项官网/现有网站证据CSV](data/v46-p1-official-evidence-20261031.csv)。#6 kis.tools 要求核心无干扰广告、输出无商用限制，本网站广告展示和素材授权未证实，降条件。#88 Resource.fyi 免费普通目录与编辑Best-of是不同展示，降P2。#147 Good Design Tools的Tally表单正常但目标主页/详情本轮返回502、填写邮箱会同意周更邮件，降P2。
 - SideProjects.net仍P1：官网Free $0永久产品页与站方宣传Dofollow，真实新链接raw rel未测，需登录。PeplioHUB仍P1：AI首先审核、必要时人工、可选Badge影响提前排期，平台可能改nofollow/ugc；都是免费曝光候选而非SEO效果承诺。
 - 原176总量不变，现**P1 13、P2 27、条件85、待核验16、排除34、非外链1**。申请和确认新获链仍为0。
+
+## V47｜13家P1的公开出站证据逐条落地（2026-10-31）
+
+- [13家实际发布链接与验收边界](docs/v47-thirteen-p1-outbound-link-audit-20261031.md) + [13行可审计矩阵CSV](data/v47-current-p1-outbound-proof-matrix-20261031.csv)；现行13家P1都有HTML操作台证据段。11家读到已刊登的**其他网站**的直接站外href，6家有旧V33/V34针对来源页的原始`rel`历史样本；其余2家产品Launch暂没有可核验具体独立第三方站外href。多数本轮网页只能抽取清理后的HTML，不能从其推断原始rel。
+- **纠正旧版填写工作单**：Educaguía已因网站真实Lettering练习纸和七天计划恢复P2，不再在现行申请表中显示V42过期条件。PeplioHUB详情出站href含`?ref=pepliohub`，Mixweight详情出站含UTM，必须与无跟踪的直接URL、raw rel分开理解；Unikist旧`noreferrer`会影响referrer统计，不等于nofollow。
+- 主库176与P1 13/P2 27/条件85等分类不变；这只是证据深化，用户实际申请0，本站新增确认获链0。
