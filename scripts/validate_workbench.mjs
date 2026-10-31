@@ -82,8 +82,10 @@ if (detailed.some(x => !all.some(i => i.id === x.id) || !x.fields?.length))
 const fieldCount = detailed.reduce((n, x) => n + x.fields.length, 0);
 if (fieldCount !== 161) throw new Error("Detailed input field count unexpectedly changed: " + fieldCount);
 if (/<script[^>]+src=/i.test(html)) throw new Error("Remote JS is forbidden in offline workbench");
-if (!html.includes("xibanya-marks-by-domain-v29") || !html.includes("domainOf(site.home)"))
+if (!html.includes("xibanya-marks-by-domain-v29") || !html.includes("xibanya-profiles-by-domain-v36") || !html.includes("activeDomain=domainOf(savedSite.home)"))
   throw new Error("User submission marks must remain isolated by site domain");
+if (!html.includes("version:2") || !html.includes("validProfile(profile,domain)") || !html.includes("blankProfile(requested)"))
+  throw new Error("V36 per-site profiles and JSON v2 migration must be available");
 if (html.includes("fetch(") || html.includes("XMLHttpRequest"))
   throw new Error("Offline workbench must not make network requests");
 const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/gi)];
