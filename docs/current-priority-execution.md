@@ -63,3 +63,7 @@
 ## V44：有实际练字课件的Educaguía可试投（P2）
 
 [现场已证实的4种SVG A4练字模板](https://generadordelettering.org/herramientas/plantillas-practica)与[7天书写练习计划](https://generadordelettering.org/blog/plan-practica-lettering-siete-dias)使#58 Educaguía不再是纯粹不相干的教育目录。它的[免费教育资源Web申请](https://educaguia.com/inserta-tu-web.asp)第一步选`Recursos Educativos`，推荐提交具体练习页、非/editor普通图像编辑器；仍需真人核对后续表单、自动订阅教育通讯及人工审核。[逐字段说明](v44-education-qualification-and-workbench-priority-20261031.md)。
+
+## V46：不要因历史P1标签无条件提交
+
+#6 kis.tools虽无需账号，仅URL/Email，却有广告干扰及输出商业许可严格条件：本站隐私政策有多个广告系统，未做页面真实遮挡和素材授权审计，降条件。#88 Resource.fyi只有普通免费目录账号申请，**不能保证进入编辑Best-of短榜**，降P2。#147 Good Design Tools主站/样本读取502且Tally邮箱默认同意周更邮件，降P2。其他首批字体/设计目录正常维持原顺序。完整官方来源与真实边界：[V46逐站复核](v46-p1-official-eligibility-and-link-evidence-20261031.md)。

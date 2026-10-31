@@ -26,6 +26,8 @@
 
 **V44教育适用性实证及排序纠错**：[Educaguía与操作台修复详细报告](v44-education-qualification-and-workbench-priority-20261031.md)。
 
+**V46更新（2026-10-31）**：核对现有16家原P1，#6 kis.tools降条件，#88 Resource.fyi/#147 Good Design Tools降P2；现P1=13，P2=27，条件85。见[高优先16家核验报告](v46-p1-official-eligibility-and-link-evidence-20261031.md)与[逐页证据CSV](../data/v46-p1-official-evidence-20261031.csv)。
+
 ## 1. 实际使用方法
 
 1. 新建一个西语网站后，先准备真实的名称、规范首页URL、具体工具页面URL、免费/付费状态、目标用户、功能说明、真实Logo与截图以及能收邮件的邮箱。下方Lettering只是示例，换站必须重新写。
@@ -224,6 +226,8 @@
 
 <a id="link-006"></a>
 ### 006. kis.tools — 候选可申请（历史级别：P1）
+
+**V46当前结论：P1→条件。** 官方[URL＋Email两字段提交](https://kis.tools/submit)另有五个必须满足的标准：免费功能真实完整、免注册、核心操作区域无打断广告、免费输出质量足够、成果不强制署名或限制商业使用。当前目标站[隐私政策](https://generadordelettering.org/politica-de-privacidad)已披露AdSense及经同意后加载Monetag/Adsterra；未实际完整测试编辑器广告覆盖和所用字体授权，不能冒称无干扰广告/自由商用。保留条件候选，只有事实满足后再投。
 
 **提交入口/官网**：[https://kis.tools/submit](https://kis.tools/submit)  
 **适合什么网站**：免登录可使用的免费工具；**西语资格**：英语平台；西语工具可申请，审核待定。  
@@ -2019,6 +2023,8 @@
 <a id="link-088"></a>
 ### 088. Resource.fyi — 候选可申请（历史级别：P1）
 
+**V46当前结论：P1→P2。** [官方About](https://resource.fyi/about)将个人免费自助提交的普通目录与编辑Best-of精选榜严格分开；免费账号至少等待7天，付费可加快普通目录审批但不能买精选排名。[OpenYC普通已发布产品页](https://resource.fyi/products/openyc)可见Visit Site直达官网，不过raw rel和实际引荐未独立查。字体/设计专栏精选的外站链接不是保证普通用户提交即获得。
+
 **提交入口/官网**：[https://resource.fyi/](https://resource.fyi/)  
 **适合什么网站**：字体与设计资源、开发工具、生产力工具；**西语资格**：英文界面，未见明确拒绝纯西语工具。  
 **费用和审核**：免费账号后投稿，队列至少约7天；有付费加速。  
@@ -3332,6 +3338,8 @@
 
 <a id="link-147"></a>
 ### 147. Good Design Tools (gooddesign.tools) — 候选可申请（主库更新：V31，2026-10-31）
+
+**V46当前结论：P1→P2。** [Tally表单](https://tally.so/r/mBbA8N)当日仍可打开，确有Name/URL/Description/Price/Deal/Affiliate/≤2MB JPG/JPEG/WebP/SVG方形图标/Email；**提供Email即同意接收更新及每周推荐邮件**。但[gooddesign.tools主页](https://www.gooddesign.tools/)与[Type Trials样本](https://www.gooddesign.tools/tools/type-trials)此次都返回502，不能把Tally存在当作官网目前可发布/普通详情真实出站/Follow证据，先等待独立验证页面恢复。502不代表永久关闭。
 
 **V34 Good Design Tools具体字体样本详情页当前读取失败target_unreachable，实际公开href/rel未知；此前Tally表单字段仍保留，不得将访问失败写成网站关闭。**
 

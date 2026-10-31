@@ -310,3 +310,9 @@
 ## V45｜多站教育资源URL独立字段（2026-10-31）
 
 离线填写台新增可选`edu`网址，按当前网站独立保存真实教学资料页。教育渠道只复制同域HTTPS教育网址；未填写时为空，不会套用普通工具地址。旧V1/V2 JSON备份即使没有该字段仍可兼容导入，其他站点资料和进度保留。详见[V45操作与测试报告](docs/v45-education-url-backward-compatible-20261031.md)。**外链仍未经实际提交或验收。**
+
+## V46｜原P1十六家官方资格及公开外链证据复核（2026-10-31）
+
+- [16家逐项定位与3家降级解释](docs/v46-p1-official-eligibility-and-link-evidence-20261031.md)；[15项官网/现有网站证据CSV](data/v46-p1-official-evidence-20261031.csv)。#6 kis.tools 要求核心无干扰广告、输出无商用限制，本网站广告展示和素材授权未证实，降条件。#88 Resource.fyi 免费普通目录与编辑Best-of是不同展示，降P2。#147 Good Design Tools的Tally表单正常但目标主页/详情本轮返回502、填写邮箱会同意周更邮件，降P2。
+- SideProjects.net仍P1：官网Free $0永久产品页与站方宣传Dofollow，真实新链接raw rel未测，需登录。PeplioHUB仍P1：AI首先审核、必要时人工、可选Badge影响提前排期，平台可能改nofollow/ugc；都是免费曝光候选而非SEO效果承诺。
+- 原176总量不变，现**P1 13、P2 27、条件85、待核验16、排除34、非外链1**。申请和确认新获链仍为0。
