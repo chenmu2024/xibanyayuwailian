@@ -282,7 +282,8 @@ $("restoreFile").addEventListener("change",async e=>{
         importedProfiles[domain]={...profile};
       }
       if(!validProfile(next,domainOf(next.home)) ||
-         !importedProfiles[domainOf(next.home)])
+         !importedProfiles[domainOf(next.home)] ||
+         !Object.keys(defaults).every(k=>next[k]===importedProfiles[domainOf(next.home)][k]))
         throw new Error("备份当前网站与全部网站资料不一致");
     }else{
       const legacyDomain=domainOf(next.home);
